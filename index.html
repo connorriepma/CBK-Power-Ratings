@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CBK Power Ratings 2026-27</title>
+  <meta name="description" content="Power ratings for all 365 Division I men's college basketball teams, 2026-27 season.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="brand">POWER<br>RATINGS</div>
+      <div class="nav-label">Tools</div>
+      <a class="nav-item active" href="index.html" aria-current="page">Ratings</a>
+    </nav>
+
+    <main class="content">
+      <div class="conf-tabs" id="conf-tabs" role="group" aria-label="Filter by conference"></div>
+
+      <header class="page-head">
+        <h1>POWER RATINGS</h1>
+        <div class="season">2026&ndash;27 <span id="status"></span></div>
+      </header>
+
+      <div class="conf-strip" id="conf-strip">All Conferences</div>
+
+      <table id="ratings-table">
+        <thead>
+          <tr>
+            <th scope="col" class="rk">#</th>
+            <th scope="col">Team</th>
+            <th scope="col" class="num">Rating</th>
+            <th scope="col" class="num">Home Court Rating</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p class="load-error" id="load-error" hidden>The ratings data could not be loaded.</p>
+
+      <footer>
+        <span id="count"></span>
+        <a href="https://github.com/connorriepma/CBK-Power-Ratings/blob/main/METHODOLOGY.md">Methodology</a>
+      </footer>
+    </main>
+  </div>
+  <script src="js/ratings.js"></script>
+</body>
+</html>
