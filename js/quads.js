@@ -71,7 +71,7 @@
       th('q1', 'Q1', 'num') + th('q2', 'Q2', 'num') + th('q3', 'Q3', 'num') + th('q4', 'Q4', 'num') + '</tr></thead><tbody>' +
       list.map(function (r) {
         var isOpen = !!open[r.team];
-        return '<tr><td class="rk cr-rk">' + r.rank + '</td><td data-team="' + esc(r.team) + '" style="cursor:pointer" title="Show ' + esc(r.team) + '\'s games by quad"><span style="text-decoration:underline dotted">' + esc(r.team) + '</span> <span class="cr-sub">' + (isOpen ? '&#9652;' : '&#9662;') + '</span></td><td class="cr-sub">' + esc(r.conf) +
+        return '<tr><td class="rk cr-rk">' + r.rank + '</td><td data-team="' + esc(r.team) + '" style="cursor:pointer" title="Show ' + esc(r.team) + '\'s games by quad"><span>' + esc(r.team) + '</span> <span class="cr-sub">' + (isOpen ? '&#9652;' : '&#9662;') + '</span></td><td class="cr-sub">' + esc(r.conf) +
           '</td><td class="num">' + C.fmtRating(C.roundHalf(r.rating)) + '</td>' + cell(r.q[1]) + cell(r.q[2]) + cell(r.q[3]) + cell(r.q[4]) + '</tr>' +
           (isOpen ? '<tr><td colspan="8" style="padding-top:2px;padding-bottom:6px">' + detailHTML(model, r.team, rankOf) + '</td></tr>' : '');
       }).join('') + '</tbody>';
