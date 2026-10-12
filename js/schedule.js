@@ -53,8 +53,7 @@
 
   function matchupHTML(g) {
     var site = g.neutral && g.site ? ' <span class="g-site">' + esc(g.site) + '</span>' : '';
-    var m = g.neutral ? esc(g.away) + ' vs ' + esc(g.home) + '*' + site : esc(g.away) + ' @ ' + esc(g.home);
-    if (g.hcaMod) m += '&Dagger;';
+    var m = g.neutral ? esc(g.away) + ' vs ' + esc(g.home) + '*' + (g.hcaMod ? '&Dagger;' : '') + site : esc(g.away) + ' @ ' + esc(g.home) + (g.hcaMod ? '&Dagger;' : '');
     return g.dateTbd ? m + ' <span class="g-site">Date TBA</span>' : m;
   }
 
