@@ -130,7 +130,53 @@ window.CBKStore = (function () {
     }, message);
   }
 
+  // Any other JSON array file in data/ (injuries, eligibility): same API, same token, its own version tracking.
+  // Rows are written as pretty JSON so they match how the files are already formatted.
+  function collection(name) {
+    var path = 'data/' + name, st = null;
+    function refreshFile() {
+      return request(BASE + 'data?ref=' + BRANCH).then(function (res) { return res.json(); }).then(function (listing) {
+        var entry = listing.filter(function (f) { return f.name === name; })[0];
+        if (!entry) throw new Error(path + ' was not found in the repo');
+        return request(BASE + path + '?ref=' + BRANCH, {}, 'application/vnd.github.raw+json').then(function (res) {
+          return res.text();
+        }).then(function (text) {
+          st = { rows: JSON.parse(text), sha: entry.sha };
+          return st.rows;
+        });
+      });
+    }
+    function putFile(rows, message) {
+      return request(BASE + path, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: message, content: toBase64(JSON.stringify(rows, null, 1) + '\n'), sha: st.sha, branch: BRANCH })
+      }).then(function (res) { return res.json(); }).then(function (body) {
+        st = { rows: rows, sha: body.content.sha };
+        return rows;
+      });
+    }
+    function attemptFile(change, message, retried) {
+      return putFile(change(st.rows.slice()), message).catch(function (err) {
+        if (err.status === 409 && !retried) {
+          st = null;
+          return refreshFile().then(function () { return attemptFile(change, message, true); });
+        }
+        throw err;
+      });
+    }
+    function mutateFile(change, message) {
+      var p = chain.then(function () {
+        return (st ? Promise.resolve() : refreshFile()).then(function () { return attemptFile(change, message, false); });
+      });
+      chain = p.catch(function () { /* keep the queue moving after a failure */ });
+      return p;
+    }
+    return { refresh: refreshFile, mutate: mutateFile, reset: function () { st = null; } };
+  }
+
   return {
+    collection: collection,
     getToken: getToken, setToken: setToken, clearToken: clearToken,
     refresh: refresh, upsert: upsert, remove: remove, serialize: serialize
   };

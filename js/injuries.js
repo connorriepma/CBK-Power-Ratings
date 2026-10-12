@@ -11,7 +11,8 @@
   };
   var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  var model, rows = [], openHist = null, datesByKey = null;
+  var model, raw = [], rows = [], openHist = null, datesByKey = null;
+  var coll = window.CBKStore.collection('injuries.json'), editMode = false, owner, form, addBtn;
   function $(id) { return document.getElementById(id); }
 
   function fmt(iso) {
@@ -108,7 +109,8 @@
         '<td data-l="Return" class="inj-num">' + ret + '</td>' +
         '<td data-l="Games missed" class="inj-gm"><span>' + gmHTML(e, today) + '</span></td>' +
         '<td data-l="Source" class="inj-src"><span>' + src + '</span></td>' +
-        '<td data-l="Updated" class="inj-upd">' + fmt(e.updated) + '<br><a href="#" data-hist="' + esc(e.id) + '">' + (openHist === e.id ? 'hide history' : 'history') + '</a></td></tr>';
+        '<td data-l="Updated" class="inj-upd">' + fmt(e.updated) + '<br><a href="#" data-hist="' + esc(e.id) + '">' + (openHist === e.id ? 'hide history' : 'history') + '</a>' +
+        (editMode ? ' &middot; <a href="#" data-edit="' + esc(e.id) + '">edit</a>' : '') + '</td></tr>';
       if (openHist === e.id) {
         h += '<tr class="inj-hist"><td colspan="8">' + (e.history.length
           ? e.history.slice().reverse().map(function (x) {
@@ -120,8 +122,94 @@
     $('inj-body').innerHTML = h + '</tbody></table></div>';
   }
 
+  function slug(x) { return x.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
+  function setRaw(list) { raw = list; rows = raw.map(norm).filter(Boolean); render(); }
+  function find(id) { return raw.filter(function (r) { return r.id === id; })[0]; }
+
+  function startEdit(id) {
+    var e = find(id);
+    if (!e) return;
+    form.open({ team: nameOf(e), player: e.player, pos: e.pos, role: e.role, status: e.status, returnDate: e.returnDate || '', source: e.source, note: e.note }, true);
+    editingId = id;
+  }
+  var editingId = null;
+
+  function save(v, editing) {
+    var t = model.byName[teamByLower[v.team.toLowerCase()]];
+    if (!t) throw new Error('Pick a team from the list.');
+    if (!v.player) throw new Error('Enter the player\u2019s name.');
+    if (v.returnDate && !/^\d{4}-\d{2}-\d{2}$/.test(v.returnDate)) throw new Error('Use a full return date or leave it blank.');
+    var id = editing ? editingId : t.key + '-' + slug(v.player);
+    var today = todayISO(), old = find(id);
+    var e = old ? JSON.parse(JSON.stringify(old)) : { id: id, team: t.key, player: v.player, reported: today, history: [] };
+    var ret = v.returnDate || null;
+    var changed = !old || old.status !== v.status || (old.returnDate || null) !== ret;
+    e.pos = v.pos; e.role = v.role; e.status = v.status; e.returnDate = ret; e.source = v.source; e.note = v.note; e.updated = today;
+    if (!Array.isArray(e.history)) e.history = [];
+    if (changed) e.history.push({ date: today, returnDate: ret, status: v.status });
+    owner.setNote('Saving\u2026', false);
+    return coll.mutate(function (list) {
+      var hit = false;
+      var out = list.map(function (r) { if (r.id === id) { hit = true; return e; } return r; });
+      if (!hit) out.push(e);
+      return out;
+    }, 'Injuries: ' + (old ? 'update ' : 'add ') + e.player + ' (' + t.team + ')').then(function (list) {
+      setRaw(list); owner.setNote('Saved.', false);
+    }, function (err) { owner.setNote('', false); throw new Error(owner.errorText(err)); });
+  }
+
+  function del() {
+    var id = editingId, e = find(id);
+    owner.setNote('Saving\u2026', false);
+    return coll.mutate(function (list) { return list.filter(function (r) { return r.id !== id; }); },
+      'Injuries: remove ' + (e ? e.player : id)).then(function (list) {
+      setRaw(list); owner.setNote('Deleted.', false);
+    }, function (err) { owner.setNote('', false); throw new Error(owner.errorText(err)); });
+  }
+
+  var teamByLower = {};
+
+  function setupOwner() {
+    var O = window.CBKOwner, bar = $('inj-bar');
+    var names = model.teams.map(function (t) { return t.team; }).sort();
+    names.forEach(function (n) { teamByLower[n.toLowerCase()] = n; });
+    var dl = document.createElement('datalist'); dl.id = 'ed-teams';
+    dl.innerHTML = names.map(function (n) { return '<option value="' + esc(n) + '">'; }).join('');
+    document.body.appendChild(dl);
+    form = O.form({
+      host: $('inj-form-host'), noun: 'injury entry', onSave: save, onDelete: del,
+      fields: [
+        { k: 'team', label: 'Team', list: 'ed-teams', lockOnEdit: true },
+        { k: 'player', label: 'Player', lockOnEdit: true },
+        { k: 'pos', label: 'Position' },
+        { k: 'role', label: 'Role (Starter, Rotation...)' },
+        { k: 'status', label: 'Status', type: 'select', options: STATUSES },
+        { k: 'returnDate', label: 'Expected return (blank = unknown)', type: 'date' },
+        { k: 'source', label: 'Source (link or outlet)', wide: true },
+        { k: 'note', label: 'Note', type: 'textarea', wide: true }
+      ]
+    });
+    owner = O.init({
+      bar: bar, before: bar, coll: coll,
+      onActive: function (list) {
+        editMode = true;
+        addBtn = document.createElement('button');
+        addBtn.type = 'button'; addBtn.className = 'entry-toggle'; addBtn.textContent = 'Add entry';
+        addBtn.addEventListener('click', function () { editingId = null; form.open({}, false); });
+        bar.appendChild(addBtn);
+        setRaw(list);
+      },
+      onExit: function () {
+        editMode = false; form.close();
+        if (addBtn) { addBtn.remove(); addBtn = null; }
+        render();
+      }
+    });
+  }
+
   function init(m, data) {
     model = m;
+    raw = data;
     rows = data.map(norm).filter(Boolean);
     var confs = [];
     m.teams.forEach(function (t) { if (confs.indexOf(t.conference) < 0) confs.push(t.conference); });
@@ -134,10 +222,12 @@
     $('inj-body').addEventListener('click', function (ev) {
       var t = ev.target.closest('a');
       if (!t) return;
+      if (t.dataset.edit) { ev.preventDefault(); startEdit(t.dataset.edit); return; }
       if (t.dataset.team) { ev.preventDefault(); $('inj-team').value = t.dataset.team; render(); }
       else if (t.dataset.hist) { ev.preventDefault(); openHist = openHist === t.dataset.hist ? null : t.dataset.hist; render(); }
     });
     render();
+    setupOwner();
   }
 
   Promise.all([C.load(), C.getJSON('data/injuries.json')]).then(function (d) { init(d[0], d[1]); }).catch(function () {

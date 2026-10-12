@@ -511,3 +511,17 @@ tr.schedule-row .schedule-list { background: transparent; border: none; border-r
 .rail .rl-b { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-top: 3px; }
 .rail .rl-b .g-line { flex: 1; min-width: 0; text-align: left; font-size: 13px; }
 .rail .rl-b .g-prob { flex: none; font-size: 13px; color: var(--muted); }
+
+/* Owner entry form (Injuries and Eligibility) */
+.ed-form { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 14px 18px; margin-bottom: 18px; max-width: 760px; }
+.ed-h { font-family: var(--cond); font-size: 20px; margin: 0 0 10px; }
+.ed-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; margin-bottom: 12px; }
+.ed-f { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ed-f.wide { grid-column: 1 / -1; }
+.ed-f label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+.ed-f input, .ed-f select, .ed-f textarea { font-family: var(--sans); font-size: 14px; background: #F7EFD9; border: 1px solid var(--wood-line); border-radius: 3px; color: var(--ink); padding: 7px 10px; width: 100%; }
+.ed-f input:disabled { opacity: .6; }
+.ed-err { color: var(--paint-2); font-weight: 600; font-size: 12.5px; margin-bottom: 8px; }
+.ed-err:empty { display: none; }
+.ed-del { margin-left: auto; color: var(--paint-2); }
+@media (max-width: 760px) { .ed-grid { grid-template-columns: 1fr; } }
