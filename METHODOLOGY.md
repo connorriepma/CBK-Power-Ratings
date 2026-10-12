@@ -61,7 +61,7 @@ After a game, the model compares the actual margin to the predicted margin and m
 ```
 predicted margin = home rating + home court rating (0 if neutral) - away rating
 
-**Modified home court.** A few "neutral" games are really near one team's campus. A game in `data/schedule.json` can carry `"hcaMod": {"team": ..., "pct": ...}`. That team gets `pct` x its home court rating added to its side of that one game (spread, win %, sims and the rating replay all use it). Tiers by drive time from campus: 15 min or less 75%, about 1 hour 50%, 1:45 to 2:00 25%, 2:45 and up 0% (no tag). Games with a tag show a double dagger on the site.
+**Modified home court.** A few "neutral" games are really near one team's campus. A game in `data/schedule.json` can carry `"hcaMod": {"team": ..., "pct": ...}`. That team gets `pct` x its home court rating added to its side of that one game (spread, win %, sims and the rating replay all use it). Tiers by drive time from campus to the arena: 20 min or less 75%, 21 to 75 min 50%, 76 to 125 min 25%, over 125 min 0% (no tag). `hcaMod` can be a list when both teams are near the site (the bonuses offset). Each entry records `mins`, and `est: true` marks drive times that were estimated rather than measured. Games with a tag show a double dagger on the site.
 miss = actual margin - predicted margin
 rating change = K × miss
 ```

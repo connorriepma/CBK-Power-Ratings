@@ -126,7 +126,7 @@ window.CBKPanel = (function () {
       return '<div class="g-row has-wp">' +
         '<div class="g-tag ' + (g.conf ? '' : 'nc') + '">' + esc(model.confTag(g)) + '</div>' +
         '<div class="g-date">' + fmtDate(g.date) + (g.dateTbd ? '&dagger;' : '') + '</div>' +
-        '<div class="g-opp"><span class="side">' + side + '</span>' + esc(opp) + (g.neutral ? '*' : '') + (g.hcaMod ? '&Dagger;' : '') + site + '</div>' +
+        '<div class="g-opp"><span class="side">' + side + '</span>' + esc(opp) + (g.neutral ? '*' : '') + (!g.isTbd && model.hcaMod(g).length ? '&Dagger;' : '') + site + '</div>' +
         lineCell(model, g, team) + winCell(model, g, team) + '</div>';
     }).join('');
 
@@ -134,8 +134,9 @@ window.CBKPanel = (function () {
     var hasDateTbd = games.some(function (g) { return g.dateTbd; });
     var hcaTxt = [];
     games.forEach(function (g) {
-      var m = g.isTbd ? null : model.hcaMod(g);
-      if (m) hcaTxt.push(esc(m.team) + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)');
+      (g.isTbd ? [] : model.hcaMod(g)).forEach(function (m) {
+        hcaTxt.push(esc(m.team) + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)');
+      });
     });
     var foot = (hasNeutral ? '<div class="g-footnote">* designates neutral site</div>' : '') +
       (hcaTxt.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + hcaTxt.filter(function (t, i) { return hcaTxt.indexOf(t) === i; }).join('; ') + '</div>' : '') +

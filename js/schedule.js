@@ -53,7 +53,7 @@
 
   function matchupHTML(g) {
     var site = g.neutral && g.site ? ' <span class="g-site">' + esc(g.site) + '</span>' : '';
-    var m = g.neutral ? esc(g.away) + ' vs ' + esc(g.home) + '*' + (g.hcaMod ? '&Dagger;' : '') + site : esc(g.away) + ' @ ' + esc(g.home) + (g.hcaMod ? '&Dagger;' : '');
+    var m = g.neutral ? esc(g.away) + ' vs ' + esc(g.home) + '*' + (model.hcaMod(g).length ? '&Dagger;' : '') + site : esc(g.away) + ' @ ' + esc(g.home) + (model.hcaMod(g).length ? '&Dagger;' : '');
     return g.dateTbd ? m + ' <span class="g-site">Date TBA</span>' : m;
   }
 
@@ -75,10 +75,10 @@
   function hcaNote(dayGames) {
     var seen = {}, out = [];
     dayGames.forEach(function (g) {
-      var m = model.hcaMod(g);
-      if (!m) return;
-      var t = m.team + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)';
-      if (!seen[t]) { seen[t] = 1; out.push(t); }
+      model.hcaMod(g).forEach(function (m) {
+        var t = m.team + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)';
+        if (!seen[t]) { seen[t] = 1; out.push(t); }
+      });
     });
     return out.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + out.map(esc).join('; ') + '</div>' : '';
   }

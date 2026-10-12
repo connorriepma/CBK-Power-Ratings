@@ -687,7 +687,8 @@
   "site": "Detroit",
   "hcaMod": {
    "team": "Michigan",
-   "pct": 0.5
+   "pct": 0.5,
+   "mins": 52
   }
  },
  {
@@ -902,7 +903,21 @@
   "away": "North Carolina",
   "neutral": true,
   "conf": false,
-  "site": "Greensboro, NC"
+  "site": "Greensboro, NC",
+  "hcaMod": [
+   {
+    "team": "North Carolina",
+    "pct": 0.5,
+    "mins": 55,
+    "est": true
+   },
+   {
+    "team": "NC State",
+    "pct": 0.25,
+    "mins": 80,
+    "est": true
+   }
+  ]
  },
  {
   "date": "2026-12-19",
@@ -1095,7 +1110,13 @@
   "away": "Minnesota",
   "neutral": true,
   "conf": false,
-  "site": "Frisco, Texas"
+  "site": "Frisco, Texas",
+  "hcaMod": {
+   "team": "SMU",
+   "pct": 0.5,
+   "mins": 35,
+   "est": true
+  }
  },
  {
   "date": "2026-12-19",
@@ -1647,7 +1668,8 @@
   "site": "Cincinnati, Ohio",
   "hcaMod": {
    "team": "Cincinnati",
-   "pct": 0.75
+   "pct": 0.75,
+   "mins": 11
   }
  },
  {
@@ -2087,7 +2109,8 @@
   "site": "Indianapolis",
   "hcaMod": {
    "team": "Indiana",
-   "pct": 0.5
+   "pct": 0.5,
+   "mins": 59
   }
  },
  {
@@ -2438,7 +2461,12 @@
   "away": "West Virginia",
   "neutral": true,
   "conf": false,
-  "site": "Pittsburgh, Pa."
+  "site": "Pittsburgh, Pa.",
+  "hcaMod": {
+   "team": "Pittsburgh",
+   "pct": 0.75,
+   "mins": 7
+  }
  },
  {
   "date": "2026-12-15",
@@ -2559,7 +2587,13 @@
   "away": "UMass",
   "neutral": true,
   "conf": false,
-  "site": "Springfield, Mass."
+  "site": "Springfield, Mass.",
+  "hcaMod": {
+   "team": "UMass",
+   "pct": 0.5,
+   "mins": 35,
+   "est": true
+  }
  },
  {
   "date": "2026-12-08",
@@ -2581,7 +2615,13 @@
   "away": "West Virginia",
   "neutral": true,
   "conf": false,
-  "site": "Greensboro, N.C."
+  "site": "Greensboro, N.C.",
+  "hcaMod": {
+   "team": "Wake Forest",
+   "pct": 0.5,
+   "mins": 30,
+   "est": true
+  }
  },
  {
   "date": "2026-12-22",
@@ -2638,7 +2678,13 @@
   "away": "UMass",
   "neutral": true,
   "conf": false,
-  "site": "Boston"
+  "site": "Boston",
+  "hcaMod": {
+   "team": "Boston College",
+   "pct": 0.75,
+   "mins": 10,
+   "est": true
+  }
  },
  {
   "date": "2026-11-10",
@@ -2674,7 +2720,13 @@
   "away": "UCF",
   "neutral": true,
   "conf": false,
-  "site": "Kissimmee, Fla."
+  "site": "Kissimmee, Fla.",
+  "hcaMod": {
+   "team": "UCF",
+   "pct": 0.5,
+   "mins": 35,
+   "est": true
+  }
  },
  {
   "date": "2026-11-27",
@@ -3030,7 +3082,13 @@
   "away": "Butler",
   "neutral": true,
   "conf": false,
-  "site": "Indianapolis, Ind."
+  "site": "Indianapolis, Ind.",
+  "hcaMod": {
+   "team": "Butler",
+   "pct": 0.75,
+   "mins": 15,
+   "est": true
+  }
  },
  {
   "date": "2026-12-22",
@@ -3097,7 +3155,8 @@
   "site": "Chicago",
   "hcaMod": {
    "team": "Illinois",
-   "pct": 0.25
+   "pct": 0.25,
+   "mins": 120
   }
  },
  {
@@ -3121,10 +3180,18 @@
   "neutral": true,
   "conf": false,
   "site": "St. Louis",
-  "hcaMod": {
-   "team": "Illinois",
-   "pct": 0.25
-  }
+  "hcaMod": [
+   {
+    "team": "Illinois",
+    "pct": 0.25,
+    "mins": 120
+   },
+   {
+    "team": "Missouri",
+    "pct": 0.25,
+    "mins": 120
+   }
+  ]
  },
  {
   "date": "2026-12-29",
@@ -3300,7 +3367,13 @@
   "away": "Arkansas",
   "neutral": true,
   "conf": false,
-  "site": "Detroit"
+  "site": "Detroit",
+  "hcaMod": {
+   "team": "Michigan St",
+   "pct": 0.25,
+   "mins": 90,
+   "est": true
+  }
  },
  {
   "date": "2026-12-02",
@@ -3664,7 +3737,8 @@
   "site": "Salt Lake City",
   "hcaMod": {
    "team": "BYU",
-   "pct": 0.5
+   "pct": 0.5,
+   "mins": 65
   }
  },
  {
@@ -4081,7 +4155,8 @@
   "site": "Indianapolis",
   "hcaMod": {
    "team": "Indiana",
-   "pct": 0.5
+   "pct": 0.5,
+   "mins": 59
   }
  },
  {
@@ -4288,7 +4363,13 @@
   "away": "Gonzaga",
   "neutral": true,
   "conf": false,
-  "site": "Anaheim"
+  "site": "Anaheim",
+  "hcaMod": {
+   "team": "UCLA",
+   "pct": 0.5,
+   "mins": 50,
+   "est": true
+  }
  },
  {
   "date": "2026-12-13",
@@ -4779,7 +4860,13 @@
   "away": "Villanova",
   "neutral": true,
   "conf": false,
-  "site": "Philadelphia"
+  "site": "Philadelphia",
+  "hcaMod": {
+   "team": "Villanova",
+   "pct": 0.5,
+   "mins": 25,
+   "est": true
+  }
  },
  {
   "date": "2026-12-19",
@@ -5059,7 +5146,13 @@
   "away": "South Carolina",
   "neutral": true,
   "conf": false,
-  "site": "Baltimore"
+  "site": "Baltimore",
+  "hcaMod": {
+   "team": "Maryland",
+   "pct": 0.5,
+   "mins": 40,
+   "est": true
+  }
  },
  {
   "date": "2026-12-29",
@@ -5290,7 +5383,8 @@
   "site": "Salt Lake City",
   "hcaMod": {
    "team": "BYU",
-   "pct": 0.5
+   "pct": 0.5,
+   "mins": 65
   }
  },
  {
@@ -5399,7 +5493,13 @@
   "away": "Baylor",
   "neutral": true,
   "conf": false,
-  "site": "Seattle"
+  "site": "Seattle",
+  "hcaMod": {
+   "team": "Washington",
+   "pct": 0.75,
+   "mins": 15,
+   "est": true
+  }
  },
  {
   "date": "2026-12-28",
@@ -5731,7 +5831,8 @@
   "site": "Phoenix",
   "hcaMod": {
    "team": "Arizona",
-   "pct": 0.25
+   "pct": 0.25,
+   "mins": 106
   }
  },
  {
@@ -5933,7 +6034,8 @@
   "site": "Houston",
   "hcaMod": {
    "team": "Houston",
-   "pct": 0.75
+   "pct": 0.75,
+   "mins": 9
   }
  },
  {
@@ -6613,7 +6715,21 @@
   "away": "Kansas",
   "neutral": true,
   "conf": false,
-  "site": "Kansas City, Mo."
+  "site": "Kansas City, Mo.",
+  "hcaMod": [
+   {
+    "team": "Kansas",
+    "pct": 0.5,
+    "mins": 45,
+    "est": true
+   },
+   {
+    "team": "Missouri",
+    "pct": 0.25,
+    "mins": 120,
+    "est": true
+   }
+  ]
  },
  {
   "date": "2026-12-12",
@@ -7440,7 +7556,21 @@
   "away": "Oklahoma St",
   "neutral": true,
   "conf": false,
-  "site": "Oklahoma City, Okla."
+  "site": "Oklahoma City, Okla.",
+  "hcaMod": [
+   {
+    "team": "Oklahoma",
+    "pct": 0.5,
+    "mins": 30,
+    "est": true
+   },
+   {
+    "team": "Oklahoma St",
+    "pct": 0.25,
+    "mins": 80,
+    "est": true
+   }
+  ]
  },
  {
   "date": "2026-12-16",
@@ -7539,7 +7669,13 @@
   "away": "UCF",
   "neutral": true,
   "conf": false,
-  "site": "Kissimmee, Fla."
+  "site": "Kissimmee, Fla.",
+  "hcaMod": {
+   "team": "UCF",
+   "pct": 0.5,
+   "mins": 35,
+   "est": true
+  }
  },
  {
   "date": "2026-12-01",
@@ -7603,7 +7739,12 @@
   "away": "Colorado",
   "neutral": true,
   "conf": false,
-  "site": "San Diego, Calif."
+  "site": "San Diego, Calif.",
+  "hcaMod": {
+   "team": "San Diego St",
+   "pct": 0.75,
+   "mins": 16
+  }
  },
  {
   "date": "2026-11-10",
@@ -8858,7 +8999,12 @@
   "away": "LSU",
   "neutral": true,
   "conf": false,
-  "site": "Spokane, Wash."
+  "site": "Spokane, Wash.",
+  "hcaMod": {
+   "team": "Gonzaga",
+   "pct": 0.75,
+   "mins": 4
+  }
  },
  {
   "date": "2026-11-18",
@@ -9351,7 +9497,19 @@
   "away": "Saint Louis",
   "neutral": true,
   "conf": false,
-  "site": "St. Louis"
+  "site": "St. Louis",
+  "hcaMod": [
+   {
+    "team": "Saint Louis",
+    "pct": 0.75,
+    "mins": 9
+   },
+   {
+    "team": "Missouri",
+    "pct": 0.25,
+    "mins": 120
+   }
+  ]
  },
  {
   "date": "2026-11-09",
@@ -12145,7 +12303,13 @@
   "away": "Seattle",
   "neutral": true,
   "conf": false,
-  "site": "Seattle, Wash."
+  "site": "Seattle, Wash.",
+  "hcaMod": {
+   "team": "Seattle",
+   "pct": 0.75,
+   "mins": 10,
+   "est": true
+  }
  },
  {
   "date": "2026-12-22",
@@ -12939,7 +13103,13 @@
   "away": "Towson",
   "neutral": true,
   "conf": false,
-  "site": "Baltimore, Md."
+  "site": "Baltimore, Md.",
+  "hcaMod": {
+   "team": "Towson",
+   "pct": 0.75,
+   "mins": 20,
+   "est": true
+  }
  },
  {
   "date": "2026-12-22",
@@ -14143,7 +14313,21 @@
   "away": "Robert Morris",
   "neutral": true,
   "conf": false,
-  "site": "Pittsburgh, Pa."
+  "site": "Pittsburgh, Pa.",
+  "hcaMod": [
+   {
+    "team": "Duquesne",
+    "pct": 0.75,
+    "mins": 10,
+    "est": true
+   },
+   {
+    "team": "Robert Morris",
+    "pct": 0.5,
+    "mins": 30,
+    "est": true
+   }
+  ]
  },
  {
   "date": "2026-12-12",
@@ -14273,7 +14457,13 @@
   "away": "Temple",
   "neutral": true,
   "conf": false,
-  "site": "Philadelphia, Pa."
+  "site": "Philadelphia, Pa.",
+  "hcaMod": {
+   "team": "Temple",
+   "pct": 0.75,
+   "mins": 10,
+   "est": true
+  }
  },
  {
   "date": "2026-12-16",
@@ -14344,7 +14534,13 @@
   "away": "Bucknell",
   "neutral": true,
   "conf": false,
-  "site": "Philadelphia, Pa."
+  "site": "Philadelphia, Pa.",
+  "hcaMod": {
+   "team": "La Salle",
+   "pct": 0.75,
+   "mins": 10,
+   "est": true
+  }
  },
  {
   "date": "2026-12-01",
@@ -15054,7 +15250,13 @@
   "away": "Florida Gulf Coast",
   "neutral": true,
   "conf": false,
-  "site": "Fort Myers, Fla."
+  "site": "Fort Myers, Fla.",
+  "hcaMod": {
+   "team": "Florida Gulf Coast",
+   "pct": 0.75,
+   "mins": 15,
+   "est": true
+  }
  },
  {
   "date": "2026-11-25",
@@ -15478,7 +15680,13 @@
   "away": "Richmond",
   "neutral": true,
   "conf": false,
-  "site": "Philadelphia, Pa."
+  "site": "Philadelphia, Pa.",
+  "hcaMod": {
+   "team": "Temple",
+   "pct": 0.75,
+   "mins": 10,
+   "est": true
+  }
  },
  {
   "date": "2026-11-11",
@@ -16629,7 +16837,13 @@
   "away": "Saint Mary's",
   "neutral": true,
   "conf": false,
-  "site": "Lake Tahoe, Nev."
+  "site": "Lake Tahoe, Nev.",
+  "hcaMod": {
+   "team": "Nevada",
+   "pct": 0.5,
+   "mins": 60,
+   "est": true
+  }
  },
  {
   "date": "2026-11-11",
@@ -21559,7 +21773,13 @@
   "away": "Miami OH",
   "neutral": true,
   "conf": false,
-  "site": "Greensboro, N.C."
+  "site": "Greensboro, N.C.",
+  "hcaMod": {
+   "team": "High Point",
+   "pct": 0.75,
+   "mins": 20,
+   "est": true
+  }
  },
  {
   "date": "2026-12-15",
@@ -21700,7 +21920,21 @@
   "away": "Queens",
   "neutral": true,
   "conf": false,
-  "site": "Rock Hill, S.C."
+  "site": "Rock Hill, S.C.",
+  "hcaMod": [
+   {
+    "team": "Winthrop",
+    "pct": 0.75,
+    "mins": 5,
+    "est": true
+   },
+   {
+    "team": "Queens",
+    "pct": 0.5,
+    "mins": 30,
+    "est": true
+   }
+  ]
  },
  {
   "date": "2026-11-07",
@@ -24811,7 +25045,13 @@
   "away": "Howard",
   "neutral": true,
   "conf": false,
-  "site": "Washington, DC"
+  "site": "Washington, DC",
+  "hcaMod": {
+   "team": "Howard",
+   "pct": 0.75,
+   "mins": 10,
+   "est": true
+  }
  },
  {
   "date": "2026-12-12",
@@ -30352,7 +30592,13 @@
   "away": "Lehigh",
   "neutral": true,
   "conf": false,
-  "site": "Thousand Oaks, Calif."
+  "site": "Thousand Oaks, Calif.",
+  "hcaMod": {
+   "team": "Pepperdine",
+   "pct": 0.5,
+   "mins": 35,
+   "est": true
+  }
  },
  {
   "date": "2026-12-01",

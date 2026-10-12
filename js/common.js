@@ -84,9 +84,9 @@ window.CBK = (function () {
   // boosted team's side of that one game: +pts if it is the home row, -pts if it is the away row.
   function homeBonus(mods, g) {
     if (!mods) return 0;
-    var m = mods[gameId(g.date, g.home, g.away)];
-    if (!m) return 0;
-    return m.key === g.home ? m.pts : m.key === g.away ? -m.pts : 0;
+    var list = mods[gameId(g.date, g.home, g.away)] || [], tot = 0;
+    list.forEach(function (m) { tot += m.key === g.home ? m.pts : m.key === g.away ? -m.pts : 0; });
+    return tot;
   }
 
   // Modified-HCA games from schedule.json (optional hcaMod: { team, pct }). pts = pct x that team's home court.
@@ -94,9 +94,12 @@ window.CBK = (function () {
     var mods = {};
     schedule.forEach(function (g) {
       if (!g.hcaMod) return;
-      var t = byName[g.hcaMod.team];
-      if (!t) return;
-      mods[gameId(g.date, g.home, g.away)] = { key: t.key, pts: g.hcaMod.pct * t.home_court };
+      var id = gameId(g.date, g.home, g.away);
+      [].concat(g.hcaMod).forEach(function (e) {
+        var t = byName[e.team];
+        if (!t) return;
+        (mods[id] = mods[id] || []).push({ key: t.key, pts: e.pct * t.home_court });
+      });
     });
     return mods;
   }
@@ -212,12 +215,11 @@ window.CBK = (function () {
       return h + (g.neutral ? 0 : t.home_court) - a + homeBonus(mods, { date: g.date, home: hk, away: ak });
     };
 
-    // Modified home court on this game, or null: { team, pct, pts }.
+    // Modified home court on this game: a list of { team, pct, pts, mins } (empty if none).
     model.hcaMod = function (g) {
-      var m = g.hcaMod;
-      if (!m) return null;
-      var t = byName[m.team];
-      return t ? { team: m.team, pct: m.pct, pts: m.pct * t.home_court } : null;
+      return [].concat(g.hcaMod || []).filter(function (e) { return byName[e.team]; }).map(function (e) {
+        return { team: e.team, pct: e.pct, pts: e.pct * byName[e.team].home_court, mins: e.mins };
+      });
     };
 
     // Displayed home margin: exact margin rounded once to 0.5, ties away from zero.

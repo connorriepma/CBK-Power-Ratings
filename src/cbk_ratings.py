@@ -85,32 +85,34 @@ def game_id(date: str, a: str, b: str) -> str:
 def home_bonus(game_mods: dict | None, g: dict) -> float:
     """Extra points for the home side of game `g` from a modified home court, else 0.
 
-    game_mods maps game_id -> (team key, points). Positive when the boosted team
+    game_mods maps game_id -> list of (team key, points). Positive when the boosted team
     is the home team of the row, negative when it is the away team.
     """
     if not game_mods:
         return 0.0
-    mod = game_mods.get(game_id(g["date"], g["home"], g["away"]))
-    if not mod:
-        return 0.0
-    team, pts = mod
-    return pts if team == g["home"] else -pts if team == g["away"] else 0.0
+    total = 0.0
+    for team, pts in game_mods.get(game_id(g["date"], g["home"], g["away"]), ()):
+        total += pts if team == g["home"] else -pts if team == g["away"] else 0.0
+    return total
 
 
 def build_game_mods(schedule: list[dict], teams: list[dict]) -> dict:
     """Modified home-court games from schedule.json (the optional hcaMod field).
 
-    hcaMod = {"team": name, "pct": share of that team's home-court rating}. The extra
-    points are pct x the team's home_court, and apply to that team only.
+    hcaMod = {"team": name, "pct": share of that team's home-court rating} or a list of
+    those (both teams near the site). The extra points are pct x the team's home_court,
+    and apply to that team only.
     """
     key = {t["team"]: t["key"] for t in teams}
     hc = {t["key"]: t["home_court"] for t in teams}
     mods = {}
     for g in schedule:
         m = g.get("hcaMod")
-        if m:
-            k = key[m["team"]]
-            mods[game_id(g["date"], key[g["home"]], key[g["away"]])] = (k, m["pct"] * hc[k])
+        if not m:
+            continue
+        for e in (m if isinstance(m, list) else [m]):
+            k = key[e["team"]]
+            mods.setdefault(game_id(g["date"], key[g["home"]], key[g["away"]]), []).append((k, e["pct"] * hc[k]))
     return mods
 
 
