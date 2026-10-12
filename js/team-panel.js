@@ -127,7 +127,7 @@ window.CBKPanel = (function () {
         '<div class="g-tag ' + (g.conf ? '' : 'nc') + '">' + esc(model.confTag(g)) + '</div>' +
         '<div class="g-date">' + fmtDate(g.date) + (g.dateTbd ? '&dagger;' : '') + '</div>' +
         '<div class="g-opp"><span class="side">' + side + '</span>' + esc(opp) + (g.neutral ? '*' : '') + (!g.isTbd && model.hcaMod(g).length ? '&Dagger;' : '') + site +
-        (g.travelMiles ? ' <span class="g-site">&#9992;&#xFE0E; ' + g.travelMiles.toLocaleString('en-US') + ' mi</span>' : '') + '</div>' +
+        (g.travelMiles && g.away === team ? ' <span class="g-site">&#9992;&#xFE0E; ' + g.travelMiles.toLocaleString('en-US') + ' mi</span>' : '') + '</div>' +
         lineCell(model, g, team) + winCell(model, g, team) + '</div>';
     }).join('');
 
@@ -139,7 +139,7 @@ window.CBKPanel = (function () {
         hcaTxt.push(esc(m.team) + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)');
       });
     });
-    var hasTravel = games.some(function (g) { return g.travelMiles; });
+    var hasTravel = games.some(function (g) { return g.travelMiles && g.away === team; });
     var foot = (hasNeutral ? '<div class="g-footnote">* designates neutral site</div>' : '') +
       (hcaTxt.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + hcaTxt.filter(function (t, i) { return hcaTxt.indexOf(t) === i; }).join('; ') + '</div>' : '') +
       (hasTravel ? '<div class="g-footnote">&#9992;&#xFE0E; long conference trip: miles the road team travels (a note only; ratings and spreads are not adjusted)</div>' : '') +
