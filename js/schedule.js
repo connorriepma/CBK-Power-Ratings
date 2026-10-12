@@ -93,7 +93,7 @@
 
   function altNote(dayGames) {
     return dayGames.some(function (g) { return model.altitude(g); })
-      ? '<div class="g-footnote">&#9968;&#xFE0F; played at altitude (host campus above ' + C.ALTITUDE_FT.toLocaleString('en-US') + ' ft). A note only; ratings and spreads are not adjusted.</div>' : '';
+      ? '<div class="g-footnote">&#9968;&#xFE0F; played at altitude (host campus at or above ' + C.ALTITUDE_FT.toLocaleString('en-US') + ' ft). A note only; ratings and spreads are not adjusted.</div>' : '';
   }
 
   function dayHTML(date, dayGames) {

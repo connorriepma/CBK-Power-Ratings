@@ -4,7 +4,7 @@ window.CBK = (function () {
 
   var SIGMA = 11; // typical miss of the predicted margin, in points (display only)
   var NON_D1 = 'Non D1 Opponent';
-  var ALTITUDE_FT = 5000; // host campuses strictly above this elevation get the mountain marker (a note only)
+  var ALTITUDE_FT = 5000; // host campuses at or above this elevation get the mountain marker (a note only)
 
   var CONF_LABELS = {
     'Big Ten': 'B10', 'Big 12': 'B12', 'Missouri Valley': 'MVC', 'Mountain West': 'MWC',
@@ -216,11 +216,11 @@ window.CBK = (function () {
       return h + (g.neutral ? 0 : t.home_court) - a + homeBonus(mods, { date: g.date, home: hk, away: ak });
     };
 
-    // Elevation (ft) of the host campus when a non-neutral game is played above ALTITUDE_FT, else 0. A note only.
+    // Elevation (ft) of the host campus when a non-neutral game is played at or above ALTITUDE_FT, else 0. A note only.
     model.altitude = function (g) {
       if (g.neutral) return 0;
       var t = byName[g.home];
-      return t && t.elevation_ft > ALTITUDE_FT ? t.elevation_ft : 0;
+      return t && t.elevation_ft >= ALTITUDE_FT ? t.elevation_ft : 0;
     };
 
     // Modified home court on this game: a list of { team, pct, pts, mins } (empty if none).

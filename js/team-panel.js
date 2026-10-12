@@ -145,7 +145,7 @@ window.CBKPanel = (function () {
     var foot = (hasNeutral ? '<div class="g-footnote">* designates neutral site</div>' : '') +
       (hcaTxt.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + hcaTxt.filter(function (t, i) { return hcaTxt.indexOf(t) === i; }).join('; ') + '</div>' : '') +
       (hasTravel ? '<div class="g-footnote">&#9992;&#xFE0E; long conference trip: miles the road team travels (a note only; ratings and spreads are not adjusted)</div>' : '') +
-      (hasAlt ? '<div class="g-footnote">&#9968;&#xFE0F; played at altitude (host campus above ' + C.ALTITUDE_FT.toLocaleString('en-US') + ' ft). A note only; ratings and spreads are not adjusted.</div>' : '') +
+      (hasAlt ? '<div class="g-footnote">&#9968;&#xFE0F; played at altitude (host campus at or above ' + C.ALTITUDE_FT.toLocaleString('en-US') + ' ft). A note only; ratings and spreads are not adjusted.</div>' : '') +
       (hasDateTbd ? '<div class="g-footnote">&dagger; Exact date not yet announced (the league has released a window of days)</div>' : '') +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
