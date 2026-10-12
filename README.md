@@ -36,15 +36,29 @@ The full write-up is in [METHODOLOGY.md](METHODOLOGY.md). In short:
 The rating engine is [`src/cbk_ratings.py`](src/cbk_ratings.py). It uses only the Python standard library.
 
 ```
-python src/cbk_ratings.py              # replay results.json onto the preseason ratings, write data/current_ratings.json
+python src/cbk_ratings.py              # replay data/results.json onto the preseason ratings, write data/current_ratings.json
 python -m unittest discover -s tests   # run the tests
 ```
 
-Current ratings are never stored. They are recomputed from the preseason ratings plus every game in `data/results.json`, so the output is always consistent with the results. The tests check the worked example in the methodology, the K tiers, the miss caps, neutral sites, skipped non-Division I games and input-order independence.
+Current ratings are never stored. They are recomputed from the preseason ratings plus every game in `data/results.json`, so the output is always consistent with the results. The website runs the same replay in the browser ([`js/common.js`](js/common.js)), so ratings, spreads and win probabilities update as soon as a result is saved. The Python and JavaScript versions produce identical ratings on the same results. `data/current_ratings.json` is generated output and is not committed.
+
+The tests check the worked example in the methodology, the K tiers, the miss caps, neutral sites, skipped non-Division I games and input-order independence.
+
+## Results
+
+Game results live in [`data/results.json`](data/results.json), one result per line:
+
+```json
+{"date":"2026-11-02","home":"duke","away":"army","neutral":false,"homeScore":90,"awayScore":55,"line":-38.5,"ts":"2026-11-03T05:12:10.000Z"}
+```
+
+`home` and `away` are team keys from `data/teams.json`. `line` is the home team's spread when the result was first saved (negative means the home team was favored), kept so the model can later be graded against its own lines. Ratings are replayed from `homeScore` and `awayScore` only; `line` and `ts` are never used in the replay.
+
+The site owner enters scores on the Schedule page. Each save is a commit to this file through the GitHub API, so every result has a visible history.
 
 ## Status
 
-Preseason ratings are set. In-season rating updates begin when games start.
+Preseason ratings are set. Score entry is built and ratings update from results as soon as games are played.
 
 ## Author
 

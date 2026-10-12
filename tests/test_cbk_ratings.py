@@ -136,7 +136,7 @@ class Display(unittest.TestCase):
 
 class RealData(unittest.TestCase):
     def test_preseason_when_no_results(self):
-        rows = cbk.build_current_ratings()
+        rows = cbk.build_current_ratings([])
         self.assertEqual(len(rows), 365)
         self.assertTrue(all(r["change"] == 0 and r["games"] == 0 for r in rows))
         self.assertEqual(rows[0]["team"], "Duke")

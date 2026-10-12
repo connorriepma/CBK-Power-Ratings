@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261011b">
+  <link rel="stylesheet" href="css/style.css?v=20261011c">
 </head>
 <body>
   <div class="shell">
@@ -31,7 +31,25 @@
         <button type="button" id="day-next" class="day-nav" aria-label="Next day">&rarr;</button>
         <select id="conf-filter" aria-label="Filter by conference"></select>
         <label class="conf-only"><input type="checkbox" id="conf-only"> Conference games only</label>
+        <button type="button" id="entry-toggle" class="entry-toggle" hidden>Enter scores</button>
+        <button type="button" id="owner-signout" class="entry-toggle" hidden>Sign out</button>
       </div>
+      <div class="entry-note" id="entry-note" role="status"></div>
+      <section class="owner-panel" id="owner-panel" hidden aria-label="Owner sign-in">
+        <h2>Owner sign-in</h2>
+        <p>Scores save to this site&rsquo;s GitHub repo. Paste a GitHub token that can edit the repo&rsquo;s contents. It stays in this browser and is sent only to GitHub.</p>
+        <ol>
+          <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub&rsquo;s new token page</a>.</li>
+          <li>Name it, choose an expiration, and under Repository access select <b>Only select repositories</b> and pick <b>CBK-Power-Ratings</b>.</li>
+          <li>Under Permissions, set <b>Contents</b> to <b>Read and write</b>, then generate the token.</li>
+        </ol>
+        <div class="owner-row">
+          <input type="password" id="token-input" autocomplete="off" placeholder="Paste token" aria-label="GitHub token">
+          <button type="button" class="entry-toggle" id="token-save">Save token</button>
+          <button type="button" class="entry-toggle" id="token-cancel">Cancel</button>
+        </div>
+        <div class="owner-msg" id="owner-msg" role="status"></div>
+      </section>
 
       <div id="schedule-master"></div>
       <p class="load-error" id="load-error" hidden>The schedule data could not be loaded.</p>
@@ -42,7 +60,8 @@
       </footer>
     </main>
   </div>
-  <script src="js/common.js?v=20261011b"></script>
-  <script src="js/schedule.js?v=20261011b"></script>
+  <script src="js/common.js?v=20261011c"></script>
+  <script src="js/store.js?v=20261011c"></script>
+  <script src="js/schedule.js?v=20261011c"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
-// Ratings page: renders data/current_ratings.json joined with data/teams.json.
+// Ratings page: current ratings are computed in the browser from the preseason ratings plus data/results.json.
 (function () {
   'use strict';
+
+  var C = window.CBK;
 
   // Display order of the conference filter tabs.
   var CONFERENCES = [
@@ -14,18 +16,6 @@
 
   var teams = [];
   var selected = 'All Conferences';
-
-  function getJSON(path) {
-    return fetch(path).then(function (res) {
-      if (!res.ok) throw new Error(path + ': HTTP ' + res.status);
-      return res.json();
-    });
-  }
-
-  // 103 -> "103", 102.5 -> "102.5"
-  function fmt(n) {
-    return String(n);
-  }
 
   function formatDate(iso) {
     var p = iso.split('-');
@@ -79,8 +69,10 @@
       name.appendChild(conf);
       tr.appendChild(name);
 
-      tr.appendChild(cell('num rating', fmt(t.display)));
-      tr.appendChild(cell('num', fmt(t.home_court)));
+      var rating = cell('num rating', C.fmtRating(t.display));
+      rating.title = 'Exact rating ' + t.exact.toFixed(2);
+      tr.appendChild(rating);
+      tr.appendChild(cell('num', C.fmtRating(t.home_court)));
       tbody.appendChild(tr);
     });
   }
@@ -95,17 +87,12 @@
     el.textContent = '· games through ' + formatDate(last);
   }
 
-  Promise.all([
-    getJSON('data/current_ratings.json'),
-    getJSON('data/teams.json'),
-    getJSON('data/results.json')
-  ]).then(function (data) {
-    var hc = {};
-    data[1].forEach(function (t) { hc[t.key] = t.home_court; });
-    teams = data[0].map(function (r) {
-      return { team: r.team, conference: r.conference, display: r.display, home_court: hc[r.key] };
-    });
-    renderStatus(data[2]);
+  C.load().then(function (model) {
+    teams = model.teams.map(function (t) {
+      var exact = model.current[t.key];
+      return { team: t.team, conference: t.conference, home_court: t.home_court, exact: exact, display: C.roundHalf(exact) };
+    }).sort(function (a, b) { return b.exact - a.exact; });
+    renderStatus(model.results);
     renderTabs();
     renderRows();
   }).catch(function (err) {

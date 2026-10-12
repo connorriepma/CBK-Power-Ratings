@@ -127,11 +127,15 @@ def load_json(name: str):
         return json.load(f)
 
 
-def build_current_ratings() -> list[dict]:
-    """Load the data files, replay all results and return one row per team."""
+def build_current_ratings(results: list[dict] | None = None) -> list[dict]:
+    """Load the data files, replay results and return one row per team.
+
+    Uses data/results.json unless `results` is given.
+    """
     teams = load_json("teams.json")
     cfg = Config.from_dict(load_json("rating_config.json"))
-    results = load_json("results.json")
+    if results is None:
+        results = load_json("results.json")
 
     start = {t["key"]: t["preseason_rating"] for t in teams}
     home_court = {t["key"]: t["home_court"] for t in teams}
