@@ -76,6 +76,21 @@ class Replay(unittest.TestCase):
         # predicted margin 11.49, miss -1.49, change 0.08 * -1.49
         self.assertAlmostEqual(ratings["utah-st"], 90.79 + 0.08 * (10 - 11.49), places=6)
 
+    def test_modified_hca_home_and_away_slot(self):
+        # boosted team in the home slot: margin gets +pts; in the away slot: margin gets -pts
+        g = game("2026-11-02", "utah-st", "denver", 86, 76, neutral=True)
+        mods = {cbk.game_id("2026-11-02", "utah-st", "denver"): ("utah-st", 2.0)}
+        self.assertEqual(cbk.home_bonus(mods, g), 2.0)
+        self.assertEqual(cbk.home_bonus({cbk.game_id("2026-11-02", "utah-st", "denver"): ("denver", 2.0)}, g), -2.0)
+        self.assertEqual(cbk.home_bonus(mods, game("2026-11-03", "utah-st", "denver", 1, 0)), 0.0)
+        ratings, _ = cbk.replay(self.start, self.hca, [g], CFG, mods)
+        self.assertAlmostEqual(ratings["utah-st"], 90.79 + 0.08 * (10 - 13.49), places=6)
+
+    def test_build_game_mods(self):
+        teams = [{"key": "a-team", "team": "A Team", "home_court": 4}, {"key": "b", "team": "B", "home_court": 3}]
+        sched = [{"date": "2026-12-01", "home": "B", "away": "A Team", "hcaMod": {"team": "A Team", "pct": 0.75}}]
+        self.assertEqual(cbk.build_game_mods(sched, teams), {"2026-12-01_a-team_b": ("a-team", 3.0)})
+
     def test_non_d1_opponent_is_skipped(self):
         results = [game("2026-11-02", "utah-st", "some-non-d1-school", 100, 40)]
         ratings, played = cbk.replay(self.start, self.hca, results, CFG)

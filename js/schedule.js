@@ -54,6 +54,7 @@
   function matchupHTML(g) {
     var site = g.neutral && g.site ? ' <span class="g-site">' + esc(g.site) + '</span>' : '';
     var m = g.neutral ? esc(g.away) + ' vs ' + esc(g.home) + '*' + site : esc(g.away) + ' @ ' + esc(g.home);
+    if (g.hcaMod) m += '&Dagger;';
     return g.dateTbd ? m + ' <span class="g-site">Date TBA</span>' : m;
   }
 
@@ -71,20 +72,32 @@
       '<span class="sc-ok" aria-live="polite"></span></div></div>';
   }
 
+  // Footnote for games that carry a modified home court (hcaMod in schedule.json).
+  function hcaNote(dayGames) {
+    var seen = {}, out = [];
+    dayGames.forEach(function (g) {
+      var m = model.hcaMod(g);
+      if (!m) return;
+      var t = m.team + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)';
+      if (!seen[t]) { seen[t] = 1; out.push(t); }
+    });
+    return out.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + out.map(esc).join('; ') + '</div>' : '';
+  }
+
   function dayHTML(date, dayGames) {
     var n = dayGames.length;
     if (entryMode) {
       return '<div class="day-group">' +
         '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + n + ' game' + (n === 1 ? '' : 's') + '</div>' +
         '<div class="schedule-list">' + dayGames.map(entryRowHTML).join('') + '</div>' +
-        '<div class="g-footnote">* designates neutral site &middot; scores are entered away first, then home</div></div>';
+        '<div class="g-footnote">* designates neutral site &middot; scores are entered away first, then home</div>' + hcaNote(dayGames) + '</div>';
     }
     return '<div class="day-group">' +
       '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + n + ' game' + (n === 1 ? '' : 's') + '</div>' +
       '<div class="schedule-list">' +
       '<div class="g-head day"><div></div><div>Matchup</div><div>Spread / Final</div><div class="r">Win % (away / home)</div></div>' +
       dayGames.map(gameRowHTML).join('') + '</div>' +
-      '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' +
+      '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' + hcaNote(dayGames) +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
       '</div>';

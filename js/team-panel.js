@@ -126,13 +126,19 @@ window.CBKPanel = (function () {
       return '<div class="g-row has-wp">' +
         '<div class="g-tag ' + (g.conf ? '' : 'nc') + '">' + esc(model.confTag(g)) + '</div>' +
         '<div class="g-date">' + fmtDate(g.date) + (g.dateTbd ? '&dagger;' : '') + '</div>' +
-        '<div class="g-opp"><span class="side">' + side + '</span>' + esc(opp) + (g.neutral ? '*' : '') + site + '</div>' +
+        '<div class="g-opp"><span class="side">' + side + '</span>' + esc(opp) + (g.neutral ? '*' : '') + (g.hcaMod ? '&Dagger;' : '') + site + '</div>' +
         lineCell(model, g, team) + winCell(model, g, team) + '</div>';
     }).join('');
 
     var hasNeutral = games.some(function (g) { return g.neutral || g.isTbd; });
     var hasDateTbd = games.some(function (g) { return g.dateTbd; });
+    var hcaTxt = [];
+    games.forEach(function (g) {
+      var m = g.isTbd ? null : model.hcaMod(g);
+      if (m) hcaTxt.push(esc(m.team) + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)');
+    });
     var foot = (hasNeutral ? '<div class="g-footnote">* designates neutral site</div>' : '') +
+      (hcaTxt.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + hcaTxt.filter(function (t, i) { return hcaTxt.indexOf(t) === i; }).join('; ') + '</div>' : '') +
       (hasDateTbd ? '<div class="g-footnote">&dagger; Exact date not yet announced (the league has released a window of days)</div>' : '') +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +

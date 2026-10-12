@@ -76,11 +76,50 @@ def win_probability(margin: float, sigma: float = SIGMA) -> float:
     return 0.5 * (1 + math.erf(margin / sigma / math.sqrt(2)))
 
 
+def game_id(date: str, a: str, b: str) -> str:
+    """Order-independent id for a game: date plus the two team keys, sorted."""
+    x, y = sorted((a, b))
+    return f"{date}_{x}_{y}"
+
+
+def home_bonus(game_mods: dict | None, g: dict) -> float:
+    """Extra points for the home side of game `g` from a modified home court, else 0.
+
+    game_mods maps game_id -> (team key, points). Positive when the boosted team
+    is the home team of the row, negative when it is the away team.
+    """
+    if not game_mods:
+        return 0.0
+    mod = game_mods.get(game_id(g["date"], g["home"], g["away"]))
+    if not mod:
+        return 0.0
+    team, pts = mod
+    return pts if team == g["home"] else -pts if team == g["away"] else 0.0
+
+
+def build_game_mods(schedule: list[dict], teams: list[dict]) -> dict:
+    """Modified home-court games from schedule.json (the optional hcaMod field).
+
+    hcaMod = {"team": name, "pct": share of that team's home-court rating}. The extra
+    points are pct x the team's home_court, and apply to that team only.
+    """
+    key = {t["team"]: t["key"] for t in teams}
+    hc = {t["key"]: t["home_court"] for t in teams}
+    mods = {}
+    for g in schedule:
+        m = g.get("hcaMod")
+        if m:
+            k = key[m["team"]]
+            mods[game_id(g["date"], key[g["home"]], key[g["away"]])] = (k, m["pct"] * hc[k])
+    return mods
+
+
 def replay(
     start: dict[str, float],
     home_court: dict[str, float],
     results: list[dict],
     cfg: Config,
+    game_mods: dict | None = None,
 ) -> tuple[dict[str, float], dict[str, int]]:
     """Replay results onto preseason ratings.
 
@@ -90,6 +129,7 @@ def replay(
         results: dicts with date, home, away, neutral, homeScore, awayScore.
             home and away are team keys.
         cfg: rating-update settings.
+        game_mods: optional modified home courts from build_game_mods.
 
     Returns:
         (current ratings, rated games played) keyed by team key. Games where
@@ -107,7 +147,7 @@ def replay(
 
         margin = predicted_margin(
             ratings[home], ratings[away], home_court[home], bool(g.get("neutral"))
-        )
+        ) + home_bonus(game_mods, g)
         cap = cfg.miss_cap_mismatch if abs(margin) >= cfg.mismatch_spread else cfg.miss_cap_normal
         actual = g["homeScore"] - g["awayScore"]
         miss = max(-cap, min(cap, actual - margin))
@@ -139,7 +179,8 @@ def build_current_ratings(results: list[dict] | None = None) -> list[dict]:
 
     start = {t["key"]: t["preseason_rating"] for t in teams}
     home_court = {t["key"]: t["home_court"] for t in teams}
-    current, played = replay(start, home_court, results, cfg)
+    game_mods = build_game_mods(load_json("schedule.json"), teams)
+    current, played = replay(start, home_court, results, cfg, game_mods)
 
     rows = []
     for t in teams:

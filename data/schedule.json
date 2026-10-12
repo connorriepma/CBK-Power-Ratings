@@ -684,7 +684,11 @@
   "away": "Michigan",
   "neutral": true,
   "conf": false,
-  "site": "Detroit"
+  "site": "Detroit",
+  "hcaMod": {
+   "team": "Michigan",
+   "pct": 0.5
+  }
  },
  {
   "date": "2026-12-12",
@@ -1640,7 +1644,11 @@
   "away": "Cincinnati",
   "neutral": true,
   "conf": false,
-  "site": "Cincinnati, Ohio"
+  "site": "Cincinnati, Ohio",
+  "hcaMod": {
+   "team": "Cincinnati",
+   "pct": 0.75
+  }
  },
  {
   "date": "2026-12-22",
@@ -2076,7 +2084,11 @@
   "away": "Indiana",
   "neutral": true,
   "conf": false,
-  "site": "Indianapolis"
+  "site": "Indianapolis",
+  "hcaMod": {
+   "team": "Indiana",
+   "pct": 0.5
+  }
  },
  {
   "date": "2026-11-18",
@@ -3082,7 +3094,11 @@
   "away": "UConn",
   "neutral": true,
   "conf": false,
-  "site": "Chicago"
+  "site": "Chicago",
+  "hcaMod": {
+   "team": "Illinois",
+   "pct": 0.25
+  }
  },
  {
   "date": "2026-12-08",
@@ -3104,7 +3120,11 @@
   "away": "Missouri",
   "neutral": true,
   "conf": false,
-  "site": "St. Louis"
+  "site": "St. Louis",
+  "hcaMod": {
+   "team": "Illinois",
+   "pct": 0.25
+  }
  },
  {
   "date": "2026-12-29",
@@ -3641,7 +3661,11 @@
   "away": "BYU",
   "neutral": true,
   "conf": false,
-  "site": "Salt Lake City"
+  "site": "Salt Lake City",
+  "hcaMod": {
+   "team": "BYU",
+   "pct": 0.5
+  }
  },
  {
   "date": "2026-11-06",
@@ -4054,7 +4078,11 @@
   "away": "Kentucky",
   "neutral": true,
   "conf": false,
-  "site": "Indianapolis"
+  "site": "Indianapolis",
+  "hcaMod": {
+   "team": "Indiana",
+   "pct": 0.5
+  }
  },
  {
   "date": "2026-11-24",
@@ -5259,7 +5287,11 @@
   "away": "BYU",
   "neutral": true,
   "conf": false,
-  "site": "Salt Lake City"
+  "site": "Salt Lake City",
+  "hcaMod": {
+   "team": "BYU",
+   "pct": 0.5
+  }
  },
  {
   "date": "2026-12-16",
@@ -5696,7 +5728,11 @@
   "away": "Arkansas",
   "neutral": true,
   "conf": false,
-  "site": "Phoenix"
+  "site": "Phoenix",
+  "hcaMod": {
+   "team": "Arizona",
+   "pct": 0.25
+  }
  },
  {
   "date": "2026-12-21",
@@ -5894,7 +5930,11 @@
   "away": "LSU",
   "neutral": true,
   "conf": false,
-  "site": "Houston"
+  "site": "Houston",
+  "hcaMod": {
+   "team": "Houston",
+   "pct": 0.75
+  }
  },
  {
   "date": "2026-12-29",

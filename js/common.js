@@ -80,7 +80,28 @@ window.CBK = (function () {
   // Replay results onto preseason ratings. start: key -> rating, hca: key -> home court.
   // Rows are { date, home, away, neutral, homeScore, awayScore } with team keys.
   // Games with a team that is not in `start` (non-Division I opponents) are skipped.
-  function replay(start, hca, rows, cfg, log) {
+  // mods (optional): game id -> { key, pts } from buildMods. A modified home court adds pts to the
+  // boosted team's side of that one game: +pts if it is the home row, -pts if it is the away row.
+  function homeBonus(mods, g) {
+    if (!mods) return 0;
+    var m = mods[gameId(g.date, g.home, g.away)];
+    if (!m) return 0;
+    return m.key === g.home ? m.pts : m.key === g.away ? -m.pts : 0;
+  }
+
+  // Modified-HCA games from schedule.json (optional hcaMod: { team, pct }). pts = pct x that team's home court.
+  function buildMods(schedule, byName) {
+    var mods = {};
+    schedule.forEach(function (g) {
+      if (!g.hcaMod) return;
+      var t = byName[g.hcaMod.team];
+      if (!t) return;
+      mods[gameId(g.date, g.home, g.away)] = { key: t.key, pts: g.hcaMod.pct * t.home_court };
+    });
+    return mods;
+  }
+
+  function replay(start, hca, rows, cfg, log, mods) {
     var r = Object.assign({}, start), played = {};
     Object.keys(start).forEach(function (k) { played[k] = 0; });
     var ordered = rows.slice().sort(function (a, b) {
@@ -95,7 +116,7 @@ window.CBK = (function () {
         return;
       }
       var hb = r[g.home], ab = r[g.away];
-      var pred = r[g.home] + (g.neutral ? 0 : hca[g.home]) - r[g.away];
+      var pred = r[g.home] + (g.neutral ? 0 : hca[g.home]) - r[g.away] + homeBonus(mods, g);
       var cap = Math.abs(pred) >= cfg.mismatchSpread ? cfg.missCap.mismatch : cfg.missCap.normal;
       var miss = Math.max(-cap, Math.min(cap, (g.homeScore - g.awayScore) - pred));
       var kh = kFor(played[g.home], cfg), ka = kFor(played[g.away], cfg);
@@ -149,12 +170,13 @@ window.CBK = (function () {
       start[t.key] = t.preseason_rating; hca[t.key] = t.home_court;
     });
 
+    var mods = buildMods(schedule, byName);
     var games = schedule.map(function (g) {
       return Object.assign({}, g, { id: gameId(g.date, g.home, g.away) });
     });
 
     var model = {
-      teams: teamList, byName: byName, byKey: byKey, start: start,
+      mods: mods, teams: teamList, byName: byName, byKey: byKey, start: start,
       games: games, tbd: tbdGames, results: [], current: {}, played: {}, log: [], records: { rec: {}, ats: {}, any: false }
     };
 
@@ -174,7 +196,7 @@ window.CBK = (function () {
         if (typeof r.line === 'number') g.lineAtEntry = r.line; else delete g.lineAtEntry;
       });
       var log = [];
-      var out = replay(start, hca, rows, cfg, log);
+      var out = replay(start, hca, rows, cfg, log, mods);
       model.current = out.current;
       model.played = out.played;
       model.log = log;
@@ -187,7 +209,15 @@ window.CBK = (function () {
       var hk = teamKey(g.home), ak = teamKey(g.away);
       var h = model.current[hk], a = model.current[ak], t = byKey[hk];
       if (typeof h !== 'number' || typeof a !== 'number' || !t) return null;
-      return h + (g.neutral ? 0 : t.home_court) - a;
+      return h + (g.neutral ? 0 : t.home_court) - a + homeBonus(mods, { date: g.date, home: hk, away: ak });
+    };
+
+    // Modified home court on this game, or null: { team, pct, pts }.
+    model.hcaMod = function (g) {
+      var m = g.hcaMod;
+      if (!m) return null;
+      var t = byName[m.team];
+      return t ? { team: m.team, pct: m.pct, pts: m.pct * t.home_court } : null;
     };
 
     // Displayed home margin: exact margin rounded once to 0.5, ties away from zero.
@@ -241,6 +271,6 @@ window.CBK = (function () {
   return {
     SIGMA: SIGMA, NON_D1: NON_D1, normCdf: normCdf, teamKey: teamKey, esc: esc, getJSON: getJSON,
     fmtRating: fmtRating, fmtPct: fmtPct, roundHalf: roundHalf, parseDate: parseDate,
-    gameId: gameId, replay: replay, parseConfig: parseConfig, load: load
+    gameId: gameId, homeBonus: homeBonus, buildMods: buildMods, replay: replay, parseConfig: parseConfig, load: load
   };
 })();
