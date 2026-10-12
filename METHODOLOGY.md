@@ -22,7 +22,7 @@ The conference mean is the average seed of that conference's teams, with a few e
 
 - **Air Force** is excluded (no portal or NIL) and is not regressed.
 - **Saint Francis (PA)** is excluded because it dropped to D-III.
-- **West Florida** is excluded because it has no prior D-I data, so its rating is fixed by hand.
+- **West Florida** is excluded because it has no prior D-I data, so its rating is fixed by hand at -13.
 
 This layer uses only last season's rating and the conference average. It does not use returning players or recruiting. The 0.6/0.4 weights are chosen, not fitted to data, so this is shrinkage rather than a regression.
 
