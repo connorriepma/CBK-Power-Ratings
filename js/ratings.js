@@ -72,13 +72,14 @@
       tr.innerHTML = '<td class="rk">' + (i + 1) + '</td>' +
         '<td>' + C.esc(t.team) + '<span class="conf">' + C.esc(t.conference) + '</span></td>' +
         '<td class="num rating" title="Exact rating ' + t.exact.toFixed(2) + '">' + C.fmtRating(t.display) + '</td>' +
+        '<td class="num pre" title="Exact preseason rating ' + t.pre.toFixed(2) + '">' + C.fmtRating(t.preDisplay) + '</td>' +
         '<td class="num">' + C.fmtRating(t.home_court) + '</td>' + Panel.recordCells(model, t.team);
 
       var panelRow = document.createElement('tr');
       panelRow.className = 'schedule-row';
       panelRow.hidden = true;
       var td = document.createElement('td');
-      td.colSpan = 8;
+      td.colSpan = 9;
       panelRow.appendChild(td);
 
       function toggle() {
@@ -112,7 +113,8 @@
     model = m;
     teams = model.teams.map(function (t) {
       var exact = model.current[t.key];
-      return { team: t.team, conference: t.conference, home_court: t.home_court, exact: exact, display: C.roundHalf(exact) };
+      return { team: t.team, conference: t.conference, home_court: t.home_court, exact: exact, display: C.roundHalf(exact),
+        pre: t.preseason_rating, preDisplay: C.roundHalf(t.preseason_rating) };
     }).sort(function (a, b) { return b.exact - a.exact; });
     renderStatus(model.results);
     renderTabs();
