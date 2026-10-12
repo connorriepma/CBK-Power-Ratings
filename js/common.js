@@ -239,7 +239,7 @@ window.CBK = (function () {
   }
 
   return {
-    SIGMA: SIGMA, NON_D1: NON_D1, teamKey: teamKey, esc: esc, getJSON: getJSON,
+    SIGMA: SIGMA, NON_D1: NON_D1, normCdf: normCdf, teamKey: teamKey, esc: esc, getJSON: getJSON,
     fmtRating: fmtRating, fmtPct: fmtPct, roundHalf: roundHalf, parseDate: parseDate,
     gameId: gameId, replay: replay, parseConfig: parseConfig, load: load
   };

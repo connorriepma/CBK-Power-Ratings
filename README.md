@@ -58,7 +58,7 @@ The site owner enters scores on the Schedule page. Each save is a commit to this
 
 ## Status
 
-Preseason ratings are set. Score entry is built and ratings update from results as soon as games are played. The site also has conference rankings, injuries, eligibility, hypothetical matchups and a next-games panel. Season simulations (projected wins, conference title and championship odds) are not built yet.
+Preseason ratings are set. Score entry is built and ratings update from results as soon as games are played. The site also has conference rankings, injuries, eligibility, hypothetical matchups, a next-games panel and season simulations (projected wins, conference title odds and championship odds). The simulations run 10,000 seasons in the browser with fixed seeds, using the same win chances as the Schedule page; the assumptions are written out on each page.
 
 ## Author
 
