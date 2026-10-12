@@ -142,6 +142,26 @@
  {
   "history": [
    {
+    "date": "2026-04-28",
+    "returnDate": null,
+    "status": "Out for season"
+   }
+  ],
+  "note": "Redshirting 2026-27 while recovering from ACL surgery. #51 overall recruit in the 2026 class.",
+  "player": "Lincoln Cosby",
+  "pos": "PF",
+  "reported": "2026-04-28",
+  "returnDate": null,
+  "role": "Rotation",
+  "source": "https://x.com/BriceMarich/status/2049130676931138025",
+  "status": "Out for season",
+  "team": "michigan",
+  "updated": "2026-10-12",
+  "id": "michigan-lincoln-cosby"
+ },
+ {
+  "history": [
+   {
     "date": "2026-10-09",
     "returnDate": null,
     "status": "Out"
