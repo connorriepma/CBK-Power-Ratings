@@ -560,3 +560,54 @@ tr.schedule-row .schedule-list { background: transparent; border: none; border-r
 .sim-warn-sm { padding: 1px 5px; font-size: 11px; cursor: help; }
 .sim-explain { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 12px 14px; font-size: 13px; line-height: 1.5; margin-bottom: 18px; }
 .sim-explain.compact { font-size: 12.5px; color: var(--muted); padding: 9px 12px; }
+
+/* ---- Refinement: plainer, one typeface, ruled tables, almost no decoration ---- */
+:root {
+  --wood: #E8DCBF;
+  --panel: transparent;
+  --wood-line: #BBA877;
+  --cond: 'Inter', system-ui, sans-serif;
+}
+body { background-image: none; font-size: 15px; -webkit-font-smoothing: antialiased; }
+* { border-radius: 0 !important; }
+
+.brand { font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: .08em; line-height: 1.25; border-bottom: 1px solid var(--ink); padding-bottom: 12px; margin-bottom: 22px; }
+.nav-label { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 6px; }
+.nav-item { font-size: 13.5px; padding: 5px 0 5px 10px; border-left: 2px solid transparent; }
+.nav-item:hover { background: none; border-left-color: var(--wood-line); }
+.nav-item.active { background: none; color: var(--ink); font-weight: 700; border-left-color: var(--ink); }
+
+h1 { font-family: var(--sans); font-weight: 700; font-size: 26px; letter-spacing: -.01em; line-height: 1.1; text-transform: none; }
+.page-head { border-bottom: 1px solid var(--ink); padding-bottom: 10px; margin-bottom: 18px; align-items: baseline; }
+.season { font-size: 13px; padding-bottom: 0; }
+
+.conf-tabs { gap: 2px 16px; border-bottom: 1px solid var(--wood-line); padding-bottom: 10px; margin-bottom: 22px; }
+.conf-tab { background: none; border: 0; border-bottom: 2px solid transparent; padding: 4px 0; font-family: var(--sans); font-size: 13px; letter-spacing: 0; color: var(--muted); }
+.conf-tab:hover { background: none; color: var(--ink); }
+.conf-tab[aria-pressed="true"] { background: none; color: var(--ink); font-weight: 700; border-bottom-color: var(--ink); }
+.conf-strip { background: none; color: var(--ink); font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: 0; padding: 0; margin-bottom: 10px; display: block; }
+
+thead th { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 8px 10px; border-bottom: 1px solid var(--ink); }
+tbody { background: none; }
+td { padding: 9px 10px; font-size: 14.5px; border-bottom: 1px solid var(--wood-line); font-variant-numeric: tabular-nums; }
+tbody tr:first-child td { border-top: 0; }
+tbody tr:hover td { background: rgba(42, 33, 23, .04); }
+td.rk { font-family: var(--sans); font-size: 13px; color: var(--muted); width: 38px; }
+td.rating { color: var(--ink); font-weight: 700; }
+.conf { font-size: 11px; letter-spacing: .02em; }
+
+.day-header { font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; padding-left: 0; }
+.schedule-list { background: none; border: 0; border-top: 1px solid var(--ink); padding: 0; }
+.g-head { padding: 7px 4px; border-bottom: 1px solid var(--wood-line); }
+.g-row { padding: 9px 4px; border-bottom: 1px solid var(--wood-line); font-size: 14.5px; }
+.g-tag { background: none !important; color: var(--muted) !important; font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .06em; text-align: left; padding: 0; }
+.g-line.fav { color: var(--ink); }
+.g-line.dog { color: var(--paint-2); }
+.g-prob .g-fav { color: var(--ink); }
+
+.day-nav, #day-select, #conf-filter, .entry-toggle { background: none; border: 1px solid var(--ink); }
+.entry-toggle.on { background: var(--ink); color: var(--wood); border-color: var(--ink); }
+.owner-panel, .ed-form, .page-note, .inj-note, .el-note, .mu-res, .inj-empty, .el-empty, .sim-explain { background: rgba(255, 255, 255, .28); border-color: var(--wood-line); }
+.rail .rail-p { background: rgba(255, 255, 255, .28); }
+.rail .rail-h { font-family: var(--sans); font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .06em; font-size: 12px; }
+footer { border-top: 1px solid var(--wood-line); padding-top: 10px; }
