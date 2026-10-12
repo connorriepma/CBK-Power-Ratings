@@ -47,11 +47,11 @@
     games.forEach(function (x) { by[x.quad || 0].push(x); });
     var block = function (n, title) {
       var list = by[n];
-      if (!list.length) return '';
+      if (!list.length && !n) return '';
       var w = 0, l = 0;
       list.forEach(function (x) { if (x.result) { if (x.result.won) w++; else l++; } });
       return '<div style="padding:0 10px;border-left:1px solid var(--wood-line, rgba(128,128,128,.35));min-width:0"><div style="font-weight:700;margin-bottom:1px">' + title + (n ? ' &middot; ' + w + '-' + l : '') +
-        ' <span class="cr-sub" style="font-weight:400">' + list.length + ' game' + (list.length === 1 ? '' : 's') + '</span></div>' + list.map(gameRow).join('') + '</div>';
+        ' <span class="cr-sub" style="font-weight:400">' + list.length + ' game' + (list.length === 1 ? '' : 's') + '</span></div>' + (list.length ? list.map(gameRow).join('') : '<div class="cr-sub">No games</div>') + '</div>';
     };
     return '<div style="padding:2px 0 0;font-size:12px"><div class="cr-sub" style="margin-bottom:3px">' + esc(team) + ' &middot; ' + games.length + ' games, each in the quad it is for ' + esc(team) +
       ' (&mdash; = not played yet)</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:6px 0">' +
