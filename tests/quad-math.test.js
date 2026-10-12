@@ -68,3 +68,26 @@ test('buildQuads: unplayed games and non-Division I opponents are not counted', 
   ], ranks);
   [1, 2, 3, 4].forEach(n => { assert.deepEqual(q.A[n], { w: 0, l: 0 }); assert.deepEqual(q.B[n], { w: 0, l: 0 }); });
 });
+
+test('teamGames: every game for the team, with the opponent quad from its own side', () => {
+  const ranks = { Duke: 1, Army: 300, Kentucky: 12 };
+  const games = [
+    { date: '2026-12-01', home: 'Kentucky', away: 'Duke', neutral: false },                                   // upcoming, Duke away at rank 12: Q1
+    { date: '2026-11-02', home: 'Duke', away: 'Army', neutral: false, result: { home: 90, away: 55 } },       // played, Duke home vs rank 300: Q4
+    { date: '2026-11-10', home: 'Army', away: 'Kentucky', neutral: false },                                    // not Duke's game
+    { date: '2026-11-20', home: 'Duke', away: 'Non D1 Opponent', neutral: false, result: { home: 99, away: 40 } }
+  ];
+  const g = M.teamGames(games, ranks, 'Duke');
+  assert.equal(g.length, 3);
+  assert.deepEqual(g.map(x => x.opp), ['Army', 'Non D1 Opponent', 'Kentucky']);   // date order
+  assert.equal(g[0].quad, 4); assert.equal(g[0].site, 'home');
+  assert.deepEqual(g[0].result, { us: 90, them: 55, won: true });
+  assert.equal(g[1].quad, null); assert.equal(g[1].rank, null);                  // non-D1: no quad
+  assert.equal(g[2].quad, 1); assert.equal(g[2].site, 'away'); assert.equal(g[2].result, null);
+});
+
+test('teamGames: a loss is recorded from the team side', () => {
+  const g = M.teamGames([{ date: '2026-11-02', home: 'A', away: 'B', neutral: true, result: { home: 60, away: 70 } }], { A: 1, B: 2 }, 'A');
+  assert.deepEqual(g[0].result, { us: 60, them: 70, won: false });
+  assert.equal(g[0].site, 'neutral');
+});

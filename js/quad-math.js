@@ -40,6 +40,26 @@
     return out;
   }
 
+  // Every game for one team (played and upcoming), in date order, each with the opponent's rank and the quad it falls in for this team.
+  // Non-Division I opponents have rank and quad null. result is { us, them, won } once played, otherwise null.
+  function teamGames(games, ranks, team) {
+    var out = [];
+    games.forEach(function (g) {
+      if (g.home !== team && g.away !== team) return;
+      var home = g.home === team, opp = home ? g.away : g.home;
+      var site = g.neutral ? 'neutral' : home ? 'home' : 'away';
+      var rank = opp in ranks ? ranks[opp] : null;
+      var res = null;
+      if (g.result) {
+        var us = home ? g.result.home : g.result.away, them = home ? g.result.away : g.result.home;
+        res = { us: us, them: them, won: us > them };
+      }
+      out.push({ date: g.date, opp: opp, site: site, rank: rank, quad: rank === null ? null : quadFor(rank, site), result: res, dateTbd: !!g.dateTbd });
+    });
+    out.sort(function (x, y) { return x.date < y.date ? -1 : x.date > y.date ? 1 : x.opp.localeCompare(y.opp); });
+    return out;
+  }
+
   // Rank every team by rating, best first. Ties break by name so the ranking is stable.
   // ratings: team name -> rating. Returns team name -> rank (1-based).
   function rankTeams(ratings) {
@@ -50,5 +70,5 @@
     return ranks;
   }
 
-  return { CUTS: CUTS, quadFor: quadFor, buildQuads: buildQuads, rankTeams: rankTeams };
+  return { CUTS: CUTS, quadFor: quadFor, buildQuads: buildQuads, teamGames: teamGames, rankTeams: rankTeams };
 });

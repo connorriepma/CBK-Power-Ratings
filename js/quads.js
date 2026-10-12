@@ -6,6 +6,9 @@
   var esc = C.esc;
   var sortKey = 'rank'; // 'rank' | 'q1' | 'q2' | 'q3' | 'q4'
   var filter = '';
+  var open = {}; // team name -> true while its game list is expanded
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var SITE = { home: 'vs', away: '@', neutral: 'N' };
 
   function rows(model) {
     var ratings = {};
@@ -29,8 +32,36 @@
 
   function cell(r) { return '<td class="num' + (r.w + r.l === 0 ? ' cr-sub' : '') + '">' + r.w + '-' + r.l + '</td>'; }
 
+  function gameRow(x) {
+    var d = x.dateTbd ? 'TBA' : MONTHS[Number(x.date.split('-')[1]) - 1] + ' ' + Number(x.date.split('-')[2]);
+    var res = x.result
+      ? '<span style="color:var(--' + (x.result.won ? 'paint' : 'paint-2') + ');font-weight:600">' + (x.result.won ? 'W' : 'L') + ' ' + x.result.us + '-' + x.result.them + '</span>'
+      : '<span class="cr-sub">upcoming</span>';
+    return '<div style="display:grid;grid-template-columns:64px 26px 1fr 96px;gap:8px;padding:3px 0"><span class="cr-sub">' + d + '</span><span class="cr-sub">' + SITE[x.site] +
+      '</span><span>' + esc(x.opp) + (x.rank ? ' <span class="cr-sub">(#' + x.rank + ')</span>' : '') + '</span><span style="text-align:right">' + res + '</span></div>';
+  }
+
+  function detailHTML(model, team, ranks) {
+    var games = Q.teamGames(model.games, ranks, team);
+    var by = { 1: [], 2: [], 3: [], 4: [], 0: [] };
+    games.forEach(function (x) { by[x.quad || 0].push(x); });
+    var block = function (n, title) {
+      var list = by[n];
+      if (!list.length) return '';
+      var w = 0, l = 0;
+      list.forEach(function (x) { if (x.result) { if (x.result.won) w++; else l++; } });
+      return '<div style="margin:6px 0 10px"><div style="font-weight:700;margin-bottom:2px">' + title + (n ? ' &middot; ' + w + '-' + l : '') +
+        ' <span class="cr-sub" style="font-weight:400">' + list.length + ' game' + (list.length === 1 ? '' : 's') + '</span></div>' + list.map(gameRow).join('') + '</div>';
+    };
+    return '<div style="padding:6px 6px 2px"><div class="cr-sub" style="margin-bottom:4px">' + esc(team) + ' &middot; ' + games.length + ' games, each in the quad it is for ' + esc(team) +
+      ' (opponent rank on my current ratings, and the site)</div>' +
+      block(1, 'Quad 1') + block(2, 'Quad 2') + block(3, 'Quad 3') + block(4, 'Quad 4') + block(0, 'Not counted (non-Division I)') + '</div>';
+  }
+
   function render(model) {
     var all = rows(model);
+    var rankOf = {};
+    all.forEach(function (r) { rankOf[r.team] = r.rank; });
     var list = all.filter(function (r) { return !filter || r.conf === filter; }).sort(cmp);
     document.getElementById('q-count').textContent = list.length + ' teams';
     var arrow = function (k) { return sortKey === k ? ' &#9662;' : ''; };
@@ -39,8 +70,10 @@
       '<thead><tr>' + th('rank', '#', 'rk') + '<th>Team</th><th>Conference</th><th class="num">Rating</th>' +
       th('q1', 'Q1', 'num') + th('q2', 'Q2', 'num') + th('q3', 'Q3', 'num') + th('q4', 'Q4', 'num') + '</tr></thead><tbody>' +
       list.map(function (r) {
-        return '<tr><td class="rk cr-rk">' + r.rank + '</td><td>' + esc(r.team) + '</td><td class="cr-sub">' + esc(r.conf) +
-          '</td><td class="num">' + C.fmtRating(C.roundHalf(r.rating)) + '</td>' + cell(r.q[1]) + cell(r.q[2]) + cell(r.q[3]) + cell(r.q[4]) + '</tr>';
+        var isOpen = !!open[r.team];
+        return '<tr><td class="rk cr-rk">' + r.rank + '</td><td data-team="' + esc(r.team) + '" style="cursor:pointer" title="Show ' + esc(r.team) + '\'s games by quad"><span style="text-decoration:underline dotted">' + esc(r.team) + '</span> <span class="cr-sub">' + (isOpen ? '&#9652;' : '&#9662;') + '</span></td><td class="cr-sub">' + esc(r.conf) +
+          '</td><td class="num">' + C.fmtRating(C.roundHalf(r.rating)) + '</td>' + cell(r.q[1]) + cell(r.q[2]) + cell(r.q[3]) + cell(r.q[4]) + '</tr>' +
+          (isOpen ? '<tr><td></td><td colspan="7">' + detailHTML(model, r.team, rankOf) + '</td></tr>' : '');
       }).join('') + '</tbody>';
   }
 
@@ -52,6 +85,8 @@
     sel.innerHTML = '<option value="">All Conferences</option>' + confs.map(function (c) { return '<option value="' + esc(c) + '">' + esc(c) + '</option>'; }).join('');
     sel.addEventListener('change', function () { filter = sel.value; render(model); });
     document.getElementById('q-table').addEventListener('click', function (ev) {
+      var tm = ev.target.closest('[data-team]');
+      if (tm) { var n = tm.getAttribute('data-team'); if (open[n]) delete open[n]; else open[n] = true; render(model); return; }
       var h = ev.target.closest('[data-sort]');
       if (!h) return;
       sortKey = h.getAttribute('data-sort');
