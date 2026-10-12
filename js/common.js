@@ -80,7 +80,7 @@ window.CBK = (function () {
   // Replay results onto preseason ratings. start: key -> rating, hca: key -> home court.
   // Rows are { date, home, away, neutral, homeScore, awayScore } with team keys.
   // Games with a team that is not in `start` (non-Division I opponents) are skipped.
-  function replay(start, hca, rows, cfg) {
+  function replay(start, hca, rows, cfg, log) {
     var r = Object.assign({}, start), played = {};
     Object.keys(start).forEach(function (k) { played[k] = 0; });
     var ordered = rows.slice().sort(function (a, b) {
@@ -89,7 +89,12 @@ window.CBK = (function () {
       return x < y ? -1 : x > y ? 1 : 0;
     });
     ordered.forEach(function (g) {
-      if (!(g.home in r) || !(g.away in r)) return;
+      if (!(g.home in r) || !(g.away in r)) {
+        if (log) log.push({ skip: true, date: g.date, home: g.home, away: g.away, neutral: !!g.neutral,
+          hs: g.homeScore, as: g.awayScore, hr: r[g.home], ar: r[g.away] });
+        return;
+      }
+      var hb = r[g.home], ab = r[g.away];
       var pred = r[g.home] + (g.neutral ? 0 : hca[g.home]) - r[g.away];
       var cap = Math.abs(pred) >= cfg.mismatchSpread ? cfg.missCap.mismatch : cfg.missCap.normal;
       var miss = Math.max(-cap, Math.min(cap, (g.homeScore - g.awayScore) - pred));
@@ -98,11 +103,45 @@ window.CBK = (function () {
       r[g.away] -= ka * miss;
       played[g.home]++;
       played[g.away]++;
+      if (log) log.push({ skip: false, date: g.date, home: g.home, away: g.away, neutral: !!g.neutral,
+        hs: g.homeScore, as: g.awayScore, pred: pred, miss: miss, kh: kh, ka: ka,
+        hb: hb, ha: r[g.home], ab: ab, aa: r[g.away] });
     });
     return { current: r, played: played };
   }
 
-  function build(teamList, cfgRaw, schedule, resultRows) {
+  // Records and record against the model's own spread, keyed by team name.
+  // The spread used is the one locked when the result was first saved (game.lineAtEntry, the home team's line:
+  // negative means the home team was favored). d = actual home margin + line: d > 0 home covered, d < 0 away covered.
+  function computeRecords(games) {
+    var rec = {}, ats = {}, any = false;
+    function getR(t) { return rec[t] || (rec[t] = { w: 0, l: 0, cw: 0, cl: 0, hw: 0, hl: 0, aw: 0, al: 0, nw: 0, nl: 0 }); }
+    function getA(t) {
+      return ats[t] || (ats[t] = { w: 0, l: 0, p: 0, cw: 0, cl: 0, cp: 0, hw: 0, hl: 0, hp: 0,
+        aw: 0, al: 0, ap: 0, nw: 0, nl: 0, np: 0, sum: 0, n: 0 });
+    }
+    function addA(T, r, conf, site, margin) { T[r]++; if (conf) T['c' + r]++; T[site + r]++; T.sum += margin; T.n++; }
+    games.forEach(function (g) {
+      if (!g.result) return;
+      any = true;
+      if (typeof g.lineAtEntry === 'number') {
+        var d = (g.result.home - g.result.away) + g.lineAtEntry;
+        var hr = Math.abs(d) < 1e-9 ? 'p' : d > 0 ? 'w' : 'l';
+        var ar = hr === 'w' ? 'l' : hr === 'l' ? 'w' : 'p';
+        addA(getA(g.home), hr, g.conf, g.neutral ? 'n' : 'h', d);
+        addA(getA(g.away), ar, g.conf, g.neutral ? 'n' : 'a', -d);
+      }
+      var homeWon = g.result.home > g.result.away;
+      var H = getR(g.home), A = getR(g.away);
+      if (homeWon) { H.w++; A.l++; } else { A.w++; H.l++; }
+      if (g.conf) { if (homeWon) { H.cw++; A.cl++; } else { A.cw++; H.cl++; } }
+      if (g.neutral) { if (homeWon) { H.nw++; A.nl++; } else { A.nw++; H.nl++; } }
+      else { if (homeWon) { H.hw++; A.al++; } else { A.aw++; H.hl++; } }
+    });
+    return { rec: rec, ats: ats, any: any };
+  }
+
+  function build(teamList, cfgRaw, schedule, tbdGames, resultRows) {
     var cfg = parseConfig(cfgRaw);
     var byName = {}, byKey = {}, start = {}, hca = {};
     teamList.forEach(function (t) {
@@ -116,7 +155,7 @@ window.CBK = (function () {
 
     var model = {
       teams: teamList, byName: byName, byKey: byKey, start: start,
-      games: games, results: [], current: {}, played: {}
+      games: games, tbd: tbdGames, results: [], current: {}, played: {}, log: [], records: { rec: {}, ats: {}, any: false }
     };
 
     // Replace the stored results: re-attach scores to games and recompute every rating.
@@ -126,16 +165,20 @@ window.CBK = (function () {
       rows.forEach(function (r) { byId[r.date + '_' + [r.home, r.away].sort().join('_')] = r; });
       games.forEach(function (g) {
         var r = byId[g.id];
-        if (!r) { delete g.result; return; }
+        if (!r) { delete g.result; delete g.lineAtEntry; return; }
         var homeIsHome = r.home === teamKey(g.home);
         g.result = {
           home: homeIsHome ? r.homeScore : r.awayScore,
           away: homeIsHome ? r.awayScore : r.homeScore
         };
+        if (typeof r.line === 'number') g.lineAtEntry = r.line; else delete g.lineAtEntry;
       });
-      var out = replay(start, hca, rows, cfg);
+      var log = [];
+      var out = replay(start, hca, rows, cfg, log);
       model.current = out.current;
       model.played = out.played;
+      model.log = log;
+      model.records = computeRecords(games);
     };
 
     // Exact predicted home margin from current ratings, or null if either team is unrated.
@@ -168,6 +211,14 @@ window.CBK = (function () {
       return CONF_LABELS[t.conference] || t.conference;
     };
 
+    // Line from `team`'s side: negative means that team is favored. Null if either team is unrated.
+    model.teamLine = function (g, team) {
+      var s = model.homeSpread(g);
+      if (s === null) return null;
+      var line = team === g.home ? -s : s;
+      return line === 0 ? 0 : line;
+    };
+
     model.setResults(resultRows);
     return model;
   }
@@ -177,8 +228,9 @@ window.CBK = (function () {
       getJSON('data/teams.json'),
       getJSON('data/rating_config.json'),
       getJSON('data/schedule.json'),
+      getJSON('data/tbd_games.json'),
       getJSON('data/results.json')
-    ]).then(function (d) { return build(d[0], d[1], d[2], d[3]); });
+    ]).then(function (d) { return build(d[0], d[1], d[2], d[3], d[4]); });
   }
 
   return {

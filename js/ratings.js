@@ -3,6 +3,8 @@
   'use strict';
 
   var C = window.CBK;
+  var Panel = window.CBKPanel;
+  var model;
 
   // Display order of the conference filter tabs.
   var CONFERENCES = [
@@ -55,25 +57,44 @@
     document.getElementById('conf-strip').textContent = selected;
     document.getElementById('count').textContent = list.length + (list.length === 1 ? ' team' : ' teams');
 
+    var any = model.records.any;
+    document.getElementById('ratings-table').classList.toggle('no-results', !any);
+    document.getElementById('ats-note').hidden = !any;
+
     var tbody = document.getElementById('rows');
     tbody.textContent = '';
     list.forEach(function (t, i) {
       var tr = document.createElement('tr');
-      tr.appendChild(cell('rk', String(i + 1)));
+      tr.className = 'team-row';
+      tr.tabIndex = 0;
+      tr.setAttribute('role', 'button');
+      tr.setAttribute('aria-expanded', 'false');
+      tr.innerHTML = '<td class="rk">' + (i + 1) + '</td>' +
+        '<td>' + C.esc(t.team) + '<span class="conf">' + C.esc(t.conference) + '</span></td>' +
+        '<td class="num rating" title="Exact rating ' + t.exact.toFixed(2) + '">' + C.fmtRating(t.display) + '</td>' +
+        '<td class="num">' + C.fmtRating(t.home_court) + '</td>' + Panel.recordCells(model, t.team);
 
-      var name = document.createElement('td');
-      name.appendChild(document.createTextNode(t.team));
-      var conf = document.createElement('span');
-      conf.className = 'conf';
-      conf.textContent = t.conference;
-      name.appendChild(conf);
-      tr.appendChild(name);
+      var panelRow = document.createElement('tr');
+      panelRow.className = 'schedule-row';
+      panelRow.hidden = true;
+      var td = document.createElement('td');
+      td.colSpan = 8;
+      panelRow.appendChild(td);
 
-      var rating = cell('num rating', C.fmtRating(t.display));
-      rating.title = 'Exact rating ' + t.exact.toFixed(2);
-      tr.appendChild(rating);
-      tr.appendChild(cell('num', C.fmtRating(t.home_court)));
+      function toggle() {
+        var open = panelRow.hidden;
+        if (open && !td.firstChild) td.innerHTML = Panel.build(model, t.team);  // built on first open
+        panelRow.hidden = !open;
+        tr.classList.toggle('open', open);
+        tr.setAttribute('aria-expanded', String(open));
+      }
+      tr.addEventListener('click', toggle);
+      tr.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+
       tbody.appendChild(tr);
+      tbody.appendChild(panelRow);
     });
   }
 
@@ -87,7 +108,8 @@
     el.textContent = '· games through ' + formatDate(last);
   }
 
-  C.load().then(function (model) {
+  C.load().then(function (m) {
+    model = m;
     teams = model.teams.map(function (t) {
       var exact = model.current[t.key];
       return { team: t.team, conference: t.conference, home_court: t.home_court, exact: exact, display: C.roundHalf(exact) };

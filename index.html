@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261011c">
+  <link rel="stylesheet" href="css/style.css?v=20261011d">
 </head>
 <body>
   <div class="shell">
@@ -17,6 +17,7 @@
       <div class="nav-label">Tools</div>
       <a class="nav-item active" href="index.html" aria-current="page">Ratings</a>
       <a class="nav-item" href="schedule.html">Schedule</a>
+      <a class="nav-item" href="history.html">Ratings History</a>
     </nav>
 
     <main class="content">
@@ -29,17 +30,24 @@
 
       <div class="conf-strip" id="conf-strip">All Conferences</div>
 
-      <table id="ratings-table">
+      <div class="table-wrap">
+      <table id="ratings-table" class="no-results">
         <thead>
           <tr>
             <th scope="col" class="rk">#</th>
             <th scope="col">Team</th>
             <th scope="col" class="num">Rating</th>
             <th scope="col" class="num">Home Court Rating</th>
+            <th scope="col" class="num rec-col">Record</th>
+            <th scope="col" class="num rec-col">Conf</th>
+            <th scope="col" class="num rec-col" title="Record against my own spread, as locked when each result was first saved (wins-losses, pushes as a third number)">ATS</th>
+            <th scope="col" class="num rec-col" title="Average points per game above (+) or below (-) my spread">Avg vs Line</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
       </table>
+      </div>
+      <p class="ats-note" id="ats-note" hidden>ATS is each team&rsquo;s record against my own spread, the number that was showing when the result was first saved. A third number is pushes. Avg vs Line is the average margin above (+) or below (&minus;) that spread. Games against non-D1 or unrated teams, or saved without a spread, are not counted. This grades the model against itself. It is not a betting record.</p>
       <p class="load-error" id="load-error" hidden>The ratings data could not be loaded.</p>
 
       <footer>
@@ -48,7 +56,8 @@
       </footer>
     </main>
   </div>
-  <script src="js/common.js?v=20261011c"></script>
-  <script src="js/ratings.js?v=20261011c"></script>
+  <script src="js/common.js?v=20261011d"></script>
+  <script src="js/team-panel.js?v=20261011d"></script>
+  <script src="js/ratings.js?v=20261011d"></script>
 </body>
 </html>

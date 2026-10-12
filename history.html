@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ratings History | CBK Power Ratings 2026-27</title>
+  <meta name="description" content="Game-by-game rating changes for every team, 2026-27 college basketball season.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261011d">
+</head>
+<body>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="brand">POWER<br>RATINGS</div>
+      <div class="nav-label">Tools</div>
+      <a class="nav-item" href="index.html">Ratings</a>
+      <a class="nav-item" href="schedule.html">Schedule</a>
+      <a class="nav-item active" href="history.html" aria-current="page">Ratings History</a>
+    </nav>
+
+    <main class="content">
+      <header class="page-head">
+        <h1>RATINGS HISTORY</h1>
+        <div class="season">2026&ndash;27 &middot; <span id="hx-count"></span></div>
+      </header>
+
+      <div class="hx-bar"><select id="hx-team" aria-label="Team"></select></div>
+      <div class="hx-stats" id="hx-stats"></div>
+      <div class="hx-card" id="hx-chart"></div>
+      <div class="hx-card hx-scroll">
+        <table id="hx-table"></table>
+        <div class="hx-note">Exact ratings. Spread, margin and miss are from this team&rsquo;s side. Greyed rows are games against unrated opponents: no change, and they do not count toward K.</div>
+      </div>
+      <p class="load-error" id="load-error" hidden>The ratings data could not be loaded.</p>
+
+      <footer>
+        <span></span>
+        <a href="https://github.com/connorriepma/CBK-Power-Ratings/blob/main/METHODOLOGY.md">Methodology</a>
+      </footer>
+    </main>
+  </div>
+  <script src="js/common.js?v=20261011d"></script>
+  <script src="js/history.js?v=20261011d"></script>
+</body>
+</html>
