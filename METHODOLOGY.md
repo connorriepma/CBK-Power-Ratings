@@ -50,6 +50,8 @@ The adjustment is a half-point judgment, usually between -3 and +3. It measures 
 - Winthrop lost a star but reloaded with several D-I transfers, so the adjustment is -1
 - Final: -2.50, displayed as 77.5
 
+A small number of ratings have been moved by hand after the preseason build when major news broke, such as a head coach retiring or a serious eligibility question. These are flagged in the `notes` column of the data file, and the `manual_adjustment` column still shows the original preseason adjustment.
+
 Home-court advantage is stored per team.
 
 ## Part 2: How a rating updates after a game

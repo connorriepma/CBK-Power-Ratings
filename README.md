@@ -18,15 +18,16 @@ The full write-up is in [METHODOLOGY.md](METHODOLOGY.md). In short:
 
 ## Data
 
-[`data/preseason_ratings_2026-27.csv`](data/preseason_ratings_2026-27.csv) holds the preseason ratings for all 365 teams.
+[`data/preseason_ratings_2026-27.csv`](data/preseason_ratings_2026-27.csv) holds the preseason ratings for all 365 teams. The rest of the site's data (teams, schedule, injuries, eligibility) is in the other JSON files in [`data/`](data/).
 
 | Column | Meaning |
 |---|---|
 | `team` | Team name |
-| `manual_adjustment` | Manual roster adjustment applied on top of the KenPom-based baseline |
+| `manual_adjustment` | Manual roster adjustment from the original preseason build, applied on top of the KenPom-based baseline |
 | `rating` | Preseason rating on a KenPom-style scale (0 = average Division I team) |
 | `rating_plus_80` | `rating + 80`, the scale shown on the site so no team displays a negative value |
 | `rating_plus_80_rounded` | `rating_plus_80` rounded to the nearest 0.5 |
+| `notes` | Flags ratings that were manually moved after the preseason build when major news broke |
 
 ## Status
 
