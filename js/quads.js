@@ -36,8 +36,8 @@
     var d = x.dateTbd ? 'TBA' : MONTHS[Number(x.date.split('-')[1]) - 1] + ' ' + Number(x.date.split('-')[2]);
     var res = x.result
       ? '<span style="color:var(--' + (x.result.won ? 'paint' : 'paint-2') + ');font-weight:600">' + (x.result.won ? 'W' : 'L') + ' ' + x.result.us + '-' + x.result.them + '</span>'
-      : '<span class="cr-sub">upcoming</span>';
-    return '<div style="display:grid;grid-template-columns:64px 26px 1fr 96px;gap:8px;padding:3px 0"><span class="cr-sub">' + d + '</span><span class="cr-sub">' + SITE[x.site] +
+      : '<span class="cr-sub" title="Not played yet">&mdash;</span>';
+    return '<div style="display:grid;grid-template-columns:46px 16px 1fr auto;gap:6px;padding:1px 0"><span class="cr-sub">' + d + '</span><span class="cr-sub">' + SITE[x.site] +
       '</span><span>' + esc(x.opp) + (x.rank ? ' <span class="cr-sub">(#' + x.rank + ')</span>' : '') + '</span><span style="text-align:right">' + res + '</span></div>';
   }
 
@@ -50,12 +50,12 @@
       if (!list.length) return '';
       var w = 0, l = 0;
       list.forEach(function (x) { if (x.result) { if (x.result.won) w++; else l++; } });
-      return '<div style="margin:6px 0 10px"><div style="font-weight:700;margin-bottom:2px">' + title + (n ? ' &middot; ' + w + '-' + l : '') +
+      return '<div style="margin:0 0 6px"><div style="font-weight:700;margin-bottom:1px">' + title + (n ? ' &middot; ' + w + '-' + l : '') +
         ' <span class="cr-sub" style="font-weight:400">' + list.length + ' game' + (list.length === 1 ? '' : 's') + '</span></div>' + list.map(gameRow).join('') + '</div>';
     };
-    return '<div style="padding:6px 6px 2px"><div class="cr-sub" style="margin-bottom:4px">' + esc(team) + ' &middot; ' + games.length + ' games, each in the quad it is for ' + esc(team) +
-      ' (opponent rank on my current ratings, and the site)</div>' +
-      block(1, 'Quad 1') + block(2, 'Quad 2') + block(3, 'Quad 3') + block(4, 'Quad 4') + block(0, 'Not counted (non-Division I)') + '</div>';
+    return '<div style="padding:4px 6px 0;font-size:12.5px"><div class="cr-sub" style="margin-bottom:4px">' + esc(team) + ' &middot; ' + games.length + ' games, each in the quad it is for ' + esc(team) +
+      ' (&mdash; = not played yet)</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 28px">' +
+      block(1, 'Quad 1') + block(2, 'Quad 2') + block(3, 'Quad 3') + block(4, 'Quad 4') + block(0, 'Not counted (non-Division I)') + '</div></div>';
   }
 
   function render(model) {
