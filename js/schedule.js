@@ -54,6 +54,7 @@
   function matchupHTML(g) {
     var site = g.neutral && g.site ? ' <span class="g-site">' + esc(g.site) + '</span>' : '';
     var m = g.neutral ? esc(g.away) + ' vs ' + esc(g.home) + '*' + (model.hcaMod(g).length ? '&Dagger;' : '') + site : esc(g.away) + ' @ ' + esc(g.home) + (model.hcaMod(g).length ? '&Dagger;' : '');
+    if (g.travelMiles) m += ' <span class="g-site">&#9992;&#xFE0E; ' + g.travelMiles.toLocaleString('en-US') + ' mi</span>';
     return g.dateTbd ? m + ' <span class="g-site">Date TBA</span>' : m;
   }
 
@@ -83,20 +84,25 @@
     return out.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + out.map(esc).join('; ') + '</div>' : '';
   }
 
+  function travelNote(dayGames) {
+    return dayGames.some(function (g) { return g.travelMiles; })
+      ? '<div class="g-footnote">&#9992;&#xFE0E; long conference trip: miles the road team travels (a note only; ratings and spreads are not adjusted)</div>' : '';
+  }
+
   function dayHTML(date, dayGames) {
     var n = dayGames.length;
     if (entryMode) {
       return '<div class="day-group">' +
         '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + n + ' game' + (n === 1 ? '' : 's') + '</div>' +
         '<div class="schedule-list">' + dayGames.map(entryRowHTML).join('') + '</div>' +
-        '<div class="g-footnote">* designates neutral site &middot; scores are entered away first, then home</div>' + hcaNote(dayGames) + '</div>';
+        '<div class="g-footnote">* designates neutral site &middot; scores are entered away first, then home</div>' + hcaNote(dayGames) + travelNote(dayGames) + '</div>';
     }
     return '<div class="day-group">' +
       '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + n + ' game' + (n === 1 ? '' : 's') + '</div>' +
       '<div class="schedule-list">' +
       '<div class="g-head day"><div></div><div>Matchup</div><div>Spread / Final</div><div class="r">Win % (away / home)</div></div>' +
       dayGames.map(gameRowHTML).join('') + '</div>' +
-      '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' + hcaNote(dayGames) +
+      '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' + hcaNote(dayGames) + travelNote(dayGames) +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
       '</div>';

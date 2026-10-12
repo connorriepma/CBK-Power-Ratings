@@ -107,7 +107,8 @@
   "home": "Duke",
   "away": "California",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2375
  },
  {
   "date": "2027-01-05",
@@ -128,7 +129,8 @@
   "home": "Duke",
   "away": "Stanford",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2375
  },
  {
   "date": "2027-01-16",
@@ -343,14 +345,16 @@
   "home": "Stanford",
   "away": "Virginia",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2364
  },
  {
   "date": "2027-01-09",
   "home": "California",
   "away": "Virginia",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2361
  },
  {
   "date": "2027-01-13",
@@ -591,14 +595,16 @@
   "home": "Stanford",
   "away": "Miami",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2572
  },
  {
   "date": "2027-02-13",
   "home": "California",
   "away": "Miami",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2580
  },
  {
   "date": "2027-02-20",
@@ -724,7 +730,8 @@
   "home": "Louisville",
   "away": "Stanford",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1975
  },
  {
   "date": "2027-01-05",
@@ -745,7 +752,8 @@
   "home": "Louisville",
   "away": "California",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1973
  },
  {
   "date": "2027-01-16",
@@ -981,14 +989,16 @@
   "home": "California",
   "away": "NC State",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2393
  },
  {
   "date": "2027-01-30",
   "home": "Stanford",
   "away": "NC State",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2394
  },
  {
   "date": "2027-02-03",
@@ -1023,7 +1033,8 @@
   "home": "NC State",
   "away": "California",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2393
  },
  {
   "date": "2027-02-24",
@@ -1187,7 +1198,8 @@
   "home": "Boston College",
   "away": "SMU",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1540
  },
  {
   "date": "2027-02-20",
@@ -1308,7 +1320,8 @@
   "home": "North Carolina",
   "away": "California",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2370
  },
  {
   "date": "2027-01-02",
@@ -1329,7 +1342,8 @@
   "home": "North Carolina",
   "away": "Stanford",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2371
  },
  {
   "date": "2027-01-23",
@@ -1726,7 +1740,8 @@
   "home": "Clemson",
   "away": "California",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2191
  },
  {
   "date": "2027-02-10",
@@ -1754,7 +1769,8 @@
   "home": "Clemson",
   "away": "Stanford",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2189
  },
  {
   "date": "2027-03-02",
@@ -1905,14 +1921,16 @@
   "home": "California",
   "away": "Virginia Tech",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2273
  },
  {
   "date": "2027-02-13",
   "home": "Stanford",
   "away": "Virginia Tech",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2275
  },
  {
   "date": "2027-02-20",
@@ -2042,14 +2060,16 @@
   "home": "California",
   "away": "Florida St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2214
  },
  {
   "date": "2027-01-09",
   "home": "Stanford",
   "away": "Florida St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2209
  },
  {
   "date": "2027-01-16",
@@ -2203,14 +2223,16 @@
   "home": "Stanford",
   "away": "Syracuse",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2428
  },
  {
   "date": "2027-01-30",
   "home": "California",
   "away": "Syracuse",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2421
  },
  {
   "date": "2027-02-06",
@@ -2225,7 +2247,8 @@
   "home": "Syracuse",
   "away": "Stanford",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2428
  },
  {
   "date": "2027-02-23",
@@ -2345,7 +2368,8 @@
   "home": "Notre Dame",
   "away": "Stanford",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1922
  },
  {
   "date": "2027-01-23",
@@ -2359,21 +2383,24 @@
   "home": "Georgia Tech",
   "away": "Stanford",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2123
  },
  {
   "date": "2027-02-24",
   "home": "Stanford",
   "away": "Wake Forest",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2301
  },
  {
   "date": "2027-02-27",
   "home": "Stanford",
   "away": "Boston College",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2685
  },
  {
   "date": "2027-03-06",
@@ -2515,7 +2542,8 @@
   "home": "Pittsburgh",
   "away": "California",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2252
  },
  {
   "date": "2027-02-20",
@@ -2656,7 +2684,8 @@
   "home": "California",
   "away": "Wake Forest",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2300
  },
  {
   "date": "2027-03-03",
@@ -2797,7 +2826,8 @@
   "home": "California",
   "away": "Boston College",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2677
  },
  {
   "date": "2027-03-06",
@@ -2911,7 +2941,8 @@
   "home": "Notre Dame",
   "away": "California",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1917
  },
  {
   "date": "2026-11-01",
@@ -3254,14 +3285,16 @@
   "home": "Illinois",
   "away": "USC",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1701
  },
  {
   "date": "2027-02-02",
   "home": "Illinois",
   "away": "UCLA",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1708
  },
  {
   "date": "2027-02-05",
@@ -3296,14 +3329,16 @@
   "home": "Oregon",
   "away": "Illinois",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1794
  },
  {
   "date": "2027-02-23",
   "home": "Washington",
   "away": "Illinois",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1760
  },
  {
   "date": "2027-02-28",
@@ -3437,28 +3472,32 @@
   "home": "Michigan St",
   "away": "Washington",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1854
  },
  {
   "date": "2027-01-09",
   "home": "UCLA",
   "away": "Michigan St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1919
  },
  {
   "date": "2027-01-12",
   "home": "USC",
   "away": "Michigan St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1913
  },
  {
   "date": "2027-01-16",
   "home": "Michigan St",
   "away": "Oregon",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1922
  },
  {
   "date": "2027-01-23",
@@ -3628,7 +3667,8 @@
   "home": "Michigan",
   "away": "Washington",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1901
  },
  {
   "date": "2027-01-05",
@@ -3663,21 +3703,24 @@
   "home": "Michigan",
   "away": "Oregon",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1967
  },
  {
   "date": "2027-01-23",
   "home": "USC",
   "away": "Michigan",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1947
  },
  {
   "date": "2027-01-26",
   "home": "UCLA",
   "away": "Michigan",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1954
  },
  {
   "date": "2027-01-30",
@@ -3831,7 +3874,8 @@
   "home": "Ohio St",
   "away": "Oregon",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2054
  },
  {
   "date": "2027-01-02",
@@ -3887,21 +3931,24 @@
   "home": "Ohio St",
   "away": "Washington",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2005
  },
  {
   "date": "2027-02-17",
   "home": "UCLA",
   "away": "Ohio St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1983
  },
  {
   "date": "2027-02-20",
   "home": "USC",
   "away": "Ohio St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1976
  },
  {
   "date": "2027-02-25",
@@ -4220,21 +4267,24 @@
   "home": "Indiana",
   "away": "USC",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1788
  },
  {
   "date": "2027-01-06",
   "home": "Oregon",
   "away": "Indiana",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1902
  },
  {
   "date": "2027-01-09",
   "home": "Washington",
   "away": "Indiana",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1871
  },
  {
   "date": "2027-01-12",
@@ -4262,7 +4312,8 @@
   "home": "Indiana",
   "away": "UCLA",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1796
  },
  {
   "date": "2027-02-02",
@@ -4404,14 +4455,16 @@
   "home": "Maryland",
   "away": "UCLA",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2310
  },
  {
   "date": "2027-01-05",
   "home": "Rutgers",
   "away": "UCLA",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2434
  },
  {
   "date": "2027-01-16",
@@ -4425,21 +4478,24 @@
   "home": "UCLA",
   "away": "Wisconsin",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1677
  },
  {
   "date": "2027-02-06",
   "home": "UCLA",
   "away": "Iowa",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1552
  },
  {
   "date": "2027-02-09",
   "home": "UCLA",
   "away": "Minnesota",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1532
  },
  {
   "date": "2027-02-13",
@@ -4453,21 +4509,24 @@
   "home": "Purdue",
   "away": "UCLA",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1779
  },
  {
   "date": "2027-02-24",
   "home": "Northwestern",
   "away": "UCLA",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1752
  },
  {
   "date": "2027-02-27",
   "home": "UCLA",
   "away": "Penn St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2254
  },
  {
   "date": "2027-03-03",
@@ -4602,14 +4661,16 @@
   "home": "USC",
   "away": "Iowa",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1545
  },
  {
   "date": "2027-02-10",
   "home": "Iowa",
   "away": "Oregon",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1596
  },
  {
   "date": "2027-02-13",
@@ -4637,7 +4698,8 @@
   "home": "Iowa",
   "away": "Washington",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1557
  },
  {
   "date": "2026-11-02",
@@ -4739,7 +4801,8 @@
   "home": "Purdue",
   "away": "USC",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1772
  },
  {
   "date": "2027-01-02",
@@ -4788,14 +4851,16 @@
   "home": "Oregon",
   "away": "Purdue",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1852
  },
  {
   "date": "2027-02-27",
   "home": "Washington",
   "away": "Purdue",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1810
  },
  {
   "date": "2026-11-02",
@@ -4909,14 +4974,16 @@
   "home": "USC",
   "away": "Wisconsin",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1671
  },
  {
   "date": "2027-01-23",
   "home": "Wisconsin",
   "away": "Washington",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1616
  },
  {
   "date": "2027-01-26",
@@ -4937,7 +5004,8 @@
   "home": "Wisconsin",
   "away": "Oregon",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1675
  },
  {
   "date": "2027-02-13",
@@ -5046,28 +5114,32 @@
   "home": "Maryland",
   "away": "USC",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2302
  },
  {
   "date": "2027-01-08",
   "home": "Rutgers",
   "away": "USC",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2427
  },
  {
   "date": "2027-01-30",
   "home": "Northwestern",
   "away": "USC",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1745
  },
  {
   "date": "2027-02-06",
   "home": "USC",
   "away": "Minnesota",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1527
  },
  {
   "date": "2027-02-10",
@@ -5088,7 +5160,8 @@
   "home": "USC",
   "away": "Penn St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2247
  },
  {
   "date": "2026-11-02",
@@ -5180,14 +5253,16 @@
   "home": "Oregon",
   "away": "Maryland",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2381
  },
  {
   "date": "2027-02-20",
   "home": "Washington",
   "away": "Maryland",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2322
  },
  {
   "date": "2027-02-24",
@@ -5428,14 +5503,16 @@
   "home": "Washington",
   "away": "Northwestern",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1724
  },
  {
   "date": "2027-01-23",
   "home": "Oregon",
   "away": "Northwestern",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1778
  },
  {
   "date": "2026-11-02",
@@ -5513,7 +5590,8 @@
   "home": "Washington",
   "away": "Rutgers",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2387
  },
  {
   "date": "2027-02-07",
@@ -5527,7 +5605,8 @@
   "home": "Penn St",
   "away": "Washington",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2219
  },
  {
   "date": "2027-03-06",
@@ -5598,14 +5677,16 @@
   "home": "Penn St",
   "away": "Oregon",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2288
  },
  {
   "date": "2027-01-27",
   "home": "Oregon",
   "away": "Rutgers",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 2462
  },
  {
   "date": "2027-01-30",
@@ -5861,7 +5942,8 @@
   "home": "Arizona",
   "away": "UCF",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1785
  },
  {
   "date": "2027-01-09",
@@ -5903,14 +5985,16 @@
   "home": "West Virginia",
   "away": "Arizona",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1798
  },
  {
   "date": "2027-02-02",
   "home": "Cincinnati",
   "away": "Arizona",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1552
  },
  {
   "date": "2027-02-06",
@@ -6474,7 +6558,8 @@
   "home": "Cincinnati",
   "away": "Arizona St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1570
  },
  {
   "date": "2027-02-06",
@@ -6919,21 +7004,24 @@
   "home": "Utah",
   "away": "West Virginia",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1675
  },
  {
   "date": "2027-01-23",
   "home": "BYU",
   "away": "West Virginia",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1670
  },
  {
   "date": "2027-01-27",
   "home": "West Virginia",
   "away": "Arizona St",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1816
  },
  {
   "date": "2027-02-03",
@@ -7342,7 +7430,8 @@
   "home": "UCF",
   "away": "BYU",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1901
  },
  {
   "date": "2027-03-02",
@@ -7457,7 +7546,8 @@
   "home": "Arizona St",
   "away": "UCF",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1843
  },
  {
   "date": "2027-01-19",
@@ -7710,14 +7800,16 @@
   "home": "UCF",
   "away": "Utah",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1920
  },
  {
   "date": "2027-01-19",
   "home": "UCF",
   "away": "Colorado",
   "neutral": false,
-  "conf": true
+  "conf": true,
+  "travelMiles": 1576
  },
  {
   "date": "2027-03-03",
