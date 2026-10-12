@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eligibility | CBK Power Ratings 2026-27</title>
+  <meta name="description" content="Log of players whose 2026-27 eligibility is in question.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261012a">
+</head>
+<body>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="brand">POWER<br>RATINGS</div>
+      <div class="nav-label">Tools</div>
+      <a class="nav-item" href="index.html">Ratings</a>
+      <a class="nav-item" href="schedule.html">Schedule</a>
+      <a class="nav-item" href="history.html">Ratings History</a>
+      <a class="nav-item" href="conference-rankings.html">Conference Rankings</a>
+      <a class="nav-item" href="injuries.html">Injuries</a>
+      <a class="nav-item active" href="eligibility.html" aria-current="page">Eligibility</a>
+      <a class="nav-item" href="matchup.html">Matchups</a>
+    </nav>
+
+    <main class="content" id="view-eligibility">
+      <header class="page-head">
+        <h1>ELIGIBILITY</h1>
+        <div class="season">2026&ndash;27 &middot; <span id="el-count"></span></div>
+      </header>
+      <div class="el-note">
+        <p><b>What this is.</b> A log of players whose eligibility for 2026-27 is in question, with where each stands and the state or ruling it rests on. Entries are added by the site owner from public reports.</p>
+        <p><b>What it is not.</b> It does not change any rating, spread or win probability. Statuses can change as rulings come in: check the note.</p>
+      </div>
+      <div class="el-sum" id="el-sum"></div>
+      <div class="el-bar">
+        <select id="el-status" aria-label="Status"></select>
+        <select id="el-basis" aria-label="Ruling state"></select>
+        <input type="search" id="el-q" placeholder="Search team or player" aria-label="Search team or player">
+      </div>
+      <div id="el-body"></div><div class="el-foot" id="el-foot"></div>
+      <p class="load-error" id="load-error" hidden>The data could not be loaded.</p>
+
+      <footer>
+        <span></span>
+        <a href="https://github.com/connorriepma/CBK-Power-Ratings/blob/main/METHODOLOGY.md">Methodology</a>
+      </footer>
+    </main>
+  </div>
+  <aside class="rail rail-l" id="rail-games" aria-label="Today's games"></aside>
+  <script src="js/common.js?v=20261012a"></script>
+  <script src="js/game-view.js?v=20261012a"></script>
+  <script src="js/eligibility.js?v=20261012a"></script>
+  <script src="js/rail.js?v=20261012a"></script>
+</body>
+</html>

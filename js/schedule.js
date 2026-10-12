@@ -5,6 +5,7 @@
   var C = window.CBK;
   var esc = C.esc;
   var Store = window.CBKStore;
+  var Games = window.CBKGames;
   var model, dates = [], dayIndex = 0, entryMode = false;
 
   var daySelect = document.getElementById('day-select');
@@ -40,38 +41,8 @@
     });
   }
 
-  function lineHTML(g) {
-    if (g.result) {
-      var homeWon = g.result.home > g.result.away;
-      var win = homeWon ? g.home : g.away, winPts = homeWon ? g.result.home : g.result.away;
-      var lose = homeWon ? g.away : g.home, losePts = homeWon ? g.result.away : g.result.home;
-      return '<div class="g-line final">Final &middot; ' + esc(win) + ' ' + winPts + ', ' + esc(lose) + ' ' + losePts + '</div>';
-    }
-    var spread = model.homeSpread(g);
-    if (spread === null) return '<div class="g-line none">&mdash;</div>';
-    if (spread === 0) return '<div class="g-line pk" title="Exact line: PK (0.00)">PK</div>';
-    var m = model.exactMargin(g);
-    var fav = spread > 0 ? g.home : g.away;
-    var tip = 'Exact line: ' + (m > 0 ? g.home : g.away) + ' -' + Math.abs(m).toFixed(2);
-    return '<div class="g-line fav" title="' + esc(tip) + '">' + esc(fav) + ' -' + Math.abs(spread).toFixed(1) + '</div>';
-  }
-
-  function probHTML(g) {
-    if (g.result) return '<div class="g-prob"></div>';
-    var wp = model.winProb(g);
-    if (!wp) {
-      var nh = g.home === C.NON_D1, na = g.away === C.NON_D1;
-      if (nh === na) return '<div class="g-prob"></div>';
-      return '<div class="g-prob" title="Non D1 opponent: counted as a win">' +
-        '<span class="' + (nh ? 'g-fav' : '') + '">' + (nh ? '&gt;99%' : '&lt;1%') + '</span> / ' +
-        '<span class="' + (na ? 'g-fav' : '') + '">' + (na ? '&gt;99%' : '&lt;1%') + '</span></div>';
-    }
-    var tie = Math.abs(wp.home - wp.away) < 1e-9, homeFav = wp.home > wp.away;
-    var exact = 'Exact: ' + (wp.away * 100).toFixed(1) + '% / ' + (wp.home * 100).toFixed(1) + '%';
-    return '<div class="g-prob" title="' + exact + '">' +
-      '<span class="' + (!tie && !homeFav ? 'g-fav' : '') + '">' + C.fmtPct(wp.away) + '</span> / ' +
-      '<span class="' + (!tie && homeFav ? 'g-fav' : '') + '">' + C.fmtPct(wp.home) + '</span></div>';
-  }
+  function lineHTML(g) { return Games.lineHTML(model, g); }
+  function probHTML(g) { return Games.probHTML(model, g); }
 
   function gameRowHTML(g) {
     return '<div class="g-row no-date has-prob">' +

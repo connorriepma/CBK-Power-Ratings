@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Injuries | CBK Power Ratings 2026-27</title>
+  <meta name="description" content="Log of notable player injuries and expected return dates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261012a">
+</head>
+<body>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="brand">POWER<br>RATINGS</div>
+      <div class="nav-label">Tools</div>
+      <a class="nav-item" href="index.html">Ratings</a>
+      <a class="nav-item" href="schedule.html">Schedule</a>
+      <a class="nav-item" href="history.html">Ratings History</a>
+      <a class="nav-item" href="conference-rankings.html">Conference Rankings</a>
+      <a class="nav-item active" href="injuries.html" aria-current="page">Injuries</a>
+      <a class="nav-item" href="eligibility.html">Eligibility</a>
+      <a class="nav-item" href="matchup.html">Matchups</a>
+    </nav>
+
+    <main class="content" id="view-injuries">
+      <header class="page-head">
+        <h1>INJURIES</h1>
+        <div class="season">2026&ndash;27 &middot; <span id="inj-count"></span></div>
+      </header>
+      <div class="inj-note">
+        <p><b>What this is.</b> A log of notable players who are expected to miss games, as publicly reported by the team or a credible outlet. Entries are added by the site owner from those reports. It tracks availability only.</p>
+        <p><b>What it is not.</b> It does not change any rating, spread or win probability. Statuses can be out of date: check &ldquo;Updated&rdquo; and the source.</p>
+      </div>
+      <div class="inj-bar">
+        <select id="inj-conf" aria-label="Conference"></select>
+        <input type="search" id="inj-team" placeholder="Search team" aria-label="Search team">
+        <select id="inj-status" aria-label="Status"></select>
+        <label class="inj-chk"><input type="checkbox" id="inj-ret"> Show returned</label>
+      </div>
+      <div id="inj-body"></div><div class="inj-foot" id="inj-foot"></div>
+      <p class="load-error" id="load-error" hidden>The data could not be loaded.</p>
+
+      <footer>
+        <span></span>
+        <a href="https://github.com/connorriepma/CBK-Power-Ratings/blob/main/METHODOLOGY.md">Methodology</a>
+      </footer>
+    </main>
+  </div>
+  <aside class="rail rail-l" id="rail-games" aria-label="Today's games"></aside>
+  <script src="js/common.js?v=20261012a"></script>
+  <script src="js/game-view.js?v=20261012a"></script>
+  <script src="js/injuries.js?v=20261012a"></script>
+  <script src="js/rail.js?v=20261012a"></script>
+</body>
+</html>

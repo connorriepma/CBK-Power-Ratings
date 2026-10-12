@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hypothetical Matchups | CBK Power Ratings 2026-27</title>
+  <meta name="description" content="Spread and win probability for any team against any team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261012a">
+</head>
+<body>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="brand">POWER<br>RATINGS</div>
+      <div class="nav-label">Tools</div>
+      <a class="nav-item" href="index.html">Ratings</a>
+      <a class="nav-item" href="schedule.html">Schedule</a>
+      <a class="nav-item" href="history.html">Ratings History</a>
+      <a class="nav-item" href="conference-rankings.html">Conference Rankings</a>
+      <a class="nav-item" href="injuries.html">Injuries</a>
+      <a class="nav-item" href="eligibility.html">Eligibility</a>
+      <a class="nav-item active" href="matchup.html" aria-current="page">Matchups</a>
+    </nav>
+
+    <main class="content" id="view-matchup">
+      <header class="page-head">
+        <h1>HYPOTHETICAL MATCHUPS</h1>
+        <div class="season">2026&ndash;27 &middot; any team vs any team</div>
+      </header>
+      <p class="page-note">Pick two teams and a site. The spread and win probability use the same ratings, home-court values and win-probability model as the Schedule page. Nothing here is saved.</p>
+      <div class="mu-bar">
+        <div class="mu-f"><label for="mu-a">Team A</label><input type="text" id="mu-a" list="mu-dl" placeholder="Start typing a team" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+        <button class="mu-btn" id="mu-swap" type="button" aria-label="Swap teams">&#8646; Swap</button>
+        <div class="mu-f"><label for="mu-b">Team B</label><input type="text" id="mu-b" list="mu-dl" placeholder="Start typing a team" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
+      </div>
+      <datalist id="mu-dl"></datalist>
+      <div class="mu-site" id="mu-site" role="group" aria-label="Site"></div>
+      <div class="mu-res" id="mu-res"></div>
+      <p class="load-error" id="load-error" hidden>The data could not be loaded.</p>
+
+      <footer>
+        <span></span>
+        <a href="https://github.com/connorriepma/CBK-Power-Ratings/blob/main/METHODOLOGY.md">Methodology</a>
+      </footer>
+    </main>
+  </div>
+  <aside class="rail rail-l" id="rail-games" aria-label="Today's games"></aside>
+  <script src="js/common.js?v=20261012a"></script>
+  <script src="js/game-view.js?v=20261012a"></script>
+  <script src="js/matchup.js?v=20261012a"></script>
+  <script src="js/rail.js?v=20261012a"></script>
+</body>
+</html>

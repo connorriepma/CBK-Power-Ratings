@@ -382,3 +382,132 @@ tr.schedule-row .schedule-list { background: transparent; border: none; border-r
 
 .g-line.final.fav { color: var(--paint); }
 .g-line.final.dog { color: var(--paint-2); }
+
+/* ---- Conference Rankings, Injuries, Eligibility, Matchups, Today's Games rail ---- */
+.page-note { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 9px 12px; font-size: 12.5px; line-height: 1.5; color: var(--muted); margin: 0 0 18px; }
+#view-matchup .mu-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-bottom: 14px; }
+#view-matchup .mu-f { display: flex; flex-direction: column; gap: 4px; flex: 1 1 220px; min-width: 0; }
+#view-matchup .mu-f label { font-family: var(--cond); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+#view-matchup input[type=text] { font-family: var(--sans); font-size: 15px; background: var(--panel); border: 1px solid var(--wood-line); color: var(--ink); padding: 9px 10px; border-radius: 3px; width: 100%; box-sizing: border-box; }
+#view-matchup .mu-btn { font-family: var(--cond); font-size: 15px; letter-spacing: .06em; text-transform: uppercase; background: var(--panel); border: 1px solid var(--wood-line); color: var(--ink); padding: 9px 14px; border-radius: 3px; cursor: pointer; }
+#view-matchup .mu-btn:hover { background: var(--wood); }
+#view-matchup .mu-site { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+#view-matchup .mu-site .mu-btn.on { background: var(--paint); border-color: var(--paint); color: #fff; }
+#view-matchup .mu-res { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 16px 18px; }
+#view-matchup .mu-msg { color: var(--muted); font-size: 14px; }
+#view-matchup .mu-line { font-family: var(--cond); font-size: 44px; line-height: 1.05; color: var(--ink); }
+#view-matchup .mu-sub { font-size: 13px; color: var(--muted); margin: 4px 0 14px; }
+#view-matchup .mu-prob { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+#view-matchup .mu-pr { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+#view-matchup .mu-pr .nm { flex: 0 0 38%; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#view-matchup .mu-pr .bar { flex: 1; height: 10px; background: var(--wood); border-radius: 2px; overflow: hidden; }
+#view-matchup .mu-pr .bar i { display: block; height: 100%; background: var(--paint); }
+#view-matchup .mu-pr .pc { flex: 0 0 48px; text-align: right; font-weight: 600; }
+#view-matchup table.mu-tb { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+#view-matchup .mu-tb td { padding: 5px 0; border-top: 1px solid var(--wood-line); }
+#view-matchup .mu-tb td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+#cr-table td.cr-rk { color: var(--muted); width: 40px; font-family: var(--cond); font-size: 17px; }
+#cr-table td.cr-avg { color: var(--paint); font-weight: 700; }
+#cr-table td.cr-sub { color: var(--muted); font-size: 13px; }
+#view-injuries .inj-note { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 12px 14px; font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
+#view-injuries .inj-note p { margin: 0 0 6px; } #view-injuries .inj-note p:last-child { margin: 0; }
+#view-injuries .inj-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+#view-injuries .inj-bar select, #view-injuries .inj-bar input[type=search] { font-family: var(--sans); font-size: 13.5px; background: var(--panel); border: 1px solid var(--wood-line); color: var(--ink); padding: 7px 10px; border-radius: 3px; }
+#view-injuries .inj-bar input[type=search] { min-width: 180px; }
+#view-injuries .inj-chk { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; font-size: 13px; }
+#view-injuries .inj-scroll { overflow-x: auto; }
+#view-injuries table { width: 100%; border-collapse: collapse; }
+#view-injuries thead th { text-align: left; font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); padding: 8px 10px; white-space: nowrap; }
+#view-injuries td { padding: 11px 10px; font-size: 14px; border-bottom: 1px solid var(--wood-line); vertical-align: top; }
+#view-injuries tbody tr:first-child td { border-top: 1px solid var(--wood-line); }
+#view-injuries .inj-team a { color: var(--ink); font-weight: 600; text-decoration: underline dotted; cursor: pointer; }
+#view-injuries .inj-conf { display: block; font-size: 11.5px; color: var(--muted); }
+#view-injuries .inj-player b { display: block; }
+#view-injuries .inj-player small { color: var(--muted); font-size: 12px; display: block; }
+#view-injuries .inj-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 3px; white-space: nowrap; border: 1.5px solid; }
+#view-injuries .inj-b-ofs { background: #5E1A10; color: #FBEDE8; border-color: #5E1A10; }
+#view-injuries .inj-b-out { background: var(--paint-2); color: #fff; border-color: var(--paint-2); }
+#view-injuries .inj-b-dbt { background: #F6D9B8; color: #7A3B00; border-color: #B8620A; }
+#view-injuries .inj-b-q { background: #F7EAB5; color: #6B5300; border-color: #A98A00; }
+#view-injuries .inj-b-dtd { background: transparent; color: #6B5300; border-color: #A98A00; border-style: dashed; }
+#view-injuries .inj-b-ret { background: #D5E8DD; color: #14472F; border-color: var(--paint); }
+#view-injuries .inj-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+#view-injuries .inj-gm small { display: block; color: var(--muted); font-size: 11.5px; }
+#view-injuries .inj-src a { color: var(--paint); word-break: break-word; }
+#view-injuries .inj-upd { color: var(--muted); font-size: 12px; white-space: nowrap; }
+#view-injuries .inj-upd a { color: var(--paint); cursor: pointer; }
+#view-injuries tr.inj-hist td { background: #E9DDBE; padding: 8px 14px; font-size: 12.5px; color: var(--muted); }
+#view-injuries .inj-empty { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 36px 20px; text-align: center; color: var(--muted); }
+#view-injuries .inj-empty b { display: block; font-family: var(--cond); font-size: 22px; color: var(--ink); margin-bottom: 6px; }
+#view-injuries .inj-foot { font-size: 11.5px; color: var(--muted); margin-top: 10px; }
+@media (max-width: 760px) {
+  #view-injuries table, #view-injuries thead, #view-injuries tbody, #view-injuries tr, #view-injuries td { display: block; }
+  #view-injuries thead { display: none; }
+  #view-injuries tbody { background: none; }
+  #view-injuries tr.inj-row { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; margin-bottom: 10px; padding: 8px 4px; }
+  #view-injuries tbody tr:first-child td { border-top: none; }
+  #view-injuries td { border-bottom: none; padding: 5px 10px; display: flex; gap: 10px; justify-content: space-between; align-items: baseline; }
+  #view-injuries td::before { content: attr(data-l); font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); flex: 0 0 84px; }
+  #view-injuries td > * { text-align: right; }
+  #view-injuries tr.inj-hist { margin: -6px 0 10px; }
+  #view-injuries tr.inj-hist td::before { content: none; }
+}
+/* ---- Eligibility tab (read-only; scoped to #view-eligibility) ---- */
+#view-eligibility .el-note { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 12px 14px; font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
+#view-eligibility .el-note p { margin: 0 0 6px; } #view-eligibility .el-note p:last-child { margin: 0; }
+#view-eligibility .el-sum { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+#view-eligibility .el-sum div { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 8px 14px; min-width: 110px; }
+#view-eligibility .el-sum b { display: block; font-family: var(--cond); font-size: 28px; line-height: 1.1; font-weight: 600; }
+#view-eligibility .el-sum span { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+#view-eligibility .el-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+#view-eligibility .el-bar select, #view-eligibility .el-bar input[type=search] { font-family: var(--sans); font-size: 13.5px; background: var(--panel); border: 1px solid var(--wood-line); color: var(--ink); padding: 7px 10px; border-radius: 3px; }
+#view-eligibility .el-bar input[type=search] { min-width: 180px; }
+#view-eligibility .el-scroll { overflow-x: auto; }
+#view-eligibility table { width: 100%; border-collapse: collapse; }
+#view-eligibility thead th { text-align: left; font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); padding: 8px 10px; white-space: nowrap; }
+#view-eligibility td { padding: 10px; font-size: 14px; border-bottom: 1px solid var(--wood-line); vertical-align: top; }
+#view-eligibility tbody tr:first-child td { border-top: 1px solid var(--wood-line); }
+#view-eligibility td.el-rk { color: var(--muted); font-family: var(--cond); font-size: 16px; width: 44px; font-variant-numeric: tabular-nums; }
+#view-eligibility td b { display: block; }
+#view-eligibility td small { color: var(--muted); font-size: 12px; display: block; }
+#view-eligibility .el-team a { color: var(--ink); font-weight: 600; text-decoration: underline dotted; cursor: pointer; }
+#view-eligibility .el-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+#view-eligibility .el-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 3px; white-space: nowrap; border: 1.5px solid; }
+#view-eligibility .el-b-yes { background: #D5E8DD; color: #14472F; border-color: var(--paint); }
+#view-eligibility .el-b-no { background: var(--paint-2); color: #fff; border-color: var(--paint-2); }
+#view-eligibility .el-b-unk { background: transparent; color: #6B5300; border-color: #A98A00; border-style: dashed; }
+#view-eligibility .el-foot { font-size: 11.5px; color: var(--muted); margin-top: 10px; }
+#view-eligibility .el-empty { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 36px 20px; text-align: center; color: var(--muted); }
+#view-eligibility .el-empty b { display: block; font-family: var(--cond); font-size: 22px; color: var(--ink); margin-bottom: 6px; }
+@media (max-width: 760px) {
+  #view-eligibility table, #view-eligibility thead, #view-eligibility tbody, #view-eligibility tr, #view-eligibility td { display: block; }
+  #view-eligibility thead { display: none; }
+  #view-eligibility tbody { background: none; }
+  #view-eligibility tr.el-row { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; margin-bottom: 10px; padding: 8px 4px; }
+  #view-eligibility tbody tr:first-child td { border-top: none; }
+  #view-eligibility td { border-bottom: none; padding: 5px 10px; display: flex; gap: 10px; justify-content: space-between; align-items: baseline; width: auto; }
+  #view-eligibility td::before { content: attr(data-l); font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); flex: 0 0 84px; }
+  #view-eligibility td > * { text-align: right; }
+}
+/* Today's Games rail: hidden below 1850px. position:fixed and outside .shell, so the shell and its sticky sidebar are untouched;
+ at 1850px and up the page is offset and widened into the space. Display only. */
+.rail { display: none; }
+@media (min-width: 1850px) {
+.rail { display: flex; flex-direction: column; position: fixed; top: 48px; left: 16px; width: 290px; z-index: 1; max-height: calc(100vh - 72px); }
+.shell { max-width: min(1600px, calc(100vw - 322px)); margin-left: 322px; margin-right: 0; }
+}
+.rail .rail-h { font-family: var(--cond); font-size: 17px; font-weight: 600; color: var(--paint-2); margin: 0 0 2px 2px; flex: none; }
+.rail .rail-sub { font-size: 11.5px; color: var(--muted); margin: 0 0 8px 2px; flex: none; }
+.rail .rail-p { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+.rail .rail-scroll { overflow-y: auto; min-height: 0; overscroll-behavior: contain; }
+.rail .rail-scroll.big { height: 600px; }
+.rail .rail-note { flex: none; padding: 7px 12px 8px; font-size: 10.5px; font-style: italic; color: var(--muted); border-top: 1px solid var(--wood-line); }
+.rail .rail-empty { padding: 14px 12px; font-size: 13px; color: var(--muted); font-style: italic; }
+.rail .rl-row { padding: 9px 12px 10px; border-bottom: 1px solid rgba(176,138,78,0.35); font-size: 14px; line-height: 1.3; }
+.rail .rl-row:last-child { border-bottom: none; }
+.rail .rl-m { overflow-wrap: anywhere; font-weight: 500; }
+.rail .rl-vs { color: var(--muted); font-weight: 400; margin: 0 2px; }
+.rail .rl-m .g-site { display: block; margin: 1px 0 0; font-weight: 400; }
+.rail .rl-b { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-top: 3px; }
+.rail .rl-b .g-line { flex: 1; min-width: 0; text-align: left; font-size: 13px; }
+.rail .rl-b .g-prob { flex: none; font-size: 13px; color: var(--muted); }

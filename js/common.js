@@ -179,6 +179,7 @@ window.CBK = (function () {
       model.played = out.played;
       model.log = log;
       model.records = computeRecords(games);
+      if (typeof document !== 'undefined') document.dispatchEvent(new CustomEvent('cbk-results'));
     };
 
     // Exact predicted home margin from current ratings, or null if either team is unrated.
@@ -223,14 +224,18 @@ window.CBK = (function () {
     return model;
   }
 
+  var loading = null;
   function load() {
-    return Promise.all([
+    if (loading) return loading;
+    loading = Promise.all([
       getJSON('data/teams.json'),
       getJSON('data/rating_config.json'),
       getJSON('data/schedule.json'),
       getJSON('data/tbd_games.json'),
       getJSON('data/results.json')
     ]).then(function (d) { return build(d[0], d[1], d[2], d[3], d[4]); });
+    loading.catch(function () { loading = null; });
+    return loading;
   }
 
   return {
