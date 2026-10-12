@@ -29,6 +29,17 @@ The full write-up is in [METHODOLOGY.md](METHODOLOGY.md). In short:
 | `rating_plus_80_rounded` | `rating_plus_80` rounded to the nearest 0.5 |
 | `notes` | Flags ratings that were manually moved after the preseason build when major news broke |
 
+## Running it
+
+The rating engine is [`src/cbk_ratings.py`](src/cbk_ratings.py). It uses only the Python standard library.
+
+```
+python src/cbk_ratings.py              # replay results.json onto the preseason ratings, write data/current_ratings.json
+python -m unittest discover -s tests   # run the tests
+```
+
+Current ratings are never stored. They are recomputed from the preseason ratings plus every game in `data/results.json`, so the output is always consistent with the results. The tests check the worked example in the methodology, the K tiers, the miss caps, neutral sites, skipped non-Division I games and input-order independence.
+
 ## Status
 
 Preseason ratings are set. In-season rating updates begin when games start.
