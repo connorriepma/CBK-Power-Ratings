@@ -49,19 +49,19 @@
     var s = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(team) + ' rating by game">';
     var step = (hi - lo) > 12 ? 2 : 1;
     for (var v = lo; v <= hi; v += step) {
-      s += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#B08A4E" stroke-opacity="0.35"/>' +
-        '<text x="' + (pl - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end" font-size="11" fill="#7A6B52">' + v + '</text>';
+      s += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + Y(v) + '" y2="' + Y(v) + '" stroke="#4A3208" stroke-opacity="0.35"/>' +
+        '<text x="' + (pl - 8) + '" y="' + (Y(v) + 4) + '" text-anchor="end" font-size="11" fill="#9A6410">' + v + '</text>';
     }
-    s += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + Y(start) + '" y2="' + Y(start) + '" stroke="#7A6B52" stroke-dasharray="4 4"/>';
-    s += '<polyline fill="none" stroke="#1E5B44" stroke-width="2.5" points="' +
+    s += '<line x1="' + pl + '" x2="' + (W - pr) + '" y1="' + Y(start) + '" y2="' + Y(start) + '" stroke="#9A6410" stroke-dasharray="4 4"/>';
+    s += '<polyline fill="none" stroke="#FFA31A" stroke-width="2.5" points="' +
       pts.map(function (p, i) { return X(i) + ',' + Y(p); }).join(' ') + '"/>';
     var every = Math.ceil(pts.length / 18);
     pts.forEach(function (p, i) {
       var e = i ? rated[i - 1] : null;
-      s += '<circle cx="' + X(i) + '" cy="' + Y(p) + '" r="4" fill="#1E5B44"><title>' +
+      s += '<circle cx="' + X(i) + '" cy="' + Y(p) + '" r="4" fill="#FFA31A"><title>' +
         (e ? fmtDate(e.date) + ' vs ' + esc(e.opp) + ': ' + num(p) : 'Preseason: ' + num(p)) + '</title></circle>';
       if (i % every === 0) {
-        s += '<text x="' + X(i) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="11" fill="#7A6B52">' + (i ? i : 'Pre') + '</text>';
+        s += '<text x="' + X(i) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="11" fill="#9A6410">' + (i ? i : 'Pre') + '</text>';
       }
     });
     return s + '</svg>';
