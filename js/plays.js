@@ -9,6 +9,8 @@
   var esc = C.esc;
   var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   var CONFIDENCE = ['Low', 'Medium', 'High'];
+  // The books offered in the entry form, in this order. To add a book, add it to this list.
+  var BOOKS = ['BetOnline', 'Circa', 'Stations', 'BetMGM', 'FanDuel', 'Boomers', 'Draft Kings', 'Wynn'];
   var BADGE = {
     win: ['pl-b-win', '✓', 'Win'], loss: ['pl-b-loss', '✕', 'Loss'],
     push: ['pl-b-push', '=', 'Push'], pending: ['pl-b-pend', '○', 'Pending']
@@ -133,7 +135,7 @@
 
   function find(id) { return raw.filter(function (r) { return r.id === id; })[0]; }
 
-  // Keep the Book filter and the entry form's suggestions in step with the books used so far.
+  // Keep the Book filter in step with the books used so far.
   function refreshBooks() {
     var seen = {}, books = [];
     rows.forEach(function (p) { if (p.book && !seen[p.book.toLowerCase()]) { seen[p.book.toLowerCase()] = 1; books.push(p.book); } });
@@ -141,8 +143,6 @@
     var sel = $('pl-book'), cur = sel.value;
     sel.innerHTML = '<option value="">All books</option>' + books.map(function (b) { return '<option>' + esc(b) + '</option>'; }).join('');
     sel.value = books.indexOf(cur) >= 0 ? cur : '';
-    var dl = $('ed-books');
-    if (dl) dl.innerHTML = books.map(function (b) { return '<option value="' + esc(b) + '">'; }).join('');
   }
 
   function setRaw(list) { raw = list; rows = raw.map(norm).filter(Boolean); refreshBooks(); render(); }
@@ -169,8 +169,14 @@
     var g = gamesById[gameId];
     fillSelect($('ed-pick'), g ? [{ v: g.away, t: g.away }, { v: g.home, t: g.home }] : [], selected);
   }
+  // The book list, plus the play's own book when editing a play whose book is not on the list.
+  function fillBooks(selected) {
+    var books = selected && BOOKS.indexOf(selected) < 0 ? BOOKS.concat([selected]) : BOOKS;
+    fillSelect($('ed-book'), books.map(function (b) { return { v: b, t: b }; }), selected);
+  }
   function openForm(v, isEdit) {
     form.open(v, isEdit);
+    fillBooks(v.book);
     fillDates(v.date);
     fillGames($('ed-date').value, v.game);
     fillPicks($('ed-game').value, v.pick);
@@ -203,7 +209,7 @@
       if (isNaN(line)) throw new Error('Enter the line in half points, like -4.5 or +3 (PK for pick ’em).');
       var odds = M.parseOdds(v.odds);
       if (isNaN(odds)) throw new Error('Enter the odds as American odds, like -110 or +105.');
-      if (!v.book) throw new Error('Enter the book.');
+      if (!v.book) throw new Error('Pick the book.');
       var units = M.parseUnits(v.units);
       if (isNaN(units)) throw new Error('Enter units to win as a number above 0, like 1 or 0.5.');
       if (CONFIDENCE.indexOf(v.confidence) < 0) throw new Error('Pick Low, Medium or High confidence.');
@@ -240,8 +246,6 @@
 
   function setupOwner() {
     var O = window.CBKOwner, bar = $('pl-bar');
-    var dl = document.createElement('datalist'); dl.id = 'ed-books';
-    document.body.appendChild(dl);
     refreshBooks();
     form = O.form({
       host: $('pl-form-host'), noun: 'play', onSave: save, onDelete: del,
@@ -251,7 +255,7 @@
         { k: 'pick', label: 'Side you took', type: 'select', options: [''], lockOnEdit: true },
         { k: 'line', label: 'Line you found (your side, e.g. -4.5 or +3)' },
         { k: 'odds', label: 'Odds (American, e.g. -110)' },
-        { k: 'book', label: 'Book', list: 'ed-books' },
+        { k: 'book', label: 'Book', type: 'select', options: [''].concat(BOOKS) },
         { k: 'units', label: 'Units to win' },
         { k: 'confidence', label: 'Confidence', type: 'select', options: [''].concat(CONFIDENCE) }
       ]
