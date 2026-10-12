@@ -1,4 +1,4 @@
-# CBK Power Ratings
+# Riepma's Ratings
 
 Power ratings for all 365 Division I men's college basketball teams, 2026-27 season.
 
