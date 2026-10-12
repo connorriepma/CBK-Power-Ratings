@@ -37,8 +37,8 @@
     var res = x.result
       ? '<span style="color:var(--' + (x.result.won ? 'paint' : 'paint-2') + ');font-weight:600">' + (x.result.won ? 'W' : 'L') + ' ' + x.result.us + '-' + x.result.them + '</span>'
       : '<span class="cr-sub" title="Not played yet">&mdash;</span>';
-    return '<div style="display:grid;grid-template-columns:46px 16px 1fr auto;gap:6px;padding:1px 0"><span class="cr-sub">' + d + '</span><span class="cr-sub">' + SITE[x.site] +
-      '</span><span>' + esc(x.opp) + (x.rank ? ' <span class="cr-sub">(#' + x.rank + ')</span>' : '') + '</span><span style="text-align:right">' + res + '</span></div>';
+    return '<div style="display:grid;grid-template-columns:44px 14px minmax(0,1fr) auto;gap:4px;padding:0;line-height:1.35"><span class="cr-sub" style="white-space:nowrap">' + d + '</span><span class="cr-sub">' + SITE[x.site] +
+      '</span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(x.opp) + (x.rank ? ' <span class="cr-sub">(#' + x.rank + ')</span>' : '') + '</span><span style="text-align:right">' + res + '</span></div>';
   }
 
   function detailHTML(model, team, ranks) {
@@ -50,11 +50,11 @@
       if (!list.length) return '';
       var w = 0, l = 0;
       list.forEach(function (x) { if (x.result) { if (x.result.won) w++; else l++; } });
-      return '<div style="margin:0 0 6px"><div style="font-weight:700;margin-bottom:1px">' + title + (n ? ' &middot; ' + w + '-' + l : '') +
+      return '<div style="padding:0 10px;border-left:1px solid var(--wood-line, rgba(128,128,128,.35));min-width:0"><div style="font-weight:700;margin-bottom:1px">' + title + (n ? ' &middot; ' + w + '-' + l : '') +
         ' <span class="cr-sub" style="font-weight:400">' + list.length + ' game' + (list.length === 1 ? '' : 's') + '</span></div>' + list.map(gameRow).join('') + '</div>';
     };
-    return '<div style="padding:4px 6px 0;font-size:12.5px"><div class="cr-sub" style="margin-bottom:4px">' + esc(team) + ' &middot; ' + games.length + ' games, each in the quad it is for ' + esc(team) +
-      ' (&mdash; = not played yet)</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 28px">' +
+    return '<div style="padding:2px 0 0;font-size:12px"><div class="cr-sub" style="margin-bottom:3px">' + esc(team) + ' &middot; ' + games.length + ' games, each in the quad it is for ' + esc(team) +
+      ' (&mdash; = not played yet)</div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:6px 0">' +
       block(1, 'Quad 1') + block(2, 'Quad 2') + block(3, 'Quad 3') + block(4, 'Quad 4') + block(0, 'Not counted (non-Division I)') + '</div></div>';
   }
 
@@ -73,7 +73,7 @@
         var isOpen = !!open[r.team];
         return '<tr><td class="rk cr-rk">' + r.rank + '</td><td data-team="' + esc(r.team) + '" style="cursor:pointer" title="Show ' + esc(r.team) + '\'s games by quad"><span style="text-decoration:underline dotted">' + esc(r.team) + '</span> <span class="cr-sub">' + (isOpen ? '&#9652;' : '&#9662;') + '</span></td><td class="cr-sub">' + esc(r.conf) +
           '</td><td class="num">' + C.fmtRating(C.roundHalf(r.rating)) + '</td>' + cell(r.q[1]) + cell(r.q[2]) + cell(r.q[3]) + cell(r.q[4]) + '</tr>' +
-          (isOpen ? '<tr><td></td><td colspan="7">' + detailHTML(model, r.team, rankOf) + '</td></tr>' : '');
+          (isOpen ? '<tr><td colspan="8" style="padding-top:2px;padding-bottom:6px">' + detailHTML(model, r.team, rankOf) + '</td></tr>' : '');
       }).join('') + '</tbody>';
   }
 
