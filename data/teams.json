@@ -529,7 +529,8 @@
   "team": "Colorado",
   "conference": "Big 12",
   "home_court": 4,
-  "preseason_rating": 86.8
+  "preseason_rating": 86.8,
+  "elevation_ft": 5400
  },
  {
   "key": "utah",
@@ -690,14 +691,16 @@
   "team": "Southern Utah",
   "conference": "Big Sky",
   "home_court": 3,
-  "preseason_rating": 74.7
+  "preseason_rating": 74.7,
+  "elevation_ft": 5800
  },
  {
   "key": "northern-arizona",
   "team": "Northern Arizona",
   "conference": "Big Sky",
   "home_court": 3,
-  "preseason_rating": 73.04
+  "preseason_rating": 73.04,
+  "elevation_ft": 6900
  },
  {
   "key": "high-point",
@@ -1593,7 +1596,8 @@
   "team": "New Mexico",
   "conference": "Mountain West",
   "home_court": 4,
-  "preseason_rating": 88.62
+  "preseason_rating": 88.62,
+  "elevation_ft": 5100
  },
  {
   "key": "nevada",
@@ -1614,7 +1618,8 @@
   "team": "Wyoming",
   "conference": "Mountain West",
   "home_court": 3.5,
-  "preseason_rating": 84.26
+  "preseason_rating": 84.26,
+  "elevation_ft": 7200
  },
  {
   "key": "hawaii",
@@ -1649,7 +1654,8 @@
   "team": "Air Force",
   "conference": "Mountain West",
   "home_court": 3,
-  "preseason_rating": 66.19
+  "preseason_rating": 66.19,
+  "elevation_ft": 7000
  },
  {
   "key": "long-island",
@@ -1866,7 +1872,8 @@
   "team": "Colorado St",
   "conference": "Pac-12",
   "home_court": 3.5,
-  "preseason_rating": 88.55
+  "preseason_rating": 88.55,
+  "elevation_ft": 5000
  },
  {
   "key": "san-diego-st",
@@ -2552,6 +2559,7 @@
   "team": "Denver",
   "conference": "WCC",
   "home_court": 3.5,
-  "preseason_rating": 79.3
+  "preseason_rating": 79.3,
+  "elevation_ft": 5300
  }
 ]

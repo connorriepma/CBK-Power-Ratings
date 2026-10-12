@@ -127,6 +127,7 @@ window.CBKPanel = (function () {
         '<div class="g-tag ' + (g.conf ? '' : 'nc') + '">' + esc(model.confTag(g)) + '</div>' +
         '<div class="g-date">' + fmtDate(g.date) + (g.dateTbd ? '&dagger;' : '') + '</div>' +
         '<div class="g-opp"><span class="side">' + side + '</span>' + esc(opp) + (g.neutral ? '*' : '') + (!g.isTbd && model.hcaMod(g).length ? '&Dagger;' : '') + site +
+        (!g.isTbd && !isHome && model.altitude(g) ? ' <span class="g-site" title="Plays at ' + model.altitude(g).toLocaleString('en-US') + ' ft elevation">&#9968;&#xFE0F;</span>' : '') +
         (g.travelMiles && g.away === team ? ' <span class="g-site">&#9992;&#xFE0E; ' + g.travelMiles.toLocaleString('en-US') + ' mi</span>' : '') + '</div>' +
         lineCell(model, g, team) + winCell(model, g, team) + '</div>';
     }).join('');
@@ -139,10 +140,12 @@ window.CBKPanel = (function () {
         hcaTxt.push(esc(m.team) + ' ' + Math.round(m.pct * 100) + '% of its home court (+' + (Math.round(m.pts * 100) / 100) + ' pts)');
       });
     });
+    var hasAlt = games.some(function (g) { return !g.isTbd && g.home !== team && model.altitude(g); });
     var hasTravel = games.some(function (g) { return g.travelMiles && g.away === team; });
     var foot = (hasNeutral ? '<div class="g-footnote">* designates neutral site</div>' : '') +
       (hcaTxt.length ? '<div class="g-footnote">&Dagger; modified HCA: ' + hcaTxt.filter(function (t, i) { return hcaTxt.indexOf(t) === i; }).join('; ') + '</div>' : '') +
       (hasTravel ? '<div class="g-footnote">&#9992;&#xFE0E; long conference trip: miles the road team travels (a note only; ratings and spreads are not adjusted)</div>' : '') +
+      (hasAlt ? '<div class="g-footnote">&#9968;&#xFE0F; played at altitude (host campus above ' + C.ALTITUDE_FT.toLocaleString('en-US') + ' ft). A note only; ratings and spreads are not adjusted.</div>' : '') +
       (hasDateTbd ? '<div class="g-footnote">&dagger; Exact date not yet announced (the league has released a window of days)</div>' : '') +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
