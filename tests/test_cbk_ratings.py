@@ -58,6 +58,24 @@ class PreseasonLock(unittest.TestCase):
         self.assertEqual(new, load("preseason_locks.json"), "run python src/lock_preseason.py")
 
 
+class TravelMiles(unittest.TestCase):
+    def test_tags_long_conference_road_trips_only(self):
+        import travel_miles as tm
+        teams = [{"team": "A", "key": "a"}, {"team": "B", "key": "b"}, {"team": "C", "key": "c"}]
+        camp = {"a": [37.4, -122.2], "b": [42.3, -71.2], "c": [37.8, -122.4]}
+        sched = [
+            {"date": "2026-12-01", "home": "A", "away": "B", "conf": True},
+            {"date": "2026-12-02", "home": "A", "away": "C", "conf": True},
+            {"date": "2026-12-03", "home": "A", "away": "B", "conf": False},
+            {"date": "2026-12-04", "home": "A", "away": "B", "conf": True, "neutral": True, "travelMiles": 9},
+        ]
+        self.assertEqual(tm.tag(sched, teams, camp), 1)
+        self.assertGreater(sched[0]["travelMiles"], 2500)
+        self.assertNotIn("travelMiles", sched[1])
+        self.assertNotIn("travelMiles", sched[2])
+        self.assertNotIn("travelMiles", sched[3])  # stale tag cleared
+
+
 class KTiers(unittest.TestCase):
     def test_tier_boundaries(self):
         self.assertEqual(cbk.k_for(0, CFG), 0.08)   # game 1
