@@ -104,3 +104,5 @@ Ratings are stored at full precision and shown to the nearest 0.5, so small chan
 - The adjustment is subjective, and there is no minutes-weighted or portal-ranking model behind it.
 - Fifth-year eligibility cases are tracked but held until the legal picture settles.
 - The ratings have not been backtested yet. The plan is to fit a compression factor against closing lines once games start.
+
+**Preseason lock.** A team's preseason rating (`data/teams.json`) can be edited until its first rated game is entered. After that it is recorded in `data/preseason_locks.json` and must not change, since every rating is replayed from it. Run `python src/lock_preseason.py` after scores are entered: it adds locks for teams that now have a game and fails if a locked rating was edited. The unit tests run the same check.

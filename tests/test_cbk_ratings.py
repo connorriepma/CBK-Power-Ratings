@@ -29,6 +29,35 @@ def game(date, home, away, hs, as_, neutral=False):
             "homeScore": hs, "awayScore": as_}
 
 
+class PreseasonLock(unittest.TestCase):
+    TEAMS = [{"key": "a", "preseason_rating": 90.0}, {"key": "b", "preseason_rating": 80.0},
+             {"key": "c", "preseason_rating": 70.0}]
+
+    def test_locks_only_teams_with_a_rated_game(self):
+        import lock_preseason as lp
+        res = [game("2026-11-02", "a", "b", 80, 70), game("2026-11-03", "c", "non-d1", 90, 50)]
+        new, problems = lp.lock(self.TEAMS, res, {})
+        self.assertEqual(new, {"a": 90.0, "b": 80.0})
+        self.assertEqual(problems, [])
+
+    def test_edit_after_first_game_is_flagged_and_lock_kept(self):
+        import lock_preseason as lp
+        res = [game("2026-11-02", "a", "b", 80, 70)]
+        teams = [dict(t) for t in self.TEAMS]
+        teams[0]["preseason_rating"] = 91.0
+        new, problems = lp.lock(teams, res, {"a": 90.0, "b": 80.0})
+        self.assertEqual(new["a"], 90.0)
+        self.assertEqual(len(problems), 1)
+
+    def test_repo_data_is_consistent(self):
+        import lock_preseason as lp, json
+        d = Path(__file__).resolve().parent.parent / "data"
+        load = lambda n: json.loads((d / n).read_text(encoding="utf-8"))
+        new, problems = lp.lock(load("teams.json"), load("results.json"), load("preseason_locks.json"))
+        self.assertEqual(problems, [])
+        self.assertEqual(new, load("preseason_locks.json"), "run python src/lock_preseason.py")
+
+
 class KTiers(unittest.TestCase):
     def test_tier_boundaries(self):
         self.assertEqual(cbk.k_for(0, CFG), 0.08)   # game 1
