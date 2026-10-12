@@ -2,6 +2,8 @@
 
 Power ratings for all 365 Division I men's college basketball teams, 2026-27 season.
 
+**Live site: https://connorriepma.github.io/CBK-Power-Ratings/**
+
 Every rating is a point-spread number: the difference between two teams' ratings, plus home court, is the predicted margin. Each team starts the season with a preseason rating built in the offseason, and the model updates both teams' ratings after every game based on how the result compared to the predicted margin.
 
 ![Power ratings table](docs/images/ratings.png)
