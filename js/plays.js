@@ -283,7 +283,11 @@
 
   function init(m, data) {
     model = m;
-    m.games.forEach(function (g) { gamesById[g.id] = g; (byDate[g.date] = byDate[g.date] || []).push(g); });
+    // The picker offers only games between two Division I teams: a non-Division I opponent has no line to take.
+    m.games.forEach(function (g) {
+      gamesById[g.id] = g;
+      if (g.home !== C.NON_D1 && g.away !== C.NON_D1) (byDate[g.date] = byDate[g.date] || []).push(g);
+    });
     dates = Object.keys(byDate).sort();
     $('pl-status').innerHTML = '<option value="">All results</option><option value="pending">Pending</option>' +
       '<option value="win">Win</option><option value="loss">Loss</option><option value="push">Push</option>';
