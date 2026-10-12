@@ -87,6 +87,26 @@
     "status": "Out for season"
    }
   ],
+  "note": "Torn ACL. 6-7 JUCO transfer from Eastern Florida State; first-team JUCO All-America (24.8 ppg, 8.7 rpg, .663 FG, .406 3PT). Coach Ritchie McKay called him one of his hardest recruiting efforts ever.",
+  "player": "Sean Register Jr.",
+  "pos": "F",
+  "reported": "2026-10-09",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "Liberty preseason report (relayed by site owner; no link)",
+  "status": "Out for season",
+  "team": "liberty",
+  "updated": "2026-10-09",
+  "id": "liberty-sean-register-jr"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out for season"
+   }
+  ],
   "note": "Michigan transfer, committed to Miami. Torn ACL last season; plans to sit out 2026-27.",
   "player": "L.J. Cason",
   "pos": "G",
@@ -222,21 +242,41 @@
  {
   "history": [
    {
+    "date": "2026-08-03",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "UConn transfer. Foot surgery on Jul 31; USC gave no recovery timeline. Averaged 5.9 pts and 3.3 reb as a UConn freshman.",
+  "player": "Eric Reibe",
+  "pos": "C",
+  "reported": "2026-08-03",
+  "returnDate": null,
+  "role": "Rotation",
+  "source": "https://x.com/USC_Hoops/status/2084354307420561870",
+  "status": "Out",
+  "team": "usc",
+  "updated": "2026-10-10",
+  "id": "usc-eric-reibe"
+ },
+ {
+  "history": [
+   {
     "date": "2026-10-09",
     "returnDate": null,
     "status": "Out"
    }
   ],
-  "note": "Torn right ACL in the second half of the Feb 2026 game at St. John's, surgery required. Redshirt freshman; started all 29 games, 9.2 PPG, 27.6 MPG. No return timetable as of Oct 7.",
+  "note": "Torn right ACL in the second half of the Feb 2026 game at St. John's, surgery required. Redshirt freshman; started all 29 games, 9.2 PPG, 27.6 MPG. Oct 10: continues to progress, but no timetable for a return.",
   "player": "Matt Hodge",
   "pos": "F",
   "reported": "2026-10-07",
   "returnDate": null,
   "role": "Starter",
-  "source": "Villanova Athletics release (torn ACL, 2025-26); RotoWire, Oct 7, 2026 (knee, no timetable)",
+  "source": "Villanova Athletics release (torn ACL, 2025-26); RotoWire, Oct 7, 2026; Jon Rothstein, Oct 10, 2026 (no timetable)",
   "status": "Out",
   "team": "villanova",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "villanova-matt-hodge"
  }
 ]

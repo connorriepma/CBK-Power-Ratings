@@ -21,10 +21,10 @@
   "basis": "not a 5in5 issue",
   "stats": "16.8 / 2.8 / 3.8",
   "prior": "",
-  "note": "Suspeneded 1st 2 games, good to go after",
-  "source": "Owner's eligibility sheet",
+  "note": "Suspended for all 3 exhibitions (Furman, Ole Miss, Auburn) and the first 2 regular-season games (Sam Houston, Arkansas State). Returns Nov 9 vs Oakland. Marijuana charges from the March arrest were dropped in September.",
+  "source": "Nick Kelly, AL.com",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "alabama-aden-holloway"
  },
  {
@@ -203,10 +203,10 @@
   "basis": "Kentucky",
   "stats": "13.1 / 8.4 / 0.8",
   "prior": "Murray St",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Remains ineligible after the NCAA won again in court in the Kentucky case (Oct 10).",
+  "source": "Jon Rothstein (relayed by site owner; no link)",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "creighton-fredrick-king"
  },
  {
@@ -320,6 +320,34 @@
   "reported": "2026-10-09",
   "updated": "2026-10-09",
   "id": "grand-canyon-tre-holloman"
+ },
+ {
+  "team": "green-bay",
+  "player": "Aidan Hadaway",
+  "rank": null,
+  "status": "Not eligible",
+  "basis": "",
+  "stats": "",
+  "prior": "",
+  "note": "Ineligible \"as of right now\", per Green Bay beat reporter. Exhibition slate starts in a few weeks.",
+  "source": "Kyle Malzhan (relayed by site owner; no link)",
+  "reported": "2026-10-10",
+  "updated": "2026-10-10",
+  "id": "green-bay-aidan-hadaway"
+ },
+ {
+  "team": "green-bay",
+  "player": "Orlando Lovejoy",
+  "rank": null,
+  "status": "Not eligible",
+  "basis": "",
+  "stats": "",
+  "prior": "",
+  "note": "Ineligible \"as of right now\", per Green Bay beat reporter. Exhibition slate starts in a few weeks.",
+  "source": "Kyle Malzhan (relayed by site owner; no link)",
+  "reported": "2026-10-10",
+  "updated": "2026-10-10",
+  "id": "green-bay-orlando-lovejoy"
  },
  {
   "team": "houston",
@@ -437,14 +465,14 @@
   "team": "louisville",
   "player": "Seth Trimble",
   "rank": 266,
-  "status": "Eligible",
+  "status": "Not eligible",
   "basis": "Kentucky",
   "stats": "14.0 / 3.8 / 3.0",
   "prior": "North Carolina",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Ruled ineligible after the NCAA won again in court in the Kentucky case (Oct 10).",
+  "source": "Jon Rothstein (relayed by site owner; no link)",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "louisville-seth-trimble"
  },
  {
@@ -497,10 +525,10 @@
   "basis": "International",
   "stats": "6.7 / 3.9 / 0.7",
   "prior": "Jovenut Badalona (Spain)",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Eligible for 2026-27, per his attorney Don Jackson. Played last season for Joventut Badalona in Spain.",
+  "source": "Jon Rothstein (relayed by site owner; no link)",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "lsu-michael-ruzic"
  },
  {
@@ -521,14 +549,14 @@
   "team": "lsu",
   "player": "Skyy Clark",
   "rank": 151,
-  "status": "Unknown",
+  "status": "Not eligible",
   "basis": "Kentucky",
   "stats": "11.5 / 2.3 / 2.0",
   "prior": "UCLA",
-  "note": "Case was dissolved, but still on LSU roster",
-  "source": "Owner's eligibility sheet",
+  "note": "Ruled ineligible after the NCAA won again in court in the Kentucky case (Oct 10). Previously: case dissolved, still on LSU roster.",
+  "source": "Jon Rothstein (relayed by site owner; no link)",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "lsu-skyy-clark"
  },
  {
@@ -595,10 +623,10 @@
   "basis": "Colorado",
   "stats": "19.6 / 5.4 / 2.1",
   "prior": "",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Next hearing in the linked court case is Oct 13; a definitive answer isn't expected from it. Practicing with the team. Coach Medved is planning on him not playing this season.",
+  "source": "Minnesota coach Medved, via 247Sports (relayed by site owner; no link)",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "minnesota-cade-tyson"
  },
  {
@@ -619,14 +647,14 @@
   "team": "missouri",
   "player": "Mark Mitchell",
   "rank": 21,
-  "status": "Eligible",
+  "status": "Not eligible",
   "basis": "Kentucky",
   "stats": "18.3 / 5.2 / 3.6",
   "prior": "",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Ruled ineligible after the NCAA won again in court in the Kentucky case (Oct 10).",
+  "source": "Jon Rothstein (relayed by site owner; no link)",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "id": "missouri-mark-mitchell"
  },
  {
@@ -740,6 +768,20 @@
   "reported": "2026-10-09",
   "updated": "2026-10-09",
   "id": "oklahoma-st-parsa-fallah"
+ },
+ {
+  "team": "ole-miss",
+  "player": "Ben Henshall",
+  "rank": null,
+  "status": "Eligible",
+  "basis": "NCAA cleared",
+  "stats": "",
+  "prior": "",
+  "note": "Cleared by the NCAA for 2026-27 and granted an additional year of eligibility. Australian guard.",
+  "source": "Olgun Uluc, ESPN (relayed by site owner; no link)",
+  "reported": "2026-10-10",
+  "updated": "2026-10-10",
+  "id": "ole-miss-ben-henshall"
  },
  {
   "team": "ole-miss",
