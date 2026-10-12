@@ -1,0 +1,21 @@
+{
+ "kTiers": [
+  {
+   "upTo": 8,
+   "k": 0.08
+  },
+  {
+   "upTo": 18,
+   "k": 0.05
+  },
+  {
+   "upTo": null,
+   "k": 0.03
+  }
+ ],
+ "mismatchSpread": 25,
+ "missCap": {
+  "normal": 30,
+  "mismatch": 25
+ }
+}

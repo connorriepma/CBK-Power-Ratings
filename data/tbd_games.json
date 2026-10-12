@@ -1,0 +1,800 @@
+[
+ {
+  "team": "Clemson",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Clemson",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Florida",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Florida",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Miami",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Miami",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Miami",
+  "date": "2026-11-28",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Louisville",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Louisville",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "NC State",
+  "date": "2026-11-20",
+  "event": "Baha Mar bracket",
+  "site": "Nassau, Bahamas"
+ },
+ {
+  "team": "Notre Dame",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Notre Dame",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Stanford",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Arizona",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Arizona",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "BYU",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "BYU",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Houston",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Houston",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "West Virginia",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "West Virginia",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Iowa St",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Iowa St",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Iowa St",
+  "date": "2026-11-28",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Texas Tech",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Texas Tech",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Texas Tech",
+  "date": "2026-11-28",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "TCU",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "TCU",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "TCU",
+  "date": "2026-11-28",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Baylor",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Baylor",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Baylor",
+  "date": "2026-11-28",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas St",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas St",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Colorado",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Tennessee",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Tennessee",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Texas",
+  "date": "2026-11-27",
+  "event": "Rady Children's Invitational",
+  "site": "San Diego, Calif."
+ },
+ {
+  "team": "Alabama",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Alabama",
+  "date": "2026-11-27",
+  "event": "Players Era 16 (Nov 27 or 28)",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Auburn",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Auburn",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Mississippi St",
+  "date": "2026-11-27",
+  "event": "Battle 4 Atlantis",
+  "site": "Paradise Island, Bahamas"
+ },
+ {
+  "team": "Ole Miss",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Ole Miss",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "St Johns",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "St Johns",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "St Johns",
+  "date": "2026-11-28",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Creighton",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Creighton",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Creighton",
+  "date": "2026-11-28",
+  "event": "Players Era 16 (championship game only)",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Villanova",
+  "date": "2026-12-05",
+  "event": "Big Five Classic",
+  "site": "Philadelphia"
+ },
+ {
+  "team": "Providence",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Providence",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Georgetown",
+  "date": "2026-11-27",
+  "event": "Rady Children's Invitational",
+  "site": "San Diego, Calif."
+ },
+ {
+  "team": "Seton Hall",
+  "date": "2026-11-20",
+  "event": "Baha Mar bracket",
+  "site": "Nassau, Bahamas"
+ },
+ {
+  "team": "Gonzaga",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Gonzaga",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Colorado St",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Colorado St",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "San Diego St",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "San Diego St",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "San Diego St",
+  "date": "2026-11-28",
+  "event": "Players Era 16 (if necessary)",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Oregon St",
+  "date": "2026-11-19",
+  "event": "Opponent TBA",
+  "site": "TBD"
+ },
+ {
+  "team": "VCU",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "VCU",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Saint Louis",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Loyola Chicago",
+  "date": "2026-11-23",
+  "event": "Acrisure Series",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Saint Joseph's",
+  "date": "2026-12-05",
+  "event": "Big Five Classic",
+  "site": "Philadelphia"
+ },
+ {
+  "team": "La Salle",
+  "date": "2026-12-05",
+  "event": "Big Five Classic",
+  "site": "Philadelphia"
+ },
+ {
+  "team": "Temple",
+  "date": "2026-11-21",
+  "event": "Paradise Jam (Nov 21 or 22; Indiana St or Stephen F Austin)",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Temple",
+  "date": "2026-11-23",
+  "event": "Paradise Jam",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Temple",
+  "date": "2026-12-05",
+  "event": "Big Five Classic",
+  "site": "Philadelphia"
+ },
+ {
+  "team": "East Carolina",
+  "date": "2026-11-21",
+  "event": "Paradise Jam",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "East Carolina",
+  "date": "2026-11-23",
+  "event": "Paradise Jam",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "UNLV",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "UNLV",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Grand Canyon",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event (Stanford or Colorado)",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "San Jose St",
+  "date": "2026-11-23",
+  "event": "Acrisure Series (Seattle or UC San Diego)",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "UTEP",
+  "date": "2026-11-25",
+  "event": "Puerto Aventuras tournament (Eastern Michigan or Kennesaw St)",
+  "site": "Puerto Aventuras, Mexico"
+ },
+ {
+  "team": "UTEP",
+  "date": "2026-12-21",
+  "event": "El Paso event bracket game (Kent St or Omaha)",
+  "site": "El Paso, Texas"
+ },
+ {
+  "team": "Murray St",
+  "date": "2026-11-20",
+  "event": "Baha Mar bracket (Wisconsin or Seton Hall)",
+  "site": "Nassau, Bahamas"
+ },
+ {
+  "team": "Indiana St",
+  "date": "2026-11-21",
+  "event": "Paradise Jam (Game No. 2)",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Indiana St",
+  "date": "2026-11-23",
+  "event": "Paradise Jam (Game No. 3)",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "UMBC",
+  "date": "2026-11-14",
+  "event": "Towson/Loyola (Md.) doubleheader (opponent TBD)",
+  "site": "Towson, MD"
+ },
+ {
+  "team": "Northern Colorado",
+  "date": "2026-11-25",
+  "event": "Cancun Challenge (North Dakota or Detroit Mercy)",
+  "site": "Cancun, Mexico"
+ },
+ {
+  "team": "UC San Diego",
+  "date": "2026-11-23",
+  "event": "Acrisure Series (opponent TBD)",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Utah Valley",
+  "date": "2026-11-21",
+  "event": "Paradise Jam (opponent TBA)",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Charleston",
+  "date": "2026-11-25",
+  "event": "Cancun Challenge (Eastern Michigan or Kennesaw St)",
+  "site": "Puerto Aventuras, Mexico"
+ },
+ {
+  "team": "Towson",
+  "date": "2026-11-14",
+  "event": "Home game vs UMBC or Morgan St (opponent TBD)",
+  "site": "Towson, MD"
+ },
+ {
+  "team": "Drexel",
+  "date": "2026-12-05",
+  "event": "Big Five Classic (opponent TBD)",
+  "site": "Philadelphia"
+ },
+ {
+  "team": "Penn",
+  "date": "2026-12-05",
+  "event": "Big Five Classic",
+  "site": "Philadelphia"
+ },
+ {
+  "team": "Middle Tennessee",
+  "date": "2026-11-22",
+  "event": "Paradise Jam",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Middle Tennessee",
+  "date": "2026-11-23",
+  "event": "Paradise Jam",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "FIU",
+  "date": "2026-12-21",
+  "event": "Home game (opponent TBA)",
+  "site": "Miami, Fla."
+ },
+ {
+  "team": "Detroit Mercy",
+  "date": "2026-11-25",
+  "event": "Cancun Challenge (Northern Colorado or SE Louisiana)",
+  "site": "Cancun, Mexico"
+ },
+ {
+  "team": "Saint Mary's",
+  "date": "2026-11-27",
+  "event": "Rady Children's Invitational (Georgetown or Texas)",
+  "site": "San Diego, Calif."
+ },
+ {
+  "team": "Seattle",
+  "date": "2026-11-23",
+  "event": "Acrisure Series (Loyola Chicago or San Jose St)",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Portland",
+  "date": "2026-11-08",
+  "event": "Rainbow Classic (opponent TBA)",
+  "site": "Honolulu, Hawaii"
+ },
+ {
+  "team": "Miami OH",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Oxford, Ohio"
+ },
+ {
+  "team": "Akron",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Akron, Ohio"
+ },
+ {
+  "team": "Toledo",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Toledo, Ohio"
+ },
+ {
+  "team": "Bowling Green",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Bowling Green, Ohio"
+ },
+ {
+  "team": "Kent St",
+  "date": "2026-12-21",
+  "event": "Sun Bowl Invitational (UTEP or Howard)",
+  "site": "El Paso, Texas"
+ },
+ {
+  "team": "Kent St",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Kent, Ohio"
+ },
+ {
+  "team": "Eastern Michigan",
+  "date": "2026-11-25",
+  "event": "Cancun Challenge (UTEP or Charleston)",
+  "site": "Cancun, Mexico"
+ },
+ {
+  "team": "Eastern Michigan",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Ypsilanti, Mich."
+ },
+ {
+  "team": "Ohio",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Athens, Ohio"
+ },
+ {
+  "team": "UMass",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Amherst, Mass."
+ },
+ {
+  "team": "Central Michigan",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Mount Pleasant, Mich."
+ },
+ {
+  "team": "Western Michigan",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Kalamazoo, Mich."
+ },
+ {
+  "team": "Buffalo",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Buffalo, N.Y."
+ },
+ {
+  "team": "Ball St",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
+  "site": "Muncie, Ind."
+ },
+ {
+  "team": "James Madison",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Troy",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Arkansas St",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Louisiana Tech",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Marshall",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Old Dominion",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Louisiana",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Coastal Carolina",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Louisiana Monroe",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Georgia St",
+  "date": "2027-02-06",
+  "event": "MAC-SBC Challenge (away at MAC team, opponent TBA)",
+  "site": "TBD"
+ },
+ {
+  "team": "Omaha",
+  "date": "2026-12-21",
+  "event": "Sun Bowl Invitational (Howard or UTEP)",
+  "site": "El Paso, Texas"
+ },
+ {
+  "team": "North Dakota",
+  "date": "2026-11-25",
+  "event": "Cancun Challenge (Northern Colorado or SE Louisiana)",
+  "site": "Cancun, Mexico"
+ },
+ {
+  "team": "Stephen F Austin",
+  "date": "2026-11-21",
+  "event": "Paradise Jam (Temple or Middle Tennessee)",
+  "site": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Stephen F Austin",
+  "date": "2026-11-23",
+  "event": "Paradise Jam",
+  "site": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Loyola MD",
+  "date": "2026-11-14",
+  "event": "Neutral game vs UMBC or Morgan St (opponent TBD)",
+  "site": "Towson, MD"
+ },
+ {
+  "team": "UT Martin",
+  "date": "2026-11-21",
+  "event": "Paradise Jam (East Carolina or Utah Valley)",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "UT Martin",
+  "date": "2026-11-23",
+  "event": "Paradise Jam (opponent TBA)",
+  "site": "St. Thomas, U.S. Virgin Islands"
+ }
+]

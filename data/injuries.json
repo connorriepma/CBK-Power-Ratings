@@ -1,0 +1,242 @@
+[
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Illinois transfer. Lower-body injury requiring surgery, suffered in the first week of summer workouts. Out indefinitely.",
+  "player": "Ty Rodgers",
+  "pos": "",
+  "reported": "2026-10-09",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "Boise State announcement (relayed by site owner; no link)",
+  "status": "Out",
+  "team": "boise-st",
+  "updated": "2026-10-09",
+  "id": "boise-st-ty-rodgers"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Torn ACL in the ACC Tournament in March. Not fully back as of Oct 7, says he is getting closer; no return date given. Averaged 10.2 PPG and 5.4 RPG, 24 starts in 32 games.",
+  "player": "Carter Welling",
+  "pos": "F",
+  "reported": "2026-10-07",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "The Clemson Insider (Jason Priester, Oct 7, 2026)",
+  "status": "Out",
+  "team": "clemson",
+  "updated": "2026-10-09",
+  "id": "clemson-carter-welling"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Foot surgery after an injury in a team workout. No return timetable announced.",
+  "player": "David Mirkovic",
+  "pos": "F",
+  "reported": "2026-08-01",
+  "returnDate": null,
+  "role": "Elite",
+  "source": "https://www.si.com/nba/draft/newsfeed/2027-nba-draft-prospect-david-mirkovic-undergoes-preseason-foot-surgery-01kz9rrhw9zc",
+  "status": "Out",
+  "team": "illinois",
+  "updated": "2026-10-09",
+  "id": "illinois-david-mirkovic"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Right shoulder surgery. Target return: January 2027 (team expectation, no exact date).",
+  "player": "Killyan Toure",
+  "pos": "G",
+  "reported": "2026-08-25",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "https://www.si.com/nba/draft/newsfeed/2027-nba-draft-prospect-killyan-toure-suffers-preseason-injury-01m0qyvxhfen",
+  "status": "Out",
+  "team": "iowa-st",
+  "updated": "2026-10-09",
+  "id": "iowa-st-killyan-toure"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out for season"
+   }
+  ],
+  "note": "Michigan transfer, committed to Miami. Torn ACL last season; plans to sit out 2026-27.",
+  "player": "L.J. Cason",
+  "pos": "G",
+  "reported": "2026-10-09",
+  "returnDate": null,
+  "role": "Rotation",
+  "source": "Jon Rothstein (X/Twitter)",
+  "status": "Out for season",
+  "team": "miami",
+  "updated": "2026-10-09",
+  "id": "miami-lj-cason"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out for season"
+   }
+  ],
+  "note": "ACL injury. 5-star freshman, #11 overall in the 2026 class per 247Sports.",
+  "player": "Brandon McCoy",
+  "pos": "G",
+  "reported": "2026-10-09",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "https://www.si.com/nba/draft/newsfeed/2027-nba-draft-michigan-star-freshman-to-miss-upcoming-season-01m1f2tym09s",
+  "status": "Out for season",
+  "team": "michigan",
+  "updated": "2026-10-09",
+  "id": "michigan-brandon-mccoy"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Rice transfer. Serious knee injury; expected to miss most, if not all, of 2026-27. Averaged 15.5 PPG at Rice.",
+  "player": "Nick Anderson",
+  "pos": "G",
+  "reported": "2026-05-22",
+  "returnDate": null,
+  "role": "Star",
+  "source": "https://x.com/ahaghver23/status/2057900106192720133",
+  "status": "Out",
+  "team": "san-diego-st",
+  "updated": "2026-10-09",
+  "id": "san-diego-st-nick-anderson"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out for season"
+   }
+  ],
+  "note": "Achilles tendon surgery after a non-contact injury in a workout. Syracuse transfer.",
+  "player": "Donnie Freeman",
+  "pos": "PF",
+  "reported": "2026-07-01",
+  "returnDate": null,
+  "role": "Star",
+  "source": "Jon Rothstein (X/Twitter), quoting Rick Pitino (@RealPitino, Jul 1)",
+  "status": "Out for season",
+  "team": "st-johns",
+  "updated": "2026-10-09",
+  "id": "st-johns-donnie-freeman"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Fractured fifth metatarsal in right foot in practice, surgery planned. Saint Mary's transfer. Expected to miss an extended period; no timetable.",
+  "player": "Mikey Lewis",
+  "pos": "CG",
+  "reported": "2026-09-30",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "https://x.com/JonRothstein/status/2105306332522021175",
+  "status": "Out",
+  "team": "texas",
+  "updated": "2026-10-09",
+  "id": "texas-mikey-lewis"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Torn ACL on Feb 17 at Arizona State. Texas Tech says he will play in 2026-27; no set timetable for return. Averaged 21.8 PPG and 10.8 RPG last season.",
+  "player": "JT Toppin",
+  "pos": "F",
+  "reported": "2026-10-09",
+  "returnDate": null,
+  "role": "Elite",
+  "source": "https://www.thescore.com/news/3564307/texas-techs-jt-toppin-will-play-in-2026-27",
+  "status": "Out",
+  "team": "texas-tech",
+  "updated": "2026-10-09",
+  "id": "texas-tech-jt-toppin"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out for season"
+   }
+  ],
+  "note": "Wrist injury. Medical redshirt, returns for 2027-28 per release. Averaged 12.8 PPG and made 77 threes last season.",
+  "player": "Solo Ball",
+  "pos": "G",
+  "reported": "2026-04-20",
+  "returnDate": null,
+  "role": "Star",
+  "source": "https://x.com/JonRothstein/status/2046334566227476634",
+  "status": "Out for season",
+  "team": "uconn",
+  "updated": "2026-10-09",
+  "id": "uconn-solo-ball"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-09",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Torn right ACL in the second half of the Feb 2026 game at St. John's, surgery required. Redshirt freshman; started all 29 games, 9.2 PPG, 27.6 MPG. No return timetable as of Oct 7.",
+  "player": "Matt Hodge",
+  "pos": "F",
+  "reported": "2026-10-07",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "Villanova Athletics release (torn ACL, 2025-26); RotoWire, Oct 7, 2026 (knee, no timetable)",
+  "status": "Out",
+  "team": "villanova",
+  "updated": "2026-10-09",
+  "id": "villanova-matt-hodge"
+ }
+]

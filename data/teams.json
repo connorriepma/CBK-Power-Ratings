@@ -1,0 +1,2557 @@
+[
+ {
+  "key": "vermont",
+  "team": "Vermont",
+  "conference": "America East",
+  "home_court": 2.5,
+  "preseason_rating": 73.82
+ },
+ {
+  "key": "umbc",
+  "team": "UMBC",
+  "conference": "America East",
+  "home_court": 1.5,
+  "preseason_rating": 73.25
+ },
+ {
+  "key": "ualbany",
+  "team": "UAlbany",
+  "conference": "America East",
+  "home_court": 2,
+  "preseason_rating": 67.75
+ },
+ {
+  "key": "new-hampshire",
+  "team": "New Hampshire",
+  "conference": "America East",
+  "home_court": 2.5,
+  "preseason_rating": 67.32
+ },
+ {
+  "key": "njit",
+  "team": "NJIT",
+  "conference": "America East",
+  "home_court": 2,
+  "preseason_rating": 67.44
+ },
+ {
+  "key": "umass-lowell",
+  "team": "UMass Lowell",
+  "conference": "America East",
+  "home_court": 2.5,
+  "preseason_rating": 67.37
+ },
+ {
+  "key": "bryant",
+  "team": "Bryant",
+  "conference": "America East",
+  "home_court": 3,
+  "preseason_rating": 66.37
+ },
+ {
+  "key": "binghamton",
+  "team": "Binghamton",
+  "conference": "America East",
+  "home_court": 2.5,
+  "preseason_rating": 65.8
+ },
+ {
+  "key": "maine",
+  "team": "Maine",
+  "conference": "America East",
+  "home_court": 2.5,
+  "preseason_rating": 65.99
+ },
+ {
+  "key": "queens",
+  "team": "Queens",
+  "conference": "ASUN",
+  "home_court": 2.5,
+  "preseason_rating": 74.76
+ },
+ {
+  "key": "jacksonville",
+  "team": "Jacksonville",
+  "conference": "ASUN",
+  "home_court": 3,
+  "preseason_rating": 74.17
+ },
+ {
+  "key": "lipscomb",
+  "team": "Lipscomb",
+  "conference": "ASUN",
+  "home_court": 2.5,
+  "preseason_rating": 73.79
+ },
+ {
+  "key": "bellarmine",
+  "team": "Bellarmine",
+  "conference": "ASUN",
+  "home_court": 2.5,
+  "preseason_rating": 71.41
+ },
+ {
+  "key": "florida-gulf-coast",
+  "team": "Florida Gulf Coast",
+  "conference": "ASUN",
+  "home_court": 2.5,
+  "preseason_rating": 71.74
+ },
+ {
+  "key": "stetson",
+  "team": "Stetson",
+  "conference": "ASUN",
+  "home_court": 2,
+  "preseason_rating": 70.24
+ },
+ {
+  "key": "north-florida",
+  "team": "North Florida",
+  "conference": "ASUN",
+  "home_court": 2.5,
+  "preseason_rating": 69.16
+ },
+ {
+  "key": "west-florida",
+  "team": "West Florida",
+  "conference": "ASUN",
+  "home_court": 2,
+  "preseason_rating": 67
+ },
+ {
+  "key": "wichita-st",
+  "team": "Wichita St",
+  "conference": "AAC",
+  "home_court": 3,
+  "preseason_rating": 87.8
+ },
+ {
+  "key": "south-florida",
+  "team": "South Florida",
+  "conference": "AAC",
+  "home_court": 2.5,
+  "preseason_rating": 87.04
+ },
+ {
+  "key": "tulsa",
+  "team": "Tulsa",
+  "conference": "AAC",
+  "home_court": 3.5,
+  "preseason_rating": 85.66
+ },
+ {
+  "key": "memphis",
+  "team": "Memphis",
+  "conference": "AAC",
+  "home_court": 3.5,
+  "preseason_rating": 82.63
+ },
+ {
+  "key": "charlotte",
+  "team": "Charlotte",
+  "conference": "AAC",
+  "home_court": 3.5,
+  "preseason_rating": 82.46
+ },
+ {
+  "key": "uab",
+  "team": "UAB",
+  "conference": "AAC",
+  "home_court": 3,
+  "preseason_rating": 81.53
+ },
+ {
+  "key": "florida-atlantic",
+  "team": "Florida Atlantic",
+  "conference": "AAC",
+  "home_court": 3,
+  "preseason_rating": 81.45
+ },
+ {
+  "key": "temple",
+  "team": "Temple",
+  "conference": "AAC",
+  "home_court": 2.5,
+  "preseason_rating": 81.27
+ },
+ {
+  "key": "north-texas",
+  "team": "North Texas",
+  "conference": "AAC",
+  "home_court": 3,
+  "preseason_rating": 81.08
+ },
+ {
+  "key": "tulane",
+  "team": "Tulane",
+  "conference": "AAC",
+  "home_court": 2.5,
+  "preseason_rating": 78.53
+ },
+ {
+  "key": "east-carolina",
+  "team": "East Carolina",
+  "conference": "AAC",
+  "home_court": 3,
+  "preseason_rating": 77.96
+ },
+ {
+  "key": "rice",
+  "team": "Rice",
+  "conference": "AAC",
+  "home_court": 2,
+  "preseason_rating": 76.87
+ },
+ {
+  "key": "utsa",
+  "team": "UTSA",
+  "conference": "AAC",
+  "home_court": 2.5,
+  "preseason_rating": 72.24
+ },
+ {
+  "key": "vcu",
+  "team": "VCU",
+  "conference": "A10",
+  "home_court": 3,
+  "preseason_rating": 90.26
+ },
+ {
+  "key": "saint-louis",
+  "team": "Saint Louis",
+  "conference": "A10",
+  "home_court": 4,
+  "preseason_rating": 89.13
+ },
+ {
+  "key": "dayton",
+  "team": "Dayton",
+  "conference": "A10",
+  "home_court": 3.5,
+  "preseason_rating": 87.03
+ },
+ {
+  "key": "george-mason",
+  "team": "George Mason",
+  "conference": "A10",
+  "home_court": 3.5,
+  "preseason_rating": 85.01
+ },
+ {
+  "key": "george-washington",
+  "team": "George Washington",
+  "conference": "A10",
+  "home_court": 3,
+  "preseason_rating": 84.9
+ },
+ {
+  "key": "loyola-chicago",
+  "team": "Loyola Chicago",
+  "conference": "A10",
+  "home_court": 3.5,
+  "preseason_rating": 83.71
+ },
+ {
+  "key": "davidson",
+  "team": "Davidson",
+  "conference": "A10",
+  "home_court": 2.5,
+  "preseason_rating": 83.23
+ },
+ {
+  "key": "richmond",
+  "team": "Richmond",
+  "conference": "A10",
+  "home_court": 3,
+  "preseason_rating": 82.89
+ },
+ {
+  "key": "fordham",
+  "team": "Fordham",
+  "conference": "A10",
+  "home_court": 2,
+  "preseason_rating": 82.74
+ },
+ {
+  "key": "rhode-island",
+  "team": "Rhode Island",
+  "conference": "A10",
+  "home_court": 3,
+  "preseason_rating": 82.58
+ },
+ {
+  "key": "saint-joseph-s",
+  "team": "Saint Joseph's",
+  "conference": "A10",
+  "home_court": 3,
+  "preseason_rating": 82.34
+ },
+ {
+  "key": "duquesne",
+  "team": "Duquesne",
+  "conference": "A10",
+  "home_court": 2.5,
+  "preseason_rating": 81.52
+ },
+ {
+  "key": "st-bonaventure",
+  "team": "St Bonaventure",
+  "conference": "A10",
+  "home_court": 3.5,
+  "preseason_rating": 80.96
+ },
+ {
+  "key": "la-salle",
+  "team": "La Salle",
+  "conference": "A10",
+  "home_court": 3,
+  "preseason_rating": 79.6
+ },
+ {
+  "key": "duke",
+  "team": "Duke",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 102.89
+ },
+ {
+  "key": "virginia",
+  "team": "Virginia",
+  "conference": "ACC",
+  "home_court": 3.5,
+  "preseason_rating": 97
+ },
+ {
+  "key": "miami",
+  "team": "Miami",
+  "conference": "ACC",
+  "home_court": 2.5,
+  "preseason_rating": 96.87
+ },
+ {
+  "key": "louisville",
+  "team": "Louisville",
+  "conference": "ACC",
+  "home_court": 3.5,
+  "preseason_rating": 96.52
+ },
+ {
+  "key": "nc-state",
+  "team": "NC State",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 92.76
+ },
+ {
+  "key": "smu",
+  "team": "SMU",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 91.26
+ },
+ {
+  "key": "north-carolina",
+  "team": "North Carolina",
+  "conference": "ACC",
+  "home_court": 4,
+  "preseason_rating": 91.14
+ },
+ {
+  "key": "clemson",
+  "team": "Clemson",
+  "conference": "ACC",
+  "home_court": 3.5,
+  "preseason_rating": 91.01
+ },
+ {
+  "key": "virginia-tech",
+  "team": "Virginia Tech",
+  "conference": "ACC",
+  "home_court": 3.5,
+  "preseason_rating": 90.78
+ },
+ {
+  "key": "florida-st",
+  "team": "Florida St",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 90.18
+ },
+ {
+  "key": "syracuse",
+  "team": "Syracuse",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 89.12
+ },
+ {
+  "key": "stanford",
+  "team": "Stanford",
+  "conference": "ACC",
+  "home_court": 3.5,
+  "preseason_rating": 89.08
+ },
+ {
+  "key": "pittsburgh",
+  "team": "Pittsburgh",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 88.23
+ },
+ {
+  "key": "california",
+  "team": "California",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 86.91
+ },
+ {
+  "key": "notre-dame",
+  "team": "Notre Dame",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 86.75
+ },
+ {
+  "key": "georgia-tech",
+  "team": "Georgia Tech",
+  "conference": "ACC",
+  "home_court": 2.5,
+  "preseason_rating": 85.29
+ },
+ {
+  "key": "wake-forest",
+  "team": "Wake Forest",
+  "conference": "ACC",
+  "home_court": 4,
+  "preseason_rating": 85.14
+ },
+ {
+  "key": "boston-college",
+  "team": "Boston College",
+  "conference": "ACC",
+  "home_court": 3,
+  "preseason_rating": 85.03
+ },
+ {
+  "key": "arizona",
+  "team": "Arizona",
+  "conference": "Big 12",
+  "home_court": 3.5,
+  "preseason_rating": 99.26
+ },
+ {
+  "key": "houston",
+  "team": "Houston",
+  "conference": "Big 12",
+  "home_court": 3,
+  "preseason_rating": 97.99
+ },
+ {
+  "key": "iowa-st",
+  "team": "Iowa St",
+  "conference": "Big 12",
+  "home_court": 4,
+  "preseason_rating": 97.22
+ },
+ {
+  "key": "cincinnati",
+  "team": "Cincinnati",
+  "conference": "Big 12",
+  "home_court": 4,
+  "preseason_rating": 95.09
+ },
+ {
+  "key": "texas-tech",
+  "team": "Texas Tech",
+  "conference": "Big 12",
+  "home_court": 4.5,
+  "preseason_rating": 94.65
+ },
+ {
+  "key": "kansas",
+  "team": "Kansas",
+  "conference": "Big 12",
+  "home_court": 3.5,
+  "preseason_rating": 94.42
+ },
+ {
+  "key": "west-virginia",
+  "team": "West Virginia",
+  "conference": "Big 12",
+  "home_court": 4.5,
+  "preseason_rating": 93.94
+ },
+ {
+  "key": "tcu",
+  "team": "TCU",
+  "conference": "Big 12",
+  "home_court": 4,
+  "preseason_rating": 93.56
+ },
+ {
+  "key": "byu",
+  "team": "BYU",
+  "conference": "Big 12",
+  "home_court": 4,
+  "preseason_rating": 92.34
+ },
+ {
+  "key": "baylor",
+  "team": "Baylor",
+  "conference": "Big 12",
+  "home_court": 3.5,
+  "preseason_rating": 93.1
+ },
+ {
+  "key": "arizona-st",
+  "team": "Arizona St",
+  "conference": "Big 12",
+  "home_court": 3,
+  "preseason_rating": 92.48
+ },
+ {
+  "key": "oklahoma-st",
+  "team": "Oklahoma St",
+  "conference": "Big 12",
+  "home_court": 4,
+  "preseason_rating": 90.8
+ },
+ {
+  "key": "ucf",
+  "team": "UCF",
+  "conference": "Big 12",
+  "home_court": 3,
+  "preseason_rating": 90.56
+ },
+ {
+  "key": "colorado",
+  "team": "Colorado",
+  "conference": "Big 12",
+  "home_court": 4,
+  "preseason_rating": 86.8
+ },
+ {
+  "key": "utah",
+  "team": "Utah",
+  "conference": "Big 12",
+  "home_court": 4.5,
+  "preseason_rating": 86.27
+ },
+ {
+  "key": "kansas-st",
+  "team": "Kansas St",
+  "conference": "Big 12",
+  "home_court": 3.5,
+  "preseason_rating": 85.69
+ },
+ {
+  "key": "uconn",
+  "team": "UConn",
+  "conference": "Big East",
+  "home_court": 3.5,
+  "preseason_rating": 97.14
+ },
+ {
+  "key": "st-johns",
+  "team": "St Johns",
+  "conference": "Big East",
+  "home_court": 3,
+  "preseason_rating": 94.04
+ },
+ {
+  "key": "villanova",
+  "team": "Villanova",
+  "conference": "Big East",
+  "home_court": 3.5,
+  "preseason_rating": 93
+ },
+ {
+  "key": "creighton",
+  "team": "Creighton",
+  "conference": "Big East",
+  "home_court": 3.5,
+  "preseason_rating": 90.74
+ },
+ {
+  "key": "providence",
+  "team": "Providence",
+  "conference": "Big East",
+  "home_court": 3,
+  "preseason_rating": 90.74
+ },
+ {
+  "key": "marquette",
+  "team": "Marquette",
+  "conference": "Big East",
+  "home_court": 3.5,
+  "preseason_rating": 90.35
+ },
+ {
+  "key": "georgetown",
+  "team": "Georgetown",
+  "conference": "Big East",
+  "home_court": 2.5,
+  "preseason_rating": 89.38
+ },
+ {
+  "key": "xavier",
+  "team": "Xavier",
+  "conference": "Big East",
+  "home_court": 3.5,
+  "preseason_rating": 88.95
+ },
+ {
+  "key": "depaul",
+  "team": "DePaul",
+  "conference": "Big East",
+  "home_court": 3,
+  "preseason_rating": 87.67
+ },
+ {
+  "key": "seton-hall",
+  "team": "Seton Hall",
+  "conference": "Big East",
+  "home_court": 3,
+  "preseason_rating": 86.89
+ },
+ {
+  "key": "butler",
+  "team": "Butler",
+  "conference": "Big East",
+  "home_court": 3,
+  "preseason_rating": 86.25
+ },
+ {
+  "key": "montana-st",
+  "team": "Montana St",
+  "conference": "Big Sky",
+  "home_court": 3,
+  "preseason_rating": 80.38
+ },
+ {
+  "key": "northern-colorado",
+  "team": "Northern Colorado",
+  "conference": "Big Sky",
+  "home_court": 3,
+  "preseason_rating": 80.34
+ },
+ {
+  "key": "idaho",
+  "team": "Idaho",
+  "conference": "Big Sky",
+  "home_court": 2.5,
+  "preseason_rating": 79.16
+ },
+ {
+  "key": "portland-st",
+  "team": "Portland St",
+  "conference": "Big Sky",
+  "home_court": 3,
+  "preseason_rating": 78.76
+ },
+ {
+  "key": "eastern-washington",
+  "team": "Eastern Washington",
+  "conference": "Big Sky",
+  "home_court": 2,
+  "preseason_rating": 78.64
+ },
+ {
+  "key": "montana",
+  "team": "Montana",
+  "conference": "Big Sky",
+  "home_court": 3,
+  "preseason_rating": 77.89
+ },
+ {
+  "key": "utah-tech",
+  "team": "Utah Tech",
+  "conference": "Big Sky",
+  "home_court": 3,
+  "preseason_rating": 76.41
+ },
+ {
+  "key": "weber-st",
+  "team": "Weber St",
+  "conference": "Big Sky",
+  "home_court": 3.5,
+  "preseason_rating": 75.51
+ },
+ {
+  "key": "idaho-st",
+  "team": "Idaho St",
+  "conference": "Big Sky",
+  "home_court": 2.5,
+  "preseason_rating": 75.16
+ },
+ {
+  "key": "southern-utah",
+  "team": "Southern Utah",
+  "conference": "Big Sky",
+  "home_court": 3,
+  "preseason_rating": 74.7
+ },
+ {
+  "key": "northern-arizona",
+  "team": "Northern Arizona",
+  "conference": "Big Sky",
+  "home_court": 3,
+  "preseason_rating": 73.04
+ },
+ {
+  "key": "high-point",
+  "team": "High Point",
+  "conference": "Big South",
+  "home_court": 2.5,
+  "preseason_rating": 84.95
+ },
+ {
+  "key": "winthrop",
+  "team": "Winthrop",
+  "conference": "Big South",
+  "home_court": 2.5,
+  "preseason_rating": 77.5
+ },
+ {
+  "key": "presbyterian",
+  "team": "Presbyterian",
+  "conference": "Big South",
+  "home_court": 2.5,
+  "preseason_rating": 76.22
+ },
+ {
+  "key": "longwood",
+  "team": "Longwood",
+  "conference": "Big South",
+  "home_court": 2.5,
+  "preseason_rating": 74.2
+ },
+ {
+  "key": "charleston-southern",
+  "team": "Charleston Southern",
+  "conference": "Big South",
+  "home_court": 2,
+  "preseason_rating": 73.32
+ },
+ {
+  "key": "radford",
+  "team": "Radford",
+  "conference": "Big South",
+  "home_court": 2,
+  "preseason_rating": 72.29
+ },
+ {
+  "key": "unc-asheville",
+  "team": "UNC Asheville",
+  "conference": "Big South",
+  "home_court": 2.5,
+  "preseason_rating": 72.72
+ },
+ {
+  "key": "usc-upstate",
+  "team": "USC Upstate",
+  "conference": "Big South",
+  "home_court": 2.5,
+  "preseason_rating": 71.32
+ },
+ {
+  "key": "gardner-webb",
+  "team": "Gardner Webb",
+  "conference": "Big South",
+  "home_court": 2,
+  "preseason_rating": 66.92
+ },
+ {
+  "key": "illinois",
+  "team": "Illinois",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 99.34
+ },
+ {
+  "key": "michigan-st",
+  "team": "Michigan St",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 97.28
+ },
+ {
+  "key": "michigan",
+  "team": "Michigan",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 96.37
+ },
+ {
+  "key": "ohio-st",
+  "team": "Ohio St",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 95.03
+ },
+ {
+  "key": "nebraska",
+  "team": "Nebraska",
+  "conference": "Big Ten",
+  "home_court": 3.5,
+  "preseason_rating": 94.86
+ },
+ {
+  "key": "indiana",
+  "team": "Indiana",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 94.46
+ },
+ {
+  "key": "ucla",
+  "team": "UCLA",
+  "conference": "Big Ten",
+  "home_court": 3.5,
+  "preseason_rating": 94.1
+ },
+ {
+  "key": "iowa",
+  "team": "Iowa",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 94.02
+ },
+ {
+  "key": "purdue",
+  "team": "Purdue",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 93.25
+ },
+ {
+  "key": "wisconsin",
+  "team": "Wisconsin",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 92.9
+ },
+ {
+  "key": "usc",
+  "team": "USC",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 92.29
+ },
+ {
+  "key": "maryland",
+  "team": "Maryland",
+  "conference": "Big Ten",
+  "home_court": 3.5,
+  "preseason_rating": 91.08
+ },
+ {
+  "key": "minnesota",
+  "team": "Minnesota",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 89.42
+ },
+ {
+  "key": "northwestern",
+  "team": "Northwestern",
+  "conference": "Big Ten",
+  "home_court": 2.5,
+  "preseason_rating": 89.38
+ },
+ {
+  "key": "washington",
+  "team": "Washington",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 89.1
+ },
+ {
+  "key": "oregon",
+  "team": "Oregon",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 86.76
+ },
+ {
+  "key": "rutgers",
+  "team": "Rutgers",
+  "conference": "Big Ten",
+  "home_court": 4,
+  "preseason_rating": 87.24
+ },
+ {
+  "key": "penn-st",
+  "team": "Penn St",
+  "conference": "Big Ten",
+  "home_court": 3,
+  "preseason_rating": 85.17
+ },
+ {
+  "key": "uc-san-diego",
+  "team": "UC San Diego",
+  "conference": "Big West",
+  "home_court": 2,
+  "preseason_rating": 83.96
+ },
+ {
+  "key": "utah-valley",
+  "team": "Utah Valley",
+  "conference": "Big West",
+  "home_court": 3.5,
+  "preseason_rating": 82.75
+ },
+ {
+  "key": "uc-santa-barbara",
+  "team": "UC Santa Barbara",
+  "conference": "Big West",
+  "home_court": 2.5,
+  "preseason_rating": 82.39
+ },
+ {
+  "key": "uc-irvine",
+  "team": "UC Irvine",
+  "conference": "Big West",
+  "home_court": 2.5,
+  "preseason_rating": 81.55
+ },
+ {
+  "key": "cal-st-fullerton",
+  "team": "Cal St Fullerton",
+  "conference": "Big West",
+  "home_court": 2,
+  "preseason_rating": 80.66
+ },
+ {
+  "key": "cal-baptist",
+  "team": "Cal Baptist",
+  "conference": "Big West",
+  "home_court": 3,
+  "preseason_rating": 80.13
+ },
+ {
+  "key": "cal-st-northridge",
+  "team": "Cal St Northridge",
+  "conference": "Big West",
+  "home_court": 2.5,
+  "preseason_rating": 78.86
+ },
+ {
+  "key": "cal-poly",
+  "team": "Cal Poly",
+  "conference": "Big West",
+  "home_court": 3,
+  "preseason_rating": 78.02
+ },
+ {
+  "key": "sacramento-st",
+  "team": "Sacramento St",
+  "conference": "Big West",
+  "home_court": 2.5,
+  "preseason_rating": 77.05
+ },
+ {
+  "key": "uc-riverside",
+  "team": "UC Riverside",
+  "conference": "Big West",
+  "home_court": 2.5,
+  "preseason_rating": 75.81
+ },
+ {
+  "key": "long-beach-st",
+  "team": "Long Beach St",
+  "conference": "Big West",
+  "home_court": 2,
+  "preseason_rating": 75.64
+ },
+ {
+  "key": "cal-st-bakersfield",
+  "team": "Cal St Bakersfield",
+  "conference": "Big West",
+  "home_court": 3,
+  "preseason_rating": 73.62
+ },
+ {
+  "key": "unc-wilmington",
+  "team": "UNC Wilmington",
+  "conference": "CAA",
+  "home_court": 2.5,
+  "preseason_rating": 81.88
+ },
+ {
+  "key": "charleston",
+  "team": "Charleston",
+  "conference": "CAA",
+  "home_court": 2.5,
+  "preseason_rating": 81.12
+ },
+ {
+  "key": "hofstra",
+  "team": "Hofstra",
+  "conference": "CAA",
+  "home_court": 2,
+  "preseason_rating": 80.57
+ },
+ {
+  "key": "towson",
+  "team": "Towson",
+  "conference": "CAA",
+  "home_court": 2.5,
+  "preseason_rating": 78.12
+ },
+ {
+  "key": "hampton",
+  "team": "Hampton",
+  "conference": "CAA",
+  "home_court": 3,
+  "preseason_rating": 77.34
+ },
+ {
+  "key": "william-mary",
+  "team": "William & Mary",
+  "conference": "CAA",
+  "home_court": 3,
+  "preseason_rating": 77.33
+ },
+ {
+  "key": "monmouth",
+  "team": "Monmouth",
+  "conference": "CAA",
+  "home_court": 3,
+  "preseason_rating": 76.82
+ },
+ {
+  "key": "campbell",
+  "team": "Campbell",
+  "conference": "CAA",
+  "home_court": 2.5,
+  "preseason_rating": 76.55
+ },
+ {
+  "key": "elon",
+  "team": "Elon",
+  "conference": "CAA",
+  "home_court": 2.5,
+  "preseason_rating": 75.3
+ },
+ {
+  "key": "stony-brook",
+  "team": "Stony Brook",
+  "conference": "CAA",
+  "home_court": 2.5,
+  "preseason_rating": 74.88
+ },
+ {
+  "key": "drexel",
+  "team": "Drexel",
+  "conference": "CAA",
+  "home_court": 3,
+  "preseason_rating": 74.74
+ },
+ {
+  "key": "north-carolina-a-t",
+  "team": "North Carolina A&T",
+  "conference": "CAA",
+  "home_court": 3,
+  "preseason_rating": 73.61
+ },
+ {
+  "key": "northeastern",
+  "team": "Northeastern",
+  "conference": "CAA",
+  "home_court": 2.5,
+  "preseason_rating": 72.74
+ },
+ {
+  "key": "liberty",
+  "team": "Liberty",
+  "conference": "C-USA",
+  "home_court": 2.5,
+  "preseason_rating": 82.18
+ },
+ {
+  "key": "western-kentucky",
+  "team": "Western Kentucky",
+  "conference": "C-USA",
+  "home_court": 3.5,
+  "preseason_rating": 81.35
+ },
+ {
+  "key": "middle-tennessee",
+  "team": "Middle Tennessee",
+  "conference": "C-USA",
+  "home_court": 3.5,
+  "preseason_rating": 80.52
+ },
+ {
+  "key": "sam-houston-st",
+  "team": "Sam Houston St",
+  "conference": "C-USA",
+  "home_court": 3,
+  "preseason_rating": 80.45
+ },
+ {
+  "key": "new-mexico-st",
+  "team": "New Mexico St",
+  "conference": "C-USA",
+  "home_court": 3.5,
+  "preseason_rating": 80.15
+ },
+ {
+  "key": "kennesaw-st",
+  "team": "Kennesaw St",
+  "conference": "C-USA",
+  "home_court": 3,
+  "preseason_rating": 79.73
+ },
+ {
+  "key": "fiu",
+  "team": "FIU",
+  "conference": "C-USA",
+  "home_court": 3,
+  "preseason_rating": 79.36
+ },
+ {
+  "key": "missouri-st",
+  "team": "Missouri St",
+  "conference": "C-USA",
+  "home_court": 3.5,
+  "preseason_rating": 78.94
+ },
+ {
+  "key": "jacksonville-st",
+  "team": "Jacksonville St",
+  "conference": "C-USA",
+  "home_court": 2.5,
+  "preseason_rating": 75.88
+ },
+ {
+  "key": "delaware",
+  "team": "Delaware",
+  "conference": "C-USA",
+  "home_court": 2,
+  "preseason_rating": 73.56
+ },
+ {
+  "key": "wright-st",
+  "team": "Wright St",
+  "conference": "Horizon",
+  "home_court": 3,
+  "preseason_rating": 79.85
+ },
+ {
+  "key": "robert-morris",
+  "team": "Robert Morris",
+  "conference": "Horizon",
+  "home_court": 2.5,
+  "preseason_rating": 77.88
+ },
+ {
+  "key": "oakland",
+  "team": "Oakland",
+  "conference": "Horizon",
+  "home_court": 2.5,
+  "preseason_rating": 77.47
+ },
+ {
+  "key": "green-bay",
+  "team": "Green Bay",
+  "conference": "Horizon",
+  "home_court": 2.5,
+  "preseason_rating": 76.18
+ },
+ {
+  "key": "detroit-mercy",
+  "team": "Detroit Mercy",
+  "conference": "Horizon",
+  "home_court": 2.5,
+  "preseason_rating": 75.43
+ },
+ {
+  "key": "northern-kentucky",
+  "team": "Northern Kentucky",
+  "conference": "Horizon",
+  "home_court": 3,
+  "preseason_rating": 75.64
+ },
+ {
+  "key": "purdue-fort-wayne",
+  "team": "Purdue Fort Wayne",
+  "conference": "Horizon",
+  "home_court": 2.5,
+  "preseason_rating": 74.1
+ },
+ {
+  "key": "youngstown-st",
+  "team": "Youngstown St",
+  "conference": "Horizon",
+  "home_court": 3,
+  "preseason_rating": 73.74
+ },
+ {
+  "key": "milwaukee",
+  "team": "Milwaukee",
+  "conference": "Horizon",
+  "home_court": 3.5,
+  "preseason_rating": 72.95
+ },
+ {
+  "key": "cleveland-st",
+  "team": "Cleveland St",
+  "conference": "Horizon",
+  "home_court": 3,
+  "preseason_rating": 72.53
+ },
+ {
+  "key": "northern-illinois",
+  "team": "Northern Illinois",
+  "conference": "Horizon",
+  "home_court": 2.5,
+  "preseason_rating": 72.04
+ },
+ {
+  "key": "iu-indy",
+  "team": "IU Indy",
+  "conference": "Horizon",
+  "home_court": 2.5,
+  "preseason_rating": 71.35
+ },
+ {
+  "key": "yale",
+  "team": "Yale",
+  "conference": "Ivy",
+  "home_court": 2.5,
+  "preseason_rating": 82.64
+ },
+ {
+  "key": "harvard",
+  "team": "Harvard",
+  "conference": "Ivy",
+  "home_court": 2,
+  "preseason_rating": 81.37
+ },
+ {
+  "key": "penn",
+  "team": "Penn",
+  "conference": "Ivy",
+  "home_court": 2.5,
+  "preseason_rating": 80.31
+ },
+ {
+  "key": "cornell",
+  "team": "Cornell",
+  "conference": "Ivy",
+  "home_court": 2.5,
+  "preseason_rating": 78.53
+ },
+ {
+  "key": "columbia",
+  "team": "Columbia",
+  "conference": "Ivy",
+  "home_court": 2,
+  "preseason_rating": 77.02
+ },
+ {
+  "key": "princeton",
+  "team": "Princeton",
+  "conference": "Ivy",
+  "home_court": 2,
+  "preseason_rating": 76.34
+ },
+ {
+  "key": "brown",
+  "team": "Brown",
+  "conference": "Ivy",
+  "home_court": 2,
+  "preseason_rating": 75.3
+ },
+ {
+  "key": "dartmouth",
+  "team": "Dartmouth",
+  "conference": "Ivy",
+  "home_court": 2.5,
+  "preseason_rating": 73.42
+ },
+ {
+  "key": "merrimack",
+  "team": "Merrimack",
+  "conference": "MAAC",
+  "home_court": 2,
+  "preseason_rating": 75.94
+ },
+ {
+  "key": "iona",
+  "team": "Iona",
+  "conference": "MAAC",
+  "home_court": 3,
+  "preseason_rating": 74.55
+ },
+ {
+  "key": "siena",
+  "team": "Siena",
+  "conference": "MAAC",
+  "home_court": 2.5,
+  "preseason_rating": 74.27
+ },
+ {
+  "key": "marist",
+  "team": "Marist",
+  "conference": "MAAC",
+  "home_court": 2.5,
+  "preseason_rating": 74
+ },
+ {
+  "key": "fairfield",
+  "team": "Fairfield",
+  "conference": "MAAC",
+  "home_court": 2.5,
+  "preseason_rating": 73.41
+ },
+ {
+  "key": "quinnipiac",
+  "team": "Quinnipiac",
+  "conference": "MAAC",
+  "home_court": 2.5,
+  "preseason_rating": 73.49
+ },
+ {
+  "key": "saint-peter-s",
+  "team": "Saint Peter's",
+  "conference": "MAAC",
+  "home_court": 2.5,
+  "preseason_rating": 73.67
+ },
+ {
+  "key": "mount-st-mary-s",
+  "team": "Mount St Mary's",
+  "conference": "MAAC",
+  "home_court": 2,
+  "preseason_rating": 71.28
+ },
+ {
+  "key": "sacred-heart",
+  "team": "Sacred Heart",
+  "conference": "MAAC",
+  "home_court": 2.5,
+  "preseason_rating": 70.43
+ },
+ {
+  "key": "manhattan",
+  "team": "Manhattan",
+  "conference": "MAAC",
+  "home_court": 2,
+  "preseason_rating": 68.89
+ },
+ {
+  "key": "canisius",
+  "team": "Canisius",
+  "conference": "MAAC",
+  "home_court": 2.5,
+  "preseason_rating": 68.25
+ },
+ {
+  "key": "niagara",
+  "team": "Niagara",
+  "conference": "MAAC",
+  "home_court": 2,
+  "preseason_rating": 68.05
+ },
+ {
+  "key": "rider",
+  "team": "Rider",
+  "conference": "MAAC",
+  "home_court": 2,
+  "preseason_rating": 66.06
+ },
+ {
+  "key": "miami-oh",
+  "team": "Miami OH",
+  "conference": "MAC",
+  "home_court": 3,
+  "preseason_rating": 83.11
+ },
+ {
+  "key": "akron",
+  "team": "Akron",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 82.99
+ },
+ {
+  "key": "toledo",
+  "team": "Toledo",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 81.23
+ },
+ {
+  "key": "bowling-green",
+  "team": "Bowling Green",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 80.55
+ },
+ {
+  "key": "kent-st",
+  "team": "Kent St",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 79.77
+ },
+ {
+  "key": "eastern-michigan",
+  "team": "Eastern Michigan",
+  "conference": "MAC",
+  "home_court": 3,
+  "preseason_rating": 78.22
+ },
+ {
+  "key": "ohio",
+  "team": "Ohio",
+  "conference": "MAC",
+  "home_court": 3,
+  "preseason_rating": 78.07
+ },
+ {
+  "key": "umass",
+  "team": "UMass",
+  "conference": "MAC",
+  "home_court": 3,
+  "preseason_rating": 76.83
+ },
+ {
+  "key": "central-michigan",
+  "team": "Central Michigan",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 76.61
+ },
+ {
+  "key": "western-michigan",
+  "team": "Western Michigan",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 76.54
+ },
+ {
+  "key": "buffalo",
+  "team": "Buffalo",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 75.75
+ },
+ {
+  "key": "ball-st",
+  "team": "Ball St",
+  "conference": "MAC",
+  "home_court": 2.5,
+  "preseason_rating": 75.64
+ },
+ {
+  "key": "howard",
+  "team": "Howard",
+  "conference": "MEAC",
+  "home_court": 3.5,
+  "preseason_rating": 73.32
+ },
+ {
+  "key": "norfolk-st",
+  "team": "Norfolk St",
+  "conference": "MEAC",
+  "home_court": 3,
+  "preseason_rating": 69.02
+ },
+ {
+  "key": "morgan-st",
+  "team": "Morgan St",
+  "conference": "MEAC",
+  "home_court": 3,
+  "preseason_rating": 63.34
+ },
+ {
+  "key": "south-carolina-st",
+  "team": "South Carolina St",
+  "conference": "MEAC",
+  "home_court": 3,
+  "preseason_rating": 63.6
+ },
+ {
+  "key": "north-carolina-central",
+  "team": "North Carolina Central",
+  "conference": "MEAC",
+  "home_court": 3.5,
+  "preseason_rating": 63.12
+ },
+ {
+  "key": "delaware-st",
+  "team": "Delaware St",
+  "conference": "MEAC",
+  "home_court": 3,
+  "preseason_rating": 62.55
+ },
+ {
+  "key": "maryland-eastern-shore",
+  "team": "Maryland Eastern Shore",
+  "conference": "MEAC",
+  "home_court": 3,
+  "preseason_rating": 62.72
+ },
+ {
+  "key": "coppin-st",
+  "team": "Coppin St",
+  "conference": "MEAC",
+  "home_court": 2,
+  "preseason_rating": 61.94
+ },
+ {
+  "key": "illinois-st",
+  "team": "Illinois St",
+  "conference": "Missouri Valley",
+  "home_court": 4,
+  "preseason_rating": 84.81
+ },
+ {
+  "key": "illinois-chicago",
+  "team": "Illinois Chicago",
+  "conference": "Missouri Valley",
+  "home_court": 2.5,
+  "preseason_rating": 84.5
+ },
+ {
+  "key": "murray-st",
+  "team": "Murray St",
+  "conference": "Missouri Valley",
+  "home_court": 3,
+  "preseason_rating": 83.22
+ },
+ {
+  "key": "belmont",
+  "team": "Belmont",
+  "conference": "Missouri Valley",
+  "home_court": 2.5,
+  "preseason_rating": 82.73
+ },
+ {
+  "key": "northern-iowa",
+  "team": "Northern Iowa",
+  "conference": "Missouri Valley",
+  "home_court": 3.5,
+  "preseason_rating": 81.8
+ },
+ {
+  "key": "valparaiso",
+  "team": "Valparaiso",
+  "conference": "Missouri Valley",
+  "home_court": 3,
+  "preseason_rating": 81.48
+ },
+ {
+  "key": "bradley",
+  "team": "Bradley",
+  "conference": "Missouri Valley",
+  "home_court": 4,
+  "preseason_rating": 80.47
+ },
+ {
+  "key": "southern-illinois",
+  "team": "Southern Illinois",
+  "conference": "Missouri Valley",
+  "home_court": 3,
+  "preseason_rating": 80.03
+ },
+ {
+  "key": "drake",
+  "team": "Drake",
+  "conference": "Missouri Valley",
+  "home_court": 3.5,
+  "preseason_rating": 79.96
+ },
+ {
+  "key": "indiana-st",
+  "team": "Indiana St",
+  "conference": "Missouri Valley",
+  "home_court": 3.5,
+  "preseason_rating": 77.88
+ },
+ {
+  "key": "evansville",
+  "team": "Evansville",
+  "conference": "Missouri Valley",
+  "home_court": 4,
+  "preseason_rating": 75.17
+ },
+ {
+  "key": "grand-canyon",
+  "team": "Grand Canyon",
+  "conference": "Mountain West",
+  "home_court": 3.5,
+  "preseason_rating": 90.7
+ },
+ {
+  "key": "new-mexico",
+  "team": "New Mexico",
+  "conference": "Mountain West",
+  "home_court": 4,
+  "preseason_rating": 88.62
+ },
+ {
+  "key": "nevada",
+  "team": "Nevada",
+  "conference": "Mountain West",
+  "home_court": 4,
+  "preseason_rating": 87.02
+ },
+ {
+  "key": "unlv",
+  "team": "UNLV",
+  "conference": "Mountain West",
+  "home_court": 3,
+  "preseason_rating": 85.2
+ },
+ {
+  "key": "wyoming",
+  "team": "Wyoming",
+  "conference": "Mountain West",
+  "home_court": 3.5,
+  "preseason_rating": 84.26
+ },
+ {
+  "key": "hawaii",
+  "team": "Hawaii",
+  "conference": "Mountain West",
+  "home_court": 2.5,
+  "preseason_rating": 81.87
+ },
+ {
+  "key": "uc-davis",
+  "team": "UC Davis",
+  "conference": "Mountain West",
+  "home_court": 2,
+  "preseason_rating": 80.31
+ },
+ {
+  "key": "san-jose-st",
+  "team": "San Jose St",
+  "conference": "Mountain West",
+  "home_court": 3,
+  "preseason_rating": 79.53
+ },
+ {
+  "key": "utep",
+  "team": "UTEP",
+  "conference": "Mountain West",
+  "home_court": 3.5,
+  "preseason_rating": 77.07
+ },
+ {
+  "key": "air-force",
+  "team": "Air Force",
+  "conference": "Mountain West",
+  "home_court": 3,
+  "preseason_rating": 66.19
+ },
+ {
+  "key": "long-island",
+  "team": "Long Island",
+  "conference": "NEC",
+  "home_court": 2.5,
+  "preseason_rating": 73.03
+ },
+ {
+  "key": "mercyhurst",
+  "team": "Mercyhurst",
+  "conference": "NEC",
+  "home_court": 2.5,
+  "preseason_rating": 70.76
+ },
+ {
+  "key": "le-moyne",
+  "team": "Le Moyne",
+  "conference": "NEC",
+  "home_court": 2.5,
+  "preseason_rating": 68.76
+ },
+ {
+  "key": "central-connecticut",
+  "team": "Central Connecticut",
+  "conference": "NEC",
+  "home_court": 1.5,
+  "preseason_rating": 68.38
+ },
+ {
+  "key": "wagner",
+  "team": "Wagner",
+  "conference": "NEC",
+  "home_court": 2,
+  "preseason_rating": 67.9
+ },
+ {
+  "key": "fairleigh-dickinson",
+  "team": "Fairleigh Dickinson",
+  "conference": "NEC",
+  "home_court": 1.5,
+  "preseason_rating": 67.32
+ },
+ {
+  "key": "new-haven",
+  "team": "New Haven",
+  "conference": "NEC",
+  "home_court": 2,
+  "preseason_rating": 67.47
+ },
+ {
+  "key": "chicago-st",
+  "team": "Chicago St",
+  "conference": "NEC",
+  "home_court": 2.5,
+  "preseason_rating": 66.5
+ },
+ {
+  "key": "stonehill",
+  "team": "Stonehill",
+  "conference": "NEC",
+  "home_court": 2,
+  "preseason_rating": 66.45
+ },
+ {
+  "key": "tennessee-st",
+  "team": "Tennessee St",
+  "conference": "OVC",
+  "home_court": 3.5,
+  "preseason_rating": 74.97
+ },
+ {
+  "key": "siu-edwardsville",
+  "team": "SIU Edwardsville",
+  "conference": "OVC",
+  "home_court": 2.5,
+  "preseason_rating": 72.6
+ },
+ {
+  "key": "ut-martin",
+  "team": "UT Martin",
+  "conference": "OVC",
+  "home_court": 2.5,
+  "preseason_rating": 72.26
+ },
+ {
+  "key": "se-missouri-st",
+  "team": "SE Missouri St",
+  "conference": "OVC",
+  "home_court": 3,
+  "preseason_rating": 72
+ },
+ {
+  "key": "morehead-st",
+  "team": "Morehead St",
+  "conference": "OVC",
+  "home_court": 2.5,
+  "preseason_rating": 70.92
+ },
+ {
+  "key": "lindenwood",
+  "team": "Lindenwood",
+  "conference": "OVC",
+  "home_court": 2.5,
+  "preseason_rating": 70.21
+ },
+ {
+  "key": "eastern-illinois",
+  "team": "Eastern Illinois",
+  "conference": "OVC",
+  "home_court": 2.5,
+  "preseason_rating": 68.04
+ },
+ {
+  "key": "southern-indiana",
+  "team": "Southern Indiana",
+  "conference": "OVC",
+  "home_court": 2.5,
+  "preseason_rating": 66.95
+ },
+ {
+  "key": "western-illinois",
+  "team": "Western Illinois",
+  "conference": "OVC",
+  "home_court": 3,
+  "preseason_rating": 63.32
+ },
+ {
+  "key": "american",
+  "team": "American",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 75.1
+ },
+ {
+  "key": "colgate",
+  "team": "Colgate",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 73.83
+ },
+ {
+  "key": "navy",
+  "team": "Navy",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 73.52
+ },
+ {
+  "key": "lehigh",
+  "team": "Lehigh",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 73.65
+ },
+ {
+  "key": "boston-u",
+  "team": "Boston U",
+  "conference": "Patriot",
+  "home_court": 2.5,
+  "preseason_rating": 72.39
+ },
+ {
+  "key": "bucknell",
+  "team": "Bucknell",
+  "conference": "Patriot",
+  "home_court": 2.5,
+  "preseason_rating": 69.78
+ },
+ {
+  "key": "lafayette",
+  "team": "Lafayette",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 68.91
+ },
+ {
+  "key": "loyola-md",
+  "team": "Loyola MD",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 68.05
+ },
+ {
+  "key": "army",
+  "team": "Army",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 67.52
+ },
+ {
+  "key": "holy-cross",
+  "team": "Holy Cross",
+  "conference": "Patriot",
+  "home_court": 2,
+  "preseason_rating": 67.37
+ },
+ {
+  "key": "gonzaga",
+  "team": "Gonzaga",
+  "conference": "Pac-12",
+  "home_court": 3,
+  "preseason_rating": 96.5
+ },
+ {
+  "key": "utah-st",
+  "team": "Utah St",
+  "conference": "Pac-12",
+  "home_court": 4,
+  "preseason_rating": 90.79
+ },
+ {
+  "key": "colorado-st",
+  "team": "Colorado St",
+  "conference": "Pac-12",
+  "home_court": 3.5,
+  "preseason_rating": 88.55
+ },
+ {
+  "key": "san-diego-st",
+  "team": "San Diego St",
+  "conference": "Pac-12",
+  "home_court": 3.5,
+  "preseason_rating": 87.29
+ },
+ {
+  "key": "boise-st",
+  "team": "Boise St",
+  "conference": "Pac-12",
+  "home_court": 3.5,
+  "preseason_rating": 86.84
+ },
+ {
+  "key": "oregon-st",
+  "team": "Oregon St",
+  "conference": "Pac-12",
+  "home_court": 3.5,
+  "preseason_rating": 84.81
+ },
+ {
+  "key": "texas-st",
+  "team": "Texas St",
+  "conference": "Pac-12",
+  "home_court": 2.5,
+  "preseason_rating": 83.37
+ },
+ {
+  "key": "washington-st",
+  "team": "Washington St",
+  "conference": "Pac-12",
+  "home_court": 3.5,
+  "preseason_rating": 81.47
+ },
+ {
+  "key": "fresno-st",
+  "team": "Fresno St",
+  "conference": "Pac-12",
+  "home_court": 3,
+  "preseason_rating": 80.63
+ },
+ {
+  "key": "florida",
+  "team": "Florida",
+  "conference": "SEC",
+  "home_court": 3,
+  "preseason_rating": 102.58
+ },
+ {
+  "key": "tennessee",
+  "team": "Tennessee",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 99.32
+ },
+ {
+  "key": "texas",
+  "team": "Texas",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 98.12
+ },
+ {
+  "key": "kentucky",
+  "team": "Kentucky",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 94.34
+ },
+ {
+  "key": "arkansas",
+  "team": "Arkansas",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 96.18
+ },
+ {
+  "key": "alabama",
+  "team": "Alabama",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 95.92
+ },
+ {
+  "key": "vanderbilt",
+  "team": "Vanderbilt",
+  "conference": "SEC",
+  "home_court": 3,
+  "preseason_rating": 94.97
+ },
+ {
+  "key": "lsu",
+  "team": "LSU",
+  "conference": "SEC",
+  "home_court": 4,
+  "preseason_rating": 89.02
+ },
+ {
+  "key": "oklahoma",
+  "team": "Oklahoma",
+  "conference": "SEC",
+  "home_court": 3,
+  "preseason_rating": 94.2
+ },
+ {
+  "key": "auburn",
+  "team": "Auburn",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 93.55
+ },
+ {
+  "key": "texas-a-m",
+  "team": "Texas A&M",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 93.33
+ },
+ {
+  "key": "missouri",
+  "team": "Missouri",
+  "conference": "SEC",
+  "home_court": 3,
+  "preseason_rating": 92.75
+ },
+ {
+  "key": "ole-miss",
+  "team": "Ole Miss",
+  "conference": "SEC",
+  "home_court": 4,
+  "preseason_rating": 92.34
+ },
+ {
+  "key": "georgia",
+  "team": "Georgia",
+  "conference": "SEC",
+  "home_court": 3,
+  "preseason_rating": 92.61
+ },
+ {
+  "key": "mississippi-st",
+  "team": "Mississippi St",
+  "conference": "SEC",
+  "home_court": 3.5,
+  "preseason_rating": 89.94
+ },
+ {
+  "key": "south-carolina",
+  "team": "South Carolina",
+  "conference": "SEC",
+  "home_court": 2.5,
+  "preseason_rating": 88.65
+ },
+ {
+  "key": "east-tennessee-st",
+  "team": "East Tennessee St",
+  "conference": "Southern",
+  "home_court": 2.5,
+  "preseason_rating": 79.13
+ },
+ {
+  "key": "furman",
+  "team": "Furman",
+  "conference": "Southern",
+  "home_court": 2.5,
+  "preseason_rating": 76.28
+ },
+ {
+  "key": "mercer",
+  "team": "Mercer",
+  "conference": "Southern",
+  "home_court": 2.5,
+  "preseason_rating": 76.6
+ },
+ {
+  "key": "western-carolina",
+  "team": "Western Carolina",
+  "conference": "Southern",
+  "home_court": 3,
+  "preseason_rating": 76.09
+ },
+ {
+  "key": "chattanooga",
+  "team": "Chattanooga",
+  "conference": "Southern",
+  "home_court": 2.5,
+  "preseason_rating": 73.78
+ },
+ {
+  "key": "samford",
+  "team": "Samford",
+  "conference": "Southern",
+  "home_court": 3,
+  "preseason_rating": 73.78
+ },
+ {
+  "key": "tennessee-tech",
+  "team": "Tennessee Tech",
+  "conference": "Southern",
+  "home_court": 3,
+  "preseason_rating": 73.73
+ },
+ {
+  "key": "wofford",
+  "team": "Wofford",
+  "conference": "Southern",
+  "home_court": 2,
+  "preseason_rating": 73.36
+ },
+ {
+  "key": "unc-greensboro",
+  "team": "UNC Greensboro",
+  "conference": "Southern",
+  "home_court": 2,
+  "preseason_rating": 69.81
+ },
+ {
+  "key": "vmi",
+  "team": "VMI",
+  "conference": "Southern",
+  "home_court": 2,
+  "preseason_rating": 68.89
+ },
+ {
+  "key": "the-citadel",
+  "team": "The Citadel",
+  "conference": "Southern",
+  "home_court": 2.5,
+  "preseason_rating": 65.91
+ },
+ {
+  "key": "mcneese",
+  "team": "McNeese",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 82.8
+ },
+ {
+  "key": "stephen-f-austin",
+  "team": "Stephen F Austin",
+  "conference": "Southland",
+  "home_court": 3,
+  "preseason_rating": 80.16
+ },
+ {
+  "key": "texas-a-m-cc",
+  "team": "Texas A&M CC",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 76.91
+ },
+ {
+  "key": "ut-rio-grande-valley",
+  "team": "UT Rio Grande Valley",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 75.99
+ },
+ {
+  "key": "lamar",
+  "team": "Lamar",
+  "conference": "Southland",
+  "home_court": 3,
+  "preseason_rating": 74.4
+ },
+ {
+  "key": "lsu-new-orleans",
+  "team": "LSU New Orleans",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 72.13
+ },
+ {
+  "key": "northwestern-st",
+  "team": "Northwestern St",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 71.27
+ },
+ {
+  "key": "nicholls",
+  "team": "Nicholls",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 70.91
+ },
+ {
+  "key": "se-louisiana",
+  "team": "SE Louisiana",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 70.6
+ },
+ {
+  "key": "houston-christian",
+  "team": "Houston Christian",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 69.88
+ },
+ {
+  "key": "incarnate-word",
+  "team": "Incarnate Word",
+  "conference": "Southland",
+  "home_court": 2.5,
+  "preseason_rating": 69.49
+ },
+ {
+  "key": "east-texas-a-m",
+  "team": "East Texas A&M",
+  "conference": "Southland",
+  "home_court": 2,
+  "preseason_rating": 68.52
+ },
+ {
+  "key": "st-thomas",
+  "team": "St Thomas",
+  "conference": "Summit League",
+  "home_court": 3,
+  "preseason_rating": 78.38
+ },
+ {
+  "key": "north-dakota-st",
+  "team": "North Dakota St",
+  "conference": "Summit League",
+  "home_court": 2.5,
+  "preseason_rating": 78.22
+ },
+ {
+  "key": "south-dakota-st",
+  "team": "South Dakota St",
+  "conference": "Summit League",
+  "home_court": 3.5,
+  "preseason_rating": 76.86
+ },
+ {
+  "key": "omaha",
+  "team": "Omaha",
+  "conference": "Summit League",
+  "home_court": 3.5,
+  "preseason_rating": 73.31
+ },
+ {
+  "key": "north-dakota",
+  "team": "North Dakota",
+  "conference": "Summit League",
+  "home_court": 2.5,
+  "preseason_rating": 72.68
+ },
+ {
+  "key": "oral-roberts",
+  "team": "Oral Roberts",
+  "conference": "Summit League",
+  "home_court": 3,
+  "preseason_rating": 71.78
+ },
+ {
+  "key": "south-dakota",
+  "team": "South Dakota",
+  "conference": "Summit League",
+  "home_court": 3,
+  "preseason_rating": 71.39
+ },
+ {
+  "key": "kansas-city",
+  "team": "Kansas City",
+  "conference": "Summit League",
+  "home_court": 2.5,
+  "preseason_rating": 66.13
+ },
+ {
+  "key": "james-madison",
+  "team": "James Madison",
+  "conference": "Sun Belt",
+  "home_court": 3,
+  "preseason_rating": 77.65
+ },
+ {
+  "key": "appalachian-st",
+  "team": "Appalachian St",
+  "conference": "Sun Belt",
+  "home_court": 2.5,
+  "preseason_rating": 77.35
+ },
+ {
+  "key": "southern-miss",
+  "team": "Southern Miss",
+  "conference": "Sun Belt",
+  "home_court": 3,
+  "preseason_rating": 77.03
+ },
+ {
+  "key": "arkansas-st",
+  "team": "Arkansas St",
+  "conference": "Sun Belt",
+  "home_court": 2.5,
+  "preseason_rating": 76.85
+ },
+ {
+  "key": "troy",
+  "team": "Troy",
+  "conference": "Sun Belt",
+  "home_court": 2.5,
+  "preseason_rating": 76.8
+ },
+ {
+  "key": "georgia-st",
+  "team": "Georgia St",
+  "conference": "Sun Belt",
+  "home_court": 3,
+  "preseason_rating": 75.87
+ },
+ {
+  "key": "louisiana-tech",
+  "team": "Louisiana Tech",
+  "conference": "Sun Belt",
+  "home_court": 3,
+  "preseason_rating": 75.69
+ },
+ {
+  "key": "marshall",
+  "team": "Marshall",
+  "conference": "Sun Belt",
+  "home_court": 3,
+  "preseason_rating": 75.46
+ },
+ {
+  "key": "old-dominion",
+  "team": "Old Dominion",
+  "conference": "Sun Belt",
+  "home_court": 3,
+  "preseason_rating": 75.37
+ },
+ {
+  "key": "south-alabama",
+  "team": "South Alabama",
+  "conference": "Sun Belt",
+  "home_court": 2.5,
+  "preseason_rating": 75.13
+ },
+ {
+  "key": "georgia-southern",
+  "team": "Georgia Southern",
+  "conference": "Sun Belt",
+  "home_court": 2.5,
+  "preseason_rating": 74.77
+ },
+ {
+  "key": "louisiana",
+  "team": "Louisiana",
+  "conference": "Sun Belt",
+  "home_court": 2.5,
+  "preseason_rating": 73.71
+ },
+ {
+  "key": "coastal-carolina",
+  "team": "Coastal Carolina",
+  "conference": "Sun Belt",
+  "home_court": 3,
+  "preseason_rating": 73.46
+ },
+ {
+  "key": "louisiana-monroe",
+  "team": "Louisiana Monroe",
+  "conference": "Sun Belt",
+  "home_court": 2.5,
+  "preseason_rating": 67.95
+ },
+ {
+  "key": "bethune-cookman",
+  "team": "Bethune-Cookman",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 74.22
+ },
+ {
+  "key": "alabama-st",
+  "team": "Alabama St",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 71.93
+ },
+ {
+  "key": "alabama-a-m",
+  "team": "Alabama A&M",
+  "conference": "SWAC",
+  "home_court": 3,
+  "preseason_rating": 70.64
+ },
+ {
+  "key": "florida-a-m",
+  "team": "Florida A&M",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 70.52
+ },
+ {
+  "key": "grambling-st",
+  "team": "Grambling St",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 70.05
+ },
+ {
+  "key": "prairie-view-a-m",
+  "team": "Prairie View A&M",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 70.18
+ },
+ {
+  "key": "southern",
+  "team": "Southern",
+  "conference": "SWAC",
+  "home_court": 3,
+  "preseason_rating": 70.93
+ },
+ {
+  "key": "texas-southern",
+  "team": "Texas Southern",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 68.37
+ },
+ {
+  "key": "arkansas-pine-bluff",
+  "team": "Arkansas-Pine Bluff",
+  "conference": "SWAC",
+  "home_court": 2,
+  "preseason_rating": 67.89
+ },
+ {
+  "key": "jackson-st",
+  "team": "Jackson St",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 66.58
+ },
+ {
+  "key": "alcorn-st",
+  "team": "Alcorn St",
+  "conference": "SWAC",
+  "home_court": 3,
+  "preseason_rating": 65.53
+ },
+ {
+  "key": "mississippi-valley-st",
+  "team": "Mississippi Valley St",
+  "conference": "SWAC",
+  "home_court": 2.5,
+  "preseason_rating": 61.33
+ },
+ {
+  "key": "ut-arlington",
+  "team": "UT Arlington",
+  "conference": "UAC",
+  "home_court": 2.5,
+  "preseason_rating": 79.39
+ },
+ {
+  "key": "central-arkansas",
+  "team": "Central Arkansas",
+  "conference": "UAC",
+  "home_court": 2.5,
+  "preseason_rating": 78.93
+ },
+ {
+  "key": "austin-peay",
+  "team": "Austin Peay",
+  "conference": "UAC",
+  "home_court": 3,
+  "preseason_rating": 76.32
+ },
+ {
+  "key": "tarleton-st",
+  "team": "Tarleton St",
+  "conference": "UAC",
+  "home_court": 3,
+  "preseason_rating": 74.58
+ },
+ {
+  "key": "little-rock",
+  "team": "Little Rock",
+  "conference": "UAC",
+  "home_court": 3,
+  "preseason_rating": 73.97
+ },
+ {
+  "key": "abilene-christian",
+  "team": "Abilene Christian",
+  "conference": "UAC",
+  "home_court": 3,
+  "preseason_rating": 73.17
+ },
+ {
+  "key": "eastern-kentucky",
+  "team": "Eastern Kentucky",
+  "conference": "UAC",
+  "home_court": 3,
+  "preseason_rating": 72.06
+ },
+ {
+  "key": "north-alabama",
+  "team": "North Alabama",
+  "conference": "UAC",
+  "home_court": 3,
+  "preseason_rating": 71.84
+ },
+ {
+  "key": "west-georgia",
+  "team": "West Georgia",
+  "conference": "UAC",
+  "home_court": 2.5,
+  "preseason_rating": 71.14
+ },
+ {
+  "key": "saint-mary-s",
+  "team": "Saint Mary's",
+  "conference": "WCC",
+  "home_court": 2.5,
+  "preseason_rating": 87.61
+ },
+ {
+  "key": "santa-clara",
+  "team": "Santa Clara",
+  "conference": "WCC",
+  "home_court": 2.5,
+  "preseason_rating": 85.92
+ },
+ {
+  "key": "seattle",
+  "team": "Seattle",
+  "conference": "WCC",
+  "home_court": 3,
+  "preseason_rating": 83.63
+ },
+ {
+  "key": "pepperdine",
+  "team": "Pepperdine",
+  "conference": "WCC",
+  "home_court": 2,
+  "preseason_rating": 83.07
+ },
+ {
+  "key": "pacific",
+  "team": "Pacific",
+  "conference": "WCC",
+  "home_court": 2.5,
+  "preseason_rating": 82.14
+ },
+ {
+  "key": "loyola-marymount",
+  "team": "Loyola Marymount",
+  "conference": "WCC",
+  "home_court": 2.5,
+  "preseason_rating": 80.67
+ },
+ {
+  "key": "san-diego",
+  "team": "San Diego",
+  "conference": "WCC",
+  "home_court": 2,
+  "preseason_rating": 80.27
+ },
+ {
+  "key": "portland",
+  "team": "Portland",
+  "conference": "WCC",
+  "home_court": 2,
+  "preseason_rating": 79.61
+ },
+ {
+  "key": "san-francisco",
+  "team": "San Francisco",
+  "conference": "WCC",
+  "home_court": 2.5,
+  "preseason_rating": 79.6
+ },
+ {
+  "key": "denver",
+  "team": "Denver",
+  "conference": "WCC",
+  "home_court": 3.5,
+  "preseason_rating": 79.3
+ }
+]
