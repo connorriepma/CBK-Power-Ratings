@@ -1,6 +1,5 @@
 [
 {"date":"2026-11-02","home":"bethune-cookman","away":"furman","neutral":true,"homeScore":56,"awayScore":82,"line":2,"ts":"2026-10-13T00:59:45.234Z"},
-{"date":"2026-11-02","home":"bryant","away":"siena","neutral":false,"homeScore":74,"awayScore":60,"line":5,"ts":"2026-10-13T01:00:21.426Z"},
 {"date":"2026-11-02","home":"butler","away":"lafayette","neutral":false,"homeScore":75,"awayScore":53,"line":-20.5,"ts":"2026-10-13T01:00:25.739Z"},
 {"date":"2026-11-02","home":"cal-poly","away":"non-d1-opponent","neutral":false,"homeScore":81,"awayScore":68,"line":null,"ts":"2026-10-13T01:00:35.611Z"},
 {"date":"2026-11-02","home":"california","away":"non-d1-opponent","neutral":false,"homeScore":83,"awayScore":46,"line":null,"ts":"2026-10-13T01:00:41.250Z"},
