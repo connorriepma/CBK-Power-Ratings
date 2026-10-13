@@ -61,5 +61,6 @@
 {"date":"2026-11-02","home":"james-madison","away":"miami-oh","neutral":false,"homeScore":75,"awayScore":66,"line":2.5,"ts":"2026-10-13T01:04:13.586Z"},
 {"date":"2026-11-02","home":"kansas","away":"fordham","neutral":false,"homeScore":79,"awayScore":54,"line":-15,"ts":"2026-10-13T01:04:19.626Z"},
 {"date":"2026-11-02","home":"kennesaw-st","away":"non-d1-opponent","neutral":false,"homeScore":89,"awayScore":51,"line":null,"ts":"2026-10-13T01:04:22.962Z"},
-{"date":"2026-11-02","home":"lamar","away":"non-d1-opponent","neutral":false,"homeScore":75,"awayScore":60,"line":null,"ts":"2026-10-13T01:04:25.666Z"}
+{"date":"2026-11-02","home":"lamar","away":"non-d1-opponent","neutral":false,"homeScore":75,"awayScore":60,"line":null,"ts":"2026-10-13T01:04:25.666Z"},
+{"date":"2026-11-02","home":"longwood","away":"non-d1-opponent","neutral":false,"homeScore":68,"awayScore":61,"line":null,"ts":"2026-10-13T01:04:28.386Z"}
 ]
