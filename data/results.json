@@ -58,5 +58,6 @@
 {"date":"2026-11-02","home":"iu-indy","away":"non-d1-opponent","neutral":false,"homeScore":95,"awayScore":71,"line":null,"ts":"2026-10-13T01:03:56.618Z"},
 {"date":"2026-11-02","home":"jacksonville-st","away":"non-d1-opponent","neutral":false,"homeScore":89,"awayScore":63,"line":null,"ts":"2026-10-13T01:04:06.994Z"},
 {"date":"2026-11-02","home":"jacksonville","away":"non-d1-opponent","neutral":false,"homeScore":81,"awayScore":53,"line":null,"ts":"2026-10-13T01:04:03.810Z"},
-{"date":"2026-11-02","home":"james-madison","away":"miami-oh","neutral":false,"homeScore":75,"awayScore":66,"line":2.5,"ts":"2026-10-13T01:04:13.586Z"}
+{"date":"2026-11-02","home":"james-madison","away":"miami-oh","neutral":false,"homeScore":75,"awayScore":66,"line":2.5,"ts":"2026-10-13T01:04:13.586Z"},
+{"date":"2026-11-02","home":"kansas","away":"fordham","neutral":false,"homeScore":79,"awayScore":54,"line":-15,"ts":"2026-10-13T01:04:19.626Z"}
 ]
