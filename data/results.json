@@ -48,5 +48,6 @@
 {"date":"2026-11-02","home":"hawaii","away":"seattle","neutral":false,"homeScore":73,"awayScore":70,"line":-0.5,"ts":"2026-10-13T01:03:06.794Z"},
 {"date":"2026-11-02","home":"high-point","away":"liberty","neutral":true,"homeScore":53,"awayScore":70,"line":-3,"ts":"2026-10-13T01:03:10.538Z"},
 {"date":"2026-11-02","home":"hofstra","away":"non-d1-opponent","neutral":false,"homeScore":82,"awayScore":68,"line":null,"ts":"2026-10-13T01:03:19.834Z"},
-{"date":"2026-11-02","home":"houston","away":"la-salle","neutral":false,"homeScore":76,"awayScore":61,"line":-21.5,"ts":"2026-10-13T01:03:23.010Z"}
+{"date":"2026-11-02","home":"houston","away":"la-salle","neutral":false,"homeScore":76,"awayScore":61,"line":-21.5,"ts":"2026-10-13T01:03:23.010Z"},
+{"date":"2026-11-02","home":"idaho","away":"non-d1-opponent","neutral":false,"homeScore":82,"awayScore":52,"line":null,"ts":"2026-10-13T01:03:27.874Z"}
 ]
