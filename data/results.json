@@ -44,5 +44,6 @@
 {"date":"2026-11-02","home":"georgia","away":"north-carolina-central","neutral":false,"homeScore":81,"awayScore":64,"line":-32.5,"ts":"2026-10-13T01:02:43.674Z"},
 {"date":"2026-11-02","home":"grand-canyon","away":"texas-southern","neutral":false,"homeScore":96,"awayScore":59,"line":-26,"ts":"2026-10-13T01:02:54.922Z"},
 {"date":"2026-11-02","home":"green-bay","away":"non-d1-opponent","neutral":false,"homeScore":67,"awayScore":58,"line":null,"ts":"2026-10-13T01:02:58.082Z"},
-{"date":"2026-11-02","home":"harvard","away":"non-d1-opponent","neutral":false,"homeScore":83,"awayScore":49,"line":null,"ts":"2026-10-13T01:03:02.778Z"}
+{"date":"2026-11-02","home":"harvard","away":"non-d1-opponent","neutral":false,"homeScore":83,"awayScore":49,"line":null,"ts":"2026-10-13T01:03:02.778Z"},
+{"date":"2026-11-02","home":"hawaii","away":"seattle","neutral":false,"homeScore":73,"awayScore":70,"line":-0.5,"ts":"2026-10-13T01:03:06.794Z"}
 ]
