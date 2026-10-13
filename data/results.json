@@ -31,5 +31,6 @@
 {"date":"2026-11-02","home":"duke","away":"army","neutral":false,"homeScore":104,"awayScore":54,"line":-38.5,"ts":"2026-10-13T01:01:53.674Z"},
 {"date":"2026-11-02","home":"east-carolina","away":"usc-upstate","neutral":false,"homeScore":73,"awayScore":74,"line":-9.5,"ts":"2026-10-13T01:01:57.170Z"},
 {"date":"2026-11-02","home":"eastern-kentucky","away":"non-d1-opponent","neutral":false,"homeScore":72,"awayScore":76,"line":null,"ts":"2026-10-13T01:02:01.418Z"},
-{"date":"2026-11-02","home":"evansville","away":"non-d1-opponent","neutral":false,"homeScore":79,"awayScore":65,"line":null,"ts":"2026-10-13T01:02:11.066Z"}
+{"date":"2026-11-02","home":"evansville","away":"non-d1-opponent","neutral":false,"homeScore":79,"awayScore":65,"line":null,"ts":"2026-10-13T01:02:11.066Z"},
+{"date":"2026-11-02","home":"fiu","away":"non-d1-opponent","neutral":false,"homeScore":91,"awayScore":71,"line":null,"ts":"2026-10-13T01:02:14.186Z"}
 ]
