@@ -51,5 +51,6 @@
 {"date":"2026-11-02","home":"houston","away":"la-salle","neutral":false,"homeScore":76,"awayScore":61,"line":-21.5,"ts":"2026-10-13T01:03:23.010Z"},
 {"date":"2026-11-02","home":"idaho","away":"non-d1-opponent","neutral":false,"homeScore":82,"awayScore":52,"line":null,"ts":"2026-10-13T01:03:27.874Z"},
 {"date":"2026-11-02","home":"illinois-chicago","away":"non-d1-opponent","neutral":false,"homeScore":87,"awayScore":46,"line":null,"ts":"2026-10-13T01:03:36.922Z"},
-{"date":"2026-11-02","home":"illinois","away":"fairleigh-dickinson","neutral":false,"homeScore":97,"awayScore":55,"line":-35,"ts":"2026-10-13T01:03:33.514Z"}
+{"date":"2026-11-02","home":"illinois","away":"fairleigh-dickinson","neutral":false,"homeScore":97,"awayScore":55,"line":-35,"ts":"2026-10-13T01:03:33.514Z"},
+{"date":"2026-11-02","home":"indiana","away":"eastern-illinois","neutral":false,"homeScore":96,"awayScore":37,"line":-29.5,"ts":"2026-10-13T01:03:40.770Z"}
 ]
