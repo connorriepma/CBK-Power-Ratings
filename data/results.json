@@ -55,5 +55,6 @@
 {"date":"2026-11-02","home":"indiana-st","away":"charlotte","neutral":false,"homeScore":57,"awayScore":72,"line":1,"ts":"2026-10-13T01:03:44.434Z"},
 {"date":"2026-11-02","home":"indiana","away":"eastern-illinois","neutral":false,"homeScore":96,"awayScore":37,"line":-29.5,"ts":"2026-10-13T01:03:40.770Z"},
 {"date":"2026-11-02","home":"iona","away":"vermont","neutral":false,"homeScore":69,"awayScore":76,"line":-3.5,"ts":"2026-10-13T01:03:47.466Z"},
-{"date":"2026-11-02","home":"iu-indy","away":"non-d1-opponent","neutral":false,"homeScore":95,"awayScore":71,"line":null,"ts":"2026-10-13T01:03:56.618Z"}
+{"date":"2026-11-02","home":"iu-indy","away":"non-d1-opponent","neutral":false,"homeScore":95,"awayScore":71,"line":null,"ts":"2026-10-13T01:03:56.618Z"},
+{"date":"2026-11-02","home":"jacksonville","away":"non-d1-opponent","neutral":false,"homeScore":81,"awayScore":53,"line":null,"ts":"2026-10-13T01:04:03.810Z"}
 ]
