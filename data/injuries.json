@@ -42,6 +42,26 @@
  {
   "history": [
    {
+    "date": "2026-10-12",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
+  "note": "Sophomore. MRI on Oct 12 confirmed a torn ACL to the same knee, a re-injury. No timetable for return. 2025-26: 6.9 pts, 2.8 reb, 2.5 ast in 18.6 min over 12 games.",
+  "player": "Zac Foster",
+  "pos": "G",
+  "reported": "2026-10-12",
+  "returnDate": null,
+  "role": "Rotation",
+  "source": "Clemson Athletics release (clemsontigers.com, Oct 12, 2026)",
+  "status": "Out",
+  "team": "clemson",
+  "updated": "2026-10-13",
+  "id": "clemson-zac-foster"
+ },
+ {
+  "history": [
+   {
     "date": "2026-10-09",
     "returnDate": null,
     "status": "Out"
