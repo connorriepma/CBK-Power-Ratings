@@ -16,5 +16,6 @@
 {"date":"2026-11-02","home":"cal-poly","away":"non-d1-opponent","neutral":false,"homeScore":81,"awayScore":68,"line":null,"ts":"2026-10-13T01:00:35.611Z"},
 {"date":"2026-11-02","home":"california","away":"non-d1-opponent","neutral":false,"homeScore":83,"awayScore":46,"line":null,"ts":"2026-10-13T01:00:41.250Z"},
 {"date":"2026-11-02","home":"central-arkansas","away":"oral-roberts","neutral":false,"homeScore":67,"awayScore":66,"line":-9.5,"ts":"2026-10-13T01:00:48.066Z"},
-{"date":"2026-11-02","home":"cincinnati","away":"american","neutral":false,"homeScore":92,"awayScore":60,"line":-24,"ts":"2026-10-13T01:00:51.234Z"}
+{"date":"2026-11-02","home":"cincinnati","away":"american","neutral":false,"homeScore":92,"awayScore":60,"line":-24,"ts":"2026-10-13T01:00:51.234Z"},
+{"date":"2026-11-02","home":"clemson","away":"stetson","neutral":false,"homeScore":77,"awayScore":49,"line":-24.5,"ts":"2026-10-13T01:00:55.442Z"}
 ]
