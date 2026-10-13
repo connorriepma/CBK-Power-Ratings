@@ -1,7 +1,6 @@
 [
 {"date":"2026-11-02","home":"bethune-cookman","away":"furman","neutral":true,"homeScore":56,"awayScore":82,"line":2,"ts":"2026-10-13T00:59:45.234Z"},
 {"date":"2026-11-02","home":"cincinnati","away":"american","neutral":false,"homeScore":92,"awayScore":60,"line":-24,"ts":"2026-10-13T01:00:51.234Z"},
-{"date":"2026-11-02","home":"clemson","away":"stetson","neutral":false,"homeScore":77,"awayScore":49,"line":-24.5,"ts":"2026-10-13T01:00:55.442Z"},
 {"date":"2026-11-02","home":"coastal-carolina","away":"eastern-michigan","neutral":false,"homeScore":65,"awayScore":77,"line":2,"ts":"2026-10-13T01:01:04.043Z"},
 {"date":"2026-11-02","home":"colorado-st","away":"montana-st","neutral":false,"homeScore":71,"awayScore":56,"line":-11.5,"ts":"2026-10-13T01:01:12.394Z"},
 {"date":"2026-11-02","home":"colorado","away":"abilene-christian","neutral":false,"homeScore":88,"awayScore":62,"line":-17.5,"ts":"2026-10-13T01:01:07.794Z"},
