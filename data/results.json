@@ -3,5 +3,6 @@
 {"date":"2026-11-02","home":"alabama-a-m","away":"non-d1-opponent","neutral":false,"homeScore":74,"awayScore":76,"line":null,"ts":"2026-10-13T00:58:56.210Z"},
 {"date":"2026-11-02","home":"appalachian-st","away":"merrimack","neutral":true,"homeScore":75,"awayScore":66,"line":-1.5,"ts":"2026-10-13T00:59:12.322Z"},
 {"date":"2026-11-02","home":"arizona-st","away":"east-tennessee-st","neutral":false,"homeScore":79,"awayScore":65,"line":-16.5,"ts":"2026-10-13T00:59:13.930Z"},
-{"date":"2026-11-02","home":"arkansas-st","away":"toledo","neutral":false,"homeScore":76,"awayScore":58,"line":2,"ts":"2026-10-13T00:59:19.474Z"}
+{"date":"2026-11-02","home":"arkansas-st","away":"toledo","neutral":false,"homeScore":76,"awayScore":58,"line":2,"ts":"2026-10-13T00:59:19.474Z"},
+{"date":"2026-11-02","home":"austin-peay","away":"non-d1-opponent","neutral":false,"homeScore":77,"awayScore":58,"line":null,"ts":"2026-10-13T00:59:25.130Z"}
 ]
