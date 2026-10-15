@@ -202,6 +202,26 @@
  {
   "history": [
    {
+    "date": "2026-10-15",
+    "returnDate": null,
+    "status": "Out for season"
+   }
+  ],
+  "note": "Transfer from Coastal Carolina. Underwent knee surgery; out for 2026-27. 2025-26 at Coastal Carolina: 15.6 pts, 5.5 reb, 2.1 ast in 33.1 min, 32 starts in 32 games, 40.2 FG%, 39.3 3P%.",
+  "player": "AJ Dancler",
+  "pos": "",
+  "reported": "2026-10-15",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "USF report (relayed by site owner; no link)",
+  "status": "Out for season",
+  "team": "south-florida",
+  "updated": "2026-10-15",
+  "id": "south-florida-aj-dancler"
+ },
+ {
+  "history": [
+   {
     "date": "2026-10-09",
     "returnDate": null,
     "status": "Out for season"
