@@ -242,6 +242,26 @@
  {
   "history": [
    {
+    "date": "2026-10-13",
+    "returnDate": null,
+    "status": "Questionable"
+   }
+  ],
+  "note": "Temple transfer (#87 transfer, #12 SG in the owner's tracker). Left the Oct 13 exhibition vs UConn with a leg injury and did not return. Had been dealing with a hamstring injury in the preseason. Status for the Nov 2 opener vs New Haven in doubt. 2025-26 at Temple: 15.3 pts, 3.7 reb, 2.0 ast, 1.2 stl in 35.3 min over 32 games.",
+  "player": "Aiden Tobiason",
+  "pos": "G",
+  "reported": "2026-10-13",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "Mike Waters, Syracuse.com (relayed by site owner; no link)",
+  "status": "Questionable",
+  "team": "syracuse",
+  "updated": "2026-10-15",
+  "id": "syracuse-aiden-tobiason"
+ },
+ {
+  "history": [
+   {
     "date": "2026-10-09",
     "returnDate": null,
     "status": "Out"
