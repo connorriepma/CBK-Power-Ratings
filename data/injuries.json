@@ -265,18 +265,23 @@
     "date": "2026-10-09",
     "returnDate": null,
     "status": "Out"
+   },
+   {
+    "date": "2026-10-15",
+    "returnDate": "2026-12-01",
+    "status": "Out"
    }
   ],
-  "note": "Fractured fifth metatarsal in right foot in practice, surgery planned. Saint Mary's transfer. Expected to miss an extended period; no timetable.",
+  "note": "Fractured fifth metatarsal in right foot in practice, surgery planned. Saint Mary's transfer. Texas coach Sean Miller expects him back in December and with the team for the last 20 to 25 games of the season.",
   "player": "Mikey Lewis",
   "pos": "CG",
   "reported": "2026-09-30",
-  "returnDate": null,
+  "returnDate": "2026-12-01",
   "role": "Starter",
-  "source": "https://x.com/JonRothstein/status/2105306332522021175",
+  "source": "https://x.com/JonRothstein/status/2105306332522021175; Sean Miller via Jalen Brown (@jalenpolobrown) (relayed by site owner; no link)",
   "status": "Out",
   "team": "texas",
-  "updated": "2026-10-09",
+  "updated": "2026-10-15",
   "id": "texas-mikey-lewis"
  },
  {
