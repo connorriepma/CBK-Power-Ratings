@@ -123,9 +123,7 @@
     }
     dayIndex = Math.max(0, Math.min(dates.length - 1, index));
     var date = dates[dayIndex];
-    var dayGames = filteredGames()
-      .filter(function (g) { return g.date === date; })
-      .sort(function (a, b) { return a.home.localeCompare(b.home); });
+    var dayGames = Games.sortBestFirst(model, filteredGames().filter(function (g) { return g.date === date; }));
     master.innerHTML = dayHTML(date, dayGames);
     daySelect.value = String(dayIndex);
     prevBtn.disabled = dayIndex === 0;

@@ -35,8 +35,7 @@
         '<div class="rail-p"><div class="rail-empty">No games left on the schedule.</div></div>';
       return;
     }
-    var list = model.games.filter(function (g) { return g.date === day; })
-      .sort(function (a, b) { return a.home.localeCompare(b.home); });
+    var list = G.sortBestFirst(model, model.games.filter(function (g) { return g.date === day; }));
     var rows = list.map(function (g) {
       var m = g.neutral
         ? esc(g.away) + ' <span class="rl-vs">vs</span> ' + esc(g.home) + '*' + (g.site ? '<span class="g-site">' + esc(g.site) + '</span>' : '')

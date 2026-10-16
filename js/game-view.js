@@ -38,5 +38,24 @@ window.CBKGames = (function () {
       '<span class="' + (!tie && homeFav ? 'g-fav' : '') + '">' + C.fmtPct(wp.home) + '</span></div>';
   }
 
-  return { lineHTML: lineHTML, probHTML: probHTML };
+  // Combined rating of the two teams (exact current ratings added together), or null if either team is unrated
+  // (Non D1 Opponent games and any other unrated opponent).
+  function combinedRating(model, g) {
+    var h = model.current[C.teamKey(g.home)], a = model.current[C.teamKey(g.away)];
+    return (typeof h === 'number' && typeof a === 'number') ? h + a : null;
+  }
+
+  // Best games first: highest combined rating on top. Games with an unrated team go last.
+  // Ties break alphabetically by home team, then away team, so the order never shuffles.
+  function sortBestFirst(model, games) {
+    return games.slice().sort(function (x, y) {
+      var cx = combinedRating(model, x), cy = combinedRating(model, y);
+      if (cx === null && cy !== null) return 1;
+      if (cy === null && cx !== null) return -1;
+      if (cx !== null && cy !== null && Math.abs(cx - cy) > 1e-9) return cy - cx;
+      return x.home.localeCompare(y.home) || x.away.localeCompare(y.away);
+    });
+  }
+
+  return { lineHTML: lineHTML, probHTML: probHTML, combinedRating: combinedRating, sortBestFirst: sortBestFirst };
 })();
