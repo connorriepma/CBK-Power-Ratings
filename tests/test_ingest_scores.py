@@ -91,6 +91,8 @@ class IngestTests(unittest.TestCase):
             self.assertIn(team, NAMES.by_name, api_name)
         self.assertEqual(NAMES.resolve("Michigan State"), "Michigan St")
         self.assertEqual(NAMES.resolve("App State"), "Appalachian St")
+        self.assertEqual(NAMES.resolve("New Orleans"), "LSU New Orleans")
+        self.assertEqual(NAMES.resolve("LSU New Orleans"), "LSU New Orleans")
         self.assertIsNone(NAMES.resolve("Allegheny"))
 
 
