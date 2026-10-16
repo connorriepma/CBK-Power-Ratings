@@ -1,0 +1,26 @@
+# DRY RUN ONLY. Pulls final scores and reports how they compare with data/results.json.
+# It has read-only permission and never passes --write, so it cannot change any file in the repo.
+name: Ingest scores (dry run)
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days back to pull"
+        default: "3"
+  schedule:
+    - cron: "17 11 * * *"   # daily, about 4:17am Pacific (only runs once this file is on main)
+  push:
+    branches: [score-ingest]
+permissions:
+  contents: read
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    env:
+      CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Dry run
+        run: python3 src/ingest_scores.py --days "${{ github.event.inputs.days || '3' }}"
