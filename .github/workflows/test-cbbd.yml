@@ -1,4 +1,4 @@
-# Read-only test of the CollegeBasketballData API. Prints what comes back; changes nothing.
+# Read-only test of the CollegeBasketballData API. Prints a report; writes and commits nothing.
 # Delete this branch (test-cbbd) to remove it completely.
 name: Test CBBD API
 on:
@@ -12,31 +12,8 @@ jobs:
     env:
       CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
     steps:
-      - name: Key present?
-        run: |
-          if [ -z "$CBBD_API_KEY" ]; then echo "NO KEY FOUND in secrets"; exit 1; fi
-          echo "Key found (length ${#CBBD_API_KEY})"
-      - name: Probe games endpoint
-        run: |
-          B=https://api.collegebasketballdata.com
-          call() {
-            echo; echo "=== $1"
-            curl -sS -m 60 -o /tmp/r.json -w "HTTP %{http_code}\n" -G "$B/games" "${@:2}" -H "Authorization: Bearer $CBBD_API_KEY" || true
-            python3 - <<'PY'
-          import json
-          try:
-              d = json.load(open('/tmp/r.json'))
-          except Exception as e:
-              print('not JSON:', open('/tmp/r.json').read()[:400]); raise SystemExit
-          if isinstance(d, list):
-              print('games returned:', len(d))
-              if d:
-                  print('fields:', sorted(d[0].keys()))
-                  print('first game:', json.dumps(d[0])[:1800])
-          else:
-              print(json.dumps(d)[:600])
-          PY
-          }
-          call "Duke, season 2026" --data-urlencode season=2026 --data-urlencode team=Duke
-          call "Duke, season 2025" --data-urlencode season=2025 --data-urlencode team=Duke
-          call "one past day (2026-03-07) by date range" --data-urlencode season=2026 --data-urlencode startDateRange=2026-03-07T00:00:00Z --data-urlencode endDateRange=2026-03-08T00:00:00Z
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Team-name match report
+        run: python3 .github/scripts/probe_names.py
