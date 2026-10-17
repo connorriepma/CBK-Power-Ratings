@@ -180,12 +180,18 @@
   "id": "michigan-lincoln-cosby"
  },
  {
-  "history": [],
+  "history": [
+   {
+    "date": "2026-10-17",
+    "returnDate": null,
+    "status": "Out"
+   }
+  ],
   "note": "Left foot in a walking boot, using a scooter on the bench and floor. Won't play.",
   "player": "Devin Vanterpool",
   "pos": "G",
   "reported": "2026-10-17",
-  "returnDate": "",
+  "returnDate": null,
   "role": "Starter",
   "source": "Relayed by site owner; no link",
   "status": "Out",
