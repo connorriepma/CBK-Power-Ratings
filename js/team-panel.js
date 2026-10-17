@@ -25,7 +25,7 @@ window.CBKPanel = (function () {
       var stats = has ? statNum(p.ppg) + ' / ' + statNum(p.rpg) + ' / ' + statNum(p.apg) : '&mdash;';
       var tip = has && p.gp ? ' title="' + esc(p.gp + ' games played last season') + '"' : '';
       return '<tr><td class="rt-pnum">' + (p.num !== undefined && p.num !== '' ? esc(p.num) : '&mdash;') + '</td>' +
-        '<td class="rt-name">' + esc(p.name) + '</td><td>' + esc(p.pos || '') + '</td><td>' + esc(p.yr || '') + '</td>' +
+        '<td class="rt-name">' + esc(p.name) + (p.star ? '*' : '') + '</td><td>' + esc(p.pos || '') + '</td><td>' + esc(p.yr || '') + '</td>' +
         '<td class="rt-ht">' + esc(p.ht || '') + '</td><td class="rt-num"' + tip + '>' + stats + '</td>' +
         '<td class="rt-num"' + tip + '>' + (statNum(p.mpg) !== null ? statNum(p.mpg) : '&mdash;') + '</td>' +
         '<td class="rt-note">' + esc(p.note || '') + '</td></tr>';
@@ -34,6 +34,7 @@ window.CBKPanel = (function () {
       '<table class="rotation-table"><thead><tr><th class="rt-pnum" title="Jersey number">#</th><th>Player</th><th>Pos</th><th>Yr</th><th>Ht</th>' +
       '<th class="rt-num" title="2025-26 season: points / rebounds / assists per game">25-26 Stats</th>' +
       '<th class="rt-num" title="2025-26 season: minutes per game">25-26 MPG</th><th>Notes</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      (r.players.some(function (p) { return p.star; }) ? '<div class="g-footnote">* Eligibility concerns</div>' : '') +
       (r.updated ? '<div class="g-footnote">Updated ' + esc(usDate(r.updated)) + '</div>' : '') + '</div>';
   }
 
