@@ -55,8 +55,8 @@
    {"name": "Derek Dixon", "num": "7", "pos": "G", "yr": "SO", "ht": "6'5\"", "note": "North Carolina Transfer", "ppg": 6.5, "rpg": 2.3, "apg": 2.7, "mpg": 22.3, "gp": 33},
    {"name": "JJ Mandaquit", "num": "23", "pos": "G", "yr": "SO", "ht": "6'1\"", "note": "Washington Transfer", "ppg": 5.2, "rpg": 2.1, "apg": 3.2, "mpg": 19.7, "gp": 22},
    {"name": "Evan Otten", "num": "30", "pos": "F", "yr": "SR", "ht": "6'11\"", "note": "Idaho St Transfer", "ppg": 4.7, "rpg": 3.8, "apg": 0.2, "mpg": 14.7, "gp": 33},
-   {"name": "RJ Godfrey", "num": "0", "pos": "F", "yr": "SR", "ht": "6'8\"", "note": "Clemson Transfer", "ppg": 12.0, "rpg": 5.3, "apg": 1.6, "mpg": 25.2, "gp": 35},
-   {"name": "Bryce James", "num": "6", "pos": "G", "yr": "SO", "ht": "6'5\"", "note": "Returnee"},
+   {"name": "RJ Godfrey", "num": "0", "pos": "F", "yr": "SR", "ht": "6'8\"", "note": "Clemson Transfer (Eligibility concerns)", "ppg": 12.0, "rpg": 5.3, "apg": 1.6, "mpg": 25.2, "gp": 35},
+   {"name": "Bryce James", "num": "6", "pos": "G", "yr": "SO", "ht": "6'5\"", "note": "Redshirt"},
    {"name": "Caleb Holt", "num": "3", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "5* Freshman"},
    {"name": "Cameron Holmes", "num": "2", "pos": "G", "yr": "FR", "ht": "6'6\"", "note": "4* Freshman"},
    {"name": "Endurance Aiyamenkhue", "num": "14", "pos": "F", "yr": "FR", "ht": "6'11\"", "note": "International Recruit (Germany)"}
