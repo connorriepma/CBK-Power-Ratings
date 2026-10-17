@@ -677,6 +677,7 @@ tr.schedule-row .rotation-table th { text-align: left; font-size: 10.5px; letter
 tr.schedule-row .rotation-table td { padding: 9px 8px; font-size: 13px; border-bottom: 1px solid var(--wood-line); vertical-align: top; }
 tr.schedule-row .rotation-table tr:last-child td { border-bottom: none; }
 tr.schedule-row .rotation-table .rt-name { font-weight: 600; }
+tr.schedule-row .rotation-table .rt-pnum { width: 34px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; padding-right: 4px; }
 tr.schedule-row .rotation-table .rt-ht { white-space: nowrap; }
 tr.schedule-row .rotation-table .rt-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 tr.schedule-row .rotation-table .rt-note { color: var(--muted); font-size: 12px; padding-left: 14px; }

@@ -24,13 +24,14 @@ window.CBKPanel = (function () {
       var has = statNum(p.ppg) !== null;
       var stats = has ? statNum(p.ppg) + ' / ' + statNum(p.rpg) + ' / ' + statNum(p.apg) : '&mdash;';
       var tip = has && p.gp ? ' title="' + esc(p.gp + ' games played last season') + '"' : '';
-      return '<tr><td class="rt-name">' + esc(p.name) + '</td><td>' + esc(p.pos || '') + '</td><td>' + esc(p.yr || '') + '</td>' +
+      return '<tr><td class="rt-pnum">' + (p.num !== undefined && p.num !== '' ? esc(p.num) : '&mdash;') + '</td>' +
+        '<td class="rt-name">' + esc(p.name) + '</td><td>' + esc(p.pos || '') + '</td><td>' + esc(p.yr || '') + '</td>' +
         '<td class="rt-ht">' + esc(p.ht || '') + '</td><td class="rt-num"' + tip + '>' + stats + '</td>' +
         '<td class="rt-num"' + tip + '>' + (statNum(p.mpg) !== null ? statNum(p.mpg) : '&mdash;') + '</td>' +
         '<td class="rt-note">' + esc(p.note || '') + '</td></tr>';
     }).join('');
     return '<div class="rotation-box"><div class="rec-bar"><b>Roster</b></div>' +
-      '<table class="rotation-table"><thead><tr><th>Player</th><th>Pos</th><th>Yr</th><th>Ht</th>' +
+      '<table class="rotation-table"><thead><tr><th class="rt-pnum" title="Jersey number">#</th><th>Player</th><th>Pos</th><th>Yr</th><th>Ht</th>' +
       '<th class="rt-num" title="Last season: points / rebounds / assists per game">P / R / A</th>' +
       '<th class="rt-num" title="Last season minutes per game">MPG</th><th>Notes</th></tr></thead><tbody>' + rows + '</tbody></table>' +
       (r.updated ? '<div class="g-footnote">Updated ' + esc(usDate(r.updated)) + '</div>' : '') + '</div>';
