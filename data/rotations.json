@@ -30,5 +30,21 @@
    {"name": "Alex Lloyd", "num": "4", "pos": "G", "yr": "SO", "ht": "6'3\"", "note": "Returnee", "ppg": 1.2, "rpg": 0.8, "apg": 0.2, "mpg": 4.8, "gp": 17},
    {"name": "Arturas Butajevas", "num": "25", "pos": "F", "yr": "FR", "ht": "6'10\"", "note": "International Recruit (Lithuania)"}
   ]
+ },
+ "illinois": {
+  "updated": "2026-10-17",
+  "players": [
+   {"name": "Andrej Stojakovic", "num": "2", "pos": "G", "yr": "SR", "ht": "6'7\"", "note": "Returnee", "ppg": 13.5, "rpg": 4.5, "apg": 1.0, "mpg": 26.3, "gp": 34},
+   {"name": "David Mirkovic", "num": "0", "pos": "F", "yr": "SO", "ht": "6'9\"", "note": "Returnee", "ppg": 13.3, "rpg": 8.0, "apg": 2.6, "mpg": 29.5, "gp": 37},
+   {"name": "Tomislav Ivisic", "num": "13", "pos": "C", "yr": "SR", "ht": "7'1\"", "note": "Returnee", "ppg": 10.4, "rpg": 5.6, "apg": 1.6, "mpg": 25.4, "gp": 34},
+   {"name": "Zvonimir Ivisic", "num": "44", "pos": "F", "yr": "SR", "ht": "7'2\"", "note": "Returnee", "ppg": 6.4, "rpg": 4.5, "apg": 0.3, "mpg": 17.2, "gp": 37},
+   {"name": "Jake Davis", "num": "15", "pos": "F", "yr": "SR", "ht": "6'6\"", "note": "Returnee", "ppg": 5.4, "rpg": 2.2, "apg": 0.7, "mpg": 19.6, "gp": 37},
+   {"name": "Stefan Vaaks", "num": "7", "pos": "G", "yr": "SO", "ht": "6'7\"", "note": "Providence Transfer", "ppg": 15.8, "rpg": 2.5, "apg": 3.2, "mpg": 31.5, "gp": 31},
+   {"name": "Quentin Coleman", "num": "11", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "5* Freshman"},
+   {"name": "Lucas Morillo", "num": "23", "pos": "G", "yr": "FR", "ht": "6'7\"", "note": "4* Freshman"},
+   {"name": "Zavier Zens", "num": "22", "pos": "F", "yr": "FR", "ht": "6'7\"", "note": "3* Freshman"},
+   {"name": "Lincoln Williams", "num": "1", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "3* Freshman"},
+   {"name": "Ethan Brown", "num": "34", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "3* Freshman"}
+  ]
  }
 }
