@@ -11,6 +11,37 @@ window.CBKPanel = (function () {
     return MONTHS[Number(p[1]) - 1] + ' ' + Number(p[2]);
   }
 
+  // Rotation players (display only), keyed by team key. Loaded once; if the file is missing the panel is unchanged.
+  var rotations = {};
+  C.getJSON('data/rotations.json').then(function (d) { rotations = d || {}; }).catch(function () { /* optional file */ });
+
+  function statNum(v) { return typeof v === 'number' ? v.toFixed(1) : null; }
+
+  function rotationHtml(team) {
+    var r = rotations[C.teamKey(team)];
+    if (!r || !r.players || !r.players.length) return '';
+    var rows = r.players.map(function (p) {
+      var has = statNum(p.ppg) !== null;
+      var stats = has ? statNum(p.ppg) + ' / ' + statNum(p.rpg) + ' / ' + statNum(p.apg) : '&mdash;';
+      var tip = has && p.gp ? ' title="' + esc(p.gp + ' games played last season') + '"' : '';
+      return '<tr><td class="rt-name">' + esc(p.name) + '</td><td>' + esc(p.pos || '') + '</td><td>' + esc(p.yr || '') + '</td>' +
+        '<td class="rt-ht">' + esc(p.ht || '') + '</td><td class="rt-num"' + tip + '>' + stats + '</td>' +
+        '<td class="rt-num"' + tip + '>' + (statNum(p.mpg) !== null ? statNum(p.mpg) : '&mdash;') + '</td>' +
+        '<td class="rt-note">' + esc(p.note || '') + '</td></tr>';
+    }).join('');
+    return '<div class="rotation-box"><div class="rec-bar"><b>Roster</b></div>' +
+      '<table class="rotation-table"><thead><tr><th>Player</th><th>Pos</th><th>Yr</th><th>Ht</th>' +
+      '<th class="rt-num" title="Last season: points / rebounds / assists per game">P / R / A</th>' +
+      '<th class="rt-num" title="Last season minutes per game">MPG</th><th>Notes</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      (r.updated ? '<div class="g-footnote">Updated ' + esc(usDate(r.updated)) + '</div>' : '') + '</div>';
+  }
+
+  // 2026-10-16 -> 10-16-2026
+  function usDate(iso) {
+    var p = String(iso).split('-');
+    return p.length === 3 ? p[1] + '-' + p[2] + '-' + p[0] : String(iso);
+  }
+
   function atsStr(w, l, p) { return w + '-' + l + (p ? '-' + p : ''); }
   function atsAvg(a) {
     var v = a.sum / a.n, t = v.toFixed(1);
@@ -150,9 +181,11 @@ window.CBKPanel = (function () {
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
       exactNote;
-    return '<div class="schedule-list">' + recBar(model, team) + projBar(model, team) +
+    var sched = '<div class="schedule-list">' + recBar(model, team) + projBar(model, team) +
       '<div class="g-head panel"><div></div><div>Date</div><div>Opponent</div><div class="r">Line</div><div class="r">Win %</div></div>' +
       rows + foot + '</div>';
+    var rot = rotationHtml(team);
+    return rot ? '<div class="panel-split"><div class="panel-sched">' + sched + '</div>' + rot + '</div>' : sched;
   }
 
   return { build: build, recordCells: recordCells };

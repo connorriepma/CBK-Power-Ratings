@@ -667,3 +667,26 @@ footer { border-top: 1px solid var(--wood-line); color: var(--muted); }
   #view-plays td.pl-date a { margin-left: 8px; }
   #view-plays td small { display: inline; margin-left: 6px; }
 }
+
+/* ---- Team panel: schedule on the left, rotation on the right (only for teams with data/rotations.json entries) ---- */
+.panel-split { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 0; align-items: start; }
+.panel-split .panel-sched { border-right: 1px solid var(--wood-line); min-width: 0; }
+.rotation-box { min-width: 0; padding: 4px 0; }
+.rotation-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+tr.schedule-row .rotation-table th { text-align: left; font-size: 10.5px; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 7px 8px; border-bottom: 1px solid var(--wood-line); }
+tr.schedule-row .rotation-table td { padding: 9px 8px; font-size: 13px; border-bottom: 1px solid var(--wood-line); vertical-align: top; }
+tr.schedule-row .rotation-table tr:last-child td { border-bottom: none; }
+tr.schedule-row .rotation-table .rt-name { font-weight: 600; }
+tr.schedule-row .rotation-table .rt-ht { white-space: nowrap; }
+tr.schedule-row .rotation-table .rt-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.schedule-row .rotation-table .rt-note { color: var(--muted); font-size: 12px; padding-left: 14px; }
+.rotation-box .rec-bar, .rotation-box .g-footnote { padding-left: 14px; padding-right: 14px; }
+.rotation-box .g-footnote { padding-bottom: 6px; }
+tr.schedule-row .rotation-table th:first-child, tr.schedule-row .rotation-table td:first-child { padding-left: 14px; }
+tr.schedule-row .rotation-table th:last-child, tr.schedule-row .rotation-table td:last-child { padding-right: 14px; }
+@media (max-width: 1100px) {
+  .panel-split { grid-template-columns: 1fr; }
+  .panel-split .panel-sched { border-right: none; border-top: 1px solid var(--wood-line); }
+  .panel-split .rotation-box { order: -1; }
+  .rotation-box { overflow-x: auto; }
+}

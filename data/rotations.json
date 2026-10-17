@@ -1,0 +1,19 @@
+{
+ "duke": {
+  "updated": "2026-10-16",
+  "players": [
+   {"name": "Cayden Boozer", "pos": "G", "yr": "SO", "ht": "6'4\"", "note": "Returnee", "ppg": 7.7, "rpg": 2.3, "apg": 3.0, "mpg": 22.8, "gp": 38},
+   {"name": "Dame Sarr", "pos": "F", "yr": "SO", "ht": "6'8\"", "note": "Returnee", "ppg": 6.4, "rpg": 3.8, "apg": 1.1, "mpg": 23.5, "gp": 38},
+   {"name": "John Blackwell", "pos": "G", "yr": "SR", "ht": "6'5\"", "note": "Wisconsin Transfer", "ppg": 19.1, "rpg": 5.1, "apg": 2.3, "mpg": 33.8, "gp": 34},
+   {"name": "Patrick Ngongba", "pos": "C", "yr": "JR", "ht": "6'11\"", "note": "Returnee", "ppg": 10.1, "rpg": 5.8, "apg": 2.0, "mpg": 21.9, "gp": 32},
+   {"name": "Joaquim Boumtje Boumtje", "pos": "C", "yr": "FR", "ht": "7'2\"", "note": "5* International Recruit"},
+   {"name": "Caleb Foster", "pos": "G", "yr": "SR", "ht": "6'5\"", "note": "Returnee", "ppg": 8.3, "rpg": 3.5, "apg": 2.8, "mpg": 24.8, "gp": 33},
+   {"name": "Bryson Howard", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "5* Freshman"},
+   {"name": "Maxime Meyer", "pos": "C", "yr": "FR", "ht": "7'1\"", "note": "4* Freshman"},
+   {"name": "Deron Rippey Jr", "pos": "G", "yr": "FR", "ht": "6'3\"", "note": "5* Freshman"},
+   {"name": "Drew Scharnowski", "pos": "F", "yr": "SR", "ht": "6'10\"", "note": "Belmont Transfer", "ppg": 10.7, "rpg": 6.0, "apg": 2.6, "mpg": 21.8, "gp": 30},
+   {"name": "Sebastian Wilkins", "pos": "F", "yr": "SO", "ht": "6'8\"", "note": "Returnee"},
+   {"name": "Cameron Williams", "pos": "F", "yr": "FR", "ht": "7'0\"", "note": "5* Freshman"}
+  ]
+ }
+}
