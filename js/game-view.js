@@ -53,7 +53,12 @@ window.CBKGames = (function () {
       if (cx === null && cy !== null) return 1;
       if (cy === null && cx !== null) return -1;
       if (cx !== null && cy !== null && Math.abs(cx - cy) > 1e-9) return cy - cx;
-      return x.home.localeCompare(y.home) || x.away.localeCompare(y.away);
+      if (cx !== null && cy !== null) {
+      // Same combined rating: closer predicted margin first.
+      var mx = Math.abs(model.exactMargin(x)), my = Math.abs(model.exactMargin(y));
+      if (Math.abs(mx - my) > 1e-9) return mx - my;
+    }
+    return x.home.localeCompare(y.home) || x.away.localeCompare(y.away);
     });
   }
 
