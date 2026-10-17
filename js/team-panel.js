@@ -32,8 +32,8 @@ window.CBKPanel = (function () {
     }).join('');
     return '<div class="rotation-box"><div class="rec-bar"><b>Roster</b></div>' +
       '<table class="rotation-table"><thead><tr><th class="rt-pnum" title="Jersey number">#</th><th>Player</th><th>Pos</th><th>Yr</th><th>Ht</th>' +
-      '<th class="rt-num" title="Last season: points / rebounds / assists per game">P / R / A</th>' +
-      '<th class="rt-num" title="Last season minutes per game">MPG</th><th>Notes</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+      '<th class="rt-num" title="2025-26 season: points / rebounds / assists per game">25-26 Stats</th>' +
+      '<th class="rt-num" title="2025-26 season: minutes per game">25-26 MPG</th><th>Notes</th></tr></thead><tbody>' + rows + '</tbody></table>' +
       (r.updated ? '<div class="g-footnote">Updated ' + esc(usDate(r.updated)) + '</div>' : '') + '</div>';
   }
 
