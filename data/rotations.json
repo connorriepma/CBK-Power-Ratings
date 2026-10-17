@@ -19,16 +19,16 @@
  "florida": {
   "updated": "2026-10-16",
   "players": [
-   {"name": "Denzel Aberdeen", "pos": "G", "yr": "SR", "ht": "6'5\"", "note": "Transfer from Kentucky (Was on 2025 Championship Team)", "ppg": 13.5, "rpg": 2.5, "apg": 3.4, "mpg": 30.6, "gp": 36},
-   {"name": "Rueben Chinyelu", "pos": "C", "yr": "SR", "ht": "6'10\"", "note": "Returnee", "ppg": 10.9, "rpg": 11.2, "apg": 0.7, "mpg": 24.5, "gp": 35},
-   {"name": "Alex Condon", "pos": "C", "yr": "SR", "ht": "6'11\"", "note": "Returnee", "ppg": 15.1, "rpg": 7.5, "apg": 3.6, "mpg": 30.5, "gp": 34},
-   {"name": "Boogie Fland", "pos": "G", "yr": "JR", "ht": "6'3\"", "note": "Returnee", "ppg": 11.6, "rpg": 2.5, "apg": 3.5, "mpg": 30.0, "gp": 35},
-   {"name": "Thomas Haugh", "pos": "F", "yr": "SR", "ht": "6'9\"", "note": "Returnee", "ppg": 17.1, "rpg": 6.1, "apg": 2.1, "mpg": 33.3, "gp": 34},
-   {"name": "CJ Ingram", "pos": "G", "yr": "SO", "ht": "6'6\"", "note": "Returnee", "ppg": 2.2, "rpg": 0.9, "apg": 0.4, "mpg": 5.3, "gp": 21},
-   {"name": "Urban Klavzar", "pos": "G", "yr": "SR", "ht": "6'1\"", "note": "Returnee", "ppg": 9.6, "rpg": 1.5, "apg": 1.3, "mpg": 20.7, "gp": 35},
-   {"name": "Isaiah Brown", "pos": "G", "yr": "JR", "ht": "6'4\"", "note": "Returnee", "ppg": 5.5, "rpg": 2.5, "apg": 0.6, "mpg": 12.8, "gp": 33},
-   {"name": "Alex Lloyd", "pos": "G", "yr": "SO", "ht": "6'3\"", "note": "Returnee", "ppg": 1.2, "rpg": 0.8, "apg": 0.2, "mpg": 4.8, "gp": 17},
-   {"name": "Arturas Butajevas", "pos": "F", "yr": "FR", "ht": "6'10\"", "note": "International Recruit (Lithuania)"}
+   {"name": "Denzel Aberdeen", "num": "1", "pos": "G", "yr": "SR", "ht": "6'5\"", "note": "Transfer from Kentucky (Was on 2025 Championship Team)", "ppg": 13.5, "rpg": 2.5, "apg": 3.4, "mpg": 30.6, "gp": 36},
+   {"name": "Rueben Chinyelu", "num": "9", "pos": "C", "yr": "SR", "ht": "6'10\"", "note": "Returnee", "ppg": 10.9, "rpg": 11.2, "apg": 0.7, "mpg": 24.5, "gp": 35},
+   {"name": "Alex Condon", "num": "21", "pos": "C", "yr": "SR", "ht": "6'11\"", "note": "Returnee", "ppg": 15.1, "rpg": 7.5, "apg": 3.6, "mpg": 30.5, "gp": 34},
+   {"name": "Boogie Fland", "num": "0", "pos": "G", "yr": "JR", "ht": "6'3\"", "note": "Returnee", "ppg": 11.6, "rpg": 2.5, "apg": 3.5, "mpg": 30.0, "gp": 35},
+   {"name": "Thomas Haugh", "num": "10", "pos": "F", "yr": "SR", "ht": "6'9\"", "note": "Returnee", "ppg": 17.1, "rpg": 6.1, "apg": 2.1, "mpg": 33.3, "gp": 34},
+   {"name": "CJ Ingram", "num": "11", "pos": "G", "yr": "SO", "ht": "6'6\"", "note": "Returnee", "ppg": 2.2, "rpg": 0.9, "apg": 0.4, "mpg": 5.3, "gp": 21},
+   {"name": "Urban Klavzar", "num": "7", "pos": "G", "yr": "SR", "ht": "6'1\"", "note": "Returnee", "ppg": 9.6, "rpg": 1.5, "apg": 1.3, "mpg": 20.7, "gp": 35},
+   {"name": "Isaiah Brown", "num": "20", "pos": "G", "yr": "JR", "ht": "6'4\"", "note": "Returnee", "ppg": 5.5, "rpg": 2.5, "apg": 0.6, "mpg": 12.8, "gp": 33},
+   {"name": "Alex Lloyd", "num": "4", "pos": "G", "yr": "SO", "ht": "6'3\"", "note": "Returnee", "ppg": 1.2, "rpg": 0.8, "apg": 0.2, "mpg": 4.8, "gp": 17},
+   {"name": "Arturas Butajevas", "num": "25", "pos": "F", "yr": "FR", "ht": "6'10\"", "note": "International Recruit (Lithuania)"}
   ]
  }
 }
