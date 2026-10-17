@@ -77,5 +77,21 @@
    {"name": "Christopher Washington Jr", "num": "33", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "4* Freshman"},
    {"name": "Ralph Scott", "num": "13", "pos": "F", "yr": "FR", "ht": "6'8\"", "note": "3* Freshman"}
   ]
+ },
+ "texas": {
+  "updated": "2026-10-17",
+  "players": [
+   {"name": "Matas Vokietaitis", "num": "8", "pos": "C", "yr": "JR", "ht": "7'0\"", "note": "Returnee", "ppg": 15.6, "rpg": 7.1, "apg": 0.6, "mpg": 26.0, "gp": 36},
+   {"name": "Mikey Lewis", "num": "0", "pos": "G", "yr": "JR", "ht": "6'3\"", "note": "Saint Mary's Transfer", "ppg": 13.9, "rpg": 2.7, "apg": 2.1, "mpg": 26.8, "gp": 33},
+   {"name": "Amari Evans", "num": "1", "pos": "G", "yr": "SO", "ht": "6'5\"", "note": "Tennessee Transfer", "ppg": 4.1, "rpg": 3.2, "apg": 0.8, "mpg": 14.4, "gp": 35},
+   {"name": "Isaiah Johnson", "num": "2", "pos": "G", "yr": "SO", "ht": "6'2\"", "note": "Colorado Transfer", "ppg": 16.9, "rpg": 2.9, "apg": 3.0, "mpg": 30.6, "gp": 32},
+   {"name": "Elyjah Freeman", "num": "6", "pos": "G", "yr": "JR", "ht": "6'8\"", "note": "Auburn Transfer", "ppg": 9.2, "rpg": 5.2, "apg": 1.2, "mpg": 26.9, "gp": 38},
+   {"name": "David Punch", "num": "13", "pos": "F", "yr": "JR", "ht": "6'7\"", "note": "TCU Transfer", "ppg": 14.1, "rpg": 6.8, "apg": 2.0, "mpg": 29.6, "gp": 34},
+   {"name": "Marcus Spears Jr", "num": "31", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "5* Freshman"},
+   {"name": "Austin Goosby", "num": "10", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "5* Freshman"},
+   {"name": "Bo Ogden", "num": "5", "pos": "G", "yr": "FR", "ht": "6'6\"", "note": "4* Freshman"},
+   {"name": "Joe Sterling", "num": "3", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "3* Freshman"},
+   {"name": "Mantas Laurencikas", "num": "25", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "International Recruit (Lithuania)"}
+  ]
  }
 }
