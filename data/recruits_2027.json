@@ -15,5 +15,11 @@
  {"name":"Scottie Adkinson","state":"MO","pos":"CG","ht":"62","school":"Missouri","r247":29,"posRank":8},
  {"name":"Devin Cleveland","state":"IN","pos":"CG","ht":"63","school":"Missouri","r247":30,"posRank":9},
  {"name":"Darrell Davis","state":"OH","pos":"PG","ht":"61","school":"Houston","r247":31,"posRank":6},
- {"name":"Ahmed Nur","state":"AZ","pos":"PF","ht":"69","school":"Ole Miss","r247":32,"posRank":6}
+ {"name":"Ahmed Nur","state":"AZ","pos":"PF","ht":"69","school":"Ole Miss","r247":32,"posRank":6},
+ {"name":"Micah Gordon","state":"OH","pos":"PG","ht":"510","school":"Creighton","r247":33,"posRank":7},
+ {"name":"Kevin Savage","state":"GA","pos":"PG","ht":"511","school":"Purdue","r247":34,"posRank":8},
+ {"name":"Tyrone Jamison Jr.","state":"LA","pos":"PG","ht":"61","school":"Baylor","r247":35,"posRank":9},
+ {"name":"Payton Jones","state":"TX","pos":"CG","ht":"62","school":"Maryland","r247":37,"posRank":10},
+ {"name":"Jarvis Hayes Jr.","state":"GA","pos":"SG","ht":"65","school":"Georgia","r247":38,"posRank":1},
+ {"name":"Jaxson Davis","state":"KS","pos":"PG","ht":"60","school":"Ohio St","r247":39,"posRank":10}
 ]
