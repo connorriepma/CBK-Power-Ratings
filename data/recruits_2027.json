@@ -3,5 +3,11 @@
  {"name":"NaVarro Bowman Jr","state":"CA","pos":"CG","ht":"63","school":"UConn","r247":11,"posRank":2},
  {"name":"Darius Wabbington","state":"AZ","pos":"C","ht":"611","school":"Indiana","r247":12,"posRank":2},
  {"name":"Kager Knueppel","state":"WI","pos":"PF","ht":"69","school":"Duke","r247":15,"posRank":2},
- {"name":"King Gibson","state":"OH","pos":"CG","ht":"64","school":"LSU","r247":16,"posRank":4}
+ {"name":"King Gibson","state":"OH","pos":"CG","ht":"64","school":"LSU","r247":16,"posRank":4},
+ {"name":"Moussa Kamissoko","state":"OH","pos":"SF","ht":"67","school":"Syracuse","r247":19,"posRank":5},
+ {"name":"Antonio Pemberton","state":"MA","pos":"PG","ht":"61","school":"Michigan State","r247":20,"posRank":5},
+ {"name":"Ryan Hampton","state":"TX","pos":"SF","ht":"66","school":"Kentucky","r247":21,"posRank":6},
+ {"name":"Isaiah Hill","state":"IN","pos":"C","ht":"70","school":"Purdue","r247":22,"posRank":4},
+ {"name":"Chase Branham","state":"IN","pos":"CG","ht":"64","school":"Indiana","r247":24,"posRank":5},
+ {"name":"Dawson Battie","state":"TX","pos":"PF","ht":"68","school":"Nebraska","r247":25,"posRank":4}
 ]
