@@ -128,7 +128,7 @@
  "kansas": {
   "updated": "2026-10-19",
   "players": [
-   {"name": "Melvin Council", "num": "14", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee", "star": true, "ppg": 12.7, "rpg": 5.0, "apg": 5.1, "mpg": 34.6, "gp": 35},
+   {"name": "Melvin Council Jr", "num": "14", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee", "star": true, "ppg": 12.7, "rpg": 5.0, "apg": 5.1, "mpg": 34.6, "gp": 35},
    {"name": "Tre White", "num": "3", "pos": "G", "yr": "SR", "ht": "6'7\"", "note": "Returnee", "star": true, "ppg": 13.5, "rpg": 6.7, "apg": 1.8, "mpg": 31.3, "gp": 35},
    {"name": "Trey Kaufman-Renn", "num": "9", "pos": "F", "yr": "SR", "ht": "6'9\"", "note": "Purdue Transfer", "star": true, "ppg": 14.2, "rpg": 8.3, "apg": 2.5, "mpg": 28.2, "gp": 37},
    {"name": "Tyran Stokes", "num": "4", "pos": "G", "yr": "FR", "ht": "6'8\"", "note": "5* Freshman (#1 overall recruit)"},
