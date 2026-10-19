@@ -44,16 +44,16 @@
   }
 
   function render() {
-    var p = $('rc-pos').value, q = $('rc-q').value.trim().toLowerCase();
+    var s = $('rc-school').value, q = $('rc-q').value.trim().toLowerCase();
     var hasOn3 = rows.some(function (r) { return r.rOn3 != null; });
     var list = rows.filter(function (r) {
-      return (!p || r.pos === p) && (!q || (r.name + ' ' + r.school + ' ' + r.state).toLowerCase().indexOf(q) >= 0);
+      return (!s || r.school === s) && (!q || (r.name + ' ' + r.school + ' ' + r.state).toLowerCase().indexOf(q) >= 0);
     });
     $('rc-count').textContent = list.length + ' shown of ' + rows.length;
     if (!list.length) {
       var any = rows.length > 0;
       $('rc-body').innerHTML = '<div class="rc-empty"><b>' + (any ? 'No commits match these filters' : 'No commits yet') + '</b>' +
-        (any ? 'Clear the search or change the position.' : 'Commits show up here as they are added.') + '</div>';
+        (any ? 'Clear the search or change the school.' : 'Commits show up here as they are added.') + '</div>';
       $('rc-foot').textContent = '';
       return;
     }
@@ -82,15 +82,11 @@
   function init(data) {
     rows = data.map(norm).filter(Boolean);
     rank(rows);
-    var seen = {}, pos = [];
-    rows.forEach(function (r) { if (r.pos && !seen[r.pos]) { seen[r.pos] = 1; pos.push(r.pos); } });
-    var ORDER = ['PG', 'SG', 'G', 'CG', 'SF', 'WING', 'F', 'PF', 'C'];
-    pos.sort(function (a, b) {
-      var x = ORDER.indexOf(a.toUpperCase()), y = ORDER.indexOf(b.toUpperCase());
-      return (x < 0 ? 99 : x) - (y < 0 ? 99 : y) || a.localeCompare(b);
-    });
-    $('rc-pos').innerHTML = '<option value="">All positions</option>' + pos.map(function (x) { return '<option>' + esc(x) + '</option>'; }).join('');
-    $('rc-pos').addEventListener('change', render);
+    var seen = {}, schools = [];
+    rows.forEach(function (r) { if (r.school && !seen[r.school]) { seen[r.school] = 1; schools.push(r.school); } });
+    schools.sort(function (a, b) { return a.localeCompare(b); });
+    $('rc-school').innerHTML = '<option value="">All schools</option>' + schools.map(function (x) { return '<option>' + esc(x) + '</option>'; }).join('');
+    $('rc-school').addEventListener('change', render);
     $('rc-q').addEventListener('input', render);
     render();
   }
