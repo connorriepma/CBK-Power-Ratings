@@ -108,5 +108,21 @@
    {"name": "Arafan Diane", "num": "13", "pos": "C", "yr": "FR", "ht": "7'0\"", "note": "5* Freshman"},
    {"name": "Ikenna Alozie", "num": "1", "pos": "G", "yr": "FR", "ht": "6'2\"", "note": "4* Freshman"}
   ]
+ },
+ "uconn": {
+  "updated": "2026-10-19",
+  "players": [
+   {"name": "Braylon Mullins", "num": "24", "pos": "G", "yr": "SO", "ht": "6'6\"", "note": "Returnee", "ppg": 12.0, "rpg": 3.5, "apg": 1.4, "mpg": 28.3, "gp": 33},
+   {"name": "Silas Demary Jr", "num": "5", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee", "ppg": 10.1, "rpg": 4.5, "apg": 5.9, "mpg": 28.4, "gp": 39},
+   {"name": "Jayden Ross", "num": "23", "pos": "F", "yr": "SR", "ht": "6'7\"", "note": "Returnee", "ppg": 4.6, "rpg": 2.5, "apg": 0.8, "mpg": 17.4, "gp": 38},
+   {"name": "Najai Hines", "num": "9", "pos": "C", "yr": "SO", "ht": "6'11\"", "note": "Seton Hall Transfer", "ppg": 6.5, "rpg": 5.5, "apg": 0.6, "mpg": 18.0, "gp": 31},
+   {"name": "Nikolas Khamenia", "num": "4", "pos": "F", "yr": "SO", "ht": "6'8\"", "note": "Duke Transfer", "ppg": 5.7, "rpg": 3.3, "apg": 1.0, "mpg": 19.8, "gp": 38},
+   {"name": "Nils Machowski", "num": "21", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Wofford Transfer", "ppg": 17.2, "rpg": 5.7, "apg": 2.6, "mpg": 33.7, "gp": 32},
+   {"name": "Oskar Giltay", "num": "18", "pos": "C", "yr": "SO", "ht": "6'11\"", "note": "Stanford Transfer", "ppg": 3.3, "rpg": 4.1, "apg": 0.3, "mpg": 14.6, "gp": 32},
+   {"name": "Jaye Nash", "num": "7", "pos": "G", "yr": "JR", "ht": "6'2\"", "note": "Jacksonville St Transfer", "ppg": 5.1, "rpg": 2.8, "apg": 4.0, "mpg": 25.7, "gp": 32},
+   {"name": "Colben Landrew", "num": "3", "pos": "F", "yr": "FR", "ht": "6'6\"", "note": "4* Recruit"},
+   {"name": "Junior County", "num": "0", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "4* Recruit"},
+   {"name": "Egor Amosov", "num": "17", "pos": "F", "yr": "FR", "ht": "6'8\"", "note": "4* International Recruit (Russia)"}
+  ]
  }
 }
