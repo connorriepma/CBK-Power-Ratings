@@ -57,17 +57,17 @@
       $('rc-foot').textContent = '';
       return;
     }
-    var h = '<div class="rc-scroll"><table><thead><tr><th>Rank</th><th>Player</th><th>Pos</th><th>Ht</th><th>State</th><th>School</th>' +
+    var h = '<div class="rc-scroll"><table><thead><tr><th>Rank</th><th>Player</th><th>School</th><th>Pos</th><th>Ht</th><th>State</th>' +
       (hasOn3 ? '<th>247</th><th>On3</th><th>Avg</th>' : '') + '<th>Pos Rank</th></tr></thead><tbody>';
     list.forEach(function (r) {
       // 247 only: Rank is the 247 overall rank itself. With On3 ranks too: Rank is the order by average.
       var overall = hasOn3 ? r.order : r.r247;
       h += '<tr class="rc-row"><td data-l="Rank" class="rc-rk">' + (overall == null ? '—' : overall) + '</td>' +
         '<td data-l="Player"><span><b>' + esc(r.name) + '</b></span></td>' +
+        '<td data-l="School"><span>' + esc(r.school || '—') + '</span></td>' +
         '<td data-l="Pos">' + esc(r.pos || '—') + '</td>' +
         '<td data-l="Ht" class="rc-num">' + esc(fmtHt(r.ht)) + '</td>' +
         '<td data-l="State">' + esc(r.state || '—') + '</td>' +
-        '<td data-l="School"><span>' + esc(r.school || '—') + '</span></td>' +
         (hasOn3 ? '<td data-l="247" class="rc-num">' + (r.r247 == null ? '—' : r.r247) + '</td>' +
           '<td data-l="On3" class="rc-num">' + (r.rOn3 == null ? '—' : r.rOn3) + '</td>' +
           '<td data-l="Avg" class="rc-num rc-avg">' + fmtAvg(r.avg) + '</td>' : '') +
