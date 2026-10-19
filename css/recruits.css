@@ -1,7 +1,4 @@
 /* 2027 Recruits page only. Uses the site's color variables, so it follows the active theme. */
-#view-recruits .rc-note { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 12px 14px; font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
-#view-recruits .rc-note p { margin: 0 0 6px; }
-#view-recruits .rc-note p:last-child { margin: 0; }
 #view-recruits .rc-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
 #view-recruits .rc-bar select, #view-recruits .rc-bar input[type=search] { font-family: var(--sans); font-size: 13.5px; background: var(--panel); border: 1px solid var(--wood-line); color: var(--ink); padding: 7px 10px; border-radius: 3px; }
 #view-recruits .rc-bar input[type=search] { min-width: 220px; }
