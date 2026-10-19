@@ -1,0 +1,29 @@
+/* 2027 Recruits page only. Uses the site's color variables, so it follows the active theme. */
+#view-recruits .rc-note { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 12px 14px; font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
+#view-recruits .rc-note p { margin: 0 0 6px; }
+#view-recruits .rc-note p:last-child { margin: 0; }
+#view-recruits .rc-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+#view-recruits .rc-bar select, #view-recruits .rc-bar input[type=search] { font-family: var(--sans); font-size: 13.5px; background: var(--panel); border: 1px solid var(--wood-line); color: var(--ink); padding: 7px 10px; border-radius: 3px; }
+#view-recruits .rc-bar input[type=search] { min-width: 220px; }
+#view-recruits .rc-scroll { overflow-x: auto; }
+#view-recruits table { width: 100%; border-collapse: collapse; }
+#view-recruits thead th { text-align: left; font-size: 11px; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); padding: 8px 10px; white-space: nowrap; }
+#view-recruits td { padding: 10px; font-size: 14px; border-bottom: 1px solid var(--wood-line); vertical-align: top; }
+#view-recruits tbody tr:first-child td { border-top: 1px solid var(--wood-line); }
+#view-recruits td.rc-rk { color: var(--muted); font-family: var(--cond); font-size: 16px; width: 44px; font-variant-numeric: tabular-nums; }
+#view-recruits td b { display: block; }
+#view-recruits .rc-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+#view-recruits .rc-avg { font-weight: 700; }
+#view-recruits .rc-foot { font-size: 11.5px; color: var(--muted); margin-top: 10px; }
+#view-recruits .rc-empty { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 36px 20px; text-align: center; color: var(--muted); }
+#view-recruits .rc-empty b { display: block; font-family: var(--cond); font-size: 22px; color: var(--ink); margin-bottom: 6px; }
+@media (max-width: 760px) {
+  #view-recruits table, #view-recruits thead, #view-recruits tbody, #view-recruits tr, #view-recruits td { display: block; }
+  #view-recruits thead { display: none; }
+  #view-recruits tr.rc-row { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; margin-bottom: 10px; padding: 8px 4px; }
+  #view-recruits tbody tr:first-child td { border-top: none; }
+  #view-recruits td { border-bottom: none; padding: 5px 10px; display: flex; gap: 10px; justify-content: space-between; align-items: baseline; width: auto; }
+  #view-recruits td::before { content: attr(data-l); font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); flex: 0 0 84px; }
+  #view-recruits td > * { text-align: right; }
+  #view-recruits td.rc-rk { width: auto; }
+}
