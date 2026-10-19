@@ -1,6 +1,6 @@
 // 2027 Recruits page: a read-only table from data/recruits_2027.json. It never touches a rating, spread or simulation.
-// Each recruit: { name, state, pos, ht, school, r247, rOn3 }. ht is the digits as sent (66 = 6'6", 610 = 6'10").
-// r247 and rOn3 are numbers or null. Average = mean of whichever ranks exist; one rank means that rank is the average.
+// Each recruit: { name, state, pos, ht, school, r247, rOn3, posRank }. ht is the digits as sent (66 = 6'6", 610 = 6'10").
+// r247 and rOn3 are overall ranks, posRank is the rank at his position. All are numbers or null. Average = mean of whichever ranks exist; one rank means that rank is the average.
 (function () {
   'use strict';
 
@@ -26,7 +26,7 @@
     var a = num(d.r247), b = num(d.rOn3), have = [a, b].filter(function (x) { return x != null; });
     return {
       name: String(d.name), state: String(d.state || ''), pos: String(d.pos || ''), ht: d.ht, school: String(d.school || ''),
-      r247: a, rOn3: b,
+      r247: a, rOn3: b, posRank: num(d.posRank),
       avg: have.length ? have.reduce(function (s, x) { return s + x; }, 0) / have.length : null,
       best: have.length ? Math.min.apply(null, have) : null
     };
@@ -57,23 +57,26 @@
       $('rc-foot').textContent = '';
       return;
     }
-    var h = '<div class="rc-scroll"><table><thead><tr><th>Rank</th><th>Player</th><th>Pos</th><th>Ht</th><th>State</th><th>School</th><th>247</th>' +
-      (hasOn3 ? '<th>On3</th><th>Avg</th>' : '') + '</tr></thead><tbody>';
+    var h = '<div class="rc-scroll"><table><thead><tr><th>Rank</th><th>Player</th><th>Pos</th><th>Ht</th><th>State</th><th>School</th>' +
+      (hasOn3 ? '<th>247</th><th>On3</th><th>Avg</th>' : '') + '<th>Pos Rank</th></tr></thead><tbody>';
     list.forEach(function (r) {
-      h += '<tr class="rc-row"><td data-l="Rank" class="rc-rk">' + (r.order == null ? '—' : r.order) + '</td>' +
+      // 247 only: Rank is the 247 overall rank itself. With On3 ranks too: Rank is the order by average.
+      var overall = hasOn3 ? r.order : r.r247;
+      h += '<tr class="rc-row"><td data-l="Rank" class="rc-rk">' + (overall == null ? '—' : overall) + '</td>' +
         '<td data-l="Player"><span><b>' + esc(r.name) + '</b></span></td>' +
         '<td data-l="Pos">' + esc(r.pos || '—') + '</td>' +
         '<td data-l="Ht" class="rc-num">' + esc(fmtHt(r.ht)) + '</td>' +
         '<td data-l="State">' + esc(r.state || '—') + '</td>' +
         '<td data-l="School"><span>' + esc(r.school || '—') + '</span></td>' +
-        '<td data-l="247" class="rc-num">' + (r.r247 == null ? '—' : r.r247) + '</td>' +
-        (hasOn3 ? '<td data-l="On3" class="rc-num">' + (r.rOn3 == null ? '—' : r.rOn3) + '</td>' +
-          '<td data-l="Avg" class="rc-num rc-avg">' + fmtAvg(r.avg) + '</td>' : '') + '</tr>';
+        (hasOn3 ? '<td data-l="247" class="rc-num">' + (r.r247 == null ? '—' : r.r247) + '</td>' +
+          '<td data-l="On3" class="rc-num">' + (r.rOn3 == null ? '—' : r.rOn3) + '</td>' +
+          '<td data-l="Avg" class="rc-num rc-avg">' + fmtAvg(r.avg) + '</td>' : '') +
+        '<td data-l="Pos Rank" class="rc-num">' + (r.posRank == null ? '—' : r.posRank) + '</td></tr>';
     });
     $('rc-body').innerHTML = h + '</tbody></table></div>';
-    $('rc-foot').textContent = hasOn3
+    $('rc-foot').textContent = (hasOn3
       ? 'Rank is the order of the average of the 247 and On3 rankings. A recruit with one ranking uses that ranking as the average (the other shows a dash).'
-      : 'Rank is the order of the 247 ranking.';
+      : 'Rank is the 247 overall ranking.') + ' Pos Rank is the ranking among players at the same position.';
   }
 
   function init(data) {
