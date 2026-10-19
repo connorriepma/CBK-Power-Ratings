@@ -1,4 +1,4 @@
-// 2027 Recruits page: a read-only table from data/recruits_2027.json. It never touches a rating, spread or simulation.
+// 2027 Commits page: a read-only table from data/recruits_2027.json. It never touches a rating, spread or simulation.
 // Each recruit: { name, state, pos, ht, school, r247, rOn3, posRank }. ht is the digits as sent (66 = 6'6", 610 = 6'10").
 // r247 and rOn3 are overall ranks, posRank is the rank at his position. All are numbers or null. Average = mean of whichever ranks exist; one rank means that rank is the average.
 (function () {
@@ -52,8 +52,8 @@
     $('rc-count').textContent = list.length + ' shown of ' + rows.length;
     if (!list.length) {
       var any = rows.length > 0;
-      $('rc-body').innerHTML = '<div class="rc-empty"><b>' + (any ? 'No recruits match these filters' : 'No recruits yet') + '</b>' +
-        (any ? 'Clear the search or change the position.' : 'Committed recruits show up here as they are added.') + '</div>';
+      $('rc-body').innerHTML = '<div class="rc-empty"><b>' + (any ? 'No commits match these filters' : 'No commits yet') + '</b>' +
+        (any ? 'Clear the search or change the position.' : 'Commits show up here as they are added.') + '</div>';
       $('rc-foot').textContent = '';
       return;
     }
