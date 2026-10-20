@@ -691,11 +691,3 @@ tr.schedule-row .rotation-table th:last-child, tr.schedule-row .rotation-table t
   .panel-split .rotation-box { order: -1; }
   .rotation-box { overflow-x: auto; }
 }
-
-/* ---- Helpful Sites ---- */
-.hs-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 640px; }
-.hs-link { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 14px 16px; background: var(--panel); border: 1px solid var(--wood-line); border-radius: 10px; color: var(--ink); text-decoration: none; }
-.hs-link:hover { border-color: var(--paint); }
-.hs-name { font-weight: 700; font-size: 16px; }
-.hs-url { color: var(--muted); font-size: 13px; }
-.hs-url::after { content: " \2197"; }
