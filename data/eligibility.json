@@ -119,10 +119,10 @@
   "basis": "California",
   "stats": "12.5 / 8.9 / 1.3",
   "prior": "Michigan St",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-20",
   "id": "byu-jaxon-kohler"
  },
  {
@@ -273,10 +273,10 @@
   "basis": "California",
   "stats": "11.6 / 3.7 / 4.2",
   "prior": "Florida",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-20",
   "id": "gonzaga-xavien-lee"
  },
  {
@@ -507,14 +507,14 @@
   "team": "lsu",
   "player": "Brice Dessert",
   "rank": 274,
-  "status": "Not eligible",
+  "status": "Eligible",
   "basis": "International",
   "stats": "8.7 / 3.3",
   "prior": "Anadolu Efes (France)",
-  "note": "Not on LSU's official roster as of Oct 12 (10 players listed).",
-  "source": "LSU athletics roster page (screenshot from site owner)",
+  "note": "Ruled eligible Oct 21, per report. Basis International unchanged. Not on LSU's official roster as of Oct 12.",
+  "source": "Tweet on LSU eligibility rulings, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-13",
+  "updated": "2026-10-21",
   "id": "lsu-brice-dessert"
  },
  {
@@ -525,10 +525,10 @@
   "basis": "California",
   "stats": "13.3 / 2.9 / 7.6",
   "prior": "UCLA",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal. Ruled eligible Oct 21, per report.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link; Tweet on LSU eligibility rulings, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-21",
   "id": "lsu-donovan-dent"
  },
  {
@@ -549,28 +549,28 @@
   "team": "lsu",
   "player": "Saliou Niang",
   "rank": 146,
-  "status": "Unknown",
+  "status": "Eligible",
   "basis": "International",
   "stats": "9.0 / 2.9 / 1.7",
   "prior": "Virtus Bologna (Europe)",
-  "note": "Not on LSU's official roster as of Oct 12 (10 players listed).",
-  "source": "LSU athletics roster page (screenshot from site owner)",
+  "note": "Ruled eligible Oct 21, per report. Basis International unchanged. Not on LSU's official roster as of Oct 12.",
+  "source": "Tweet on LSU eligibility rulings, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-13",
+  "updated": "2026-10-21",
   "id": "lsu-saliou-niang"
  },
  {
   "team": "lsu",
   "player": "Skyy Clark",
   "rank": 151,
-  "status": "Not eligible",
-  "basis": "Kentucky",
+  "status": "Eligible",
+  "basis": "Kentucky + California",
   "stats": "11.5 / 2.3 / 2.0",
   "prior": "UCLA",
-  "note": "Ruled ineligible after the NCAA won again in court in the Kentucky case (Oct 10). Previously: case dissolved, still on LSU roster. Not on LSU's official roster as of Oct 12 (10 players listed).",
-  "source": "Jon Rothstein (relayed by site owner; no link); LSU athletics roster page (screenshot from site owner)",
+  "note": "Ruled eligible Oct 21, per report. Also named in the Glancey v. NCAA injunction (California, Oct 20); NCAA will appeal. Kentucky ineligibility ruling (Oct 10) superseded. Not on LSU's official roster as of Oct 12.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link; Tweet on LSU eligibility rulings, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-13",
+  "updated": "2026-10-21",
   "id": "lsu-skyy-clark"
  },
  {
@@ -749,10 +749,10 @@
   "basis": "California",
   "stats": "12.4 / 10.3 / 2.0",
   "prior": "Villanova",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-20",
   "id": "oklahoma-duke-brennan"
  },
  {
@@ -805,10 +805,10 @@
   "basis": "California",
   "stats": "18.0 / 6.4 / 1.6",
   "prior": "FIU",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-20",
   "id": "ole-miss-corey-stephenson"
  },
  {
@@ -868,6 +868,20 @@
   "id": "seton-hall-elijah-fisher"
  },
  {
+  "team": "smu",
+  "player": "Oziyah Sellers",
+  "rank": null,
+  "status": "Eligible",
+  "basis": "California",
+  "stats": "10.3 / 2.7 / 1.6",
+  "prior": "",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
+  "reported": "2026-10-20",
+  "updated": "2026-10-20",
+  "id": "smu-oziyah-sellers"
+ },
+ {
   "team": "st-johns",
   "player": "Babacar Sane",
   "rank": 626,
@@ -917,10 +931,10 @@
   "basis": "California",
   "stats": "8.3 / 3.4 / 1.1",
   "prior": "Indiana",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-20",
   "id": "st-johns-reed-bailey"
  },
  {
@@ -931,10 +945,10 @@
   "basis": "California",
   "stats": "11.3 / 5.6 / 2.7",
   "prior": "Yale",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-20",
   "id": "stanford-nick-townsend"
  },
  {
@@ -973,10 +987,10 @@
   "basis": "California",
   "stats": "13.1 / 2.1 / 1.9",
   "prior": "Texas",
-  "note": "",
-  "source": "Owner's eligibility sheet",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
   "reported": "2026-10-09",
-  "updated": "2026-10-09",
+  "updated": "2026-10-20",
   "id": "texas-a-m-jordan-pope"
  },
  {
@@ -1048,6 +1062,20 @@
   "reported": "2026-10-09",
   "updated": "2026-10-09",
   "id": "uc-san-diego-treysean-eaglestaff"
+ },
+ {
+  "team": "uc-santa-barbara",
+  "player": "Aidan Mahaney",
+  "rank": null,
+  "status": "Eligible",
+  "basis": "California",
+  "stats": "",
+  "prior": "",
+  "note": "Named in the Glancey v. NCAA injunction (California, Oct 20): Class of 2022 plaintiffs eligible through 2026-27. NCAA will appeal.",
+  "source": "Glancey v. NCAA injunction report, relayed by site owner; no link",
+  "reported": "2026-10-20",
+  "updated": "2026-10-20",
+  "id": "uc-santa-barbara-aidan-mahaney"
  },
  {
   "team": "unlv",
