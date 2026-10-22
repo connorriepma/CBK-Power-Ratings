@@ -691,3 +691,8 @@ tr.schedule-row .rotation-table th:last-child, tr.schedule-row .rotation-table t
   .panel-split .rotation-box { order: -1; }
   .rotation-box { overflow-x: auto; }
 }
+
+/* ---- Not Finalized group ---- */
+.nav-label.nav-label-nf { display: block; margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--wood-line); }
+.nf-note { border-left: 3px solid var(--paint-2); }
+@media (max-width: 760px) { .nav-label.nav-label-nf { margin-top: 12px; } }
