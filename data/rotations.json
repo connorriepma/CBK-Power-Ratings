@@ -195,5 +195,26 @@
    {"name": "Yusef Gray Jr", "num": "5", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "3* Freshman (#170 overall)"},
    {"name": "Xzavion Mitchell", "num": "2", "pos": "F", "yr": "FR", "ht": "6'6\"", "note": "Redshirt Freshman"}
   ]
+ },
+ "virginia": {
+  "updated": "2026-10-23",
+  "players": [
+   {"name": "Thijs De Ridder", "num": "28", "pos": "F", "yr": "SO", "ht": "6'9\"", "note": "Returnee", "ppg": 15.6, "rpg": 6.2, "apg": 1.6, "mpg": 27.7, "gp": 36},
+   {"name": "Sam Lewis", "num": "5", "pos": "G", "yr": "SR", "ht": "6'7\"", "note": "Returnee", "ppg": 10.6, "rpg": 3.6, "apg": 1.4, "mpg": 25.4, "gp": 36},
+   {"name": "Chance Mallory", "num": "1", "pos": "G", "yr": "SO", "ht": "5'10\"", "note": "Returnee", "ppg": 9.3, "rpg": 3.7, "apg": 3.4, "mpg": 24.0, "gp": 36},
+   {"name": "Johann Grünloh", "num": "17", "pos": "C", "yr": "SO", "ht": "7'0\"", "note": "Returnee", "ppg": 7.1, "rpg": 5.2, "apg": 0.6, "mpg": 21.0, "gp": 36},
+   {"name": "Elijah Gertrude", "num": "12", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee", "ppg": 1.7, "rpg": 0.8, "apg": 0.6, "mpg": 6.2, "gp": 17},
+   {"name": "Martin Carrere", "num": "7", "pos": "G", "yr": "JR", "ht": "6'9\"", "note": "Returnee", "ppg": 0.8, "rpg": 0.5, "apg": 0.3, "mpg": 3.9, "gp": 16},
+   {"name": "Christian Harmon", "num": "2", "pos": "G", "yr": "SR", "ht": "6'6\"", "note": "Arkansas St Transfer"},
+   {"name": "Jurian Dixon", "num": "4", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "UC Irvine Transfer"},
+   {"name": "Jan Vide", "num": "37", "pos": "G", "yr": "SR", "ht": "6'6\"", "note": "Loyola Marymount Transfer"},
+   {"name": "Kalu Anya", "num": "6", "pos": "F", "yr": "SR", "ht": "6'8\"", "note": "St. Louis Transfer"},
+   {"name": "Carter Lang", "num": "35", "pos": "F", "yr": "SR", "ht": "6'9\"", "note": "Returnee"},
+   {"name": "Desmond Roberts", "num": "13", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee"},
+   {"name": "Owen Odom", "num": "00", "pos": "G", "yr": "SO", "ht": "6'1\"", "note": "Returnee"},
+   {"name": "Silas Barksdale", "num": "21", "pos": "F", "yr": "SO", "ht": "6'9\"", "note": "Redshirt Freshman"},
+   {"name": "Favour Ibe", "num": "34", "pos": "C", "yr": "FR", "ht": "7'1\"", "note": "3* Freshman (#159 overall)"},
+   {"name": "Nolan Adekunle", "num": "22", "pos": "F", "yr": "FR", "ht": "6'7\"", "note": "Unranked International Recruit (Germany)"}
+  ]
  }
 }
