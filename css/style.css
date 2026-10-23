@@ -622,8 +622,6 @@ footer { border-top: 1px solid var(--wood-line); color: var(--muted); }
 @media (max-width: 760px) { .page-head { align-items: center; gap: 8px; flex-wrap: wrap; } h1 { font-size: 26px; } .season { margin-bottom: 0; } }
 
 /* ---- Plays tab: hypothetical spread plays (scoped to #view-plays; uses the theme variables like Injuries and Eligibility) ---- */
-#view-plays .pl-note { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 12px 14px; font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
-#view-plays .pl-note p { margin: 0 0 6px; } #view-plays .pl-note p:last-child { margin: 0; }
 #view-plays .pl-sum { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
 #view-plays .pl-sum div { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 8px 14px; min-width: 120px; }
 #view-plays .pl-sum b { display: block; font-family: var(--cond); font-size: 28px; line-height: 1.1; font-weight: 600; font-variant-numeric: tabular-nums; }
