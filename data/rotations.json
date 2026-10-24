@@ -131,7 +131,7 @@
    {"name": "Melvin Council Jr", "num": "14", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee", "star": true, "ppg": 12.7, "rpg": 5.0, "apg": 5.1, "mpg": 34.6, "gp": 35},
    {"name": "Tre White", "num": "3", "pos": "G", "yr": "SR", "ht": "6'7\"", "note": "Returnee", "star": true, "ppg": 13.5, "rpg": 6.7, "apg": 1.8, "mpg": 31.3, "gp": 35},
    {"name": "Trey Kaufman-Renn", "num": "9", "pos": "F", "yr": "SR", "ht": "6'9\"", "note": "Purdue Transfer", "star": true, "ppg": 14.2, "rpg": 8.3, "apg": 2.5, "mpg": 28.2, "gp": 37},
-   {"name": "Tyran Stokes", "num": "4", "pos": "G", "yr": "FR", "ht": "6'8\"", "note": "5* Freshman (#1 overall recruit)"},
+   {"name": "Tyran Stokes", "num": "4", "pos": "G", "yr": "FR", "ht": "6'8\"", "note": "5* Freshman"},
    {"name": "Taylen Kinney", "num": "0", "pos": "G", "yr": "FR", "ht": "6'3\"", "note": "5* Freshman"},
    {"name": "Dennis Parker Jr", "num": "11", "pos": "G", "yr": "SR", "ht": "6'7\"", "note": "Radford Transfer", "ppg": 18.3, "rpg": 5.9, "apg": 1.3, "mpg": 29.3, "gp": 32},
    {"name": "Christian Reeves", "num": "32", "pos": "C", "yr": "SR", "ht": "7'2\"", "note": "Charleston Transfer", "ppg": 11.1, "rpg": 7.8, "apg": 0.4, "mpg": 21.4, "gp": 31},
@@ -170,8 +170,8 @@
    {"name": "Damarion Dennis", "num": "1", "pos": "G", "yr": "JR", "ht": "6'1\"", "note": "Wyoming Transfer", "ppg": 11.2, "rpg": 3.2, "apg": 1.3, "mpg": 23.9, "gp": 32},
    {"name": "Josiah Moseley", "num": "2", "pos": "F", "yr": "JR", "ht": "6'8\"", "note": "Returnee", "ppg": 5.5, "rpg": 3.6, "apg": 0.5, "mpg": 13.8, "gp": 14},
    {"name": "Marial Akuentok", "num": "13", "pos": "F", "yr": "SO", "ht": "6'11\"", "note": "Returnee", "ppg": 1.1, "rpg": 1.7, "apg": 0.2, "mpg": 5.9, "gp": 15},
-   {"name": "DaKari Spear", "num": "0", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "4* Freshman (#30 overall)"},
-   {"name": "Amari Barrett", "num": "7", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "3* Freshman (#230 overall)"},
+   {"name": "DaKari Spear", "num": "0", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "4* Freshman"},
+   {"name": "Amari Barrett", "num": "7", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "3* Freshman"},
    {"name": "Trey Hall", "num": "11", "pos": "F", "yr": "FR", "ht": "6'6\"", "note": "Unranked Freshman"},
    {"name": "Bassala Bagayoko", "num": "33", "pos": "F", "yr": "FR", "ht": "6'10\"", "note": "Unranked International Recruit (Spain)"},
    {"name": "LaTrell Hoover", "num": "21", "pos": "F", "yr": "FR", "ht": "6'11\"", "note": "Redshirt Freshman"}
@@ -190,9 +190,9 @@
    {"name": "Taj Manning", "num": "15", "pos": "F", "yr": "SR", "ht": "6'7\"", "note": "Kansas St Transfer", "ppg": 4.2, "rpg": 5.1, "apg": 0.9, "mpg": 20.7, "gp": 30},
    {"name": "Jamarion Batemon", "num": "1", "pos": "G", "yr": "SO", "ht": "6'3\"", "note": "Returnee", "ppg": 6.6, "rpg": 1.2, "apg": 0.5, "mpg": 15.5, "gp": 37},
    {"name": "Dominykas Pleta", "num": "21", "pos": "F", "yr": "SO", "ht": "6'11\"", "note": "Returnee", "ppg": 4.4, "rpg": 2.3, "apg": 0.5, "mpg": 11.3, "gp": 35},
-   {"name": "Dorian Rinaldo-Komlan", "num": "24", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "4* Freshman (#96 overall)"},
-   {"name": "Christian Wiggins", "num": "22", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "4* Freshman (#106 overall)"},
-   {"name": "Yusef Gray Jr", "num": "5", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "3* Freshman (#170 overall)"},
+   {"name": "Dorian Rinaldo-Komlan", "num": "24", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "4* Freshman"},
+   {"name": "Christian Wiggins", "num": "22", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "4* Freshman"},
+   {"name": "Yusef Gray Jr", "num": "5", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "3* Freshman"},
    {"name": "Xzavion Mitchell", "num": "2", "pos": "F", "yr": "FR", "ht": "6'6\"", "note": "Redshirt Freshman"}
   ]
  },
@@ -213,7 +213,7 @@
    {"name": "Desmond Roberts", "num": "13", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee"},
    {"name": "Owen Odom", "num": "00", "pos": "G", "yr": "SO", "ht": "6'1\"", "note": "Returnee"},
    {"name": "Silas Barksdale", "num": "21", "pos": "F", "yr": "SO", "ht": "6'9\"", "note": "Redshirt Freshman"},
-   {"name": "Favour Ibe", "num": "34", "pos": "C", "yr": "FR", "ht": "7'1\"", "note": "3* Freshman (#159 overall)"},
+   {"name": "Favour Ibe", "num": "34", "pos": "C", "yr": "FR", "ht": "7'1\"", "note": "3* Freshman"},
    {"name": "Nolan Adekunle", "num": "22", "pos": "F", "yr": "FR", "ht": "6'7\"", "note": "Unranked International Recruit (Germany)"}
   ]
  },
@@ -232,7 +232,7 @@
    {"name": "Marcus Allen", "num": "4", "pos": "F", "yr": "JR", "ht": "6'7\"", "note": "Returnee (health unclear)", "ppg": 5.3, "rpg": 3.1, "apg": 1.6, "mpg": 19.0, "gp": 8},
    {"name": "L.J. Cason", "num": "13", "pos": "G", "yr": "JR", "ht": "6'2\"", "note": "Michigan Transfer (injury redshirt)", "ppg": 8.4, "rpg": 1.9, "apg": 2.4, "mpg": 18.6, "gp": 28},
    {"name": "Quin Berger", "num": "12", "pos": "G", "yr": "SR", "ht": "6'2\"", "note": "Bucknell Transfer", "ppg": 3.1, "rpg": 1.4, "apg": 0.7, "mpg": 16.6, "gp": 30},
-   {"name": "Caleb Gaskins", "num": "11", "pos": "F", "yr": "FR", "ht": "6'8\"", "note": "5* Freshman (#18 overall)"},
+   {"name": "Caleb Gaskins", "num": "11", "pos": "F", "yr": "FR", "ht": "6'8\"", "note": "5* Freshman"},
    {"name": "Christopher Birden Jr", "num": "8", "pos": "F", "yr": "FR", "ht": "6'10\"", "note": "Unranked Freshman"},
    {"name": "Egor Ryzhov", "num": "10", "pos": "C", "yr": "SR", "ht": "6'11\"", "note": "Unranked International Recruit (Russia)"}
   ]
@@ -249,8 +249,8 @@
    {"name": "Isiah Harwell", "num": "1", "pos": "G", "yr": "SO", "ht": "6'6\"", "note": "Houston Transfer", "ppg": 3.6, "rpg": 2.0, "apg": 0.5, "mpg": 13.8, "gp": 32},
    {"name": "Izan Almansa", "num": "13", "pos": "F", "yr": "JR", "ht": "6'10\"", "note": "Unranked International Recruit (Spain)"},
    {"name": "Nathan De Sousa", "num": "7", "pos": "G", "yr": "SR", "ht": "6'3\"", "note": "Unranked International Recruit (France)"},
-   {"name": "Luca Foster", "num": "0", "pos": "F", "yr": "FR", "ht": "6'5\"", "note": "4* Freshman (#54 overall)"},
-   {"name": "Sam Funches", "num": "33", "pos": "F", "yr": "FR", "ht": "7'0\"", "note": "4* Freshman (#99 overall)"},
+   {"name": "Luca Foster", "num": "0", "pos": "F", "yr": "FR", "ht": "6'5\"", "note": "4* Freshman"},
+   {"name": "Sam Funches", "num": "33", "pos": "F", "yr": "FR", "ht": "7'0\"", "note": "4* Freshman"},
    {"name": "Parker Jefferson", "num": "32", "pos": "F", "yr": "SO", "ht": "6'9\"", "note": "Redshirt Freshman"},
    {"name": "Alonzo Metz", "num": "14", "pos": "G", "yr": "SO", "ht": "6'0\"", "note": "Redshirt Freshman"}
   ]
