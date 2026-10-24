@@ -282,7 +282,7 @@ window.CBK = (function () {
       // Small "AP #n" tag for ranked teams; empty for everyone else.
       m.apTag = function (name) {
         var r = m.ap[name];
-        return r ? ' <span class="ap-tag" title="AP Top 25: ' + esc(m.apLabel) + '">AP #' + r + '</span>' : '';
+        return r ? ' <span class="ap-tag" title="AP Top 25: ' + esc(m.apLabel) + '">#' + r + '</span>' : '';
       };
       return m;
     });
