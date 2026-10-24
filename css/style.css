@@ -696,4 +696,4 @@ tr.schedule-row .rotation-table th:last-child, tr.schedule-row .rotation-table t
 @media (max-width: 760px) { .nav-label.nav-label-nf { margin-top: 12px; } }
 
 /* AP Top 25 tag */
-.ap-tag { margin-left: 5px; color: var(--muted); font-size: 11.5px; font-weight: 600; font-style: normal; }
+.ap-tag { margin-right: 1px; color: var(--muted); font-size: 11.5px; font-weight: 600; font-style: normal; }

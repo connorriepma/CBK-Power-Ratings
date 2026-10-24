@@ -55,7 +55,7 @@
 
   function matchupHTML(g) {
     var site = g.neutral && g.site ? ' <span class="g-site">' + esc(g.site) + '</span>' : '';
-    var A = esc(g.away) + model.apTag(g.away), H = esc(g.home) + model.apTag(g.home);
+    var A = model.apTag(g.away) + esc(g.away), H = model.apTag(g.home) + esc(g.home);
     var m = g.neutral ? A + ' vs ' + H + '*' + (model.hcaMod(g).length ? '&Dagger;' : '') + site : A + ' @ ' + H + (model.hcaMod(g).length ? '&Dagger;' : '');
     var alt = model.altitude(g);
     if (alt) m += ' <span class="g-site" title="Plays at ' + alt.toLocaleString('en-US') + ' ft elevation">&#9968;&#xFE0F;</span>';
