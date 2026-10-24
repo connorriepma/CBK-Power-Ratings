@@ -11,6 +11,7 @@
   var daySelect = document.getElementById('day-select');
   var confFilter = document.getElementById('conf-filter');
   var confOnly = document.getElementById('conf-only');
+  var top25 = document.getElementById('top25-only');
   var prevBtn = document.getElementById('day-prev');
   var nextBtn = document.getElementById('day-next');
   var master = document.getElementById('schedule-master');
@@ -36,6 +37,7 @@
     var c = confFilter.value;
     return model.games.filter(function (g) {
       if (confOnly.checked && !g.conf) return false;
+      if (top25.checked && !(model.ap[g.home] || model.ap[g.away])) return false;
       if (!c) return true;
       return confOf(g.home) === c || confOf(g.away) === c;
     });
@@ -53,7 +55,8 @@
 
   function matchupHTML(g) {
     var site = g.neutral && g.site ? ' <span class="g-site">' + esc(g.site) + '</span>' : '';
-    var m = g.neutral ? esc(g.away) + ' vs ' + esc(g.home) + '*' + (model.hcaMod(g).length ? '&Dagger;' : '') + site : esc(g.away) + ' @ ' + esc(g.home) + (model.hcaMod(g).length ? '&Dagger;' : '');
+    var A = esc(g.away) + model.apTag(g.away), H = esc(g.home) + model.apTag(g.home);
+    var m = g.neutral ? A + ' vs ' + H + '*' + (model.hcaMod(g).length ? '&Dagger;' : '') + site : A + ' @ ' + H + (model.hcaMod(g).length ? '&Dagger;' : '');
     var alt = model.altitude(g);
     if (alt) m += ' <span class="g-site" title="Plays at ' + alt.toLocaleString('en-US') + ' ft elevation">&#9968;&#xFE0F;</span>';
     if (g.travelMiles) m += ' <span class="g-site">&#9992;&#xFE0E; ' + g.travelMiles.toLocaleString('en-US') + ' mi</span>';
@@ -291,6 +294,7 @@
     nextBtn.addEventListener('click', function () { renderDay(dayIndex + 1); });
     confFilter.addEventListener('change', function () { rebuildDates(dates[dayIndex]); });
     confOnly.addEventListener('change', function () { rebuildDates(dates[dayIndex]); });
+    top25.addEventListener('change', function () { rebuildDates(dates[dayIndex]); });
 
     toggle.addEventListener('click', function () { if (entryMode) exitEntry(); else startEntry(); });
     signOut.addEventListener('click', function () { Store.clearToken(); exitEntry(); });

@@ -272,8 +272,20 @@ window.CBK = (function () {
       getJSON('data/rating_config.json'),
       getJSON('data/schedule.json'),
       getJSON('data/tbd_games.json'),
-      getJSON('data/results.json')
-    ]).then(function (d) { return build(d[0], d[1], d[2], d[3], d[4]); });
+      getJSON('data/results.json'),
+      getJSON('data/ap_poll.json').catch(function () { return null; })
+    ]).then(function (d) {
+      var m = build(d[0], d[1], d[2], d[3], d[4]);
+      m.ap = {};
+      if (d[5] && d[5].teams) d[5].teams.forEach(function (n, i) { m.ap[n] = i + 1; });
+      m.apLabel = d[5] && d[5].label ? d[5].label : '';
+      // Small "AP #n" tag for ranked teams; empty for everyone else.
+      m.apTag = function (name) {
+        var r = m.ap[name];
+        return r ? ' <span class="ap-tag" title="AP Top 25: ' + esc(m.apLabel) + '">AP #' + r + '</span>' : '';
+      };
+      return m;
+    });
     loading.catch(function () { loading = null; });
     return loading;
   }

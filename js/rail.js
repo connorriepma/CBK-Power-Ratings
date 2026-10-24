@@ -38,8 +38,8 @@
     var list = G.sortBestFirst(model, model.games.filter(function (g) { return g.date === day; }));
     var rows = list.map(function (g) {
       var m = g.neutral
-        ? esc(g.away) + ' <span class="rl-vs">vs</span> ' + esc(g.home) + '*' + (g.site ? '<span class="g-site">' + esc(g.site) + '</span>' : '')
-        : esc(g.away) + ' <span class="rl-vs">@</span> ' + esc(g.home);
+        ? esc(g.away) + model.apTag(g.away) + ' <span class="rl-vs">vs</span> ' + esc(g.home) + model.apTag(g.home) + '*' + (g.site ? '<span class="g-site">' + esc(g.site) + '</span>' : '')
+        : esc(g.away) + model.apTag(g.away) + ' <span class="rl-vs">@</span> ' + esc(g.home) + model.apTag(g.home);
       return '<div class="rl-row"><div class="rl-m">' + m + (g.dateTbd ? ' <span class="g-site">Date TBA</span>' : '') +
         '</div><div class="rl-b">' + G.lineHTML(model, g) + G.probHTML(model, g) + '</div></div>';
     }).join('');
