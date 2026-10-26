@@ -1,20 +1,28 @@
 """One-time job: match ESPN's team list to our teams and save logo links to data/team_logos.json.
 Writes only data/team_logos.json and data/team_logos_report.txt. Never touches scores or ratings."""
-import json, re, sys, urllib.request
+import json, re, sys, unicodedata, urllib.request
 
 URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams?limit=500"
 
 ALIASES = {  # our name (normalized) -> ESPN name (normalized); add fixes here after reading the report
+    "cal baptist": "california baptist", "sam houston st": "sam houston", "illinois chicago": "uic",
+    "se missouri st": "southeast missouri st", "texas am cc": "texas am corpus christi",
+    "appalachian st": "app st", "louisiana monroe": "ul monroe", "grambling st": "grambling",
+    "seattle": "seattle u", "usc upstate": "south carolina upstate", "queens": "queens charlotte",
 }
 
 def norm(s):
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     s = s.lower().replace("&", " and ")
     s = re.sub(r"\(([a-z]+)\)", r" \1", s)          # Miami (OH) -> miami oh
-    s = re.sub(r"[.'’\-]", "", s)
+    s = re.sub(r"[.'’]", "", s).replace("-", " ")
     s = re.sub(r"\bsaint\b", "st", s)
     s = re.sub(r"\bstate\b", "st", s)
     s = re.sub(r"[^a-z0-9 ]", " ", s)
     return re.sub(r"\s+", " ", s).strip()
+
+def key(s):
+    return norm(s).replace(" ", "")
 
 def match(ours, espn_teams):
     by = {}
@@ -24,11 +32,11 @@ def match(ours, espn_teams):
             continue
         for k in ("location", "displayName", "shortDisplayName"):
             if t.get(k):
-                by.setdefault(norm(t[k]), logo)
+                by.setdefault(key(t[k]), logo)
     out, missing = {}, []
     for t in ours:
         n = norm(t["team"])
-        hit = by.get(ALIASES.get(n, n))
+        hit = by.get(key(ALIASES.get(n, n)))
         if hit:
             out[t["key"]] = hit
         else:
