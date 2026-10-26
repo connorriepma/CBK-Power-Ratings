@@ -5,7 +5,6 @@ import json, re, sys, urllib.request
 URL = "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/teams?limit=500"
 
 ALIASES = {  # our name (normalized) -> ESPN name (normalized); add fixes here after reading the report
-    "uconn": "connecticut",
 }
 
 def norm(s):
