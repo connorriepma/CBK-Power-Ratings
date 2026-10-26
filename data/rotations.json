@@ -290,5 +290,24 @@
    {"name": "Malachi Brown", "num": "15", "pos": "G", "yr": "FR", "ht": "6'6\"", "note": "3* Freshman"},
    {"name": "Marcus Møller", "num": "9", "pos": "C", "yr": "FR", "ht": "7'3\"", "note": "Unranked International Recruit (Denmark)"}
   ]
+ },
+ "arkansas": {
+  "updated": "2026-10-25",
+  "players": [
+   {"name": "Cooper Bowser", "num": "21", "pos": "F", "yr": "SR", "ht": "6'11\"", "note": "Furman Transfer", "ppg": 13.8, "rpg": 5.9, "apg": 1.8, "mpg": 29.6, "gp": 35},
+   {"name": "Billy Richmond III", "num": "24", "pos": "G", "yr": "JR", "ht": "6'7\"", "note": "Returnee", "ppg": 11.2, "rpg": 4.3, "apg": 2.0, "mpg": 27.6, "gp": 37},
+   {"name": "Jeremiah Wilkinson", "num": "5", "pos": "G", "yr": "JR", "ht": "6'1\"", "note": "Georgia Transfer", "ppg": 17.4, "rpg": 2.0, "apg": 1.7, "mpg": 25.7, "gp": 31},
+   {"name": "Ayden Kelley", "num": "4", "pos": "G", "yr": "JR", "ht": "5'10\"", "note": "Returnee", "mpg": 1.6, "gp": 7},
+   {"name": "Amere Brown", "num": "2", "pos": "G", "yr": "SO", "ht": "5'9\"", "note": "Returnee", "mpg": 1.6, "gp": 7},
+   {"name": "Jordan Smith Jr", "num": "23", "pos": "G", "yr": "FR", "ht": "6'2\"", "note": "5* Freshman"},
+   {"name": "JJ Andrews", "num": "7", "pos": "G", "yr": "FR", "ht": "6'6\"", "note": "5* Freshman"},
+   {"name": "Miikka Muurinen", "num": "3", "pos": "F", "yr": "FR", "ht": "7'0\"", "note": "5* International Recruit (Finland)"},
+   {"name": "Abdou Toure", "num": "1", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "5* Freshman"},
+   {"name": "Davion Thompson", "num": "9", "pos": "G", "yr": "FR", "ht": "6'2\"", "note": "4* Freshman"},
+   {"name": "Maper Maker", "num": "8", "pos": "F", "yr": "FR", "ht": "7'0\"", "note": "4* International Recruit (Australia)"},
+   {"name": "Ilia Frolov", "num": "14", "pos": "F", "yr": "FR", "ht": "7'0\"", "note": "Unranked International Recruit (Russia)"},
+   {"name": "Paulo Semedo", "num": "99", "pos": "F", "yr": "SO", "ht": "7'1\"", "note": "Redshirt Freshman"},
+   {"name": "Caleb Ourigou", "num": "0", "pos": "C", "yr": "FR", "ht": "6'11\"", "note": ""}
+  ]
  }
 }
