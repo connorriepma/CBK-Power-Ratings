@@ -1,0 +1,26 @@
+name: Fetch team logos (one time)
+
+# Runs when this branch is pushed. Saves two files (data/team_logos.json and
+# data/team_logos_report.txt) back to this same branch. Does not touch main, scores or ratings.
+on:
+  workflow_dispatch:
+  push:
+    branches: [team-logos]
+
+permissions:
+  contents: write
+
+jobs:
+  logos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/scripts/fetch_logos.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Save files to this branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/team_logos.json data/team_logos_report.txt
+          git diff --cached --quiet && echo "No change" && exit 0
+          git commit -m "Add team logo links (one-time job)"
+          git push origin HEAD:${{ github.ref_name }}
