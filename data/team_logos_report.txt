@@ -1,0 +1,4 @@
+ESPN teams: 362
+Our teams: 365
+Matched: 362
+No logo found (3): Queens, Lindenwood, Southern Indiana
