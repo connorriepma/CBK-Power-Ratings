@@ -398,5 +398,27 @@
    {"name": "Chase Byington", "num": "12", "pos": "", "yr": "FR", "ht": "6'5\"", "note": ""},
    {"name": "Baylor Allen", "num": "24", "pos": "", "yr": "FR", "ht": "5'11\"", "note": ""}
   ]
+ },
+ "indiana": {
+  "updated": "2026-10-25",
+  "players": [
+   {"name": "Markus Burton", "num": "5", "pos": "G", "yr": "JR", "ht": "6'0\"", "note": "Notre Dame Transfer", "ppg": 18.5, "rpg": 2.8, "apg": 3.7, "mpg": 30.1, "gp": 10},
+   {"name": "Samet Yigitoglu", "num": "21", "pos": "C", "yr": "JR", "ht": "7'2\"", "note": "SMU Transfer", "ppg": 10.7, "rpg": 7.9, "apg": 1.6, "mpg": 28.9, "gp": 34},
+   {"name": "Bryce Lindsay", "num": "2", "pos": "G", "yr": "JR", "ht": "6'4\"", "note": "Villanova Transfer", "ppg": 12.3, "rpg": 2.1, "apg": 2.1, "mpg": 28.6, "gp": 33},
+   {"name": "Jaeden Mustaf", "num": "3", "pos": "G", "yr": "JR", "ht": "6'6\"", "note": "Georgia Tech Transfer", "ppg": 10.4, "rpg": 4.3, "apg": 2.4, "mpg": 27.8, "gp": 29},
+   {"name": "Aiden Sherrell", "num": "22", "pos": "F", "yr": "JR", "ht": "7'0\"", "note": "Alabama Transfer", "ppg": 11.1, "rpg": 6.2, "apg": 1.1, "mpg": 23.9, "gp": 34},
+   {"name": "Sam Alexis", "star": true, "num": "4", "pos": "F", "yr": "SR", "ht": "6'9\"", "note": "Returnee", "ppg": 8.8, "rpg": 4.8, "apg": 1.2, "mpg": 21.3, "gp": 32},
+   {"name": "Justin Monden", "num": "12", "pos": "G", "yr": "SR", "ht": "6'0\"", "note": "Maryland Eastern Shore Transfer", "ppg": 6.0, "rpg": 1.2, "apg": 1.6, "mpg": 20.7, "gp": 32},
+   {"name": "Trent Sisley", "num": "11", "pos": "F", "yr": "SO", "ht": "6'8\"", "note": "Returnee", "ppg": 4.2, "rpg": 2.8, "apg": 0.4, "mpg": 13.1, "gp": 30},
+   {"name": "Darren Harris", "num": "1", "pos": "G", "yr": "JR", "ht": "6'5\"", "note": "Duke Transfer", "ppg": 3.3, "rpg": 0.8, "apg": 0.4, "mpg": 9.7, "gp": 36},
+   {"name": "Vaughn Karvala", "num": "24", "pos": "F", "yr": "FR", "ht": "6'8\"", "note": "4* Freshman"},
+   {"name": "Prince-Alexander Moody", "num": "8", "pos": "G", "yr": "FR", "ht": "6'4\"", "note": "4* Freshman"},
+   {"name": "Trevor Manhertz", "num": "0", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "4* Freshman"},
+   {"name": "Clemens Sokolov", "num": "17", "pos": "C", "yr": "FR", "ht": "7'0\"", "note": "Unranked International Recruit (Germany)"},
+   {"name": "Drew Snively", "num": "10", "pos": "G", "yr": "SO", "ht": "6'6\"", "note": ""},
+   {"name": "Jordan Rayford", "num": "14", "pos": "G", "yr": "SR", "ht": "6'5\"", "note": ""},
+   {"name": "Ian Stephens", "num": "30", "pos": "G", "yr": "SR", "ht": "6'6\"", "note": ""},
+   {"name": "Ben Winker", "num": "33", "pos": "F", "yr": "SO", "ht": "6'10\"", "note": ""}
+  ]
  }
 }
