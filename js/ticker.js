@@ -13,7 +13,7 @@
         ? '<img src="' + C.esc(logos[t.key]) + '" alt="' + C.esc(t.team) + '" loading="lazy">'
         : '<span class="tk-name">' + C.esc(t.team) + '</span>';
       return '<span class="tk-item" title="#' + (i + 1) + ' ' + C.esc(t.team) + '"><span class="tk-rk">' + (i + 1) + '</span>' + face + '</span>';
-    }).join('');
+    }).join('') + '<span class="tk-sep" aria-hidden="true"></span>';
     // Two copies side by side so the loop has no gap.
     host.innerHTML = '<div class="tk-label">Top 25 Teams</div><div class="tk-view"><div class="tk-track" aria-label="Top 25 teams by current rating"><div class="tk-set">' + items + '</div><div class="tk-set" aria-hidden="true">' + items + '</div></div></div>';
     // A logo that fails to load falls back to the team name.
