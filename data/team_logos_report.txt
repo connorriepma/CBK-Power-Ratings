@@ -1,4 +1,4 @@
 ESPN teams: 362
 Our teams: 365
-Matched: 350
-No logo found (15): Queens, USC Upstate, Gardner Webb, Cal Baptist, Sam Houston St, Illinois Chicago, San Jose St, SE Missouri St, Lindenwood, Southern Indiana, Texas A&M CC, Appalachian St, Louisiana Monroe, Grambling St, Seattle
+Matched: 362
+No logo found (3): Queens, Lindenwood, Southern Indiana
