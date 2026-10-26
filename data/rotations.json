@@ -254,5 +254,23 @@
    {"name": "Parker Jefferson", "num": "32", "pos": "F", "yr": "SO", "ht": "6'9\"", "note": "Redshirt Freshman"},
    {"name": "Alonzo Metz", "num": "14", "pos": "G", "yr": "SO", "ht": "6'0\"", "note": "Redshirt Freshman"}
   ]
+ },
+ "louisville": {
+  "updated": "2026-10-25",
+  "players": [
+   {"name": "Jackson Shelstad", "num": "3", "pos": "G", "yr": "SR", "ht": "6'1\"", "note": "Oregon Transfer", "ppg": 15.6, "rpg": 2.9, "apg": 4.9, "mpg": 34.8, "gp": 12},
+   {"name": "Seth Trimble", "num": "5", "pos": "G", "yr": "SR", "ht": "6'3\"", "note": "North Carolina Transfer", "star": true, "ppg": 14.0, "rpg": 3.8, "apg": 3.0, "mpg": 32.5, "gp": 24},
+   {"name": "Flory Bidunga", "num": "40", "pos": "F", "yr": "JR", "ht": "6'9\"", "note": "Kansas Transfer", "ppg": 13.3, "rpg": 9.0, "apg": 1.5, "mpg": 31.6, "gp": 35},
+   {"name": "De'Shayne Montgomery", "num": "11", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Dayton Transfer", "ppg": 13.4, "rpg": 4.0, "apg": 2.1, "mpg": 30.6, "gp": 36},
+   {"name": "Adrian Wooley", "num": "14", "pos": "G", "yr": "JR", "ht": "6'4\"", "note": "Returnee", "ppg": 8.7, "rpg": 3.9, "apg": 1.8, "mpg": 22.5, "gp": 35},
+   {"name": "Karter Knox", "num": "1", "pos": "G", "yr": "JR", "ht": "6'6\"", "note": "Arkansas Transfer", "ppg": 8.1, "rpg": 4.5, "apg": 1.2, "mpg": 22.2, "gp": 22},
+   {"name": "Álvaro Folgueiras", "num": "7", "pos": "F", "yr": "SR", "ht": "6'10\"", "note": "Iowa Transfer", "ppg": 8.4, "rpg": 3.6, "apg": 2.2, "mpg": 20.8, "gp": 37},
+   {"name": "Gabe Dynes", "num": "45", "pos": "C", "yr": "SR", "ht": "7'5\"", "note": "USC Transfer", "ppg": 2.9, "rpg": 2.3, "apg": 0.4, "mpg": 11.9, "gp": 30},
+   {"name": "LJ Wells", "num": "53", "pos": "F", "yr": "SR", "ht": "6'8\"", "note": "NKU Transfer", "star": true, "ppg": 15.0, "rpg": 7.3, "apg": 2.1},
+   {"name": "Will Hanke", "num": "33", "pos": "G", "yr": "SO", "ht": "6'4\"", "note": "Returnee"},
+   {"name": "Obinna Ekezie Jr", "num": "15", "pos": "C", "yr": "FR", "ht": "7'2\"", "note": "5* Freshman"},
+   {"name": "Boyuan Zhang", "num": "6", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "4* Freshman"},
+   {"name": "Isaac Ellis", "num": "22", "pos": "G", "yr": "FR", "ht": "6'1\"", "note": "3* Freshman"}
+  ]
  }
 }
