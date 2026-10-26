@@ -272,5 +272,23 @@
    {"name": "Boyuan Zhang", "num": "6", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "4* Freshman"},
    {"name": "Isaac Ellis", "num": "22", "pos": "G", "yr": "FR", "ht": "6'1\"", "note": "3* Freshman"}
   ]
+ },
+ "michigan": {
+  "updated": "2026-10-25",
+  "players": [
+   {"name": "Kenny Noland", "num": "2", "pos": "G", "yr": "SR", "ht": "6'2\"", "note": "Columbia Transfer", "star": true, "ppg": 17.1, "rpg": 3.4, "apg": 3.7, "mpg": 33.0, "gp": 28},
+   {"name": "Elliot Cadeau", "num": "3", "pos": "G", "yr": "SR", "ht": "6'1\"", "note": "Returnee", "ppg": 10.5, "rpg": 2.7, "apg": 5.9, "mpg": 27.3, "gp": 40},
+   {"name": "Moustapha Thiam", "num": "52", "pos": "C", "yr": "JR", "ht": "7'2\"", "note": "Cincinnati Transfer", "ppg": 12.8, "rpg": 7.1, "apg": 0.5, "mpg": 27.2, "gp": 31},
+   {"name": "Trey McKenney", "num": "1", "pos": "G", "yr": "SO", "ht": "6'4\"", "note": "Returnee", "ppg": 9.9, "rpg": 2.8, "apg": 0.9, "mpg": 22.1, "gp": 40},
+   {"name": "Roddy Gayle Jr", "num": "11", "pos": "G", "yr": "SR", "ht": "6'5\"", "note": "Returnee", "star": true, "ppg": 7.3, "rpg": 3.3, "apg": 1.3, "mpg": 21.1, "gp": 39},
+   {"name": "J.P. Estrella", "num": "13", "pos": "F", "yr": "SR", "ht": "6'11\"", "note": "Tennessee Transfer", "ppg": 10.0, "rpg": 5.4, "apg": 0.8, "mpg": 18.3, "gp": 33},
+   {"name": "Jalen Reed", "num": "19", "pos": "F", "yr": "SR", "ht": "6'9\"", "note": "LSU Transfer", "ppg": 9.5, "rpg": 5.7, "apg": 0.7, "mpg": 18.0, "gp": 6},
+   {"name": "Brandon McCoy Jr", "num": "4", "pos": "G", "yr": "FR", "ht": "6'5\"", "note": "5* Freshman"},
+   {"name": "Lincoln Cosby", "num": "5", "pos": "F", "yr": "FR", "ht": "6'10\"", "note": "4* Freshman"},
+   {"name": "Quinn Costello", "num": "8", "pos": "F", "yr": "FR", "ht": "6'10\"", "note": "4* Freshman"},
+   {"name": "Joseph Hartman", "num": "10", "pos": "G", "yr": "FR", "ht": "6'6\"", "note": "4* Freshman"},
+   {"name": "Malachi Brown", "num": "15", "pos": "G", "yr": "FR", "ht": "6'6\"", "note": "3* Freshman"},
+   {"name": "Marcus Møller", "num": "9", "pos": "C", "yr": "FR", "ht": "7'3\"", "note": "Unranked International Recruit (Denmark)"}
+  ]
  }
 }
