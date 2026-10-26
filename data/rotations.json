@@ -439,5 +439,25 @@
    {"name": "Zyon Hawthorne", "num": "0", "pos": "G", "yr": "FR", "ht": "6'1\"", "note": "Unranked Freshman"},
    {"name": "Ousmane N'Diaye", "num": "19", "pos": "F", "yr": "JR", "ht": "7'0\"", "note": "Unranked International Recruit (Senegal)"}
   ]
+ },
+ "nebraska": {
+  "updated": "2026-10-25",
+  "players": [
+   {"name": "Trevan Leonhardt", "num": "10", "pos": "G", "yr": "SR", "ht": "6'6\"", "note": "Utah Valley Transfer", "ppg": 11.9, "rpg": 5.4, "apg": 6.0, "mpg": 34.4, "gp": 34},
+   {"name": "Pryce Sandfort", "num": "21", "pos": "F", "yr": "SR", "ht": "6'7\"", "note": "Returnee", "ppg": 18.1, "rpg": 4.9, "apg": 2.0, "mpg": 33.6, "gp": 35},
+   {"name": "Boden Kapke", "num": "33", "pos": "F", "yr": "SR", "ht": "7'0\"", "note": "Boston College Transfer", "ppg": 10.6, "rpg": 5.7, "apg": 0.7, "mpg": 26.8, "gp": 31},
+   {"name": "Sam Orme", "num": "14", "pos": "F", "yr": "SR", "ht": "6'10\"", "note": "Belmont Transfer", "ppg": 12.7, "rpg": 5.0, "apg": 1.8, "mpg": 25.7, "gp": 29},
+   {"name": "Damon Wilkinson", "num": "34", "pos": "F", "yr": "SR", "ht": "6'11\"", "note": "South Dakota St Transfer", "ppg": 13.9, "rpg": 6.4, "apg": 1.3, "mpg": 23.9, "gp": 32},
+   {"name": "Braden Frager", "num": "5", "pos": "F", "yr": "JR", "ht": "6'7\"", "note": "Returnee", "ppg": 11.8, "rpg": 3.8, "apg": 1.0, "mpg": 23.6, "gp": 33},
+   {"name": "Cale Jacobsen", "num": "31", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee", "ppg": 4.6, "rpg": 2.9, "apg": 1.3, "mpg": 19.7, "gp": 35},
+   {"name": "Taj DeGourville", "num": "8", "pos": "G", "yr": "JR", "ht": "6'6\"", "note": "San Diego St Transfer", "ppg": 5.5, "rpg": 2.8, "apg": 3.0, "mpg": 19.4, "gp": 33},
+   {"name": "Connor Essegian", "num": "0", "pos": "G", "yr": "SR", "ht": "6'4\"", "note": "Returnee", "ppg": 5.4, "rpg": 1.3, "apg": 0.9, "mpg": 14.0, "gp": 7},
+   {"name": "Kadyn Betts", "num": "7", "pos": "F", "yr": "SR", "ht": "6'8\"", "note": "Montana Transfer", "ppg": 3.1, "rpg": 1.1, "apg": 0.2, "mpg": 6.6, "gp": 9},
+   {"name": "Leo Curtis", "num": "9", "pos": "F", "yr": "SO", "ht": "7'2\"", "note": "Returnee", "ppg": 1.6, "rpg": 0.5, "apg": 0.2, "mpg": 3.6, "gp": 17},
+   {"name": "Colin Rice", "num": "4", "pos": "F", "yr": "FR", "ht": "6'9\"", "note": "4* Freshman"},
+   {"name": "Jacob Lanier", "num": "13", "pos": "G", "yr": "FR", "ht": "6'6\"", "note": "4* Freshman"},
+   {"name": "Will Cooper", "num": "6", "pos": "F", "yr": "JR", "ht": "6'7\"", "note": ""},
+   {"name": "Henry Burt", "num": "35", "pos": "F", "yr": "SR", "ht": "6'8\"", "note": ""}
+  ]
  }
 }
