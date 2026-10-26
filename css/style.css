@@ -699,7 +699,7 @@ tr.schedule-row .rotation-table th:last-child, tr.schedule-row .rotation-table t
 .ap-tag { margin-right: 1px; color: var(--muted); font-size: 11.5px; font-weight: 600; font-style: normal; }
 
 /* Top 25 ticker (main page only) */
-.ticker { position: sticky; top: 0; z-index: 20; height: 52px; background: var(--panel); border-bottom: 1px solid var(--wood-line); overflow: hidden; }
+.ticker { position: sticky; top: 0; z-index: 20; height: 52px; display: flex; background: var(--panel); border-bottom: 1px solid var(--wood-line); overflow: hidden; }
 .tk-track { display: flex; width: max-content; height: 100%; animation: tk-scroll 75s linear infinite; }
 .ticker:hover .tk-track { animation-play-state: paused; }
 .tk-set { display: flex; align-items: center; flex: none; }
@@ -708,6 +708,9 @@ tr.schedule-row .rotation-table th:last-child, tr.schedule-row .rotation-table t
 .tk-rk { font-size: 11px; font-weight: 700; color: var(--muted); min-width: 12px; text-align: right; }
 .tk-name { font-size: 13px; font-weight: 600; color: var(--ink); white-space: nowrap; }
 @keyframes tk-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .ticker { overflow-x: auto; } .tk-track { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .tk-view { overflow-x: auto; } .tk-track { animation: none; } }
 body.has-ticker .sidebar { top: 52px; }
 @media (min-width: 1850px) { body.has-ticker .rail { top: 100px; max-height: calc(100vh - 124px); } }
+
+.tk-label { flex: none; display: flex; align-items: center; padding: 0 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--paint); background: var(--panel); border-right: 1px solid var(--wood-line); white-space: nowrap; position: relative; z-index: 1; }
+.tk-view { flex: 1; min-width: 0; overflow: hidden; }
