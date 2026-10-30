@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261012o">
+  <link rel="stylesheet" href="css/style.css?v=20261030a">
 </head>
 <body>
   <div class="shell">
@@ -40,6 +40,7 @@
         <select id="day-select" aria-label="Day"></select>
         <button type="button" id="day-next" class="day-nav" aria-label="Next day">&rarr;</button>
         <select id="conf-filter" aria-label="Filter by conference"></select>
+        <input type="search" id="team-search" placeholder="Search teams" aria-label="Search teams on this day" autocomplete="off" hidden>
         <label class="conf-only"><input type="checkbox" id="conf-only"> Conference games only</label>
         <button type="button" id="entry-toggle" class="entry-toggle" hidden>Enter scores</button>
         <button type="button" id="owner-signout" class="entry-toggle" hidden>Sign out</button>
@@ -74,7 +75,7 @@
   <script src="js/common.js?v=20261012o"></script>
   <script src="js/game-view.js?v=20261016b"></script>
   <script src="js/store.js?v=20261012o"></script>
-  <script src="js/schedule.js?v=20261016b"></script>
+  <script src="js/schedule.js?v=20261030a"></script>
   <script src="js/rail.js?v=20261016b"></script>
 </body>
 </html>

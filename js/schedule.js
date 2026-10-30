@@ -11,6 +11,9 @@
   var daySelect = document.getElementById('day-select');
   var confFilter = document.getElementById('conf-filter');
   var confOnly = document.getElementById('conf-only');
+  var teamSearch = document.getElementById('team-search');
+  var SEARCH_MIN_GAMES = 100; // the search box only appears on days at least this big
+  var searchDate = null;
   var prevBtn = document.getElementById('day-prev');
   var nextBtn = document.getElementById('day-next');
   var master = document.getElementById('schedule-master');
@@ -96,16 +99,17 @@
       ? '<div class="g-footnote">&#9968;&#xFE0F; played at altitude (host campus at or above ' + C.ALTITUDE_FT.toLocaleString('en-US') + ' ft). A note only; ratings and spreads are not adjusted.</div>' : '';
   }
 
-  function dayHTML(date, dayGames) {
+  function dayHTML(date, dayGames, total) {
     var n = dayGames.length;
+    var count = (total && total !== n ? n + ' of ' + total : n) + ' game' + ((total || n) === 1 ? '' : 's');
     if (entryMode) {
       return '<div class="day-group">' +
-        '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + n + ' game' + (n === 1 ? '' : 's') + '</div>' +
+        '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '</div>' +
         '<div class="schedule-list">' + dayGames.map(entryRowHTML).join('') + '</div>' +
         '<div class="g-footnote">* designates neutral site &middot; scores are entered away first, then home</div>' + hcaNote(dayGames) + travelNote(dayGames) + altNote(dayGames) + '</div>';
     }
     return '<div class="day-group">' +
-      '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + n + ' game' + (n === 1 ? '' : 's') + '</div>' +
+      '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '</div>' +
       '<div class="schedule-list">' +
       '<div class="g-head day"><div></div><div>Matchup</div><div>Spread / Final</div><div class="r">Win % (away / home)</div></div>' +
       dayGames.map(gameRowHTML).join('') + '</div>' +
@@ -115,16 +119,26 @@
       '</div>';
   }
 
+  function normName(s) { return String(s).toLowerCase().replace(/[^a-z0-9]+/g, ''); }
+
   function renderDay(index) {
     if (!dates.length) {
+      teamSearch.hidden = true;
       master.innerHTML = '<div class="schedule-empty">No games match this filter</div>';
       prevBtn.disabled = nextBtn.disabled = true;
       return;
     }
     dayIndex = Math.max(0, Math.min(dates.length - 1, index));
     var date = dates[dayIndex];
-    var dayGames = Games.sortBestFirst(model, filteredGames().filter(function (g) { return g.date === date; }));
-    master.innerHTML = dayHTML(date, dayGames);
+    var allDay = Games.sortBestFirst(model, filteredGames().filter(function (g) { return g.date === date; }));
+    // Search is for big days only. A new day starts with a clean box.
+    if (date !== searchDate) { teamSearch.value = ''; searchDate = date; }
+    teamSearch.hidden = allDay.length < SEARCH_MIN_GAMES;
+    var q = teamSearch.hidden ? '' : normName(teamSearch.value);
+    var dayGames = q ? allDay.filter(function (g) { return normName(g.home).indexOf(q) !== -1 || normName(g.away).indexOf(q) !== -1; }) : allDay;
+    master.innerHTML = q && !dayGames.length
+      ? '<div class="day-group"><div class="day-header">' + fmtDayHeader(date) + ' &middot; 0 of ' + allDay.length + ' games</div><div class="schedule-empty">No team on this day matches &ldquo;' + esc(teamSearch.value.trim()) + '&rdquo;</div></div>'
+      : dayHTML(date, dayGames, allDay.length);
     daySelect.value = String(dayIndex);
     prevBtn.disabled = dayIndex === 0;
     nextBtn.disabled = dayIndex === dates.length - 1;
@@ -291,6 +305,7 @@
     nextBtn.addEventListener('click', function () { renderDay(dayIndex + 1); });
     confFilter.addEventListener('change', function () { rebuildDates(dates[dayIndex]); });
     confOnly.addEventListener('change', function () { rebuildDates(dates[dayIndex]); });
+    teamSearch.addEventListener('input', function () { renderDay(dayIndex); });
 
     toggle.addEventListener('click', function () { if (entryMode) exitEntry(); else startEntry(); });
     signOut.addEventListener('click', function () { Store.clearToken(); exitEntry(); });

@@ -181,7 +181,7 @@ footer a { color: var(--paint); }
   cursor: pointer;
 }
 .day-nav:disabled { opacity: 0.35; cursor: default; }
-#day-select, #conf-filter {
+#day-select, #conf-filter, #team-search {
   font-family: var(--sans);
   font-size: 13.5px;
   background: var(--panel);
@@ -192,6 +192,8 @@ footer a { color: var(--paint); }
 }
 #day-select { min-width: 180px; }
 #conf-filter { min-width: 170px; }
+#team-search { min-width: 170px; }
+#team-search[hidden] { display: none; }
 .conf-only { font-size: 13px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; user-select: none; }
 
 .day-group { margin-bottom: 18px; }
@@ -249,7 +251,7 @@ footer a { color: var(--paint); }
   .g-row .g-line { grid-column: 2; }
   .g-row .g-prob { grid-column: 3; grid-row: 1 / span 2; }
   .day-picker { gap: 6px; }
-  #day-select, #conf-filter { min-width: 0; flex: 1 1 140px; }
+  #day-select, #conf-filter, #team-search { min-width: 0; flex: 1 1 140px; }
 }
 
 /* ---- Owner score entry ---- */
