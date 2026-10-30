@@ -221,7 +221,7 @@
   "team": "Saint Louis",
   "conference": "A10",
   "home_court": 4,
-  "preseason_rating": 89.13
+  "preseason_rating": 90.63
  },
  {
   "key": "dayton",
@@ -312,7 +312,7 @@
   "team": "Duke",
   "conference": "ACC",
   "home_court": 3,
-  "preseason_rating": 102.89
+  "preseason_rating": 103.39
  },
  {
   "key": "virginia",
@@ -452,7 +452,7 @@
   "team": "Iowa St",
   "conference": "Big 12",
   "home_court": 4,
-  "preseason_rating": 97.22
+  "preseason_rating": 96.72
  },
  {
   "key": "cincinnati",
@@ -466,14 +466,14 @@
   "team": "Texas Tech",
   "conference": "Big 12",
   "home_court": 4.5,
-  "preseason_rating": 94.65
+  "preseason_rating": 95.65
  },
  {
   "key": "kansas",
   "team": "Kansas",
   "conference": "Big 12",
   "home_court": 3.5,
-  "preseason_rating": 94.42
+  "preseason_rating": 97.42
  },
  {
   "key": "west-virginia",
@@ -551,7 +551,7 @@
   "team": "UConn",
   "conference": "Big East",
   "home_court": 3.5,
-  "preseason_rating": 97.14
+  "preseason_rating": 98.14
  },
  {
   "key": "st-johns",
@@ -1929,7 +1929,7 @@
   "team": "Tennessee",
   "conference": "SEC",
   "home_court": 3.5,
-  "preseason_rating": 98.32
+  "preseason_rating": 96.82
  },
  {
   "key": "texas",
@@ -1971,7 +1971,7 @@
   "team": "LSU",
   "conference": "SEC",
   "home_court": 4,
-  "preseason_rating": 89.02
+  "preseason_rating": 92.02
  },
  {
   "key": "oklahoma",

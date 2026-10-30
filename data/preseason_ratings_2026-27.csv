@@ -1,14 +1,14 @@
 team,manual_adjustment,rating,rating_plus_80,rating_plus_80_rounded,notes
-Duke,2.0,22.89,102.89,103.0,
+Duke,2.5,23.39,103.39,103.5,Raised 0.5 points on 2026-10-19
 Florida,2.0,22.58,102.58,102.5,
 Illinois,-0.5,19.34,99.34,99.5,
-Tennessee,1.5,18.32,98.32,98.5,Manually lowered 1 point after the preseason build (2026-10-16)
+Tennessee,0.0,16.82,96.82,97.0,Manually lowered 2.5 points after the preseason build (1 on 2026-10-16, 0.5 on 2026-10-19, 1 on 2026-10-23)
 Arizona,-2.0,19.26,99.26,99.5,
 Texas,4.0,18.12,98.12,98.0,
 Houston,-1.5,17.99,97.99,98.0,
 Michigan State,0.0,17.28,97.28,97.5,
-Iowa St,-0.5,17.22,97.22,97.0,
-UConn,0.5,17.14,97.14,97.0,
+Iowa St,-1.0,16.72,96.72,96.5,Lowered 0.5 points on 2026-10-23
+UConn,1.5,18.14,98.14,98.0,Raised 1 point on 2026-10-19
 Virginia,1.5,17.0,97.0,97.0,
 Miami,1.5,16.87,96.87,97.0,
 Louisville,2.0,16.52,96.52,96.5,
@@ -20,15 +20,15 @@ Cincinnati,2.5,15.09,95.09,95.0,
 Ohio State,0.5,15.03,95.03,95.0,
 Vanderbilt,0.0,14.97,94.97,95.0,
 Nebraska,-1.5,14.86,94.86,95.0,
-Texas Tech,-1.0,14.65,94.65,94.5,
+Texas Tech,0.0,15.65,95.65,95.5,Raised 1 point on 2026-10-20
 Indiana,2.0,14.46,94.46,94.5,
-Kansas,-1.0,14.42,94.42,94.5,
+Kansas,2.0,17.42,97.42,97.5,Raised 3 points on 2026-10-19: Trey Kaufman-Renn signed (Purdue transfer, sixth year via injunction) plus Tre White and Melvin Council Jr. getting another year of eligibility
 Kentucky,0.0,14.34,94.34,94.5,
 Oklahoma,1.0,14.2,94.2,94.0,
 UCLA,-0.5,14.1,94.1,94.0,
 St Johns,-1.5,14.04,94.04,94.0,
 Iowa,-1.0,14.02,94.02,94.0,
-LSU,-2.0,9.02,89.02,89.0,Manually lowered after the preseason build due to eligibility questions
+LSU,1.0,12.02,92.02,92.0,Lowered 5 points after the preseason build due to eligibility questions (2026-10-11); raised 3 points on 2026-10-22 after eligibility wins
 West Virginia,2.5,13.94,93.94,94.0,
 TCU,1.0,13.56,93.56,93.5,
 Auburn,0.0,13.55,93.55,93.5,
@@ -62,7 +62,7 @@ Mississippi State,1.5,9.94,89.94,90.0,
 Minnesota,0.0,9.42,89.42,89.5,
 Northwestern,-1.5,9.38,89.38,89.5,
 Georgetown,0.5,9.38,89.38,89.5,
-Saint Louis,-0.5,9.13,89.13,89.0,
+Saint Louis,1.0,10.63,90.63,90.5,Raised 1.5 points on 2026-10-24: Robbie Avila granted a TRO to play (preliminary injunction hearing Nov. 4)
 Syracuse,1.0,9.12,89.12,89.0,
 Washington,-0.5,9.1,89.1,89.0,
 Stanford,-0.5,9.08,89.08,89.0,

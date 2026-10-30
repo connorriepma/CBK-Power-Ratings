@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2027 Commits | CBK Power Ratings 2026-27</title>
+  <meta name="description" content="2027 commits, ranked by recruiting-site rankings.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261030c">
+  <link rel="stylesheet" href="css/recruits.css?v=20261019a">
+</head>
+<body class="has-ticker">
+  <div class="ticker" id="ticker" role="region" aria-label="Top 25 teams"></div>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Main">
+      <div class="brand">POWER<br>RATINGS</div>
+      <div class="nav-label">Tools</div>
+      <a class="nav-item" href="index.html">Ratings</a>
+      <a class="nav-item" href="schedule.html">Schedule</a>
+      <a class="nav-item" href="history.html">Ratings History</a>
+      <a class="nav-item" href="conference-rankings.html">Conference Rankings</a>
+      <a class="nav-item" href="quads.html">Quad Records</a>
+      <a class="nav-item" href="injuries.html">Injuries</a>
+      <a class="nav-item" href="eligibility.html">Eligibility</a>
+      <a class="nav-item" href="matchup.html">Hypothetical Matchups</a>
+      <a class="nav-item" href="plays.html">Plays</a>
+      <div class="nav-label nav-label-nf">Not Finalized</div>
+      <a class="nav-item" href="projected-wins.html">Projected Wins</a>
+      <a class="nav-item" href="conference-title-odds.html">Conference Title Odds</a>
+      <a class="nav-item" href="championship-odds.html">Championship Odds</a>
+    </nav>
+
+    <main class="content" id="view-recruits">
+      <header class="page-head">
+        <h1>2027 Commits</h1>
+        <div class="season"><span id="rc-count"></span></div>
+      </header>
+      <div class="rc-bar" id="rc-bar">
+        <select id="rc-school" aria-label="School"></select>
+        <input type="search" id="rc-q" placeholder="Search player, school or state" aria-label="Search player, school or state">
+      </div>
+      <div id="rc-body"></div><div class="rc-foot" id="rc-foot"></div>
+      <p class="load-error" id="load-error" hidden>The data could not be loaded.</p>
+
+      <footer>
+        <span></span>
+        <a href="https://github.com/connorriepma/CBK-Power-Ratings/blob/main/METHODOLOGY.md">Methodology</a>
+      </footer>
+    </main>
+  </div>
+  <script src="js/common.js?v=20261024d"></script>
+  <script src="js/ticker.js?v=20261025g"></script>
+  <script src="js/recruits.js?v=20261019a"></script>
+</body>
+</html>

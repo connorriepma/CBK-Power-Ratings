@@ -8,9 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261030a">
+  <link rel="stylesheet" href="css/style.css?v=20261030c">
 </head>
-<body>
+<body class="has-ticker">
+  <div class="ticker" id="ticker" role="region" aria-label="Top 25 teams"></div>
   <div class="shell">
     <nav class="sidebar" aria-label="Main">
       <div class="brand">POWER<br>RATINGS</div>
@@ -18,15 +19,16 @@
       <a class="nav-item" href="index.html">Ratings</a>
       <a class="nav-item active" href="schedule.html" aria-current="page">Schedule</a>
       <a class="nav-item" href="history.html">Ratings History</a>
-      <a class="nav-item" href="projected-wins.html">Projected Wins</a>
-      <a class="nav-item" href="conference-title-odds.html">Conference Title Odds</a>
-      <a class="nav-item" href="championship-odds.html">Championship Odds</a>
       <a class="nav-item" href="conference-rankings.html">Conference Rankings</a>
       <a class="nav-item" href="quads.html">Quad Records</a>
       <a class="nav-item" href="injuries.html">Injuries</a>
       <a class="nav-item" href="eligibility.html">Eligibility</a>
       <a class="nav-item" href="matchup.html">Hypothetical Matchups</a>
       <a class="nav-item" href="plays.html">Plays</a>
+      <div class="nav-label nav-label-nf">Not Finalized</div>
+      <a class="nav-item" href="projected-wins.html">Projected Wins</a>
+      <a class="nav-item" href="conference-title-odds.html">Conference Title Odds</a>
+      <a class="nav-item" href="championship-odds.html">Championship Odds</a>
     </nav>
 
     <main class="content">
@@ -40,8 +42,9 @@
         <select id="day-select" aria-label="Day"></select>
         <button type="button" id="day-next" class="day-nav" aria-label="Next day">&rarr;</button>
         <select id="conf-filter" aria-label="Filter by conference"></select>
-        <input type="search" id="team-search" placeholder="Search teams" aria-label="Search teams on this day" autocomplete="off" hidden>
+        <input type="search" id="team-search" placeholder="Search teams" aria-label="Search teams on this day" autocomplete="off">
         <label class="conf-only"><input type="checkbox" id="conf-only"> Conference games only</label>
+        <label class="conf-only"><input type="checkbox" id="top25-only"> AP Top 25 games</label>
         <button type="button" id="entry-toggle" class="entry-toggle" hidden>Enter scores</button>
         <button type="button" id="owner-signout" class="entry-toggle" hidden>Sign out</button>
       </div>
@@ -72,10 +75,11 @@
     </main>
   </div>
   <aside class="rail rail-l" id="rail-games" aria-label="Today's games"></aside>
-  <script src="js/common.js?v=20261012o"></script>
-  <script src="js/game-view.js?v=20261016b"></script>
+  <script src="js/common.js?v=20261024d"></script>
+  <script src="js/ticker.js?v=20261025g"></script>
+  <script src="js/game-view.js?v=20261030c"></script>
   <script src="js/store.js?v=20261012o"></script>
-  <script src="js/schedule.js?v=20261030b"></script>
-  <script src="js/rail.js?v=20261016b"></script>
+  <script src="js/schedule.js?v=20261030c"></script>
+  <script src="js/rail.js?v=20261024d"></script>
 </body>
 </html>

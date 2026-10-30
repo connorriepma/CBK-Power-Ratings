@@ -182,6 +182,51 @@
  {
   "history": [
    {
+    "date": "2026-10-17",
+    "returnDate": null,
+    "status": "Out"
+   },
+   {
+    "date": "2026-10-17",
+    "returnDate": null,
+    "status": "Day-to-day"
+   }
+  ],
+  "note": "Sprained ankle, per HC Bryan Hodgson on Oct 17. Replaces the earlier report of a left foot in a walking boot and a scooter.",
+  "player": "Devin Vanterpool",
+  "pos": "G",
+  "reported": "2026-10-17",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "Bryan Hodgson, relayed by site owner; no link",
+  "status": "Day-to-day",
+  "team": "providence",
+  "updated": "2026-10-17",
+  "id": "providence-devin-vanterpool"
+ },
+ {
+  "history": [
+   {
+    "date": "2026-10-17",
+    "returnDate": null,
+    "status": "Day-to-day"
+   }
+  ],
+  "note": "Sprained shoulder joint, shooting arm. Out for practice today.",
+  "player": "Ryan Sabol",
+  "pos": "G",
+  "reported": "2026-10-17",
+  "returnDate": null,
+  "role": "Starter",
+  "source": "Bryan Hodgson, relayed by site owner; no link",
+  "status": "Day-to-day",
+  "team": "providence",
+  "updated": "2026-10-17",
+  "id": "providence-ryan-sabol"
+ },
+ {
+  "history": [
+   {
     "date": "2026-10-09",
     "returnDate": null,
     "status": "Out"
@@ -292,16 +337,16 @@
     "status": "Out"
    }
   ],
-  "note": "Torn ACL on Feb 17 at Arizona State. Texas Tech says he will play in 2026-27; no set timetable for return. Averaged 21.8 PPG and 10.8 RPG last season.",
+  "note": "Torn ACL on Feb 17 at Arizona State. As of Oct 22, per Jon Rothstein, he isn't close to practicing and there is still no timetable. HC Grant McCasland said \"He 100% would have redshirted\" if the NCAA hadn't passed the five-for-five age-based eligibility model. Still expected back at some point. Averaged 21.8 PPG and 10.8 RPG last season.",
   "player": "JT Toppin",
   "pos": "F",
   "reported": "2026-10-09",
   "returnDate": null,
   "role": "Elite",
-  "source": "https://www.thescore.com/news/3564307/texas-techs-jt-toppin-will-play-in-2026-27",
+  "source": "https://x.com/JonRothstein/status/2112611057969631352",
   "status": "Out",
   "team": "texas-tech",
-  "updated": "2026-10-09",
+  "updated": "2026-10-22",
   "id": "texas-tech-jt-toppin"
  },
  {

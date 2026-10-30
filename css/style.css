@@ -624,8 +624,6 @@ footer { border-top: 1px solid var(--wood-line); color: var(--muted); }
 @media (max-width: 760px) { .page-head { align-items: center; gap: 8px; flex-wrap: wrap; } h1 { font-size: 26px; } .season { margin-bottom: 0; } }
 
 /* ---- Plays tab: hypothetical spread plays (scoped to #view-plays; uses the theme variables like Injuries and Eligibility) ---- */
-#view-plays .pl-note { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 12px 14px; font-size: 13px; line-height: 1.5; margin-bottom: 16px; }
-#view-plays .pl-note p { margin: 0 0 6px; } #view-plays .pl-note p:last-child { margin: 0; }
 #view-plays .pl-sum { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
 #view-plays .pl-sum div { background: var(--panel); border: 1px solid var(--wood-line); border-radius: 3px; padding: 8px 14px; min-width: 120px; }
 #view-plays .pl-sum b { display: block; font-family: var(--cond); font-size: 28px; line-height: 1.1; font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -645,6 +643,7 @@ footer { border-top: 1px solid var(--wood-line); color: var(--muted); }
 #view-plays td small.neg { color: var(--paint-2); font-weight: 600; }
 #view-plays .pl-num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 #view-plays .pl-date { white-space: nowrap; }
+#view-plays .pl-ent { white-space: nowrap; color: var(--muted); font-size: 12.5px; }
 #view-plays .pl-date a { color: var(--paint); font-size: 12px; cursor: pointer; }
 #view-plays .pl-none { color: var(--muted); }
 #view-plays .pl-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; padding: 3px 8px; border-radius: 3px; white-space: nowrap; border: 1.5px solid; }
@@ -669,3 +668,53 @@ footer { border-top: 1px solid var(--wood-line); color: var(--muted); }
   #view-plays td.pl-date a { margin-left: 8px; }
   #view-plays td small { display: inline; margin-left: 6px; }
 }
+
+/* ---- Team panel: schedule on the left, rotation on the right (only for teams with data/rotations.json entries) ---- */
+.panel-split { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 0; align-items: start; }
+.panel-split .panel-sched { border-right: 1px solid var(--wood-line); min-width: 0; }
+.rotation-box { min-width: 0; padding: 4px 0; }
+.rotation-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+tr.schedule-row .rotation-table th { text-align: left; font-size: 10.5px; letter-spacing: .5px; text-transform: uppercase; color: var(--muted); font-weight: 600; padding: 7px 8px; border-bottom: 1px solid var(--wood-line); }
+tr.schedule-row .rotation-table td { padding: 9px 8px; font-size: 13px; border-bottom: 1px solid var(--wood-line); vertical-align: top; }
+tr.schedule-row .rotation-table tr:last-child td { border-bottom: none; }
+tr.schedule-row .rotation-table .rt-name { font-weight: 600; }
+tr.schedule-row .rotation-table .rt-pnum { width: 34px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; padding-right: 4px; }
+tr.schedule-row .rotation-table .rt-ht { white-space: nowrap; }
+tr.schedule-row .rotation-table .rt-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr.schedule-row .rotation-table .rt-note { color: var(--muted); font-size: 12px; padding-left: 14px; }
+.rotation-box .rec-bar, .rotation-box .g-footnote { padding-left: 14px; padding-right: 14px; }
+.rotation-box .g-footnote { padding-bottom: 6px; }
+tr.schedule-row .rotation-table th:first-child, tr.schedule-row .rotation-table td:first-child { padding-left: 14px; }
+tr.schedule-row .rotation-table th:last-child, tr.schedule-row .rotation-table td:last-child { padding-right: 14px; }
+@media (max-width: 1100px) {
+  .panel-split { grid-template-columns: 1fr; }
+  .panel-split .panel-sched { border-right: none; border-top: 1px solid var(--wood-line); }
+  .panel-split .rotation-box { order: -1; }
+  .rotation-box { overflow-x: auto; }
+}
+
+/* ---- Not Finalized group ---- */
+.nav-label.nav-label-nf { display: block; margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--wood-line); }
+.nf-note { border-left: 3px solid var(--paint-2); }
+@media (max-width: 760px) { .nav-label.nav-label-nf { margin-top: 12px; } }
+
+/* AP Top 25 tag */
+.ap-tag { margin-right: 1px; color: var(--muted); font-size: 11.5px; font-weight: 600; font-style: normal; }
+
+/* Top 25 ticker (main page only) */
+.ticker { position: sticky; top: 0; z-index: 20; height: 52px; display: flex; background: var(--panel); border-bottom: 1px solid var(--wood-line); overflow: hidden; }
+.tk-track { display: flex; width: max-content; height: 100%; animation: tk-scroll 75s linear infinite; }
+.ticker:hover .tk-track { animation-play-state: paused; }
+.tk-set { display: flex; align-items: center; flex: none; }
+.tk-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 18px; }
+.tk-item img { height: 32px; width: 32px; object-fit: contain; display: block; }
+.tk-rk { font-size: 11px; font-weight: 700; color: var(--muted); min-width: 12px; text-align: right; }
+.tk-name { font-size: 13px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+@keyframes tk-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .tk-view { overflow-x: auto; } .tk-track { animation: none; } }
+body.has-ticker .sidebar { top: 52px; }
+@media (min-width: 1850px) { body.has-ticker .rail { top: 100px; max-height: calc(100vh - 124px); } }
+
+.tk-label { flex: none; display: flex; align-items: center; padding: 0 16px; font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--paint); background: var(--panel); border-right: 1px solid var(--wood-line); white-space: nowrap; position: relative; z-index: 1; }
+.tk-view { flex: 1; min-width: 0; overflow: hidden; }
+.tk-sep { flex: none; align-self: center; width: 3px; height: 30px; margin: 0 8px; border-radius: 2px; background: var(--muted); opacity: 0.7; }
