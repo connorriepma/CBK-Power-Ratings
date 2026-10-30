@@ -29,6 +29,13 @@
     function z(n) { return (n < 10 ? '0' : '') + n; }
     return d.getFullYear() + '-' + z(d.getMonth() + 1) + '-' + z(d.getDate());
   }
+  // When the play was entered, in the viewer's local time: "Oct 30, 12:22 PM". Empty for a play saved without a timestamp.
+  function fmtEntered(ts) {
+    var d = ts ? new Date(ts) : null;
+    if (!d || isNaN(d.getTime())) return '';
+    var h = d.getHours(), m = d.getMinutes();
+    return MON[d.getMonth()] + ' ' + d.getDate() + ', ' + (h % 12 || 12) + ':' + (m < 10 ? '0' : '') + m + ' ' + (h < 12 ? 'AM' : 'PM');
+  }
   function gameLabel(g) { return g.neutral ? g.away + ' vs ' + g.home + '*' : g.away + ' @ ' + g.home; }
   function signed(n) { return (n > 0 ? '+' : '') + String(n); }
   function tone(n) { return n > 0.004 ? 'pos' : n < -0.004 ? 'neg' : ''; }
@@ -106,6 +113,7 @@
       '<td data-l="Conf.">' + esc(p.confidence) + '</td>' +
       '<td data-l="Book">' + esc(p.book) + '</td>' +
       '<td data-l="Model" class="pl-mdl"><span>' + mdl + '</span></td>' +
+      '<td data-l="Entered" class="pl-ent">' + (fmtEntered(p.ts) || '<span class="pl-none">&mdash;</span>') + '</td>' +
       '<td data-l="Result" class="pl-res"><span>' + res + '</span></td>' +
       '<td data-l="Net units" class="pl-net">' + netCell + '</td></tr>';
   }
@@ -120,6 +128,7 @@
     $('pl-foot').textContent = list.length
       ? 'Units are units to win: a win pays that many units at any price, a loss costs the stake the odds imply (1u at -110 loses 1.10u), a push returns the stake (0u). ' +
         'Net units and ROI count graded plays only; ROI is net units over the units risked on wins and losses. ' +
+        'Entered is when you first saved the play, in your local time; editing a play does not change it. ' +
         'Edge is your line minus the model’s line from the same side, saved when the play was entered: positive means you got a better number than the model.'
       : '';
     if (!list.length) {
@@ -128,8 +137,8 @@
         (filteredOut ? 'Clear a filter to see the rest.' : 'Plays are picked from the schedule by the site owner. Each one grades itself once the final score is saved.') + '</div>';
       return;
     }
-    $('pl-body').innerHTML = '<div class="pl-scroll"><table><thead><tr><th>Date</th><th>Game</th><th>Play</th><th>Odds</th><th>Units</th>' +
-      '<th>Conf.</th><th>Book</th><th>Model</th><th>Result</th><th>Net units</th></tr></thead><tbody>' +
+    $('pl-body').innerHTML = '<div class="pl-scroll"><table><thead><tr><th>Game date</th><th>Game</th><th>Play</th><th>Odds</th><th>Units</th>' +
+      '<th>Conf.</th><th>Book</th><th>Model</th><th>Entered</th><th>Result</th><th>Net units</th></tr></thead><tbody>' +
       list.map(rowHTML).join('') + '</tbody></table></div>';
   }
 
