@@ -12,7 +12,6 @@
   var confFilter = document.getElementById('conf-filter');
   var confOnly = document.getElementById('conf-only');
   var teamSearch = document.getElementById('team-search');
-  var SEARCH_MIN_GAMES = 100; // the search box only appears on days at least this big
   var searchDate = null;
   var prevBtn = document.getElementById('day-prev');
   var nextBtn = document.getElementById('day-next');
@@ -131,10 +130,10 @@
     dayIndex = Math.max(0, Math.min(dates.length - 1, index));
     var date = dates[dayIndex];
     var allDay = Games.sortBestFirst(model, filteredGames().filter(function (g) { return g.date === date; }));
-    // Search is for big days only. A new day starts with a clean box.
+    // A new day starts with a clean search box.
     if (date !== searchDate) { teamSearch.value = ''; searchDate = date; }
-    teamSearch.hidden = allDay.length < SEARCH_MIN_GAMES;
-    var q = teamSearch.hidden ? '' : normName(teamSearch.value);
+    teamSearch.hidden = false;
+    var q = normName(teamSearch.value);
     var dayGames = q ? allDay.filter(function (g) { return normName(g.home).indexOf(q) !== -1 || normName(g.away).indexOf(q) !== -1; }) : allDay;
     master.innerHTML = q && !dayGames.length
       ? '<div class="day-group"><div class="day-header">' + fmtDayHeader(date) + ' &middot; 0 of ' + allDay.length + ' games</div><div class="schedule-empty">No team on this day matches &ldquo;' + esc(teamSearch.value.trim()) + '&rdquo;</div></div>'
