@@ -14,5 +14,21 @@
   "confidence": "Medium",
   "modelLine": -0.5,
   "ts": "2026-10-30T19:22:00.595Z"
+ },
+ {
+  "id": "2026-11-02_appalachian-st_merrimack_appalachian-st",
+  "gameId": "2026-11-02_appalachian-st_merrimack",
+  "date": "2026-11-02",
+  "home": "Appalachian St",
+  "away": "Merrimack",
+  "neutral": true,
+  "pick": "Appalachian St",
+  "line": 4,
+  "odds": -115,
+  "units": 0.5,
+  "book": "BetOnline",
+  "confidence": "Low",
+  "modelLine": -1.5,
+  "ts": "2026-10-31T23:19:18.285Z"
  }
 ]
