@@ -22,6 +22,7 @@
   var entryNote = document.getElementById('entry-note');
   var panel = document.getElementById('owner-panel');
   var gamesById = {};
+  var tot = null; // { base, cfg, results, off } for the projected totals column; null if its data did not load
 
   function fmtDayHeader(iso) {
     return C.parseDate(iso).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
@@ -48,11 +49,22 @@
   function lineHTML(g) { return Games.lineHTML(model, g); }
   function probHTML(g) { return Games.probHTML(model, g); }
 
+  // Projected total: preseason total plus the two teams' offsets from final scores (js/totals-math.js).
+  function totalHTML(g) {
+    if (g.result) return '<div class="g-total"></div>';
+    var Tm = window.CBKTotals;
+    if (tot.results !== model.results) { tot.results = model.results; tot.off = Tm.replay(tot.base, tot.cfg, model.results).off; }
+    var hk = C.teamKey(g.home), ak = C.teamKey(g.away), h = tot.base.teams[hk], a = tot.base.teams[ak];
+    if (!h || !a) return '<div class="g-total"></div>';
+    var exact = Tm.matchup(tot.base, h, a).total + tot.off[hk] + tot.off[ak];
+    return '<div class="g-total" title="Exact total: ' + exact.toFixed(2) + '">' + Tm.roundHalf(exact).toFixed(1) + '</div>';
+  }
+
   function gameRowHTML(g) {
-    return '<div class="g-row no-date has-prob">' +
+    return '<div class="g-row no-date has-prob' + (tot ? ' has-total' : '') + '">' +
       '<div class="g-tag ' + (g.conf ? '' : 'nc') + '">' + esc(model.confTag(g)) + '</div>' +
       '<div class="g-opp">' + matchupHTML(g) + '</div>' +
-      lineHTML(g) + probHTML(g) + '</div>';
+      lineHTML(g) + (tot ? totalHTML(g) : '') + probHTML(g) + '</div>';
   }
 
   function matchupHTML(g) {
@@ -113,11 +125,12 @@
     return '<div class="day-group">' +
       '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '</div>' +
       '<div class="schedule-list">' +
-      '<div class="g-head day"><div></div><div>Matchup</div><div>Spread / Final</div><div class="r">Win % (away / home)</div></div>' +
+      '<div class="g-head day' + (tot ? ' has-total' : '') + '"><div></div><div>Matchup</div><div>Spread / Final</div>' + (tot ? '<div class="r">Total</div>' : '') + '<div class="r">Win % (away / home)</div></div>' +
       dayGames.map(gameRowHTML).join('') + '</div>' +
       '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' + hcaNote(dayGames) + travelNote(dayGames) + altNote(dayGames) +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
+      (tot ? '<div class="g-footnote">Total is the projected combined score, rounded to the nearest 0.5. Hover it to see the exact number. Games against non-D1 opponents have no total.</div>' : '') +
       '</div>';
   }
 
@@ -319,7 +332,12 @@
     // The entry button is shown only to the owner: a saved token, or the #owner link for first-time setup.
     toggle.hidden = !(Store.getToken() || location.hash === '#owner');
 
-    rebuildDates(todayISO());
+    // The totals column is optional: if its files do not load, the page looks exactly as it did before.
+    return Promise.all(['data/totals/base.json', 'data/rating_config.json'].map(function (p) {
+      return fetch(p).then(function (res) { if (!res.ok) throw new Error(p); return res.json(); });
+    })).then(function (d) { if (window.CBKTotals) tot = { base: d[0], cfg: d[1], results: null, off: null }; }, function () {}).then(function () {
+      rebuildDates(todayISO());
+    });
   }).catch(function (err) {
     console.error(err);
     document.getElementById('load-error').hidden = false;

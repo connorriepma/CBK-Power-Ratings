@@ -23,3 +23,14 @@
   #view-totals td::before { content: attr(data-l); font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); flex: 0 0 84px; }
   #view-totals td > * { text-align: right; }
 }
+
+/* Schedule tab: Total column between the spread and the win probability. Applied only when the totals data loads. */
+.g-row.has-total { grid-template-columns: 44px 1fr minmax(130px, 190px) 64px 150px; }
+.g-head.has-total { grid-template-columns: 44px 1fr minmax(130px, 190px) 64px 150px; }
+.g-total { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+@media (max-width: 760px) {
+  .g-row.has-total { grid-template-columns: 44px 1fr auto; }
+  .g-row.has-total .g-total { grid-column: 2; text-align: left; font-weight: 400; color: var(--muted); font-size: 12.5px; }
+  .g-row.has-total .g-total:not(:empty)::before { content: "Total "; }
+  .g-row.has-total .g-prob { grid-row: 1 / span 3; }
+}
