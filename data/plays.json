@@ -30,21 +30,5 @@
   "confidence": "Low",
   "modelLine": -1.5,
   "ts": "2026-10-31T23:19:18.285Z"
- },
- {
-  "id": "2026-11-02_san-jose-st_utsa_san-jose-st",
-  "gameId": "2026-11-02_san-jose-st_utsa",
-  "date": "2026-11-02",
-  "home": "San Jose St",
-  "away": "UTSA",
-  "neutral": false,
-  "pick": "San Jose St",
-  "line": -7.5,
-  "odds": -105,
-  "units": 0.5,
-  "book": "BetOnline",
-  "confidence": "Low",
-  "modelLine": -10.5,
-  "ts": "2026-10-31T23:21:35.591Z"
  }
 ]
