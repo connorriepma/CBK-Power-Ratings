@@ -1,0 +1,2199 @@
+{
+ "avgEff": 106.0,
+ "avgTempo": 71.5,
+ "errCap": 30,
+ "scale": 0.7,
+ "share": 0.5,
+ "teams": {
+  "abilene-christian": {
+   "de": 108.1669,
+   "oe": 98.4098,
+   "team": "Abilene Christian",
+   "tempo": 72.3492
+  },
+  "air-force": {
+   "de": 114.1939,
+   "oe": 94.4653,
+   "team": "Air Force",
+   "tempo": 71.2965
+  },
+  "akron": {
+   "de": 104.9269,
+   "oe": 109.1984,
+   "team": "Akron",
+   "tempo": 72.559
+  },
+  "alabama": {
+   "de": 98.2648,
+   "oe": 121.0077,
+   "team": "Alabama",
+   "tempo": 75.881
+  },
+  "alabama-a-m": {
+   "de": 111.2692,
+   "oe": 97.8978,
+   "team": "Alabama A&M",
+   "tempo": 69.9583
+  },
+  "alabama-st": {
+   "de": 111.9836,
+   "oe": 100.455,
+   "team": "Alabama St",
+   "tempo": 72.3422
+  },
+  "alcorn-st": {
+   "de": 115.2009,
+   "oe": 94.5295,
+   "team": "Alcorn St",
+   "tempo": 71.4543
+  },
+  "american": {
+   "de": 108.4203,
+   "oe": 101.4203,
+   "team": "American",
+   "tempo": 70.2036
+  },
+  "appalachian-st": {
+   "de": 106.6099,
+   "oe": 102.8241,
+   "team": "Appalachian St",
+   "tempo": 68.3991
+  },
+  "arizona": {
+   "de": 92.1036,
+   "oe": 119.6179,
+   "team": "Arizona",
+   "tempo": 73.9826
+  },
+  "arizona-st": {
+   "de": 97.4087,
+   "oe": 115.2373,
+   "team": "Arizona St",
+   "tempo": 69.2664
+  },
+  "arkansas": {
+   "de": 96.6356,
+   "oe": 119.7499,
+   "team": "Arkansas",
+   "tempo": 74.0584
+  },
+  "arkansas-pine-bluff": {
+   "de": 114.9778,
+   "oe": 97.6778,
+   "team": "Arkansas-Pine Bluff",
+   "tempo": 73.1407
+  },
+  "arkansas-st": {
+   "de": 107.7506,
+   "oe": 103.2506,
+   "team": "Arkansas St",
+   "tempo": 74.683
+  },
+  "army": {
+   "de": 114.4561,
+   "oe": 96.6275,
+   "team": "Army",
+   "tempo": 71.0265
+  },
+  "auburn": {
+   "de": 98.8994,
+   "oe": 118.2565,
+   "team": "Auburn",
+   "tempo": 71.5417
+  },
+  "austin-peay": {
+   "de": 108.7572,
+   "oe": 103.5001,
+   "team": "Austin Peay",
+   "tempo": 72.2101
+  },
+  "ball-st": {
+   "de": 109.2643,
+   "oe": 103.0357,
+   "team": "Ball St",
+   "tempo": 70.4547
+  },
+  "baylor": {
+   "de": 98.9054,
+   "oe": 117.6197,
+   "team": "Baylor",
+   "tempo": 71.2869
+  },
+  "bellarmine": {
+   "de": 116.1963,
+   "oe": 103.9249,
+   "team": "Bellarmine",
+   "tempo": 69.6606
+  },
+  "belmont": {
+   "de": 105.0481,
+   "oe": 108.9481,
+   "team": "Belmont",
+   "tempo": 72.1512
+  },
+  "bethune-cookman": {
+   "de": 108.4518,
+   "oe": 100.1947,
+   "team": "Bethune-Cookman",
+   "tempo": 72.7392
+  },
+  "binghamton": {
+   "de": 116.724,
+   "oe": 96.4383,
+   "team": "Binghamton",
+   "tempo": 70.1257
+  },
+  "boise-st": {
+   "de": 99.581,
+   "oe": 109.3525,
+   "team": "Boise St",
+   "tempo": 70.2274
+  },
+  "boston-college": {
+   "de": 102.5549,
+   "oe": 109.7406,
+   "team": "Boston College",
+   "tempo": 71.1891
+  },
+  "boston-u": {
+   "de": 111.9711,
+   "oe": 101.0997,
+   "team": "Boston U",
+   "tempo": 68.4538
+  },
+  "bowling-green": {
+   "de": 106.6453,
+   "oe": 107.4311,
+   "team": "Bowling Green",
+   "tempo": 72.5509
+  },
+  "bradley": {
+   "de": 103.9814,
+   "oe": 104.6528,
+   "team": "Bradley",
+   "tempo": 71.0118
+  },
+  "brown": {
+   "de": 106.6712,
+   "oe": 99.9569,
+   "team": "Brown",
+   "tempo": 71.0295
+  },
+  "bryant": {
+   "de": 115.5743,
+   "oe": 96.1029,
+   "team": "Bryant",
+   "tempo": 69.5866
+  },
+  "bucknell": {
+   "de": 111.4122,
+   "oe": 96.8122,
+   "team": "Bucknell",
+   "tempo": 71.0248
+  },
+  "buffalo": {
+   "de": 110.0336,
+   "oe": 103.9622,
+   "team": "Buffalo",
+   "tempo": 71.698
+  },
+  "butler": {
+   "de": 102.9025,
+   "oe": 111.8311,
+   "team": "Butler",
+   "tempo": 72.0715
+  },
+  "byu": {
+   "de": 101.394,
+   "oe": 119.0226,
+   "team": "BYU",
+   "tempo": 72.9706
+  },
+  "cal-baptist": {
+   "de": 105.4441,
+   "oe": 105.6298,
+   "team": "Cal Baptist",
+   "tempo": 71.1845
+  },
+  "cal-poly": {
+   "de": 109.0125,
+   "oe": 106.1839,
+   "team": "Cal Poly",
+   "tempo": 76.2839
+  },
+  "cal-st-bakersfield": {
+   "de": 111.0736,
+   "oe": 101.9593,
+   "team": "Cal St Bakersfield",
+   "tempo": 71.4632
+  },
+  "cal-st-fullerton": {
+   "de": 104.2393,
+   "oe": 105.1821,
+   "team": "Cal St Fullerton",
+   "tempo": 74.1448
+  },
+  "cal-st-northridge": {
+   "de": 105.9922,
+   "oe": 104.3636,
+   "team": "Cal St Northridge",
+   "tempo": 75.8781
+  },
+  "california": {
+   "de": 102.2858,
+   "oe": 112.1572,
+   "team": "California",
+   "tempo": 72.0948
+  },
+  "campbell": {
+   "de": 109.1469,
+   "oe": 104.2183,
+   "team": "Campbell",
+   "tempo": 72.4191
+  },
+  "canisius": {
+   "de": 114.5877,
+   "oe": 97.8019,
+   "team": "Canisius",
+   "tempo": 69.9424
+  },
+  "central-arkansas": {
+   "de": 106.8138,
+   "oe": 105.2852,
+   "team": "Central Arkansas",
+   "tempo": 72.1254
+  },
+  "central-connecticut": {
+   "de": 111.6689,
+   "oe": 95.0689,
+   "team": "Central Connecticut",
+   "tempo": 69.7983
+  },
+  "central-michigan": {
+   "de": 108.6052,
+   "oe": 103.7624,
+   "team": "Central Michigan",
+   "tempo": 71.3729
+  },
+  "charleston": {
+   "de": 106.9784,
+   "oe": 108.5784,
+   "team": "Charleston",
+   "tempo": 72.5482
+  },
+  "charleston-southern": {
+   "de": 108.806,
+   "oe": 99.2631,
+   "team": "Charleston Southern",
+   "tempo": 73.8988
+  },
+  "charlotte": {
+   "de": 104.7411,
+   "oe": 108.2554,
+   "team": "Charlotte",
+   "tempo": 70.9731
+  },
+  "chattanooga": {
+   "de": 112.1467,
+   "oe": 103.261,
+   "team": "Chattanooga",
+   "tempo": 71.5046
+  },
+  "chicago-st": {
+   "de": 114.2716,
+   "oe": 94.9859,
+   "team": "Chicago St",
+   "tempo": 70.1426
+  },
+  "cincinnati": {
+   "de": 94.4382,
+   "oe": 115.9954,
+   "team": "Cincinnati",
+   "tempo": 71.7339
+  },
+  "clemson": {
+   "de": 98.4503,
+   "oe": 114.1788,
+   "team": "Clemson",
+   "tempo": 69.3661
+  },
+  "cleveland-st": {
+   "de": 113.2414,
+   "oe": 102.57,
+   "team": "Cleveland St",
+   "tempo": 73.1579
+  },
+  "coastal-carolina": {
+   "de": 109.9888,
+   "oe": 100.6459,
+   "team": "Coastal Carolina",
+   "tempo": 70.8223
+  },
+  "colgate": {
+   "de": 111.048,
+   "oe": 102.2337,
+   "team": "Colgate",
+   "tempo": 71.2256
+  },
+  "colorado": {
+   "de": 100.8934,
+   "oe": 110.6077,
+   "team": "Colorado",
+   "tempo": 72.472
+  },
+  "colorado-st": {
+   "de": 102.5007,
+   "oe": 114.715,
+   "team": "Colorado St",
+   "tempo": 68.5955
+  },
+  "columbia": {
+   "de": 108.0509,
+   "oe": 103.7937,
+   "team": "Columbia",
+   "tempo": 71.0827
+  },
+  "coppin-st": {
+   "de": 115.1251,
+   "oe": 89.3251,
+   "team": "Coppin St",
+   "tempo": 71.8058
+  },
+  "cornell": {
+   "de": 109.3936,
+   "oe": 107.2936,
+   "team": "Cornell",
+   "tempo": 74.2957
+  },
+  "creighton": {
+   "de": 100.0908,
+   "oe": 115.4336,
+   "team": "Creighton",
+   "tempo": 71.4342
+  },
+  "dartmouth": {
+   "de": 108.3968,
+   "oe": 98.9968,
+   "team": "Dartmouth",
+   "tempo": 72.3502
+  },
+  "davidson": {
+   "de": 103.9299,
+   "oe": 108.5442,
+   "team": "Davidson",
+   "tempo": 69.1637
+  },
+  "dayton": {
+   "de": 99.5989,
+   "oe": 109.6417,
+   "team": "Dayton",
+   "tempo": 70.2504
+  },
+  "delaware": {
+   "de": 111.7102,
+   "oe": 102.5102,
+   "team": "Delaware",
+   "tempo": 69.7332
+  },
+  "delaware-st": {
+   "de": 115.4362,
+   "oe": 90.5077,
+   "team": "Delaware St",
+   "tempo": 71.018
+  },
+  "denver": {
+   "de": 109.2166,
+   "oe": 108.2166,
+   "team": "Denver",
+   "tempo": 71.8536
+  },
+  "depaul": {
+   "de": 97.9829,
+   "oe": 108.94,
+   "team": "DePaul",
+   "tempo": 70.6548
+  },
+  "detroit-mercy": {
+   "de": 110.6175,
+   "oe": 104.0889,
+   "team": "Detroit Mercy",
+   "tempo": 71.7503
+  },
+  "drake": {
+   "de": 105.5937,
+   "oe": 105.5365,
+   "team": "Drake",
+   "tempo": 71.7657
+  },
+  "drexel": {
+   "de": 108.116,
+   "oe": 100.6018,
+   "team": "Drexel",
+   "tempo": 68.9223
+  },
+  "duke": {
+   "de": 91.2064,
+   "oe": 124.6207,
+   "team": "Duke",
+   "tempo": 70.0496
+  },
+  "duquesne": {
+   "de": 105.1276,
+   "oe": 107.299,
+   "team": "Duquesne",
+   "tempo": 71.8741
+  },
+  "east-carolina": {
+   "de": 107.6824,
+   "oe": 104.7681,
+   "team": "East Carolina",
+   "tempo": 71.9264
+  },
+  "east-tennessee-st": {
+   "de": 107.8295,
+   "oe": 106.5867,
+   "team": "East Tennessee St",
+   "tempo": 70.4779
+  },
+  "east-texas-a-m": {
+   "de": 112.9995,
+   "oe": 96.5995,
+   "team": "East Texas A&M",
+   "tempo": 71.7254
+  },
+  "eastern-illinois": {
+   "de": 110.9897,
+   "oe": 93.904,
+   "team": "Eastern Illinois",
+   "tempo": 70.3513
+  },
+  "eastern-kentucky": {
+   "de": 112.2684,
+   "oe": 100.9255,
+   "team": "Eastern Kentucky",
+   "tempo": 71.9728
+  },
+  "eastern-michigan": {
+   "de": 106.4545,
+   "oe": 103.9117,
+   "team": "Eastern Michigan",
+   "tempo": 70.4144
+  },
+  "eastern-washington": {
+   "de": 108.5615,
+   "oe": 106.6186,
+   "team": "Eastern Washington",
+   "tempo": 72.402
+  },
+  "elon": {
+   "de": 110.8996,
+   "oe": 104.1853,
+   "team": "Elon",
+   "tempo": 70.9503
+  },
+  "evansville": {
+   "de": 107.3402,
+   "oe": 100.4402,
+   "team": "Evansville",
+   "tempo": 71.5319
+  },
+  "fairfield": {
+   "de": 109.3749,
+   "oe": 99.9606,
+   "team": "Fairfield",
+   "tempo": 71.645
+  },
+  "fairleigh-dickinson": {
+   "de": 112.4747,
+   "oe": 94.3604,
+   "team": "Fairleigh Dickinson",
+   "tempo": 70.3795
+  },
+  "fiu": {
+   "de": 105.5714,
+   "oe": 104.6571,
+   "team": "FIU",
+   "tempo": 73.0142
+  },
+  "florida": {
+   "de": 92.8765,
+   "oe": 125.1337,
+   "team": "Florida",
+   "tempo": 73.7799
+  },
+  "florida-a-m": {
+   "de": 110.9486,
+   "oe": 97.4057,
+   "team": "Florida A&M",
+   "tempo": 72.1276
+  },
+  "florida-atlantic": {
+   "de": 105.4759,
+   "oe": 107.5473,
+   "team": "Florida Atlantic",
+   "tempo": 73.0512
+  },
+  "florida-gulf-coast": {
+   "de": 111.5633,
+   "oe": 99.7633,
+   "team": "Florida Gulf Coast",
+   "tempo": 71.2828
+  },
+  "florida-st": {
+   "de": 99.0502,
+   "oe": 113.593,
+   "team": "Florida St",
+   "tempo": 73.6494
+  },
+  "fordham": {
+   "de": 102.659,
+   "oe": 106.5733,
+   "team": "Fordham",
+   "tempo": 69.8069
+  },
+  "fresno-st": {
+   "de": 104.7125,
+   "oe": 105.6125,
+   "team": "Fresno St",
+   "tempo": 73.3397
+  },
+  "furman": {
+   "de": 110.6054,
+   "oe": 105.2911,
+   "team": "Furman",
+   "tempo": 70.6474
+  },
+  "gardner-webb": {
+   "de": 113.7007,
+   "oe": 95.015,
+   "team": "Gardner Webb",
+   "tempo": 72.8744
+  },
+  "george-mason": {
+   "de": 102.6355,
+   "oe": 109.7926,
+   "team": "George Mason",
+   "tempo": 68.6675
+  },
+  "george-washington": {
+   "de": 101.815,
+   "oe": 108.815,
+   "team": "George Washington",
+   "tempo": 72.6844
+  },
+  "georgetown": {
+   "de": 98.786,
+   "oe": 112.186,
+   "team": "Georgetown",
+   "tempo": 70.8433
+  },
+  "georgia": {
+   "de": 99.445,
+   "oe": 117.4592,
+   "team": "Georgia",
+   "tempo": 73.6661
+  },
+  "georgia-southern": {
+   "de": 111.0994,
+   "oe": 103.628,
+   "team": "Georgia Southern",
+   "tempo": 73.3973
+  },
+  "georgia-st": {
+   "de": 108.9068,
+   "oe": 103.0068,
+   "team": "Georgia St",
+   "tempo": 71.7984
+  },
+  "georgia-tech": {
+   "de": 103.3029,
+   "oe": 110.8601,
+   "team": "Georgia Tech",
+   "tempo": 71.0269
+  },
+  "gonzaga": {
+   "de": 95.7332,
+   "oe": 119.3046,
+   "team": "Gonzaga",
+   "tempo": 72.9337
+  },
+  "grambling-st": {
+   "de": 110.9133,
+   "oe": 96.6991,
+   "team": "Grambling St",
+   "tempo": 71.6499
+  },
+  "grand-canyon": {
+   "de": 97.101,
+   "oe": 112.3867,
+   "team": "Grand Canyon",
+   "tempo": 72.1095
+  },
+  "green-bay": {
+   "de": 110.4061,
+   "oe": 104.9489,
+   "team": "Green Bay",
+   "tempo": 69.3893
+  },
+  "hampton": {
+   "de": 106.8905,
+   "oe": 103.0905,
+   "team": "Hampton",
+   "tempo": 70.0608
+  },
+  "harvard": {
+   "de": 103.7385,
+   "oe": 105.6956,
+   "team": "Harvard",
+   "tempo": 68.9492
+  },
+  "hawaii": {
+   "de": 102.8258,
+   "oe": 105.4973,
+   "team": "Hawaii",
+   "tempo": 72.3015
+  },
+  "high-point": {
+   "de": 104.5237,
+   "oe": 111.5951,
+   "team": "High Point",
+   "tempo": 73.4099
+  },
+  "hofstra": {
+   "de": 105.1781,
+   "oe": 105.9924,
+   "team": "Hofstra",
+   "tempo": 69.6941
+  },
+  "holy-cross": {
+   "de": 114.2903,
+   "oe": 96.2474,
+   "team": "Holy Cross",
+   "tempo": 70.259
+  },
+  "houston": {
+   "de": 90.8227,
+   "oe": 116.5227,
+   "team": "Houston",
+   "tempo": 67.9811
+  },
+  "houston-christian": {
+   "de": 111.0738,
+   "oe": 96.6167,
+   "team": "Houston Christian",
+   "tempo": 69.3665
+  },
+  "howard": {
+   "de": 110.6281,
+   "oe": 101.0853,
+   "team": "Howard",
+   "tempo": 72.9853
+  },
+  "idaho": {
+   "de": 105.9239,
+   "oe": 104.7239,
+   "team": "Idaho",
+   "tempo": 71.3937
+  },
+  "idaho-st": {
+   "de": 109.5449,
+   "oe": 102.6306,
+   "team": "Idaho St",
+   "tempo": 69.9024
+  },
+  "illinois": {
+   "de": 96.6606,
+   "oe": 124.2892,
+   "team": "Illinois",
+   "tempo": 71.2224
+  },
+  "illinois-chicago": {
+   "de": 103.5669,
+   "oe": 109.9955,
+   "team": "Illinois Chicago",
+   "tempo": 70.9738
+  },
+  "illinois-st": {
+   "de": 104.0564,
+   "oe": 110.9278,
+   "team": "Illinois St",
+   "tempo": 70.5017
+  },
+  "incarnate-word": {
+   "de": 115.3848,
+   "oe": 100.3705,
+   "team": "Incarnate Word",
+   "tempo": 70.4074
+  },
+  "indiana": {
+   "de": 96.7576,
+   "oe": 117.4148,
+   "team": "Indiana",
+   "tempo": 70.4294
+  },
+  "indiana-st": {
+   "de": 107.567,
+   "oe": 104.5385,
+   "team": "Indiana St",
+   "tempo": 72.7091
+  },
+  "iona": {
+   "de": 109.278,
+   "oe": 101.4923,
+   "team": "Iona",
+   "tempo": 72.4744
+  },
+  "iowa": {
+   "de": 97.6133,
+   "oe": 117.6419,
+   "team": "Iowa",
+   "tempo": 67.0264
+  },
+  "iowa-st": {
+   "de": 92.5355,
+   "oe": 116.4212,
+   "team": "Iowa St",
+   "tempo": 71.2415
+  },
+  "iu-indy": {
+   "de": 114.0365,
+   "oe": 101.6793,
+   "team": "IU Indy",
+   "tempo": 75.5253
+  },
+  "jackson-st": {
+   "de": 114.9317,
+   "oe": 95.7603,
+   "team": "Jackson St",
+   "tempo": 72.3339
+  },
+  "jacksonville": {
+   "de": 110.9104,
+   "oe": 102.5818,
+   "team": "Jacksonville",
+   "tempo": 68.7137
+  },
+  "jacksonville-st": {
+   "de": 108.971,
+   "oe": 103.0853,
+   "team": "Jacksonville St",
+   "tempo": 69.8198
+  },
+  "james-madison": {
+   "de": 109.2882,
+   "oe": 105.931,
+   "team": "James Madison",
+   "tempo": 69.9795
+  },
+  "kansas": {
+   "de": 93.8956,
+   "oe": 118.7813,
+   "team": "Kansas",
+   "tempo": 72.1757
+  },
+  "kansas-city": {
+   "de": 116.7571,
+   "oe": 96.9428,
+   "team": "Kansas City",
+   "tempo": 70.076
+  },
+  "kansas-st": {
+   "de": 103.0819,
+   "oe": 111.2104,
+   "team": "Kansas St",
+   "tempo": 73.5442
+  },
+  "kennesaw-st": {
+   "de": 105.2646,
+   "oe": 104.8789,
+   "team": "Kennesaw St",
+   "tempo": 74.5274
+  },
+  "kent-st": {
+   "de": 105.5368,
+   "oe": 105.2082,
+   "team": "Kent St",
+   "tempo": 72.8526
+  },
+  "kentucky": {
+   "de": 99.2697,
+   "oe": 119.7555,
+   "team": "Kentucky",
+   "tempo": 72.6497
+  },
+  "la-salle": {
+   "de": 106.8091,
+   "oe": 106.2377,
+   "team": "La Salle",
+   "tempo": 69.6194
+  },
+  "lafayette": {
+   "de": 110.3809,
+   "oe": 94.5381,
+   "team": "Lafayette",
+   "tempo": 70.837
+  },
+  "lamar": {
+   "de": 108.3538,
+   "oe": 100.3538,
+   "team": "Lamar",
+   "tempo": 71.0679
+  },
+  "le-moyne": {
+   "de": 112.9589,
+   "oe": 96.9017,
+   "team": "Le Moyne",
+   "tempo": 72.8383
+  },
+  "lehigh": {
+   "de": 108.4046,
+   "oe": 99.3332,
+   "team": "Lehigh",
+   "tempo": 71.5187
+  },
+  "liberty": {
+   "de": 105.5085,
+   "oe": 108.6228,
+   "team": "Liberty",
+   "tempo": 69.1849
+  },
+  "lindenwood": {
+   "de": 110.6741,
+   "oe": 96.6884,
+   "team": "Lindenwood",
+   "tempo": 74.3219
+  },
+  "lipscomb": {
+   "de": 112.0602,
+   "oe": 103.1887,
+   "team": "Lipscomb",
+   "tempo": 72.8803
+  },
+  "little-rock": {
+   "de": 109.8523,
+   "oe": 101.238,
+   "team": "Little Rock",
+   "tempo": 72.3059
+  },
+  "long-beach-st": {
+   "de": 108.8845,
+   "oe": 102.6559,
+   "team": "Long Beach St",
+   "tempo": 71.6165
+  },
+  "long-island": {
+   "de": 110.0271,
+   "oe": 100.0699,
+   "team": "Long Island",
+   "tempo": 72.0996
+  },
+  "longwood": {
+   "de": 109.6159,
+   "oe": 101.3302,
+   "team": "Longwood",
+   "tempo": 72.2593
+  },
+  "louisiana": {
+   "de": 109.0782,
+   "oe": 100.0924,
+   "team": "Louisiana",
+   "tempo": 68.6985
+  },
+  "louisiana-monroe": {
+   "de": 115.4906,
+   "oe": 98.2763,
+   "team": "Louisiana Monroe",
+   "tempo": 72.5467
+  },
+  "louisiana-tech": {
+   "de": 107.5029,
+   "oe": 101.3457,
+   "team": "Louisiana Tech",
+   "tempo": 69.3524
+  },
+  "louisville": {
+   "de": 94.3067,
+   "oe": 117.9067,
+   "team": "Louisville",
+   "tempo": 73.608
+  },
+  "loyola-chicago": {
+   "de": 101.8246,
+   "oe": 107.1246,
+   "team": "Loyola Chicago",
+   "tempo": 70.3917
+  },
+  "loyola-marymount": {
+   "de": 104.8645,
+   "oe": 105.8217,
+   "team": "Loyola Marymount",
+   "tempo": 71.048
+  },
+  "loyola-md": {
+   "de": 114.9019,
+   "oe": 97.8305,
+   "team": "Loyola MD",
+   "tempo": 71.8906
+  },
+  "lsu": {
+   "de": 99.1007,
+   "oe": 116.2721,
+   "team": "LSU",
+   "tempo": 72.0372
+  },
+  "lsu-new-orleans": {
+   "de": 112.7549,
+   "oe": 101.512,
+   "team": "LSU New Orleans",
+   "tempo": 73.1984
+  },
+  "maine": {
+   "de": 112.0964,
+   "oe": 92.0821,
+   "team": "Maine",
+   "tempo": 69.707
+  },
+  "manhattan": {
+   "de": 114.1103,
+   "oe": 98.2389,
+   "team": "Manhattan",
+   "tempo": 71.785
+  },
+  "marist": {
+   "de": 105.8343,
+   "oe": 97.2628,
+   "team": "Marist",
+   "tempo": 70.3094
+  },
+  "marquette": {
+   "de": 97.9786,
+   "oe": 112.7643,
+   "team": "Marquette",
+   "tempo": 72.672
+  },
+  "marshall": {
+   "de": 109.1061,
+   "oe": 102.6204,
+   "team": "Marshall",
+   "tempo": 72.8814
+  },
+  "maryland": {
+   "de": 98.7801,
+   "oe": 114.6087,
+   "team": "Maryland",
+   "tempo": 70.7058
+  },
+  "maryland-eastern-shore": {
+   "de": 115.4182,
+   "oe": 90.7325,
+   "team": "Maryland Eastern Shore",
+   "tempo": 68.8081
+  },
+  "mcneese": {
+   "de": 102.635,
+   "oe": 106.635,
+   "team": "McNeese",
+   "tempo": 70.6161
+  },
+  "memphis": {
+   "de": 104.9625,
+   "oe": 108.7196,
+   "team": "Memphis",
+   "tempo": 73.9431
+  },
+  "mercer": {
+   "de": 108.4606,
+   "oe": 103.6035,
+   "team": "Mercer",
+   "tempo": 73.3632
+  },
+  "mercyhurst": {
+   "de": 111.914,
+   "oe": 98.714,
+   "team": "Mercyhurst",
+   "tempo": 69.5973
+  },
+  "merrimack": {
+   "de": 106.8181,
+   "oe": 101.0181,
+   "team": "Merrimack",
+   "tempo": 68.783
+  },
+  "miami": {
+   "de": 94.579,
+   "oe": 118.679,
+   "team": "Miami",
+   "tempo": 71.7247
+  },
+  "miami-oh": {
+   "de": 104.6284,
+   "oe": 109.0713,
+   "team": "Miami OH",
+   "tempo": 72.9569
+  },
+  "michigan": {
+   "de": 95.0935,
+   "oe": 118.4793,
+   "team": "Michigan",
+   "tempo": 72.1173
+  },
+  "michigan-st": {
+   "de": 93.2241,
+   "oe": 117.9098,
+   "team": "Michigan St",
+   "tempo": 70.7108
+  },
+  "middle-tennessee": {
+   "de": 105.5941,
+   "oe": 106.337,
+   "team": "Middle Tennessee",
+   "tempo": 70.6982
+  },
+  "milwaukee": {
+   "de": 110.642,
+   "oe": 100.5706,
+   "team": "Milwaukee",
+   "tempo": 72.0227
+  },
+  "minnesota": {
+   "de": 98.3692,
+   "oe": 111.8264,
+   "team": "Minnesota",
+   "tempo": 68.4778
+  },
+  "mississippi-st": {
+   "de": 99.4697,
+   "oe": 113.6697,
+   "team": "Mississippi St",
+   "tempo": 72.4825
+  },
+  "mississippi-valley-st": {
+   "de": 118.2133,
+   "oe": 91.5418,
+   "team": "Mississippi Valley St",
+   "tempo": 71.0389
+  },
+  "missouri": {
+   "de": 100.7156,
+   "oe": 118.9299,
+   "team": "Missouri",
+   "tempo": 71.1389
+  },
+  "missouri-st": {
+   "de": 106.2139,
+   "oe": 104.6996,
+   "team": "Missouri St",
+   "tempo": 69.9347
+  },
+  "monmouth": {
+   "de": 107.359,
+   "oe": 102.8161,
+   "team": "Monmouth",
+   "tempo": 71.3878
+  },
+  "montana": {
+   "de": 106.7907,
+   "oe": 103.7764,
+   "team": "Montana",
+   "tempo": 72.2715
+  },
+  "montana-st": {
+   "de": 105.6815,
+   "oe": 106.2244,
+   "team": "Montana St",
+   "tempo": 70.6579
+  },
+  "morehead-st": {
+   "de": 113.3366,
+   "oe": 100.3651,
+   "team": "Morehead St",
+   "tempo": 69.7541
+  },
+  "morgan-st": {
+   "de": 118.9296,
+   "oe": 95.1296,
+   "team": "Morgan St",
+   "tempo": 74.2186
+  },
+  "mount-st-mary-s": {
+   "de": 110.0952,
+   "oe": 97.6381,
+   "team": "Mount St Mary's",
+   "tempo": 71.6827
+  },
+  "murray-st": {
+   "de": 104.5756,
+   "oe": 109.1756,
+   "team": "Murray St",
+   "tempo": 74.4639
+  },
+  "navy": {
+   "de": 110.4349,
+   "oe": 101.1777,
+   "team": "Navy",
+   "tempo": 69.9935
+  },
+  "nc-state": {
+   "de": 100.05,
+   "oe": 118.2785,
+   "team": "NC State",
+   "tempo": 72.2007
+  },
+  "nebraska": {
+   "de": 96.4964,
+   "oe": 117.7249,
+   "team": "Nebraska",
+   "tempo": 71.4096
+  },
+  "nevada": {
+   "de": 99.4577,
+   "oe": 109.4863,
+   "team": "Nevada",
+   "tempo": 70.5107
+  },
+  "new-hampshire": {
+   "de": 112.7473,
+   "oe": 94.633,
+   "team": "New Hampshire",
+   "tempo": 71.814
+  },
+  "new-haven": {
+   "de": 111.2826,
+   "oe": 93.3826,
+   "team": "New Haven",
+   "tempo": 68.7571
+  },
+  "new-mexico": {
+   "de": 100.6275,
+   "oe": 112.9418,
+   "team": "New Mexico",
+   "tempo": 72.5547
+  },
+  "new-mexico-st": {
+   "de": 103.9566,
+   "oe": 104.1708,
+   "team": "New Mexico St",
+   "tempo": 70.6476
+  },
+  "niagara": {
+   "de": 115.7384,
+   "oe": 98.667,
+   "team": "Niagara",
+   "tempo": 68.1007
+  },
+  "nicholls": {
+   "de": 111.8095,
+   "oe": 98.8237,
+   "team": "Nicholls",
+   "tempo": 71.9107
+  },
+  "njit": {
+   "de": 113.5142,
+   "oe": 95.5714,
+   "team": "NJIT",
+   "tempo": 71.5482
+  },
+  "norfolk-st": {
+   "de": 113.2008,
+   "oe": 97.5151,
+   "team": "Norfolk St",
+   "tempo": 71.6474
+  },
+  "north-alabama": {
+   "de": 109.6874,
+   "oe": 98.0302,
+   "team": "North Alabama",
+   "tempo": 70.2735
+  },
+  "north-carolina": {
+   "de": 99.1506,
+   "oe": 115.0648,
+   "team": "North Carolina",
+   "tempo": 71.8226
+  },
+  "north-carolina-a-t": {
+   "de": 110.4281,
+   "oe": 101.2995,
+   "team": "North Carolina A&T",
+   "tempo": 72.3257
+  },
+  "north-carolina-central": {
+   "de": 117.1829,
+   "oe": 93.0686,
+   "team": "North Carolina Central",
+   "tempo": 70.6575
+  },
+  "north-dakota": {
+   "de": 112.7215,
+   "oe": 102.2644,
+   "team": "North Dakota",
+   "tempo": 71.5897
+  },
+  "north-dakota-st": {
+   "de": 107.8829,
+   "oe": 105.3401,
+   "team": "North Dakota St",
+   "tempo": 70.7486
+  },
+  "north-florida": {
+   "de": 117.2841,
+   "oe": 101.7984,
+   "team": "North Florida",
+   "tempo": 73.6524
+  },
+  "north-texas": {
+   "de": 103.5761,
+   "oe": 105.119,
+   "team": "North Texas",
+   "tempo": 69.9508
+  },
+  "northeastern": {
+   "de": 112.0906,
+   "oe": 101.7191,
+   "team": "Northeastern",
+   "tempo": 72.3975
+  },
+  "northern-arizona": {
+   "de": 111.8815,
+   "oe": 101.9386,
+   "team": "Northern Arizona",
+   "tempo": 69.5188
+  },
+  "northern-colorado": {
+   "de": 107.6496,
+   "oe": 108.1353,
+   "team": "Northern Colorado",
+   "tempo": 72.7823
+  },
+  "northern-illinois": {
+   "de": 111.7463,
+   "oe": 100.3749,
+   "team": "Northern Illinois",
+   "tempo": 71.6787
+  },
+  "northern-iowa": {
+   "de": 104.8473,
+   "oe": 107.4187,
+   "team": "Northern Iowa",
+   "tempo": 69.9781
+  },
+  "northern-kentucky": {
+   "de": 107.6507,
+   "oe": 101.4221,
+   "team": "Northern Kentucky",
+   "tempo": 72.4395
+  },
+  "northwestern": {
+   "de": 100.1158,
+   "oe": 113.5158,
+   "team": "Northwestern",
+   "tempo": 69.7538
+  },
+  "northwestern-st": {
+   "de": 110.0715,
+   "oe": 97.6001,
+   "team": "Northwestern St",
+   "tempo": 69.6374
+  },
+  "notre-dame": {
+   "de": 100.3966,
+   "oe": 110.0395,
+   "team": "Notre Dame",
+   "tempo": 69.8387
+  },
+  "oakland": {
+   "de": 109.2094,
+   "oe": 105.5951,
+   "team": "Oakland",
+   "tempo": 72.4726
+  },
+  "ohio": {
+   "de": 110.1944,
+   "oe": 107.4373,
+   "team": "Ohio",
+   "tempo": 72.6889
+  },
+  "ohio-st": {
+   "de": 97.1295,
+   "oe": 118.6009,
+   "team": "Ohio St",
+   "tempo": 70.7267
+  },
+  "oklahoma": {
+   "de": 98.158,
+   "oe": 118.4437,
+   "team": "Oklahoma",
+   "tempo": 71.0609
+  },
+  "oklahoma-st": {
+   "de": 99.7102,
+   "oe": 115.1387,
+   "team": "Oklahoma St",
+   "tempo": 75.1278
+  },
+  "old-dominion": {
+   "de": 109.3658,
+   "oe": 102.7515,
+   "team": "Old Dominion",
+   "tempo": 72.2214
+  },
+  "ole-miss": {
+   "de": 95.4455,
+   "oe": 113.0741,
+   "team": "Ole Miss",
+   "tempo": 70.6744
+  },
+  "omaha": {
+   "de": 111.127,
+   "oe": 101.5698,
+   "team": "Omaha",
+   "tempo": 71.3791
+  },
+  "oral-roberts": {
+   "de": 113.0936,
+   "oe": 101.3507,
+   "team": "Oral Roberts",
+   "tempo": 71.7547
+  },
+  "oregon": {
+   "de": 102.7162,
+   "oe": 112.3733,
+   "team": "Oregon",
+   "tempo": 71.6731
+  },
+  "oregon-st": {
+   "de": 104.8377,
+   "oe": 111.7091,
+   "team": "Oregon St",
+   "tempo": 70.912
+  },
+  "pacific": {
+   "de": 103.6307,
+   "oe": 106.6878,
+   "team": "Pacific",
+   "tempo": 69.6646
+  },
+  "penn": {
+   "de": 106.9207,
+   "oe": 107.3635,
+   "team": "Penn",
+   "tempo": 73.172
+  },
+  "penn-st": {
+   "de": 103.7591,
+   "oe": 111.1448,
+   "team": "Penn St",
+   "tempo": 72.1358
+  },
+  "pepperdine": {
+   "de": 105.0821,
+   "oe": 109.4679,
+   "team": "Pepperdine",
+   "tempo": 71.9541
+  },
+  "pittsburgh": {
+   "de": 99.5619,
+   "oe": 111.319,
+   "team": "Pittsburgh",
+   "tempo": 69.1282
+  },
+  "portland": {
+   "de": 106.9249,
+   "oe": 106.3678,
+   "team": "Portland",
+   "tempo": 72.4138
+  },
+  "portland-st": {
+   "de": 104.3162,
+   "oe": 102.5448,
+   "team": "Portland St",
+   "tempo": 72.594
+  },
+  "prairie-view-a-m": {
+   "de": 111.5116,
+   "oe": 97.483,
+   "team": "Prairie View A&M",
+   "tempo": 73.9074
+  },
+  "presbyterian": {
+   "de": 108.5335,
+   "oe": 103.1335,
+   "team": "Presbyterian",
+   "tempo": 69.1549
+  },
+  "princeton": {
+   "de": 109.8477,
+   "oe": 104.6192,
+   "team": "Princeton",
+   "tempo": 69.2866
+  },
+  "providence": {
+   "de": 98.648,
+   "oe": 113.9909,
+   "team": "Providence",
+   "tempo": 74.0947
+  },
+  "purdue": {
+   "de": 98.5662,
+   "oe": 117.4948,
+   "team": "Purdue",
+   "tempo": 69.4072
+  },
+  "purdue-fort-wayne": {
+   "de": 110.4031,
+   "oe": 101.9745,
+   "team": "Purdue Fort Wayne",
+   "tempo": 72.331
+  },
+  "queens": {
+   "de": 112.3593,
+   "oe": 104.8736,
+   "team": "Queens",
+   "tempo": 73.4326
+  },
+  "quinnipiac": {
+   "de": 107.9269,
+   "oe": 98.6269,
+   "team": "Quinnipiac",
+   "tempo": 73.6897
+  },
+  "radford": {
+   "de": 111.7319,
+   "oe": 100.7176,
+   "team": "Radford",
+   "tempo": 73.7383
+  },
+  "rhode-island": {
+   "de": 103.7399,
+   "oe": 107.4256,
+   "team": "Rhode Island",
+   "tempo": 70.9878
+  },
+  "rice": {
+   "de": 108.4881,
+   "oe": 104.0167,
+   "team": "Rice",
+   "tempo": 70.4703
+  },
+  "richmond": {
+   "de": 104.8529,
+   "oe": 108.9814,
+   "team": "Richmond",
+   "tempo": 71.1112
+  },
+  "rider": {
+   "de": 115.0292,
+   "oe": 95.1149,
+   "team": "Rider",
+   "tempo": 70.3026
+  },
+  "robert-morris": {
+   "de": 106.8563,
+   "oe": 103.8277,
+   "team": "Robert Morris",
+   "tempo": 69.9951
+  },
+  "rutgers": {
+   "de": 102.7321,
+   "oe": 113.075,
+   "team": "Rutgers",
+   "tempo": 71.566
+  },
+  "sacramento-st": {
+   "de": 108.3681,
+   "oe": 104.1538,
+   "team": "Sacramento St",
+   "tempo": 74.4246
+  },
+  "sacred-heart": {
+   "de": 114.3326,
+   "oe": 100.6611,
+   "team": "Sacred Heart",
+   "tempo": 72.6466
+  },
+  "saint-joseph-s": {
+   "de": 102.1865,
+   "oe": 105.5293,
+   "team": "Saint Joseph's",
+   "tempo": 71.8186
+  },
+  "saint-louis": {
+   "de": 100.9675,
+   "oe": 116.1532,
+   "team": "Saint Louis",
+   "tempo": 73.9728
+  },
+  "saint-mary-s": {
+   "de": 98.1576,
+   "oe": 109.029,
+   "team": "Saint Mary's",
+   "tempo": 70.8251
+  },
+  "saint-peter-s": {
+   "de": 108.0182,
+   "oe": 98.9754,
+   "team": "Saint Peter's",
+   "tempo": 69.6705
+  },
+  "sam-houston-st": {
+   "de": 105.7407,
+   "oe": 106.3835,
+   "team": "Sam Houston St",
+   "tempo": 73.1009
+  },
+  "samford": {
+   "de": 113.5715,
+   "oe": 104.6857,
+   "team": "Samford",
+   "tempo": 71.6481
+  },
+  "san-diego": {
+   "de": 105.3202,
+   "oe": 105.7059,
+   "team": "San Diego",
+   "tempo": 71.8557
+  },
+  "san-diego-st": {
+   "de": 100.6088,
+   "oe": 111.0231,
+   "team": "San Diego St",
+   "tempo": 71.8422
+  },
+  "san-francisco": {
+   "de": 105.6761,
+   "oe": 105.1046,
+   "team": "San Francisco",
+   "tempo": 70.9656
+  },
+  "san-jose-st": {
+   "de": 107.1466,
+   "oe": 106.4752,
+   "team": "San Jose St",
+   "tempo": 69.7872
+  },
+  "santa-clara": {
+   "de": 105.5146,
+   "oe": 113.9717,
+   "team": "Santa Clara",
+   "tempo": 73.0555
+  },
+  "se-louisiana": {
+   "de": 110.5369,
+   "oe": 97.1083,
+   "team": "SE Louisiana",
+   "tempo": 70.6322
+  },
+  "se-missouri-st": {
+   "de": 108.225,
+   "oe": 96.7965,
+   "team": "SE Missouri St",
+   "tempo": 73.1406
+  },
+  "seattle": {
+   "de": 98.9117,
+   "oe": 104.0974,
+   "team": "Seattle",
+   "tempo": 71.9271
+  },
+  "seton-hall": {
+   "de": 99.1565,
+   "oe": 108.9994,
+   "team": "Seton Hall",
+   "tempo": 69.8233
+  },
+  "siena": {
+   "de": 109.8192,
+   "oe": 101.6335,
+   "team": "Siena",
+   "tempo": 70.7552
+  },
+  "siu-edwardsville": {
+   "de": 109.0714,
+   "oe": 98.4999,
+   "team": "SIU Edwardsville",
+   "tempo": 69.9744
+  },
+  "smu": {
+   "de": 99.0551,
+   "oe": 115.1408,
+   "team": "SMU",
+   "tempo": 72.2518
+  },
+  "south-alabama": {
+   "de": 108.6745,
+   "oe": 101.7173,
+   "team": "South Alabama",
+   "tempo": 69.492
+  },
+  "south-carolina": {
+   "de": 100.7401,
+   "oe": 113.0972,
+   "team": "South Carolina",
+   "tempo": 70.2105
+  },
+  "south-carolina-st": {
+   "de": 115.7499,
+   "oe": 92.3214,
+   "team": "South Carolina St",
+   "tempo": 72.8315
+  },
+  "south-dakota": {
+   "de": 113.4398,
+   "oe": 101.1398,
+   "team": "South Dakota",
+   "tempo": 73.5637
+  },
+  "south-dakota-st": {
+   "de": 110.7931,
+   "oe": 106.3073,
+   "team": "South Dakota St",
+   "tempo": 71.1149
+  },
+  "south-florida": {
+   "de": 102.2776,
+   "oe": 112.3348,
+   "team": "South Florida",
+   "tempo": 72.2814
+  },
+  "southern": {
+   "de": 109.9831,
+   "oe": 97.026,
+   "team": "Southern",
+   "tempo": 72.8626
+  },
+  "southern-illinois": {
+   "de": 103.9893,
+   "oe": 104.0321,
+   "team": "Southern Illinois",
+   "tempo": 72.9403
+  },
+  "southern-indiana": {
+   "de": 113.3598,
+   "oe": 94.717,
+   "team": "Southern Indiana",
+   "tempo": 71.8234
+  },
+  "southern-miss": {
+   "de": 106.7618,
+   "oe": 102.519,
+   "team": "Southern Miss",
+   "tempo": 72.9986
+  },
+  "southern-utah": {
+   "de": 109.8197,
+   "oe": 102.2483,
+   "team": "Southern Utah",
+   "tempo": 73.4636
+  },
+  "st-bonaventure": {
+   "de": 103.0643,
+   "oe": 104.4358,
+   "team": "St Bonaventure",
+   "tempo": 71.3022
+  },
+  "st-johns": {
+   "de": 95.5064,
+   "oe": 115.5636,
+   "team": "St Johns",
+   "tempo": 73.1444
+  },
+  "st-thomas": {
+   "de": 108.5803,
+   "oe": 106.266,
+   "team": "St Thomas",
+   "tempo": 71.6459
+  },
+  "stanford": {
+   "de": 99.1781,
+   "oe": 112.1495,
+   "team": "Stanford",
+   "tempo": 70.7744
+  },
+  "stephen-f-austin": {
+   "de": 104.6269,
+   "oe": 104.8554,
+   "team": "Stephen F Austin",
+   "tempo": 70.5307
+  },
+  "stetson": {
+   "de": 114.2684,
+   "oe": 100.3255,
+   "team": "Stetson",
+   "tempo": 70.9152
+  },
+  "stonehill": {
+   "de": 113.1517,
+   "oe": 93.7945,
+   "team": "Stonehill",
+   "tempo": 70.6582
+  },
+  "stony-brook": {
+   "de": 109.8963,
+   "oe": 102.582,
+   "team": "Stony Brook",
+   "tempo": 70.4984
+  },
+  "syracuse": {
+   "de": 97.8315,
+   "oe": 110.8601,
+   "team": "Syracuse",
+   "tempo": 70.391
+  },
+  "tarleton-st": {
+   "de": 108.9206,
+   "oe": 101.1778,
+   "team": "Tarleton St",
+   "tempo": 72.2535
+  },
+  "tcu": {
+   "de": 96.5452,
+   "oe": 115.9166,
+   "team": "TCU",
+   "tempo": 71.7968
+  },
+  "temple": {
+   "de": 105.9873,
+   "oe": 107.8015,
+   "team": "Temple",
+   "tempo": 70.3357
+  },
+  "tennessee": {
+   "de": 95.9446,
+   "oe": 119.9731,
+   "team": "Tennessee",
+   "tempo": 70.0445
+  },
+  "tennessee-st": {
+   "de": 108.528,
+   "oe": 101.3423,
+   "team": "Tennessee St",
+   "tempo": 73.668
+  },
+  "tennessee-tech": {
+   "de": 112.5605,
+   "oe": 103.6034,
+   "team": "Tennessee Tech",
+   "tempo": 71.8476
+  },
+  "texas": {
+   "de": 94.8763,
+   "oe": 120.762,
+   "team": "Texas",
+   "tempo": 71.6679
+  },
+  "texas-a-m": {
+   "de": 99.9622,
+   "oe": 119.005,
+   "team": "Texas A&M",
+   "tempo": 73.7828
+  },
+  "texas-a-m-cc": {
+   "de": 105.2527,
+   "oe": 100.8384,
+   "team": "Texas A&M CC",
+   "tempo": 70.9468
+  },
+  "texas-southern": {
+   "de": 110.4014,
+   "oe": 93.7871,
+   "team": "Texas Southern",
+   "tempo": 72.1182
+  },
+  "texas-st": {
+   "de": 105.0543,
+   "oe": 109.8686,
+   "team": "Texas St",
+   "tempo": 70.2073
+  },
+  "texas-tech": {
+   "de": 98.9109,
+   "oe": 121.268,
+   "team": "Texas Tech",
+   "tempo": 69.6499
+  },
+  "the-citadel": {
+   "de": 116.6259,
+   "oe": 96.4973,
+   "team": "The Citadel",
+   "tempo": 69.4803
+  },
+  "toledo": {
+   "de": 108.0413,
+   "oe": 109.7985,
+   "team": "Toledo",
+   "tempo": 72.1759
+  },
+  "towson": {
+   "de": 105.8278,
+   "oe": 103.1421,
+   "team": "Towson",
+   "tempo": 68.4439
+  },
+  "troy": {
+   "de": 108.2918,
+   "oe": 103.7204,
+   "team": "Troy",
+   "tempo": 70.8123
+  },
+  "tulane": {
+   "de": 108.9202,
+   "oe": 106.8202,
+   "team": "Tulane",
+   "tempo": 71.9131
+  },
+  "tulsa": {
+   "de": 103.5366,
+   "oe": 111.6223,
+   "team": "Tulsa",
+   "tempo": 72.1697
+  },
+  "uab": {
+   "de": 107.1195,
+   "oe": 109.3052,
+   "team": "UAB",
+   "tempo": 72.9228
+  },
+  "ualbany": {
+   "de": 113.7384,
+   "oe": 96.2384,
+   "team": "UAlbany",
+   "tempo": 70.6543
+  },
+  "uc-davis": {
+   "de": 104.4899,
+   "oe": 104.9328,
+   "team": "UC Davis",
+   "tempo": 72.4677
+  },
+  "uc-irvine": {
+   "de": 100.0009,
+   "oe": 102.2152,
+   "team": "UC Irvine",
+   "tempo": 72.2923
+  },
+  "uc-riverside": {
+   "de": 108.5888,
+   "oe": 102.6031,
+   "team": "UC Riverside",
+   "tempo": 72.2644
+  },
+  "uc-san-diego": {
+   "de": 103.6489,
+   "oe": 109.306,
+   "team": "UC San Diego",
+   "tempo": 71.4168
+  },
+  "uc-santa-barbara": {
+   "de": 106.3775,
+   "oe": 109.7918,
+   "team": "UC Santa Barbara",
+   "tempo": 69.5125
+  },
+  "ucf": {
+   "de": 97.3321,
+   "oe": 112.4178,
+   "team": "UCF",
+   "tempo": 72.9736
+  },
+  "ucla": {
+   "de": 95.7694,
+   "oe": 115.9122,
+   "team": "UCLA",
+   "tempo": 69.4891
+  },
+  "uconn": {
+   "de": 92.1391,
+   "oe": 118.0534,
+   "team": "UConn",
+   "tempo": 69.3054
+  },
+  "umass": {
+   "de": 106.7484,
+   "oe": 102.2199,
+   "team": "UMass",
+   "tempo": 73.5795
+  },
+  "umass-lowell": {
+   "de": 116.2219,
+   "oe": 98.179,
+   "team": "UMass Lowell",
+   "tempo": 72.8522
+  },
+  "umbc": {
+   "de": 113.0184,
+   "oe": 103.3755,
+   "team": "UMBC",
+   "tempo": 71.7679
+  },
+  "unc-asheville": {
+   "de": 110.3251,
+   "oe": 99.9251,
+   "team": "UNC Asheville",
+   "tempo": 70.3658
+  },
+  "unc-greensboro": {
+   "de": 113.8383,
+   "oe": 99.2812,
+   "team": "UNC Greensboro",
+   "tempo": 72.157
+  },
+  "unc-wilmington": {
+   "de": 106.8579,
+   "oe": 109.5437,
+   "team": "UNC Wilmington",
+   "tempo": 69.8651
+  },
+  "unlv": {
+   "de": 99.706,
+   "oe": 107.1346,
+   "team": "UNLV",
+   "tempo": 72.785
+  },
+  "usc": {
+   "de": 97.5904,
+   "oe": 115.1475,
+   "team": "USC",
+   "tempo": 73.8367
+  },
+  "usc-upstate": {
+   "de": 110.8926,
+   "oe": 98.4926,
+   "team": "USC Upstate",
+   "tempo": 72.6308
+  },
+  "ut-arlington": {
+   "de": 104.5099,
+   "oe": 103.6385,
+   "team": "UT Arlington",
+   "tempo": 70.5552
+  },
+  "ut-martin": {
+   "de": 108.524,
+   "oe": 97.4668,
+   "team": "UT Martin",
+   "tempo": 69.5529
+  },
+  "ut-rio-grande-valley": {
+   "de": 108.5909,
+   "oe": 102.8623,
+   "team": "UT Rio Grande Valley",
+   "tempo": 71.3287
+  },
+  "utah": {
+   "de": 100.235,
+   "oe": 109.1921,
+   "team": "Utah",
+   "tempo": 70.5511
+  },
+  "utah-st": {
+   "de": 100.3032,
+   "oe": 115.7175,
+   "team": "Utah St",
+   "tempo": 69.3048
+  },
+  "utah-tech": {
+   "de": 109.2867,
+   "oe": 104.1582,
+   "team": "Utah Tech",
+   "tempo": 71.4818
+  },
+  "utah-valley": {
+   "de": 102.0123,
+   "oe": 105.9409,
+   "team": "Utah Valley",
+   "tempo": 72.3416
+  },
+  "utep": {
+   "de": 105.8598,
+   "oe": 101.6741,
+   "team": "UTEP",
+   "tempo": 70.8173
+  },
+  "utsa": {
+   "de": 111.9213,
+   "oe": 100.8356,
+   "team": "UTSA",
+   "tempo": 72.9528
+  },
+  "valparaiso": {
+   "de": 104.6019,
+   "oe": 106.7162,
+   "team": "Valparaiso",
+   "tempo": 70.4701
+  },
+  "vanderbilt": {
+   "de": 96.208,
+   "oe": 117.5938,
+   "team": "Vanderbilt",
+   "tempo": 72.7816
+  },
+  "vcu": {
+   "de": 97.6465,
+   "oe": 112.3037,
+   "team": "VCU",
+   "tempo": 73.4703
+  },
+  "vermont": {
+   "de": 109.4177,
+   "oe": 100.5892,
+   "team": "Vermont",
+   "tempo": 69.0831
+  },
+  "villanova": {
+   "de": 99.3516,
+   "oe": 117.923,
+   "team": "Villanova",
+   "tempo": 70.4457
+  },
+  "virginia": {
+   "de": 93.9458,
+   "oe": 118.2315,
+   "team": "Virginia",
+   "tempo": 70.5349
+  },
+  "virginia-tech": {
+   "de": 99.5499,
+   "oe": 114.9499,
+   "team": "Virginia Tech",
+   "tempo": 70.8783
+  },
+  "vmi": {
+   "de": 115.8848,
+   "oe": 100.0133,
+   "team": "VMI",
+   "tempo": 71.7887
+  },
+  "wagner": {
+   "de": 111.6256,
+   "oe": 94.3399,
+   "team": "Wagner",
+   "tempo": 70.2215
+  },
+  "wake-forest": {
+   "de": 101.5467,
+   "oe": 108.8896,
+   "team": "Wake Forest",
+   "tempo": 72.3102
+  },
+  "washington": {
+   "de": 101.2002,
+   "oe": 114.2002,
+   "team": "Washington",
+   "tempo": 71.4806
+  },
+  "washington-st": {
+   "de": 106.5579,
+   "oe": 108.6579,
+   "team": "Washington St",
+   "tempo": 72.5475
+  },
+  "weber-st": {
+   "de": 109.3171,
+   "oe": 102.9028,
+   "team": "Weber St",
+   "tempo": 72.0171
+  },
+  "west-florida": {
+   "de": 115.6277,
+   "oe": 97.0562,
+   "team": "West Florida",
+   "tempo": 71.9622
+  },
+  "west-georgia": {
+   "de": 110.605,
+   "oe": 97.9479,
+   "team": "West Georgia",
+   "tempo": 72.6936
+  },
+  "west-virginia": {
+   "de": 95.4968,
+   "oe": 115.4111,
+   "team": "West Virginia",
+   "tempo": 67.4055
+  },
+  "western-carolina": {
+   "de": 109.1726,
+   "oe": 103.5869,
+   "team": "Western Carolina",
+   "tempo": 72.1536
+  },
+  "western-illinois": {
+   "de": 115.7203,
+   "oe": 91.8917,
+   "team": "Western Illinois",
+   "tempo": 70.4177
+  },
+  "western-kentucky": {
+   "de": 104.7893,
+   "oe": 106.7178,
+   "team": "Western Kentucky",
+   "tempo": 73.6892
+  },
+  "western-michigan": {
+   "de": 111.7569,
+   "oe": 106.8141,
+   "team": "Western Michigan",
+   "tempo": 71.7896
+  },
+  "wichita-st": {
+   "de": 102.3586,
+   "oe": 113.5015,
+   "team": "Wichita St",
+   "tempo": 71.8122
+  },
+  "william-mary": {
+   "de": 108.5705,
+   "oe": 104.7562,
+   "team": "William & Mary",
+   "tempo": 75.2806
+  },
+  "winthrop": {
+   "de": 110.0823,
+   "oe": 106.5109,
+   "team": "Winthrop",
+   "tempo": 73.4273
+  },
+  "wisconsin": {
+   "de": 97.8746,
+   "oe": 116.3032,
+   "team": "Wisconsin",
+   "tempo": 71.979
+  },
+  "wofford": {
+   "de": 111.8441,
+   "oe": 102.3584,
+   "team": "Wofford",
+   "tempo": 71.8108
+  },
+  "wright-st": {
+   "de": 107.2265,
+   "oe": 107.0122,
+   "team": "Wright St",
+   "tempo": 71.4755
+  },
+  "wyoming": {
+   "de": 104.1189,
+   "oe": 110.2046,
+   "team": "Wyoming",
+   "tempo": 70.2535
+  },
+  "xavier": {
+   "de": 101.0421,
+   "oe": 113.8278,
+   "team": "Xavier",
+   "tempo": 74.2795
+  },
+  "yale": {
+   "de": 106.5859,
+   "oe": 110.3574,
+   "team": "Yale",
+   "tempo": 69.968
+  },
+  "youngstown-st": {
+   "de": 111.2045,
+   "oe": 102.2616,
+   "team": "Youngstown St",
+   "tempo": 71.8284
+  }
+ }
+}
