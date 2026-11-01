@@ -334,7 +334,7 @@
 
     // The totals column is optional: if its files do not load, the page looks exactly as it did before.
     return Promise.all(['data/totals/base.json', 'data/rating_config.json'].map(function (p) {
-      return fetch(p).then(function (res) { if (!res.ok) throw new Error(p); return res.json(); });
+      return fetch(p, { cache: 'no-cache' }).then(function (res) { if (!res.ok) throw new Error(p); return res.json(); });
     })).then(function (d) { if (window.CBKTotals) tot = { base: d[0], cfg: d[1], results: null, off: null }; }, function () {}).then(function () {
       rebuildDates(todayISO());
     });

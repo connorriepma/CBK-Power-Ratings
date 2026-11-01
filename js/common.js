@@ -22,7 +22,7 @@ window.CBK = (function () {
   }
 
   function getJSON(path) {
-    return fetch(path).then(function (res) {
+    return fetch(path, { cache: 'no-cache' }).then(function (res) {  // always revalidate, so a fresh push shows up right away
       if (!res.ok) throw new Error(path + ': HTTP ' + res.status);
       return res.json();
     });
