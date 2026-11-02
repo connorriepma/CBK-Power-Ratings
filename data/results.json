@@ -2,5 +2,6 @@
 {"date":"2026-11-01","home":"notre-dame","away":"villanova","neutral":true,"homeScore":74,"awayScore":72,"line":6.5,"ts":"2026-11-01T19:52:46.165Z"},
 {"date":"2026-11-02","home":"appalachian-st","away":"merrimack","neutral":true,"homeScore":63,"awayScore":49,"line":-1.5,"ts":"2026-11-02T19:01:12.669Z"},
 {"date":"2026-11-02","home":"high-point","away":"liberty","neutral":true,"homeScore":72,"awayScore":57,"line":-3,"ts":"2026-11-02T19:00:36.837Z"},
-{"date":"2026-11-02","home":"northern-illinois","away":"grambling-st","neutral":true,"homeScore":87,"awayScore":89,"line":-2,"ts":"2026-11-02T19:00:59.452Z"}
+{"date":"2026-11-02","home":"northern-illinois","away":"grambling-st","neutral":true,"homeScore":87,"awayScore":89,"line":-2,"ts":"2026-11-02T19:00:59.452Z"},
+{"date":"2026-11-02","home":"winthrop","away":"queens","neutral":true,"homeScore":98,"awayScore":103,"line":-3.5,"ts":"2026-11-02T19:01:26.734Z"}
 ]
