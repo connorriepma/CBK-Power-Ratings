@@ -1,4 +1,4 @@
-// Movers page: biggest risers and fallers by rating change over a time period.
+// Trends page: biggest risers and fallers by rating change over a time period.
 // Uses the same replay log as Ratings History: a team's change is the sum of its rating changes in the window.
 (function () {
   'use strict';
