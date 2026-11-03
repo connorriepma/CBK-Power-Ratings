@@ -39,6 +39,7 @@
 {"date":"2026-11-02","home":"miami","away":"florida","neutral":true,"homeScore":67,"awayScore":77,"line":5.5,"ts":"2026-11-03T02:01:59.009Z"},
 {"date":"2026-11-02","home":"michigan","away":"oakland","neutral":false,"homeScore":84,"awayScore":68,"line":-22,"ts":"2026-11-03T01:10:01.163Z"},
 {"date":"2026-11-02","home":"middle-tennessee","away":"non-d1-opponent","neutral":false,"homeScore":117,"awayScore":73,"line":null,"ts":"2026-11-02T19:02:03.834Z"},
+{"date":"2026-11-02","home":"minnesota","away":"north-dakota","neutral":false,"homeScore":85,"awayScore":50,"line":-19.5,"ts":"2026-11-03T04:33:21.782Z"},
 {"date":"2026-11-02","home":"mississippi-st","away":"tennessee-tech","neutral":false,"homeScore":106,"awayScore":88,"line":-19.5,"ts":"2026-11-03T02:48:17.967Z"},
 {"date":"2026-11-02","home":"murray-st","away":"tennessee-st","neutral":true,"homeScore":94,"awayScore":64,"line":-8.5,"ts":"2026-11-02T19:02:25.499Z"},
 {"date":"2026-11-02","home":"nc-state","away":"campbell","neutral":false,"homeScore":83,"awayScore":64,"line":-19,"ts":"2026-11-03T02:52:35.698Z"},
