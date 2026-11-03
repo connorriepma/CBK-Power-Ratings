@@ -120,5 +120,6 @@
 {"date":"2026-11-02","home":"winthrop","away":"queens","neutral":true,"homeScore":98,"awayScore":103,"line":-3.5,"ts":"2026-11-02T19:01:26.734Z"},
 {"date":"2026-11-02","home":"wisconsin","away":"denver","neutral":false,"homeScore":75,"awayScore":68,"line":-16.5,"ts":"2026-11-03T02:53:58.579Z"},
 {"date":"2026-11-02","home":"wright-st","away":"air-force","neutral":false,"homeScore":102,"awayScore":71,"line":-16.5,"ts":"2026-11-03T03:00:50.958Z"},
-{"date":"2026-11-02","home":"xavier","away":"mount-st-mary-s","neutral":false,"homeScore":97,"awayScore":52,"line":-21,"ts":"2026-11-03T02:57:56.324Z"}
+{"date":"2026-11-02","home":"xavier","away":"mount-st-mary-s","neutral":false,"homeScore":97,"awayScore":52,"line":-21,"ts":"2026-11-03T02:57:56.324Z"},
+{"date":"2026-11-02","home":"yale","away":"howard","neutral":false,"homeScore":72,"awayScore":62,"line":-12,"ts":"2026-11-03T04:47:00.556Z"}
 ]
