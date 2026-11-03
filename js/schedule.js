@@ -142,7 +142,7 @@
       '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' + hcaNote(dayGames) + travelNote(dayGames) + altNote(dayGames) +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
-      (tot ? '<div class="g-footnote">Total is the projected combined score, rounded to the nearest 0.5. Hover it to see the exact number. Once a game is final it shows the total going into the game, then the actual total in parentheses: purple if the game went over, white if it went under. Games against non-D1 opponents have no total.</div>' : '') +
+      (tot ? '<div class="g-footnote">Total is the projected combined score, rounded to the nearest 0.5. Hover it to see the exact number. Once a game is final it shows the total going into the game, then the actual total in parentheses. Games against non-D1 opponents have no total.</div>' : '') +
       '</div>';
   }
 
