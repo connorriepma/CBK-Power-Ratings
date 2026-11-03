@@ -1,6 +1,7 @@
 [
 {"date":"2026-11-01","home":"notre-dame","away":"villanova","neutral":true,"homeScore":74,"awayScore":72,"line":6.5,"ts":"2026-11-01T19:52:46.165Z"},
 {"date":"2026-11-02","home":"appalachian-st","away":"merrimack","neutral":true,"homeScore":63,"awayScore":49,"line":-1.5,"ts":"2026-11-02T19:01:12.669Z"},
+{"date":"2026-11-02","home":"george-mason","away":"umbc","neutral":false,"homeScore":82,"awayScore":54,"line":-15.5,"ts":"2026-11-03T00:27:41.038Z"},
 {"date":"2026-11-02","home":"high-point","away":"liberty","neutral":true,"homeScore":72,"awayScore":57,"line":-3,"ts":"2026-11-02T19:00:36.837Z"},
 {"date":"2026-11-02","home":"hofstra","away":"non-d1-opponent","neutral":false,"homeScore":97,"awayScore":51,"line":null,"ts":"2026-11-02T19:02:17.299Z"},
 {"date":"2026-11-02","home":"iu-indy","away":"non-d1-opponent","neutral":false,"homeScore":113,"awayScore":76,"line":null,"ts":"2026-11-02T19:01:50.500Z"},
