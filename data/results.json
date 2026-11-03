@@ -86,6 +86,7 @@
 {"date":"2026-11-02","home":"texas","away":"chicago-st","neutral":false,"homeScore":109,"awayScore":59,"line":-35,"ts":"2026-11-03T04:32:52.348Z"},
 {"date":"2026-11-02","home":"troy","away":"umass","neutral":false,"homeScore":60,"awayScore":71,"line":-2.5,"ts":"2026-11-03T02:59:29.301Z"},
 {"date":"2026-11-02","home":"tulane","away":"ut-martin","neutral":false,"homeScore":100,"awayScore":98,"line":-9,"ts":"2026-11-03T04:41:57.454Z"},
+{"date":"2026-11-02","home":"tulsa","away":"non-d1-opponent","neutral":false,"homeScore":98,"awayScore":50,"line":null,"ts":"2026-11-03T04:42:09.738Z"},
 {"date":"2026-11-02","home":"uab","away":"mcneese","neutral":true,"homeScore":78,"awayScore":99,"line":1.5,"ts":"2026-11-03T00:42:52.500Z"},
 {"date":"2026-11-02","home":"ualbany","away":"non-d1-opponent","neutral":false,"homeScore":74,"awayScore":67,"line":null,"ts":"2026-11-03T01:49:56.950Z"},
 {"date":"2026-11-02","home":"uconn","away":"gardner-webb","neutral":false,"homeScore":86,"awayScore":46,"line":-34.5,"ts":"2026-11-03T04:33:04.799Z"},
