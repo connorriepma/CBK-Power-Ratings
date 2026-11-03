@@ -79,7 +79,7 @@
       panelRow.className = 'schedule-row';
       panelRow.hidden = true;
       var td = document.createElement('td');
-      td.colSpan = 9;
+      td.colSpan = 8;
       panelRow.appendChild(td);
 
       function toggle() {
