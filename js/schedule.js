@@ -63,8 +63,8 @@
       if (!l) return '<div class="g-total"></div>';
       var line = Tm.roundHalf(l.pred), actual = l.actual;
       var res = actual > line ? 'Over' : actual < line ? 'Under' : 'Push';
-      return '<div class="g-total done" title="Exact total going in: ' + l.pred.toFixed(2) + '">' + line.toFixed(1) +
-        ' <span class="g-tot-res">(' + actual + ' &middot; ' + res + ')</span></div>';
+      return '<div class="g-total done ' + res.toLowerCase() + '" title="Final total ' + actual + ' (' + res + '). Exact total going in: ' +
+        l.pred.toFixed(2) + '">' + line.toFixed(1) + '</div>';
     }
     var hk = C.teamKey(g.home), ak = C.teamKey(g.away), h = tot.base.teams[hk], a = tot.base.teams[ak];
     if (!h || !a) return '<div class="g-total"></div>';
@@ -142,7 +142,7 @@
       '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' + hcaNote(dayGames) + travelNote(dayGames) + altNote(dayGames) +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
-      (tot ? '<div class="g-footnote">Total is the projected combined score, rounded to the nearest 0.5. Hover it to see the exact number. Once a game is final it keeps the total going into the game, with the actual total and Over/Under in parentheses. Games against non-D1 opponents have no total.</div>' : '') +
+      (tot ? '<div class="g-footnote">Total is the projected combined score, rounded to the nearest 0.5. Hover it to see the exact number. Once a game is final it keeps the total going into the game: purple if the game went over, white if it went under (hover for the final total). Games against non-D1 opponents have no total.</div>' : '') +
       '</div>';
   }
 

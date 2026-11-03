@@ -8,4 +8,5 @@
   .g-row.has-total .g-total:not(:empty)::before { content: "Total "; }
   .g-row.has-total .g-prob { grid-row: 1 / span 3; }
 }
-.g-total.done .g-tot-res { font-weight: 400; font-size: 12px; color: var(--muted); }
+.g-total.done { color: var(--ink); }
+.g-total.done.over { color: var(--paint); }
