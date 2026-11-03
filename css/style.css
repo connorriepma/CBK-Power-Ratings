@@ -749,3 +749,20 @@ body.has-ticker .sidebar { top: 52px; }
   #view-misses td::before { content: attr(data-l); font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); flex: 0 0 84px; }
   #view-misses td > * { text-align: right; }
 }
+
+/* Movers page */
+.mv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 14px; }
+.mv-grid .hx-card { margin-bottom: 0; overflow-x: auto; }
+.mv-h { font-family: var(--cond); font-size: 20px; margin: 0 0 10px; }
+.mv-up { color: var(--paint); }
+.mv-down { color: var(--paint-2); }
+.mv-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.mv-table th { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted); padding: 4px 8px; border-bottom: 1px solid var(--wood-line); }
+.mv-table td { padding: 7px 8px; border-bottom: 1px solid var(--wood-line); }
+.mv-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.mv-table th.num { text-align: right; }
+.mv-pos { color: var(--paint); font-weight: 600; }
+.mv-neg { color: var(--paint-2); font-weight: 600; }
+.mv-empty { color: var(--muted); font-style: italic; }
+.mv-more { margin-bottom: 10px; }
+@media (max-width: 900px) { .mv-grid { grid-template-columns: 1fr; } }
