@@ -6,11 +6,14 @@ window.CBKGames = (function () {
   var esc = C.esc;
 
   function lineHTML(model, g) {
+    // Finished games keep the spread that was locked when the score was first saved (the final score
+    // itself is shown in the win % column). No locked spread (non-D1 game, or saved without one): a dash.
     if (g.result) {
-      var homeWon = g.result.home > g.result.away;
-      var win = homeWon ? g.home : g.away, winPts = homeWon ? g.result.home : g.result.away;
-      var lose = homeWon ? g.away : g.home, losePts = homeWon ? g.result.away : g.result.home;
-      return '<div class="g-line final">Final &middot; ' + esc(win) + ' ' + winPts + ', ' + esc(lose) + ' ' + losePts + '</div>';
+      var L = g.lineAtEntry;
+      if (typeof L !== 'number') return '<div class="g-line none" title="No spread was saved with this result">&mdash;</div>';
+      if (L === 0) return '<div class="g-line pk" title="Spread when the score was saved: PK">PK</div>';
+      var favL = L < 0 ? g.home : g.away;
+      return '<div class="g-line fav" title="Spread when the score was saved">' + esc(favL) + ' -' + Math.abs(L).toFixed(1) + '</div>';
     }
     var spread = model.homeSpread(g);
     if (spread === null) return '<div class="g-line none">&mdash;</div>';
@@ -22,7 +25,13 @@ window.CBKGames = (function () {
   }
 
   function probHTML(model, g) {
-    if (g.result) return '<div class="g-prob"></div>';
+    if (g.result) {
+      var homeWon = g.result.home > g.result.away;
+      var win = homeWon ? g.home : g.away, winPts = homeWon ? g.result.home : g.result.away;
+      var lose = homeWon ? g.away : g.home, losePts = homeWon ? g.result.away : g.result.home;
+      return '<div class="g-prob final" title="Final score">' +
+        '<div class="fin-w">' + esc(win) + ' ' + winPts + '</div><div class="fin-l">' + esc(lose) + ' ' + losePts + '</div></div>';
+    }
     var wp = model.winProb(g);
     if (!wp) {
       var nh = g.home === C.NON_D1, na = g.away === C.NON_D1;

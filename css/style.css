@@ -232,6 +232,9 @@ footer a { color: var(--paint); }
 .g-line.final { color: var(--ink); font-weight: 600; font-size: 12px; }
 .g-prob { text-align: right; font-variant-numeric: tabular-nums; font-size: 13.5px; }
 .g-prob .g-fav { font-weight: 700; color: var(--paint); }
+.g-prob.final { font-size: 12.5px; line-height: 1.3; }
+.g-prob.final .fin-w { font-weight: 700; color: var(--ink); }
+.g-prob.final .fin-l { color: var(--muted); }
 .g-tag {
   font-family: var(--cond);
   font-size: 10.5px;

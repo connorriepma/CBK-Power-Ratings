@@ -125,7 +125,7 @@
     return '<div class="day-group">' +
       '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '</div>' +
       '<div class="schedule-list">' +
-      '<div class="g-head day' + (tot ? ' has-total' : '') + '"><div></div><div>Matchup</div><div>Spread / Final</div>' + (tot ? '<div class="r">Total</div>' : '') + '<div class="r">Win % (away / home)</div></div>' +
+      '<div class="g-head day' + (tot ? ' has-total' : '') + '"><div></div><div>Matchup</div><div>Spread</div>' + (tot ? '<div class="r">Total</div>' : '') + '<div class="r">Win % / Final</div></div>' +
       dayGames.map(gameRowHTML).join('') + '</div>' +
       '<div class="g-footnote">* designates neutral site &middot; line shown is the home team&rsquo;s</div>' + hcaNote(dayGames) + travelNote(dayGames) + altNote(dayGames) +
       '<div class="g-footnote">Win % comes from the predicted margin: a typical game lands about ' + C.SIGMA +
