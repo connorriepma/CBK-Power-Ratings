@@ -1,6 +1,6 @@
 /* Totals column on the Schedule tab. Applied only when the totals data loads. */
-.g-row.has-total { grid-template-columns: 44px 1fr minmax(130px, 190px) 64px 150px; }
-.g-head.has-total { grid-template-columns: 44px 1fr minmax(130px, 190px) 64px 150px; }
+.g-row.has-total { grid-template-columns: 44px 1fr minmax(130px, 190px) 150px 150px; }
+.g-head.has-total { grid-template-columns: 44px 1fr minmax(130px, 190px) 150px 150px; }
 .g-total { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
 @media (max-width: 760px) {
   .g-row.has-total { grid-template-columns: 44px 1fr auto; }
@@ -8,3 +8,4 @@
   .g-row.has-total .g-total:not(:empty)::before { content: "Total "; }
   .g-row.has-total .g-prob { grid-row: 1 / span 3; }
 }
+.g-total.done .g-tot-res { font-weight: 400; font-size: 12px; color: var(--muted); }
