@@ -44,5 +44,6 @@
 {"date":"2026-11-02","home":"utep","away":"northern-kentucky","neutral":true,"homeScore":76,"awayScore":84,"line":-1.5,"ts":"2026-11-02T21:48:23.130Z"},
 {"date":"2026-11-02","home":"vmi","away":"non-d1-opponent","neutral":false,"homeScore":115,"awayScore":83,"line":null,"ts":"2026-11-03T01:51:36.544Z"},
 {"date":"2026-11-02","home":"west-florida","away":"non-d1-opponent","neutral":false,"homeScore":127,"awayScore":40,"line":null,"ts":"2026-11-03T01:48:44.991Z"},
-{"date":"2026-11-02","home":"winthrop","away":"queens","neutral":true,"homeScore":98,"awayScore":103,"line":-3.5,"ts":"2026-11-02T19:01:26.734Z"}
+{"date":"2026-11-02","home":"winthrop","away":"queens","neutral":true,"homeScore":98,"awayScore":103,"line":-3.5,"ts":"2026-11-02T19:01:26.734Z"},
+{"date":"2026-11-02","home":"wisconsin","away":"denver","neutral":false,"homeScore":75,"awayScore":68,"line":-16.5,"ts":"2026-11-03T02:53:58.579Z"}
 ]
