@@ -13,6 +13,7 @@
   var confOnly = document.getElementById('conf-only');
   var teamSearch = document.getElementById('team-search');
   var searchDate = null;
+  var dayAll = [], dayDate = null; // the games on the day being shown (conference filters applied, search ignored)
   var top25 = document.getElementById('top25-only');
   var prevBtn = document.getElementById('day-prev');
   var nextBtn = document.getElementById('day-next');
@@ -125,17 +126,29 @@
       ? '<div class="g-footnote">&#9968;&#xFE0F; played at altitude (host campus at or above ' + C.ALTITUDE_FT.toLocaleString('en-US') + ' ft). A note only; ratings and spreads are not adjusted.</div>' : '';
   }
 
+  // "23/25 final": how many of the day's games have a final score entered. Not shown for days still in the future
+  // with nothing entered.
+  function finalCountText() {
+    var finals = dayAll.filter(function (g) { return g.result; }).length;
+    if (!finals && dayDate > todayISO()) return '';
+    return ' &middot; ' + finals + '/' + dayAll.length + ' final';
+  }
+  function updateFinalCount() {
+    var el = master.querySelector('.final-count');
+    if (el) el.innerHTML = finalCountText();
+  }
+
   function dayHTML(date, dayGames, total) {
     var n = dayGames.length;
     var count = (total && total !== n ? n + ' of ' + total : n) + ' game' + ((total || n) === 1 ? '' : 's');
     if (entryMode) {
       return '<div class="day-group">' +
-        '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '</div>' +
+        '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '<span class="final-count">' + finalCountText() + '</span></div>' +
         '<div class="schedule-list">' + dayGames.map(entryRowHTML).join('') + '</div>' +
         '<div class="g-footnote">* designates neutral site &middot; scores are entered away first, then home</div>' + hcaNote(dayGames) + travelNote(dayGames) + altNote(dayGames) + '</div>';
     }
     return '<div class="day-group">' +
-      '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '</div>' +
+      '<div class="day-header">' + fmtDayHeader(date) + ' &middot; ' + count + '<span class="final-count">' + finalCountText() + '</span></div>' +
       '<div class="schedule-list">' +
       '<div class="g-head day' + (tot ? ' has-total' : '') + '"><div></div><div>Matchup</div><div>Spread</div>' + (tot ? '<div class="r">Total</div>' : '') + '<div class="r">Win % / Final</div></div>' +
       dayGames.map(gameRowHTML).join('') + '</div>' +
@@ -158,13 +171,14 @@
     dayIndex = Math.max(0, Math.min(dates.length - 1, index));
     var date = dates[dayIndex];
     var allDay = Games.sortBestFirst(model, filteredGames().filter(function (g) { return g.date === date; }));
+    dayAll = allDay; dayDate = date;
     // A new day starts with a clean search box.
     if (date !== searchDate) { teamSearch.value = ''; searchDate = date; }
     teamSearch.hidden = false;
     var q = normName(teamSearch.value);
     var dayGames = q ? allDay.filter(function (g) { return normName(g.home).indexOf(q) !== -1 || normName(g.away).indexOf(q) !== -1; }) : allDay;
     master.innerHTML = q && !dayGames.length
-      ? '<div class="day-group"><div class="day-header">' + fmtDayHeader(date) + ' &middot; 0 of ' + allDay.length + ' games</div><div class="schedule-empty">No team on this day matches &ldquo;' + esc(teamSearch.value.trim()) + '&rdquo;</div></div>'
+      ? '<div class="day-group"><div class="day-header">' + fmtDayHeader(date) + ' &middot; 0 of ' + allDay.length + ' games<span class="final-count">' + finalCountText() + '</span></div><div class="schedule-empty">No team on this day matches &ldquo;' + esc(teamSearch.value.trim()) + '&rdquo;</div></div>'
       : dayHTML(date, dayGames, allDay.length);
     daySelect.value = String(dayIndex);
     prevBtn.disabled = dayIndex === 0;
@@ -287,7 +301,7 @@
     var hk = C.teamKey(g.home), ak = C.teamKey(g.away);
     var label = g.away + ' @ ' + g.home + ' (' + g.date + ')';
 
-    function done(rows) { model.setResults(rows); mark.textContent = '\u2713'; mark.title = 'Saved'; setNote('', false); }
+    function done(rows) { model.setResults(rows); updateFinalCount(); mark.textContent = '\u2713'; mark.title = 'Saved'; setNote('', false); }
     function failed(err) { mark.textContent = '!'; mark.title = errorText(err); setNote(errorText(err), true); }
 
     if (away === null && home === null) {
