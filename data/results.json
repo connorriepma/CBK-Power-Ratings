@@ -206,6 +206,7 @@
 {"date":"2026-11-03","home":"south-carolina","away":"stetson","neutral":false,"homeScore":81,"awayScore":55,"line":-20,"ts":"2026-11-04T06:28:37.873Z"},
 {"date":"2026-11-03","home":"tennessee","away":"wofford","neutral":false,"homeScore":90,"awayScore":59,"line":-27,"ts":"2026-11-04T06:35:39.004Z"},
 {"date":"2026-11-03","home":"texas-a-m","away":"alabama-st","neutral":false,"homeScore":97,"awayScore":66,"line":-25,"ts":"2026-11-04T06:35:44.881Z"},
+{"date":"2026-11-03","home":"uc-irvine","away":"non-d1-opponent","neutral":false,"homeScore":92,"awayScore":66,"line":null,"ts":"2026-11-04T06:39:40.488Z"},
 {"date":"2026-11-03","home":"unc-greensboro","away":"non-d1-opponent","neutral":false,"homeScore":96,"awayScore":43,"line":null,"ts":"2026-11-04T06:36:15.905Z"},
 {"date":"2026-11-03","home":"unlv","away":"northern-arizona","neutral":false,"homeScore":89,"awayScore":77,"line":-15,"ts":"2026-11-04T06:29:21.824Z"},
 {"date":"2026-11-03","home":"virginia-tech","away":"coppin-st","neutral":false,"homeScore":88,"awayScore":54,"line":-32.5,"ts":"2026-11-04T06:34:53.305Z"},
