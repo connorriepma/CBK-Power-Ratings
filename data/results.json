@@ -182,5 +182,14 @@
 {"date":"2026-11-02","home":"wisconsin","away":"denver","neutral":false,"homeScore":75,"awayScore":68,"line":-16.5,"ts":"2026-11-03T02:53:58.579Z"},
 {"date":"2026-11-02","home":"wright-st","away":"air-force","neutral":false,"homeScore":102,"awayScore":71,"line":-16.5,"ts":"2026-11-03T03:00:50.958Z"},
 {"date":"2026-11-02","home":"xavier","away":"mount-st-mary-s","neutral":false,"homeScore":97,"awayScore":52,"line":-21,"ts":"2026-11-03T02:57:56.324Z"},
-{"date":"2026-11-02","home":"yale","away":"howard","neutral":false,"homeScore":72,"awayScore":62,"line":-12,"ts":"2026-11-03T04:47:00.556Z"}
+{"date":"2026-11-02","home":"yale","away":"howard","neutral":false,"homeScore":72,"awayScore":62,"line":-12,"ts":"2026-11-03T04:47:00.556Z"},
+{"date":"2026-11-03","home":"cal-baptist","away":"north-florida","neutral":false,"homeScore":63,"awayScore":71,"line":-14,"ts":"2026-11-04T06:28:45.705Z"},
+{"date":"2026-11-03","home":"duquesne","away":"purdue-fort-wayne","neutral":false,"homeScore":78,"awayScore":71,"line":-10,"ts":"2026-11-04T06:27:23.159Z"},
+{"date":"2026-11-03","home":"iowa","away":"lipscomb","neutral":false,"homeScore":76,"awayScore":54,"line":-23.5,"ts":"2026-11-04T06:28:31.040Z"},
+{"date":"2026-11-03","home":"kansas-st","away":"south-dakota-st","neutral":false,"homeScore":66,"awayScore":68,"line":-12.5,"ts":"2026-11-04T06:29:03.206Z"},
+{"date":"2026-11-03","home":"portland-st","away":"non-d1-opponent","neutral":false,"homeScore":111,"awayScore":59,"line":null,"ts":"2026-11-04T06:29:27.439Z"},
+{"date":"2026-11-03","home":"rhode-island","away":"holy-cross","neutral":false,"homeScore":103,"awayScore":59,"line":-18,"ts":"2026-11-04T06:27:30.923Z"},
+{"date":"2026-11-03","home":"san-diego-st","away":"cal-st-fullerton","neutral":false,"homeScore":102,"awayScore":78,"line":-10,"ts":"2026-11-04T06:29:44.056Z"},
+{"date":"2026-11-03","home":"south-carolina","away":"stetson","neutral":false,"homeScore":81,"awayScore":55,"line":-20,"ts":"2026-11-04T06:28:37.873Z"},
+{"date":"2026-11-03","home":"unlv","away":"northern-arizona","neutral":false,"homeScore":89,"awayScore":77,"line":-15,"ts":"2026-11-04T06:29:21.824Z"}
 ]
