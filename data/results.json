@@ -188,5 +188,6 @@
 {"date":"2026-11-03","home":"iowa","away":"lipscomb","neutral":false,"homeScore":76,"awayScore":54,"line":-23.5,"ts":"2026-11-04T06:28:31.040Z"},
 {"date":"2026-11-03","home":"kansas-st","away":"south-dakota-st","neutral":false,"homeScore":66,"awayScore":68,"line":-12.5,"ts":"2026-11-04T06:29:03.206Z"},
 {"date":"2026-11-03","home":"rhode-island","away":"holy-cross","neutral":false,"homeScore":103,"awayScore":59,"line":-18,"ts":"2026-11-04T06:27:30.923Z"},
-{"date":"2026-11-03","home":"south-carolina","away":"stetson","neutral":false,"homeScore":81,"awayScore":55,"line":-20,"ts":"2026-11-04T06:28:37.873Z"}
+{"date":"2026-11-03","home":"south-carolina","away":"stetson","neutral":false,"homeScore":81,"awayScore":55,"line":-20,"ts":"2026-11-04T06:28:37.873Z"},
+{"date":"2026-11-03","home":"unlv","away":"northern-arizona","neutral":false,"homeScore":89,"awayScore":77,"line":-15,"ts":"2026-11-04T06:29:21.824Z"}
 ]
