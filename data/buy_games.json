@@ -55,7 +55,7 @@
    "home": "illinois",
    "away": "penn",
    "favorite": "illinois",
-   "bonus": 4
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
@@ -83,14 +83,14 @@
    "home": "michigan-st",
    "away": "toledo",
    "favorite": "michigan-st",
-   "bonus": 3
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
    "home": "mississippi-st",
    "away": "northwestern-st",
    "favorite": "mississippi-st",
-   "bonus": 4
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
@@ -104,28 +104,28 @@
    "home": "notre-dame",
    "away": "mercyhurst",
    "favorite": "notre-dame",
-   "bonus": 4
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
    "home": "penn-st",
    "away": "chattanooga",
    "favorite": "penn-st",
-   "bonus": 4
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
    "home": "pittsburgh",
    "away": "buffalo",
    "favorite": "pittsburgh",
-   "bonus": 3
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
    "home": "seton-hall",
    "away": "long-island",
    "favorite": "seton-hall",
-   "bonus": 4
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
@@ -174,7 +174,7 @@
    "home": "utah",
    "away": "towson",
    "favorite": "utah",
-   "bonus": 4
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
@@ -188,7 +188,7 @@
    "home": "virginia-tech",
    "away": "mercer",
    "favorite": "virginia-tech",
-   "bonus": 4
+   "bonus": 0
   },
   {
    "date": "2026-11-06",
