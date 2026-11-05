@@ -62,5 +62,21 @@
   "confidence": "Low",
   "modelLine": 12,
   "ts": "2026-11-02T02:26:45.172Z"
+ },
+ {
+  "id": "2026-11-06_boston-college_umass_boston-college",
+  "gameId": "2026-11-06_boston-college_umass",
+  "date": "2026-11-06",
+  "home": "Boston College",
+  "away": "UMass",
+  "neutral": true,
+  "pick": "Boston College",
+  "line": -5.5,
+  "odds": -112,
+  "units": 1,
+  "book": "Draft Kings",
+  "confidence": "Low",
+  "modelLine": -9.5,
+  "ts": "2026-11-05T23:44:03.062Z"
  }
 ]
