@@ -151,7 +151,7 @@ def classify(games, names: Names, schedule, results, now_iso):
             unresolved = [n for n, r in ((g["homeTeam"], h), (g["awayTeam"], a)) if r is None] if (h is None) != (a is None) else []
             why = "no schedule row matches" if not cands else "more than one schedule row matches"
             hint = f' (unrecognized name: {", ".join(unresolved)}: if it is a D1 team, add it to data/ingest_aliases.json)' if unresolved and not cands else ""
-            row.update(status="UNMATCHED", note=why + hint)
+            row.update(status="UNMATCHED", note=why + hint + f' [API startDate {g["startDate"]}, neutralSite={g.get("neutralSite")}, resolved {h} / {a}]')
             continue
         s = cands[0]
         pts = {g["homeTeam"]: g["homePoints"], g["awayTeam"]: g["awayPoints"]}
@@ -169,6 +169,7 @@ def classify(games, names: Names, schedule, results, now_iso):
         if bool(g.get("neutralSite")) != bool(s["neutral"]):
             row["note"] = f'neutral-site flag differs (API {g.get("neutralSite")}, schedule {s["neutral"]}); schedule used. '
         row["sched"] = f'{s["date"]} {s["away"]} @ {s["home"]}'
+        row["rid"] = rid
         old = existing.get(rid)
         if old:
             same = old["homeScore"] == home_score and old["awayScore"] == away_score
@@ -197,7 +198,17 @@ def serialize(rows: list[dict]) -> str:
     return "[\n" + ",\n".join(json.dumps(r, separators=(",", ":"), ensure_ascii=False) for r in ordered) + "\n]\n"
 
 
-def report(rows, new, dry: bool) -> str:
+def entered_not_in_api(rows, results, games):
+    """Games you entered, dated inside the pulled window, that the API did not return as a matched game."""
+    if not games:
+        return []
+    dates = [d for g in games for d in local_dates(g["startDate"])]
+    lo, hi = min(dates), max(dates)
+    matched = {r["rid"] for r in rows if r.get("rid")}
+    return [r for r in results if lo <= r["date"] <= hi and result_id(r["date"], r["home"], r["away"]) not in matched]
+
+
+def report(rows, new, dry: bool, missing=None) -> str:
     counts: dict[str, int] = {}
     for r in rows:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
@@ -213,6 +224,11 @@ def report(rows, new, dry: bool) -> str:
         else:
             for r in sel:
                 out.append(f'- {r["label"]}  {r["score"]}  {r["note"]}'.rstrip())
+        out.append("")
+    if missing:
+        out += [f"### ENTERED BY YOU, NOT MATCHED TO AN API GAME ({len(missing)})", ""]
+        for r in missing:
+            out.append(f'- {r["date"]} {r["away"]} @ {r["home"]}  you entered {r["awayScore"]}-{r["homeScore"]} (away-home)')
         out.append("")
     return "\n".join(out)
 
@@ -236,7 +252,7 @@ def main() -> int:
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     rows, new = classify(games, names, schedule, results, now_iso)
 
-    text = report(rows, new, dry=not args.write)
+    text = report(rows, new, dry=not args.write, missing=entered_not_in_api(rows, results, games))
     print(text)
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
