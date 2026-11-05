@@ -213,5 +213,6 @@
 {"date":"2026-11-03","home":"virginia","away":"drexel","neutral":false,"homeScore":89,"awayScore":60,"line":-26,"ts":"2026-11-04T06:30:49.660Z"},
 {"date":"2026-11-03","home":"wyoming","away":"non-d1-opponent","neutral":false,"homeScore":95,"awayScore":48,"line":null,"ts":"2026-11-04T06:35:05.738Z"},
 {"date":"2026-11-04","home":"california","away":"radford","neutral":false,"homeScore":84,"awayScore":70,"line":-18,"ts":"2026-11-05T16:46:33.348Z"},
-{"date":"2026-11-04","home":"saint-joseph-s","away":"longwood","neutral":false,"homeScore":82,"awayScore":73,"line":-11,"ts":"2026-11-05T16:46:16.799Z"}
+{"date":"2026-11-04","home":"saint-joseph-s","away":"longwood","neutral":false,"homeScore":82,"awayScore":73,"line":-11,"ts":"2026-11-05T16:46:16.799Z"},
+{"date":"2026-11-04","home":"wichita-st","away":"cal-st-northridge","neutral":false,"homeScore":79,"awayScore":67,"line":-12,"ts":"2026-11-05T16:46:48.664Z"}
 ]
