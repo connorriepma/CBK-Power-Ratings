@@ -87,7 +87,10 @@ def fetch_games(key: str, days: int) -> list[dict]:
 
 def local_dates(start_iso: str) -> list[str]:
     t = datetime.fromisoformat(start_iso.replace("Z", "+00:00"))
-    return sorted({t.astimezone(EASTERN).date().isoformat(), t.astimezone(PACIFIC).date().isoformat()})
+    # Eastern and Pacific, plus the UTC date: the API sometimes stamps a game at a placeholder time
+    # (e.g. 04:59 UTC) that lands on the day before the real game date in US time.
+    return sorted({t.astimezone(EASTERN).date().isoformat(), t.astimezone(PACIFIC).date().isoformat(),
+                   t.astimezone(timezone.utc).date().isoformat()})
 
 
 def result_id(date: str, a: str, b: str) -> str:

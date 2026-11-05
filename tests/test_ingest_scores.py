@@ -34,8 +34,18 @@ class IngestTests(unittest.TestCase):
     def test_new_game_matches_manual_entry_format(self):
         rows, new = run([api("Duke", "Army", 90, 55)])      # 00:30Z Nov 3 = Nov 2 evening in the US
         self.assertEqual(rows[0]["status"], "NEW")
+        self.assertEqual(len(new), 1)
+        line = new[0].pop("line")                      # depends on current ratings, so only check it is a home-favored line
+        self.assertTrue(isinstance(line, float) and line < 0)
         self.assertEqual(new, [{"date": "2026-11-02", "home": "duke", "away": "army", "neutral": False,
-                                "homeScore": 90, "awayScore": 55, "line": -38.5, "ts": NOW}])
+                                "homeScore": 90, "awayScore": 55, "ts": NOW}])
+
+    def test_placeholder_start_time_uses_utc_date(self):
+        g = api("Duke", "Army", 90, 55)
+        g["startDate"] = "2026-11-02T04:59:00.000Z"    # API placeholder time: US date would be Nov 1, game date is Nov 2
+        rows, new = run([g])
+        self.assertEqual(rows[0]["status"], "NEW")
+        self.assertEqual(new[0]["date"], "2026-11-02")
 
     def test_serialize_matches_site_format(self):
         text = ing.serialize([{"date": "2026-11-02", "home": "duke", "away": "army", "neutral": False,
