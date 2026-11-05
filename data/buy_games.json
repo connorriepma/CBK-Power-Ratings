@@ -1,0 +1,194 @@
+{
+ "_note": "Buy-game adjustments for PUBLISHED LINES ONLY (never ratings). bonus = points added to the favorite's line for that game. bonus 0 records a game that was reviewed and left alone. favorite/home/away are team keys.",
+ "games": [
+  {
+   "date": "2026-11-05",
+   "home": "arizona",
+   "away": "cal-poly",
+   "favorite": "arizona",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "cincinnati",
+   "away": "green-bay",
+   "favorite": "cincinnati",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "creighton",
+   "away": "le-moyne",
+   "favorite": "creighton",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "duke",
+   "away": "coastal-carolina",
+   "favorite": "duke",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "florida",
+   "away": "jacksonville",
+   "favorite": "florida",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "illinois",
+   "away": "penn",
+   "favorite": "illinois",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "indiana",
+   "away": "bellarmine",
+   "favorite": "indiana",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "mississippi-st",
+   "away": "northwestern-st",
+   "favorite": "mississippi-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "notre-dame",
+   "away": "mercyhurst",
+   "favorite": "notre-dame",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "penn-st",
+   "away": "chattanooga",
+   "favorite": "penn-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "seton-hall",
+   "away": "long-island",
+   "favorite": "seton-hall",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "smu",
+   "away": "vmi",
+   "favorite": "smu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "syracuse",
+   "away": "central-connecticut",
+   "favorite": "syracuse",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "texas",
+   "away": "gardner-webb",
+   "favorite": "texas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "texas-tech",
+   "away": "bethune-cookman",
+   "favorite": "texas-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "utah",
+   "away": "towson",
+   "favorite": "utah",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "virginia-tech",
+   "away": "mercer",
+   "favorite": "virginia-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "michigan-st",
+   "away": "toledo",
+   "favorite": "michigan-st",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-05",
+   "home": "pittsburgh",
+   "away": "buffalo",
+   "favorite": "pittsburgh",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-05",
+   "home": "charlotte",
+   "away": "georgia-st",
+   "favorite": "charlotte",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "fordham",
+   "away": "stonehill",
+   "favorite": "fordham",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "iona",
+   "away": "njit",
+   "favorite": "iona",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "loyola-chicago",
+   "away": "west-georgia",
+   "favorite": "loyola-chicago",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "navy",
+   "away": "delaware-st",
+   "favorite": "navy",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "tulane",
+   "away": "jackson-st",
+   "favorite": "tulane",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "tulsa",
+   "away": "northern-illinois",
+   "favorite": "tulsa",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "vanderbilt",
+   "away": "wake-forest",
+   "favorite": "vanderbilt",
+   "bonus": 0
+  }
+ ]
+}

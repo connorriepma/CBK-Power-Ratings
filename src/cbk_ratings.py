@@ -119,6 +119,33 @@ def home_bonus(game_mods: dict | None, g: dict) -> float:
     return total
 
 
+def load_buy_games() -> dict:
+    """Buy-game adjustments from data/buy_games.json: game id -> (favorite key, bonus points).
+
+    Published lines only. They never enter replay() or any rating.
+    """
+    try:
+        raw = load_json("buy_games.json")
+    except FileNotFoundError:
+        return {}
+    out = {}
+    for e in raw.get("games", []):
+        if e.get("bonus"):
+            out[game_id(e["date"], e["home"], e["away"])] = (e["favorite"], float(e["bonus"]))
+    return out
+
+
+def buy_adjusted_margin(margin: float, date: str, home: str, away: str, buy: dict | None) -> float:
+    """Add the buy-game bonus (if any) to the home margin, toward the named favorite."""
+    if not buy:
+        return margin
+    hit = buy.get(game_id(date, home, away))
+    if not hit:
+        return margin
+    favorite, bonus = hit
+    return margin + (bonus if favorite == home else -bonus)
+
+
 def build_game_mods(schedule: list[dict], teams: list[dict]) -> dict:
     """Modified home-court games from schedule.json (the optional hcaMod field).
 

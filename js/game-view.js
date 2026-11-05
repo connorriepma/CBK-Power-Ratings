@@ -21,6 +21,8 @@ window.CBKGames = (function () {
     var m = model.exactMargin(g);
     var fav = spread > 0 ? g.home : g.away;
     var tip = 'Exact line: ' + (m > 0 ? g.home : g.away) + ' -' + Math.abs(m).toFixed(2);
+    var bg = model.buyGame && model.buyGame(g);
+    if (bg) tip += ' (includes +' + bg.bonus + ' buy-game adjustment; ratings are unchanged)';
     return '<div class="g-line fav" title="' + esc(tip) + '">' + esc(fav) + ' -' + Math.abs(spread).toFixed(1) + '</div>';
   }
 

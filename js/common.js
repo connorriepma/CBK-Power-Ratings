@@ -182,8 +182,19 @@ window.CBK = (function () {
     return { rec: rec, ats: ats, any: any };
   }
 
-  function build(teamList, cfgRaw, schedule, tbdGames, resultRows) {
+  // Buy-game adjustments (data/buy_games.json): points added to the favorite's PUBLISHED line for one game.
+  // They never touch ratings. Returns gameId -> { favorite, bonus }.
+  function parseBuyGames(raw) {
+    var out = {};
+    ((raw && raw.games) || []).forEach(function (e) {
+      if (typeof e.bonus === 'number' && e.bonus !== 0) out[gameId(e.date, e.home, e.away)] = { favorite: e.favorite, bonus: e.bonus };
+    });
+    return out;
+  }
+
+  function build(teamList, cfgRaw, schedule, tbdGames, resultRows, buyRaw) {
     var cfg = parseConfig(cfgRaw);
+    var buy = parseBuyGames(buyRaw);
     var byName = {}, byKey = {}, start = {}, hca = {};
     teamList.forEach(function (t) {
       byName[t.team] = t; byKey[t.key] = t;
@@ -224,12 +235,26 @@ window.CBK = (function () {
       if (typeof document !== 'undefined') document.dispatchEvent(new CustomEvent('cbk-results'));
     };
 
-    // Exact predicted home margin from current ratings, or null if either team is unrated.
-    model.exactMargin = function (g) {
+    // Buy-game adjustment on this game as { favorite (team key), bonus } or null.
+    model.buyGame = function (g) {
+      return buy[gameId(g.date, g.home, g.away)] || null;
+    };
+
+    // Predicted home margin from current ratings alone (no buy-game adjustment), or null if either team is unrated.
+    model.ratingMargin = function (g) {
       var hk = teamKey(g.home), ak = teamKey(g.away);
       var h = model.current[hk], a = model.current[ak], t = byKey[hk];
       if (typeof h !== 'number' || typeof a !== 'number' || !t) return null;
       return h + (g.neutral ? 0 : t.home_court) - a + homeBonus(mods, { date: g.date, home: hk, away: ak });
+    };
+
+    // Published home margin: the rating margin plus any buy-game adjustment toward the named favorite. Null if either team is unrated.
+    model.exactMargin = function (g) {
+      var m = model.ratingMargin(g);
+      if (m === null) return null;
+      var b = model.buyGame(g);
+      if (b) m += (b.favorite === teamKey(g.home) ? 1 : -1) * b.bonus;
+      return m;
     };
 
     // Elevation (ft) of the host campus when a non-neutral game is played at or above ALTITUDE_FT, else 0. A note only.
@@ -289,9 +314,10 @@ window.CBK = (function () {
       getJSON('data/schedule.json'),
       getJSON('data/tbd_games.json'),
       getJSON('data/results.json'),
-      getJSON('data/ap_poll.json').catch(function () { return null; })
+      getJSON('data/ap_poll.json').catch(function () { return null; }),
+      getJSON('data/buy_games.json').catch(function () { return null; })
     ]).then(function (d) {
-      var m = build(d[0], d[1], d[2], d[3], d[4]);
+      var m = build(d[0], d[1], d[2], d[3], d[4], d[6]);
       m.ap = {};
       if (d[5] && d[5].teams) d[5].teams.forEach(function (n, i) { m.ap[n] = i + 1; });
       m.apLabel = d[5] && d[5].label ? d[5].label : '';
@@ -309,6 +335,6 @@ window.CBK = (function () {
   return {
     SIGMA: SIGMA, ALTITUDE_FT: ALTITUDE_FT, NON_D1: NON_D1, normCdf: normCdf, teamKey: teamKey, esc: esc, getJSON: getJSON,
     fmtRating: fmtRating, fmtPct: fmtPct, roundHalf: roundHalf, parseDate: parseDate,
-    gameId: gameId, homeBonus: homeBonus, buildMods: buildMods, replay: replay, parseConfig: parseConfig, blowoutCredit: blowoutCredit, load: load
+    gameId: gameId, homeBonus: homeBonus, buildMods: buildMods, replay: replay, parseConfig: parseConfig, blowoutCredit: blowoutCredit, build: build, load: load
   };
 })();
