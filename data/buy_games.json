@@ -10,6 +10,13 @@
   },
   {
    "date": "2026-11-05",
+   "home": "charlotte",
+   "away": "georgia-st",
+   "favorite": "charlotte",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
    "home": "cincinnati",
    "away": "green-bay",
    "favorite": "cincinnati",
@@ -38,6 +45,13 @@
   },
   {
    "date": "2026-11-05",
+   "home": "fordham",
+   "away": "stonehill",
+   "favorite": "fordham",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
    "home": "illinois",
    "away": "penn",
    "favorite": "illinois",
@@ -52,10 +66,38 @@
   },
   {
    "date": "2026-11-05",
+   "home": "iona",
+   "away": "njit",
+   "favorite": "iona",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "loyola-chicago",
+   "away": "west-georgia",
+   "favorite": "loyola-chicago",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-05",
+   "home": "michigan-st",
+   "away": "toledo",
+   "favorite": "michigan-st",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-05",
    "home": "mississippi-st",
    "away": "northwestern-st",
    "favorite": "mississippi-st",
    "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "navy",
+   "away": "delaware-st",
+   "favorite": "navy",
+   "bonus": 0
   },
   {
    "date": "2026-11-05",
@@ -70,6 +112,13 @@
    "away": "chattanooga",
    "favorite": "penn-st",
    "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
+   "home": "pittsburgh",
+   "away": "buffalo",
+   "favorite": "pittsburgh",
+   "bonus": 3
   },
   {
    "date": "2026-11-05",
@@ -108,69 +157,6 @@
   },
   {
    "date": "2026-11-05",
-   "home": "utah",
-   "away": "towson",
-   "favorite": "utah",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-05",
-   "home": "virginia-tech",
-   "away": "mercer",
-   "favorite": "virginia-tech",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-05",
-   "home": "michigan-st",
-   "away": "toledo",
-   "favorite": "michigan-st",
-   "bonus": 3
-  },
-  {
-   "date": "2026-11-05",
-   "home": "pittsburgh",
-   "away": "buffalo",
-   "favorite": "pittsburgh",
-   "bonus": 3
-  },
-  {
-   "date": "2026-11-05",
-   "home": "charlotte",
-   "away": "georgia-st",
-   "favorite": "charlotte",
-   "bonus": 0
-  },
-  {
-   "date": "2026-11-05",
-   "home": "fordham",
-   "away": "stonehill",
-   "favorite": "fordham",
-   "bonus": 0
-  },
-  {
-   "date": "2026-11-05",
-   "home": "iona",
-   "away": "njit",
-   "favorite": "iona",
-   "bonus": 0
-  },
-  {
-   "date": "2026-11-05",
-   "home": "loyola-chicago",
-   "away": "west-georgia",
-   "favorite": "loyola-chicago",
-   "bonus": 0
-  },
-  {
-   "date": "2026-11-05",
-   "home": "navy",
-   "away": "delaware-st",
-   "favorite": "navy",
-   "bonus": 0
-  },
-  {
-   "date": "2026-11-05",
    "home": "tulane",
    "away": "jackson-st",
    "favorite": "tulane",
@@ -185,16 +171,23 @@
   },
   {
    "date": "2026-11-05",
+   "home": "utah",
+   "away": "towson",
+   "favorite": "utah",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-05",
    "home": "vanderbilt",
    "away": "wake-forest",
    "favorite": "vanderbilt",
    "bonus": 0
   },
   {
-   "date": "2026-11-06",
-   "home": "baylor",
-   "away": "arkansas-pine-bluff",
-   "favorite": "baylor",
+   "date": "2026-11-05",
+   "home": "virginia-tech",
+   "away": "mercer",
+   "favorite": "virginia-tech",
    "bonus": 4
   },
   {
@@ -206,16 +199,23 @@
   },
   {
    "date": "2026-11-06",
-   "home": "george-mason",
-   "away": "coppin-st",
-   "favorite": "george-mason",
+   "home": "baylor",
+   "away": "arkansas-pine-bluff",
+   "favorite": "baylor",
    "bonus": 4
   },
   {
    "date": "2026-11-06",
-   "home": "wisconsin",
-   "away": "delaware",
-   "favorite": "wisconsin",
+   "home": "byu",
+   "away": "omaha",
+   "favorite": "byu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "george-mason",
+   "away": "coppin-st",
+   "favorite": "george-mason",
    "bonus": 4
   },
   {
@@ -227,17 +227,10 @@
   },
   {
    "date": "2026-11-06",
-   "home": "villanova",
-   "away": "holy-cross",
-   "favorite": "villanova",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-06",
-   "home": "kentucky",
-   "away": "james-madison",
-   "favorite": "kentucky",
-   "bonus": 0
+   "home": "iowa-st",
+   "away": "southern-miss",
+   "favorite": "iowa-st",
+   "bonus": 3
   },
   {
    "date": "2026-11-06",
@@ -248,66 +241,10 @@
   },
   {
    "date": "2026-11-06",
-   "home": "oklahoma",
-   "away": "mississippi-valley-st",
-   "favorite": "oklahoma",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-06",
-   "home": "rutgers",
-   "away": "new-haven",
-   "favorite": "rutgers",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-06",
-   "home": "ucla",
-   "away": "north-florida",
-   "favorite": "ucla",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-06",
-   "home": "virginia",
-   "away": "northeastern",
-   "favorite": "virginia",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-06",
-   "home": "texas-a-m",
-   "away": "northern-kentucky",
-   "favorite": "texas-a-m",
+   "home": "kentucky",
+   "away": "james-madison",
+   "favorite": "kentucky",
    "bonus": 0
-  },
-  {
-   "date": "2026-11-06",
-   "home": "byu",
-   "away": "omaha",
-   "favorite": "byu",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-06",
-   "home": "iowa-st",
-   "away": "southern-miss",
-   "favorite": "iowa-st",
-   "bonus": 3
-  },
-  {
-   "date": "2026-11-06",
-   "home": "tcu",
-   "away": "southern",
-   "favorite": "tcu",
-   "bonus": 4
-  },
-  {
-   "date": "2026-11-06",
-   "home": "west-virginia",
-   "away": "stetson",
-   "favorite": "west-virginia",
-   "bonus": 4
   },
   {
    "date": "2026-11-06",
@@ -336,6 +273,1973 @@
    "away": "youngstown-st",
    "favorite": "ohio-st",
    "bonus": 3
+  },
+  {
+   "date": "2026-11-06",
+   "home": "oklahoma",
+   "away": "mississippi-valley-st",
+   "favorite": "oklahoma",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "rutgers",
+   "away": "new-haven",
+   "favorite": "rutgers",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "tcu",
+   "away": "southern",
+   "favorite": "tcu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "texas-a-m",
+   "away": "northern-kentucky",
+   "favorite": "texas-a-m",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-06",
+   "home": "ucla",
+   "away": "north-florida",
+   "favorite": "ucla",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "villanova",
+   "away": "holy-cross",
+   "favorite": "villanova",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "virginia",
+   "away": "northeastern",
+   "favorite": "virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "west-virginia",
+   "away": "stetson",
+   "favorite": "west-virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-06",
+   "home": "wisconsin",
+   "away": "delaware",
+   "favorite": "wisconsin",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-07",
+   "home": "grand-canyon",
+   "away": "bethune-cookman",
+   "favorite": "grand-canyon",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-07",
+   "home": "louisville",
+   "away": "morehead-st",
+   "favorite": "louisville",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-07",
+   "home": "new-mexico",
+   "away": "northern-arizona",
+   "favorite": "new-mexico",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-07",
+   "home": "utah-st",
+   "away": "omaha",
+   "favorite": "utah-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-08",
+   "home": "st-johns",
+   "away": "iona",
+   "favorite": "st-johns",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-09",
+   "home": "miami",
+   "away": "north-florida",
+   "favorite": "miami",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-09",
+   "home": "mississippi-st",
+   "away": "jackson-st",
+   "favorite": "mississippi-st",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-09",
+   "home": "missouri",
+   "away": "siu-edwardsville",
+   "favorite": "missouri",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-09",
+   "home": "notre-dame",
+   "away": "eastern-illinois",
+   "favorite": "notre-dame",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-09",
+   "home": "tennessee",
+   "away": "radford",
+   "favorite": "tennessee",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-09",
+   "home": "texas",
+   "away": "grambling-st",
+   "favorite": "texas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-09",
+   "home": "texas-a-m",
+   "away": "louisiana-monroe",
+   "favorite": "texas-a-m",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-09",
+   "home": "uconn",
+   "away": "wagner",
+   "favorite": "uconn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-09",
+   "home": "washington",
+   "away": "mississippi-valley-st",
+   "favorite": "washington",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "arizona",
+   "away": "northern-arizona",
+   "favorite": "arizona",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "boston-college",
+   "away": "maryland-eastern-shore",
+   "favorite": "boston-college",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-10",
+   "home": "georgetown",
+   "away": "delaware-st",
+   "favorite": "georgetown",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "iowa-st",
+   "away": "southern",
+   "favorite": "iowa-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "murray-st",
+   "away": "alcorn-st",
+   "favorite": "murray-st",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-10",
+   "home": "ole-miss",
+   "away": "se-louisiana",
+   "favorite": "ole-miss",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "providence",
+   "away": "bryant",
+   "favorite": "providence",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "rutgers",
+   "away": "njit",
+   "favorite": "rutgers",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-10",
+   "home": "smu",
+   "away": "prairie-view-a-m",
+   "favorite": "smu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "tcu",
+   "away": "louisiana-monroe",
+   "favorite": "tcu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-10",
+   "home": "virginia",
+   "away": "bucknell",
+   "favorite": "virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-11",
+   "home": "arkansas",
+   "away": "robert-morris",
+   "favorite": "arkansas",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-11",
+   "home": "houston",
+   "away": "jacksonville-st",
+   "favorite": "houston",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-11",
+   "home": "nebraska",
+   "away": "lindenwood",
+   "favorite": "nebraska",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-11",
+   "home": "notre-dame",
+   "away": "south-carolina-st",
+   "favorite": "notre-dame",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-11",
+   "home": "oregon",
+   "away": "mississippi-valley-st",
+   "favorite": "oregon",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-11",
+   "home": "st-johns",
+   "away": "colgate",
+   "favorite": "st-johns",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-11",
+   "home": "ucla",
+   "away": "arkansas-pine-bluff",
+   "favorite": "ucla",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-11",
+   "home": "vcu",
+   "away": "njit",
+   "favorite": "vcu",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-12",
+   "home": "indiana",
+   "away": "tennessee-tech",
+   "favorite": "indiana",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-12",
+   "home": "rhode-island",
+   "away": "maryland-eastern-shore",
+   "favorite": "rhode-island",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-13",
+   "home": "arizona-st",
+   "away": "louisiana-monroe",
+   "favorite": "arizona-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "duke",
+   "away": "siu-edwardsville",
+   "favorite": "duke",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "florida",
+   "away": "merrimack",
+   "favorite": "florida",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "kentucky",
+   "away": "northern-arizona",
+   "favorite": "kentucky",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "miami",
+   "away": "north-alabama",
+   "favorite": "miami",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "oklahoma",
+   "away": "fairleigh-dickinson",
+   "favorite": "oklahoma",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "oregon-st",
+   "away": "mississippi-valley-st",
+   "favorite": "oregon-st",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-13",
+   "home": "rutgers",
+   "away": "bryant",
+   "favorite": "rutgers",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "tcu",
+   "away": "milwaukee",
+   "favorite": "tcu",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-13",
+   "home": "tennessee",
+   "away": "tennessee-st",
+   "favorite": "tennessee",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "vanderbilt",
+   "away": "prairie-view-a-m",
+   "favorite": "vanderbilt",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-13",
+   "home": "virginia-tech",
+   "away": "mount-st-mary-s",
+   "favorite": "virginia-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-14",
+   "home": "grand-canyon",
+   "away": "louisiana-monroe",
+   "favorite": "grand-canyon",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-14",
+   "home": "south-carolina",
+   "away": "gardner-webb",
+   "favorite": "south-carolina",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-14",
+   "home": "south-florida",
+   "away": "coppin-st",
+   "favorite": "south-florida",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-14",
+   "home": "texas-tech",
+   "away": "stonehill",
+   "favorite": "texas-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-14",
+   "home": "villanova",
+   "away": "rider",
+   "favorite": "villanova",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-15",
+   "home": "iowa-st",
+   "away": "niagara",
+   "favorite": "iowa-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-15",
+   "home": "usc",
+   "away": "arkansas-pine-bluff",
+   "favorite": "usc",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-16",
+   "home": "clemson",
+   "away": "the-citadel",
+   "favorite": "clemson",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-16",
+   "home": "kentucky",
+   "away": "grambling-st",
+   "favorite": "kentucky",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-16",
+   "home": "maryland",
+   "away": "alcorn-st",
+   "favorite": "maryland",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-16",
+   "home": "minnesota",
+   "away": "western-illinois",
+   "favorite": "minnesota",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-16",
+   "home": "ohio-st",
+   "away": "prairie-view-a-m",
+   "favorite": "ohio-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-16",
+   "home": "texas-a-m",
+   "away": "se-louisiana",
+   "favorite": "texas-a-m",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "depaul",
+   "away": "maryland-eastern-shore",
+   "favorite": "depaul",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "miami",
+   "away": "rider",
+   "favorite": "miami",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "ole-miss",
+   "away": "nicholls",
+   "favorite": "ole-miss",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "providence",
+   "away": "sacred-heart",
+   "favorite": "providence",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "purdue",
+   "away": "lipscomb",
+   "favorite": "purdue",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "smu",
+   "away": "oral-roberts",
+   "favorite": "smu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "vanderbilt",
+   "away": "eastern-illinois",
+   "favorite": "vanderbilt",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-17",
+   "home": "virginia",
+   "away": "old-dominion",
+   "favorite": "virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "baylor",
+   "away": "jackson-st",
+   "favorite": "baylor",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "cincinnati",
+   "away": "youngstown-st",
+   "favorite": "cincinnati",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "george-mason",
+   "away": "north-carolina-central",
+   "favorite": "george-mason",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-18",
+   "home": "lsu",
+   "away": "louisiana-monroe",
+   "favorite": "lsu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "marquette",
+   "away": "northern-illinois",
+   "favorite": "marquette",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "missouri",
+   "away": "alcorn-st",
+   "favorite": "missouri",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "nebraska",
+   "away": "south-dakota",
+   "favorite": "nebraska",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "san-diego-st",
+   "away": "texas-southern",
+   "favorite": "san-diego-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "st-johns",
+   "away": "siena",
+   "favorite": "st-johns",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-18",
+   "home": "texas-tech",
+   "away": "lsu-new-orleans",
+   "favorite": "texas-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-19",
+   "home": "louisville",
+   "away": "stetson",
+   "favorite": "louisville",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-19",
+   "home": "ohio-st",
+   "away": "umbc",
+   "favorite": "ohio-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-19",
+   "home": "texas",
+   "away": "southern-utah",
+   "favorite": "texas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-20",
+   "home": "arkansas",
+   "away": "mississippi-valley-st",
+   "favorite": "arkansas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-20",
+   "home": "illinois",
+   "away": "eastern-illinois",
+   "favorite": "illinois",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-20",
+   "home": "maryland",
+   "away": "wagner",
+   "favorite": "maryland",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-20",
+   "home": "miami",
+   "away": "manhattan",
+   "favorite": "miami",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-20",
+   "home": "missouri",
+   "away": "le-moyne",
+   "favorite": "missouri",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-20",
+   "home": "tennessee",
+   "away": "coastal-carolina",
+   "favorite": "tennessee",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-20",
+   "home": "virginia",
+   "away": "loyola-md",
+   "favorite": "virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-21",
+   "home": "duke",
+   "away": "washington-st",
+   "favorite": "duke",
+   "bonus": 0
+  },
+  {
+   "date": "2026-11-21",
+   "home": "georgetown",
+   "away": "coppin-st",
+   "favorite": "georgetown",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-21",
+   "home": "michigan-st",
+   "away": "detroit-mercy",
+   "favorite": "michigan-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-21",
+   "home": "syracuse",
+   "away": "lafayette",
+   "favorite": "syracuse",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-22",
+   "home": "cincinnati",
+   "away": "umass-lowell",
+   "favorite": "cincinnati",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-22",
+   "home": "marquette",
+   "away": "chicago-st",
+   "favorite": "marquette",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-22",
+   "home": "texas",
+   "away": "southern-indiana",
+   "favorite": "texas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-22",
+   "home": "ucla",
+   "away": "delaware",
+   "favorite": "ucla",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-22",
+   "home": "usc",
+   "away": "louisiana",
+   "favorite": "usc",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-23",
+   "home": "illinois",
+   "away": "winthrop",
+   "favorite": "illinois",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-24",
+   "home": "auburn",
+   "away": "lipscomb",
+   "favorite": "auburn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-24",
+   "home": "florida",
+   "away": "milwaukee",
+   "favorite": "florida",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-24",
+   "home": "indiana",
+   "away": "jacksonville",
+   "favorite": "indiana",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-24",
+   "home": "iowa",
+   "away": "umbc",
+   "favorite": "iowa",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-24",
+   "home": "villanova",
+   "away": "coppin-st",
+   "favorite": "villanova",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-25",
+   "home": "nc-state",
+   "away": "norfolk-st",
+   "favorite": "nc-state",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-25",
+   "home": "nebraska",
+   "away": "southern",
+   "favorite": "nebraska",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-25",
+   "home": "new-mexico",
+   "away": "mississippi-valley-st",
+   "favorite": "new-mexico",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-25",
+   "home": "oklahoma-st",
+   "away": "jackson-st",
+   "favorite": "oklahoma-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-25",
+   "home": "syracuse",
+   "away": "ualbany",
+   "favorite": "syracuse",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-25",
+   "home": "wisconsin",
+   "away": "northeastern",
+   "favorite": "wisconsin",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-27",
+   "home": "houston",
+   "away": "oakland",
+   "favorite": "houston",
+   "bonus": 3
+  },
+  {
+   "date": "2026-11-27",
+   "home": "missouri",
+   "away": "arkansas-pine-bluff",
+   "favorite": "missouri",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-27",
+   "home": "vanderbilt",
+   "away": "southern",
+   "favorite": "vanderbilt",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-28",
+   "home": "georgia-tech",
+   "away": "alcorn-st",
+   "favorite": "georgia-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-28",
+   "home": "iowa",
+   "away": "prairie-view-a-m",
+   "favorite": "iowa",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-28",
+   "home": "notre-dame",
+   "away": "stonehill",
+   "favorite": "notre-dame",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-29",
+   "home": "florida-st",
+   "away": "west-florida",
+   "favorite": "florida-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-29",
+   "home": "grand-canyon",
+   "away": "incarnate-word",
+   "favorite": "grand-canyon",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-29",
+   "home": "houston",
+   "away": "queens",
+   "favorite": "houston",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-29",
+   "home": "ohio-st",
+   "away": "lipscomb",
+   "favorite": "ohio-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-29",
+   "home": "washington",
+   "away": "norfolk-st",
+   "favorite": "washington",
+   "bonus": 4
+  },
+  {
+   "date": "2026-11-30",
+   "home": "uconn",
+   "away": "rider",
+   "favorite": "uconn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-01",
+   "home": "arizona",
+   "away": "lsu-new-orleans",
+   "favorite": "arizona",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-01",
+   "home": "creighton",
+   "away": "oral-roberts",
+   "favorite": "creighton",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-01",
+   "home": "iowa-st",
+   "away": "alcorn-st",
+   "favorite": "iowa-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-01",
+   "home": "marquette",
+   "away": "wagner",
+   "favorite": "marquette",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-01",
+   "home": "michigan",
+   "away": "mississippi-valley-st",
+   "favorite": "michigan",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-01",
+   "home": "providence",
+   "away": "stonehill",
+   "favorite": "providence",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-01",
+   "home": "west-virginia",
+   "away": "mercyhurst",
+   "favorite": "west-virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-02",
+   "home": "dayton",
+   "away": "loyola-md",
+   "favorite": "dayton",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-02",
+   "home": "georgetown",
+   "away": "umass-lowell",
+   "favorite": "georgetown",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-02",
+   "home": "saint-louis",
+   "away": "arkansas-pine-bluff",
+   "favorite": "saint-louis",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-02",
+   "home": "south-florida",
+   "away": "west-florida",
+   "favorite": "south-florida",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-02",
+   "home": "xavier",
+   "away": "texas-southern",
+   "favorite": "xavier",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-03",
+   "home": "indiana",
+   "away": "western-illinois",
+   "favorite": "indiana",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-03",
+   "home": "vcu",
+   "away": "coppin-st",
+   "favorite": "vcu",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-04",
+   "home": "duke",
+   "away": "harvard",
+   "favorite": "duke",
+   "bonus": 0
+  },
+  {
+   "date": "2026-12-05",
+   "home": "arkansas",
+   "away": "oral-roberts",
+   "favorite": "arkansas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-05",
+   "home": "miami",
+   "away": "stetson",
+   "favorite": "miami",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-06",
+   "home": "auburn",
+   "away": "eastern-kentucky",
+   "favorite": "auburn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-06",
+   "home": "clemson",
+   "away": "le-moyne",
+   "favorite": "clemson",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-06",
+   "home": "florida",
+   "away": "vermont",
+   "favorite": "florida",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-06",
+   "home": "north-texas",
+   "away": "mississippi-valley-st",
+   "favorite": "north-texas",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-06",
+   "home": "saint-louis",
+   "away": "se-missouri-st",
+   "favorite": "saint-louis",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-06",
+   "home": "texas-a-m",
+   "away": "arkansas-pine-bluff",
+   "favorite": "texas-a-m",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-07",
+   "home": "mississippi-st",
+   "away": "alabama-a-m",
+   "favorite": "mississippi-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-07",
+   "home": "oklahoma",
+   "away": "alabama-st",
+   "favorite": "oklahoma",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-07",
+   "home": "seton-hall",
+   "away": "njit",
+   "favorite": "seton-hall",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-07",
+   "home": "vcu",
+   "away": "north-carolina-central",
+   "favorite": "vcu",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-08",
+   "home": "depaul",
+   "away": "maine",
+   "favorite": "depaul",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-08",
+   "home": "george-mason",
+   "away": "morgan-st",
+   "favorite": "george-mason",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-08",
+   "home": "grand-canyon",
+   "away": "northwestern-st",
+   "favorite": "grand-canyon",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-08",
+   "home": "kentucky",
+   "away": "bryant",
+   "favorite": "kentucky",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-08",
+   "home": "st-johns",
+   "away": "wagner",
+   "favorite": "st-johns",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-08",
+   "home": "tcu",
+   "away": "alabama-st",
+   "favorite": "tcu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-08",
+   "home": "texas",
+   "away": "jackson-st",
+   "favorite": "texas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-08",
+   "home": "texas-tech",
+   "away": "omaha",
+   "favorite": "texas-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-08",
+   "home": "uconn",
+   "away": "mississippi-valley-st",
+   "favorite": "uconn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-08",
+   "home": "virginia",
+   "away": "bethune-cookman",
+   "favorite": "virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-09",
+   "home": "georgetown",
+   "away": "rider",
+   "favorite": "georgetown",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-09",
+   "home": "georgia-tech",
+   "away": "the-citadel",
+   "favorite": "georgia-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-09",
+   "home": "gonzaga",
+   "away": "incarnate-word",
+   "favorite": "gonzaga",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-09",
+   "home": "marquette",
+   "away": "new-hampshire",
+   "favorite": "marquette",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-10",
+   "home": "virginia-tech",
+   "away": "maryland-eastern-shore",
+   "favorite": "virginia-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-11",
+   "home": "nc-state",
+   "away": "unc-greensboro",
+   "favorite": "nc-state",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-12",
+   "home": "arizona",
+   "away": "tennessee-tech",
+   "favorite": "arizona",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-12",
+   "home": "michigan-st",
+   "away": "merrimack",
+   "favorite": "michigan-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-12",
+   "home": "ole-miss",
+   "away": "louisiana-monroe",
+   "favorite": "ole-miss",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-12",
+   "home": "vanderbilt",
+   "away": "west-georgia",
+   "favorite": "vanderbilt",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-13",
+   "home": "auburn",
+   "away": "alabama-st",
+   "favorite": "auburn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-13",
+   "home": "georgia",
+   "away": "alabama-a-m",
+   "favorite": "georgia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-13",
+   "home": "iowa",
+   "away": "western-illinois",
+   "favorite": "iowa",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-13",
+   "home": "iowa-st",
+   "away": "north-carolina-central",
+   "favorite": "iowa-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-13",
+   "home": "virginia",
+   "away": "western-carolina",
+   "favorite": "virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-13",
+   "home": "west-virginia",
+   "away": "coppin-st",
+   "favorite": "west-virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-14",
+   "home": "cincinnati",
+   "away": "stetson",
+   "favorite": "cincinnati",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-15",
+   "home": "byu",
+   "away": "weber-st",
+   "favorite": "byu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-15",
+   "home": "creighton",
+   "away": "mount-st-mary-s",
+   "favorite": "creighton",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-15",
+   "home": "duke",
+   "away": "campbell",
+   "favorite": "duke",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-15",
+   "home": "high-point",
+   "away": "north-carolina-central",
+   "favorite": "high-point",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-15",
+   "home": "maryland",
+   "away": "morgan-st",
+   "favorite": "maryland",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-15",
+   "home": "mississippi-st",
+   "away": "mississippi-valley-st",
+   "favorite": "mississippi-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-15",
+   "home": "saint-louis",
+   "away": "florida-a-m",
+   "favorite": "saint-louis",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-15",
+   "home": "texas-tech",
+   "away": "incarnate-word",
+   "favorite": "texas-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-15",
+   "home": "tulsa",
+   "away": "jackson-st",
+   "favorite": "tulsa",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-15",
+   "home": "uconn",
+   "away": "delaware-st",
+   "favorite": "uconn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-15",
+   "home": "vcu",
+   "away": "central-connecticut",
+   "favorite": "vcu",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-16",
+   "home": "georgia",
+   "away": "west-georgia",
+   "favorite": "georgia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-16",
+   "home": "louisville",
+   "away": "long-island",
+   "favorite": "louisville",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-16",
+   "home": "miami",
+   "away": "alcorn-st",
+   "favorite": "miami",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-16",
+   "home": "minnesota",
+   "away": "texas-southern",
+   "favorite": "minnesota",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-16",
+   "home": "oklahoma-st",
+   "away": "oral-roberts",
+   "favorite": "oklahoma-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-16",
+   "home": "syracuse",
+   "away": "canisius",
+   "favorite": "syracuse",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-16",
+   "home": "tennessee",
+   "away": "morehead-st",
+   "favorite": "tennessee",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-16",
+   "home": "west-virginia",
+   "away": "northern-arizona",
+   "favorite": "west-virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-17",
+   "home": "duke",
+   "away": "grambling-st",
+   "favorite": "duke",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-17",
+   "home": "iowa",
+   "away": "bethune-cookman",
+   "favorite": "iowa",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-17",
+   "home": "nebraska",
+   "away": "mount-st-mary-s",
+   "favorite": "nebraska",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-17",
+   "home": "oklahoma",
+   "away": "jackson-st",
+   "favorite": "oklahoma",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-17",
+   "home": "texas-a-m",
+   "away": "holy-cross",
+   "favorite": "texas-a-m",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-18",
+   "home": "vanderbilt",
+   "away": "southern-indiana",
+   "favorite": "vanderbilt",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-18",
+   "home": "wichita-st",
+   "away": "south-carolina-st",
+   "favorite": "wichita-st",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-19",
+   "home": "saint-joseph-s",
+   "away": "coppin-st",
+   "favorite": "saint-joseph-s",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-19",
+   "home": "tcu",
+   "away": "holy-cross",
+   "favorite": "tcu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-19",
+   "home": "ucla",
+   "away": "quinnipiac",
+   "favorite": "ucla",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-20",
+   "home": "georgia",
+   "away": "gardner-webb",
+   "favorite": "georgia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-20",
+   "home": "minnesota",
+   "away": "alcorn-st",
+   "favorite": "minnesota",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-20",
+   "home": "nebraska",
+   "away": "fairleigh-dickinson",
+   "favorite": "nebraska",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-20",
+   "home": "rutgers",
+   "away": "army",
+   "favorite": "rutgers",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-20",
+   "home": "saint-louis",
+   "away": "jackson-st",
+   "favorite": "saint-louis",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-20",
+   "home": "tennessee",
+   "away": "marist",
+   "favorite": "tennessee",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "arizona",
+   "away": "northern-illinois",
+   "favorite": "arizona",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "florida",
+   "away": "florida-a-m",
+   "favorite": "florida",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "iowa-st",
+   "away": "northern-arizona",
+   "favorite": "iowa-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "miami",
+   "away": "usc-upstate",
+   "favorite": "miami",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "michigan",
+   "away": "detroit-mercy",
+   "favorite": "michigan",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "north-carolina",
+   "away": "the-citadel",
+   "favorite": "north-carolina",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "texas",
+   "away": "prairie-view-a-m",
+   "favorite": "texas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "texas-a-m",
+   "away": "north-florida",
+   "favorite": "texas-a-m",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "vanderbilt",
+   "away": "milwaukee",
+   "favorite": "vanderbilt",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "virginia-tech",
+   "away": "vmi",
+   "favorite": "virginia-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-21",
+   "home": "west-virginia",
+   "away": "south-carolina-st",
+   "favorite": "west-virginia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "arkansas",
+   "away": "central-michigan",
+   "favorite": "arkansas",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-22",
+   "home": "auburn",
+   "away": "lehigh",
+   "favorite": "auburn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "cincinnati",
+   "away": "marist",
+   "favorite": "cincinnati",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "depaul",
+   "away": "canisius",
+   "favorite": "depaul",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "indiana",
+   "away": "fairleigh-dickinson",
+   "favorite": "indiana",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "kansas",
+   "away": "indiana-st",
+   "favorite": "kansas",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-22",
+   "home": "kentucky",
+   "away": "sacred-heart",
+   "favorite": "kentucky",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "lsu",
+   "away": "louisiana",
+   "favorite": "lsu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "michigan-st",
+   "away": "oakland",
+   "favorite": "michigan-st",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-22",
+   "home": "missouri",
+   "away": "chicago-st",
+   "favorite": "missouri",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "nc-state",
+   "away": "alabama-a-m",
+   "favorite": "nc-state",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "ohio-st",
+   "away": "mississippi-valley-st",
+   "favorite": "ohio-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "south-carolina",
+   "away": "north-carolina-central",
+   "favorite": "south-carolina",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "syracuse",
+   "away": "binghamton",
+   "favorite": "syracuse",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "tcu",
+   "away": "houston-christian",
+   "favorite": "tcu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "ucla",
+   "away": "uc-riverside",
+   "favorite": "ucla",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-22",
+   "home": "vcu",
+   "away": "morgan-st",
+   "favorite": "vcu",
+   "bonus": 3
+  },
+  {
+   "date": "2026-12-28",
+   "home": "arizona",
+   "away": "incarnate-word",
+   "favorite": "arizona",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-28",
+   "home": "kentucky",
+   "away": "gardner-webb",
+   "favorite": "kentucky",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-28",
+   "home": "oklahoma",
+   "away": "louisiana-monroe",
+   "favorite": "oklahoma",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-28",
+   "home": "ole-miss",
+   "away": "jackson-st",
+   "favorite": "ole-miss",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-28",
+   "home": "texas-tech",
+   "away": "mississippi-valley-st",
+   "favorite": "texas-tech",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "alabama",
+   "away": "samford",
+   "favorite": "alabama",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "arkansas",
+   "away": "ut-rio-grande-valley",
+   "favorite": "arkansas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "auburn",
+   "away": "morgan-st",
+   "favorite": "auburn",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "baylor",
+   "away": "mississippi-valley-st",
+   "favorite": "baylor",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "cincinnati",
+   "away": "bethune-cookman",
+   "favorite": "cincinnati",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "florida",
+   "away": "long-island",
+   "favorite": "florida",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "georgia",
+   "away": "north-florida",
+   "favorite": "georgia",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "houston",
+   "away": "texas-a-m-cc",
+   "favorite": "houston",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "iowa",
+   "away": "south-dakota",
+   "favorite": "iowa",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "iowa-st",
+   "away": "new-hampshire",
+   "favorite": "iowa-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "kansas",
+   "away": "lsu-new-orleans",
+   "favorite": "kansas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "maryland",
+   "away": "radford",
+   "favorite": "maryland",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "northwestern",
+   "away": "chicago-st",
+   "favorite": "northwestern",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "oklahoma-st",
+   "away": "houston-christian",
+   "favorite": "oklahoma-st",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "rutgers",
+   "away": "delaware-st",
+   "favorite": "rutgers",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "south-carolina",
+   "away": "south-carolina-st",
+   "favorite": "south-carolina",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "tcu",
+   "away": "oral-roberts",
+   "favorite": "tcu",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "tennessee",
+   "away": "norfolk-st",
+   "favorite": "tennessee",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "texas",
+   "away": "east-texas-a-m",
+   "favorite": "texas",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "texas-a-m",
+   "away": "prairie-view-a-m",
+   "favorite": "texas-a-m",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "utah",
+   "away": "air-force",
+   "favorite": "utah",
+   "bonus": 0
+  },
+  {
+   "date": "2026-12-29",
+   "home": "vanderbilt",
+   "away": "alcorn-st",
+   "favorite": "vanderbilt",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-29",
+   "home": "villanova",
+   "away": "fairleigh-dickinson",
+   "favorite": "villanova",
+   "bonus": 4
+  },
+  {
+   "date": "2026-12-30",
+   "home": "nebraska",
+   "away": "new-haven",
+   "favorite": "nebraska",
+   "bonus": 4
+  },
+  {
+   "date": "2027-01-19",
+   "home": "nevada",
+   "away": "air-force",
+   "favorite": "nevada",
+   "bonus": 0
+  },
+  {
+   "date": "2027-01-27",
+   "home": "grand-canyon",
+   "away": "air-force",
+   "favorite": "grand-canyon",
+   "bonus": 0
+  },
+  {
+   "date": "2027-01-30",
+   "home": "new-mexico",
+   "away": "air-force",
+   "favorite": "new-mexico",
+   "bonus": 0
+  },
+  {
+   "date": "2027-02-24",
+   "home": "unlv",
+   "away": "air-force",
+   "favorite": "unlv",
+   "bonus": 0
+  },
+  {
+   "date": "2027-02-27",
+   "home": "wyoming",
+   "away": "air-force",
+   "favorite": "wyoming",
+   "bonus": 0
   }
  ]
 }
