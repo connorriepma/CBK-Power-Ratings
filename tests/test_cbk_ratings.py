@@ -20,6 +20,7 @@ CFG = cbk.Config.from_dict(
         ],
         "mismatchSpread": 25,
         "missCap": {"normal": 30, "mismatch": 25},
+        "blowoutCredit": {"fullUpTo": 10, "floorAt": 25, "floor": 0.1},
     }
 )
 
@@ -161,6 +162,43 @@ class Replay(unittest.TestCase):
         # predicted margin 30 (>= 25), so the cap is 25; actual margin -60, miss -90 -> -25
         ratings, _ = cbk.replay(start, hca, [game("2026-11-02", "a", "b", 40, 100)], CFG)
         self.assertAlmostEqual(ratings["a"], 100 - 0.08 * 25, places=9)
+
+    def test_blowout_credit_curve(self):
+        self.assertEqual(cbk.blowout_credit(10, CFG), 1.0)
+        self.assertEqual(cbk.blowout_credit(25, CFG), 0.1)
+        self.assertEqual(cbk.blowout_credit(40, CFG), 0.1)
+        self.assertAlmostEqual(cbk.blowout_credit(17.5, CFG), 0.55, places=9)
+        self.assertEqual(cbk.blowout_credit(-17.5, CFG), cbk.blowout_credit(17.5, CFG))
+
+    def test_favorite_beating_a_big_line_gets_partial_credit(self):
+        start = {"a": 100.0, "b": 65.0}
+        hca = {"a": 0.0, "b": 0.0}
+        # predicted +35 (credit 0.1), actual +75: miss 40, capped 25, credited 2.5
+        ratings, _ = cbk.replay(start, hca, [game("2026-11-02", "a", "b", 120, 45)], CFG)
+        self.assertAlmostEqual(ratings["a"], 100 + 0.08 * 2.5, places=9)
+        self.assertAlmostEqual(ratings["b"], 65 - 0.08 * 2.5, places=9)
+
+    def test_big_favorite_underperforming_is_not_reduced(self):
+        start = {"a": 100.0, "b": 65.0}
+        hca = {"a": 0.0, "b": 0.0}
+        # predicted +35, actual +5: miss -30, capped -25, full weight
+        ratings, _ = cbk.replay(start, hca, [game("2026-11-02", "a", "b", 60, 55)], CFG)
+        self.assertAlmostEqual(ratings["a"], 100 - 0.08 * 25, places=9)
+
+    def test_away_favorite_beating_a_big_line_gets_partial_credit(self):
+        start = {"a": 65.0, "b": 100.0}
+        hca = {"a": 0.0, "b": 0.0}
+        # b is the road favorite by 35; b wins by 75 -> miss -40, capped -25, credited -2.5
+        ratings, _ = cbk.replay(start, hca, [game("2026-11-02", "a", "b", 45, 120)], CFG)
+        self.assertAlmostEqual(ratings["b"], 100 + 0.08 * 2.5, places=9)
+
+    def test_no_blowout_credit_in_config_means_no_dampening(self):
+        plain = cbk.Config.from_dict({"kTiers": [{"upTo": None, "k": 0.08}],
+                                      "mismatchSpread": 25, "missCap": {"normal": 30, "mismatch": 25}})
+        start = {"a": 100.0, "b": 65.0}
+        hca = {"a": 0.0, "b": 0.0}
+        ratings, _ = cbk.replay(start, hca, [game("2026-11-02", "a", "b", 120, 45)], plain)
+        self.assertAlmostEqual(ratings["a"], 100 + 0.08 * 25, places=9)
 
     def test_k_drops_with_games_played(self):
         start = {"a": 80.0, "b": 80.0}

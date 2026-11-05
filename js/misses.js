@@ -50,7 +50,7 @@
       }).join('') + '</tbody></table></div>';
     $('ms-foot').textContent = (list.length > LIMIT ? 'Showing the ' + LIMIT + ' biggest of ' + list.length + '. ' : '') +
       'Miss is how many points the final margin landed from the model’s line going into that game, using the exact line (not rounded to 0.5). ' +
-      'It is the raw miss: the rating update caps it, this page does not. “Model too high on” is the team that did worse than the line expected. ' +
+      'It is the raw miss: the rating update caps it and, for a big favorite beating the line, only counts part of it. This page does neither. “Model too high on” is the team that did worse than the line expected. ' +
       'Games against unrated opponents are left out. * neutral site.';
   }
 

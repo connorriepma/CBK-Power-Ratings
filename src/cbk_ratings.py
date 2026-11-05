@@ -32,6 +32,8 @@ class Config:
     mismatch_spread: float
     miss_cap_normal: float
     miss_cap_mismatch: float
+    # (full_up_to, floor_at, floor) or None. See blowout_credit.
+    blowout_credit: tuple[float, float, float] | None = None
 
     @classmethod
     def from_dict(cls, raw: dict) -> "Config":
@@ -39,11 +41,15 @@ class Config:
             (math.inf if t["upTo"] is None else float(t["upTo"]), float(t["k"]))
             for t in raw["kTiers"]
         )
+        bc = raw.get("blowoutCredit")
         return cls(
             k_tiers=tiers,
             mismatch_spread=float(raw["mismatchSpread"]),
             miss_cap_normal=float(raw["missCap"]["normal"]),
             miss_cap_mismatch=float(raw["missCap"]["mismatch"]),
+            blowout_credit=(
+                (float(bc["fullUpTo"]), float(bc["floorAt"]), float(bc["floor"])) if bc else None
+            ),
         )
 
 
@@ -54,6 +60,23 @@ def k_for(games_before: int, cfg: Config) -> float:
         if game_number <= up_to:
             return k
     return cfg.k_tiers[-1][1]
+
+
+def blowout_credit(spread: float, cfg: Config) -> float:
+    """Share of a favorite's beat-the-line credit that counts, by predicted spread.
+
+    1 up to full_up_to, then a straight line down to `floor` at floor_at and beyond.
+    Always 1 when the config has no blowoutCredit.
+    """
+    if cfg.blowout_credit is None:
+        return 1.0
+    full_up_to, floor_at, floor = cfg.blowout_credit
+    s = abs(spread)
+    if s <= full_up_to:
+        return 1.0
+    if s >= floor_at:
+        return floor
+    return 1.0 - (1.0 - floor) * (s - full_up_to) / (floor_at - full_up_to)
 
 
 def predicted_margin(home: float, away: float, home_court: float, neutral: bool) -> float:
@@ -153,6 +176,10 @@ def replay(
         cap = cfg.miss_cap_mismatch if abs(margin) >= cfg.mismatch_spread else cfg.miss_cap_normal
         actual = g["homeScore"] - g["awayScore"]
         miss = max(-cap, min(cap, actual - margin))
+        # A favorite that beats the line in a big mismatch gets only part of the credit.
+        # Underperforming is never reduced.
+        beat_line = miss > 0 if margin >= 0 else miss < 0
+        miss *= blowout_credit(margin, cfg) if beat_line else 1.0
 
         k_home = k_for(played[home], cfg)
         k_away = k_for(played[away], cfg)

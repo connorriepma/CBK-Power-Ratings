@@ -68,8 +68,21 @@ window.CBK = (function () {
     return {
       kTiers: raw.kTiers.map(function (t) { return { upTo: t.upTo == null ? Infinity : t.upTo, k: t.k }; }),
       mismatchSpread: raw.mismatchSpread,
-      missCap: { normal: raw.missCap.normal, mismatch: raw.missCap.mismatch }
+      missCap: { normal: raw.missCap.normal, mismatch: raw.missCap.mismatch },
+      // Optional. Absent means no dampening.
+      blowoutCredit: raw.blowoutCredit ? { fullUpTo: raw.blowoutCredit.fullUpTo, floorAt: raw.blowoutCredit.floorAt, floor: raw.blowoutCredit.floor } : null
     };
+  }
+
+  // Share of the favorite's beat-the-line credit that counts, by predicted spread (always 1 when not configured).
+  // 1 up to fullUpTo, sliding in a straight line down to floor at floorAt and beyond.
+  function blowoutCredit(spread, cfg) {
+    var b = cfg.blowoutCredit;
+    if (!b) return 1;
+    var s = Math.abs(spread);
+    if (s <= b.fullUpTo) return 1;
+    if (s >= b.floorAt) return b.floor;
+    return 1 - (1 - b.floor) * (s - b.fullUpTo) / (b.floorAt - b.fullUpTo);
   }
 
   function kFor(gamesBefore, cfg) {
@@ -123,13 +136,16 @@ window.CBK = (function () {
       var pred = r[g.home] + (g.neutral ? 0 : hca[g.home]) - r[g.away] + homeBonus(mods, g);
       var cap = Math.abs(pred) >= cfg.mismatchSpread ? cfg.missCap.mismatch : cfg.missCap.normal;
       var miss = Math.max(-cap, Math.min(cap, (g.homeScore - g.awayScore) - pred));
+      // A favorite that beats the line in a big mismatch gets only part of the credit. Underperforming is never reduced.
+      var credit = (pred >= 0 ? miss > 0 : miss < 0) ? blowoutCredit(pred, cfg) : 1;
+      var used = miss * credit;
       var kh = kFor(played[g.home], cfg), ka = kFor(played[g.away], cfg);
-      r[g.home] += kh * miss;
-      r[g.away] -= ka * miss;
+      r[g.home] += kh * used;
+      r[g.away] -= ka * used;
       played[g.home]++;
       played[g.away]++;
       if (log) log.push({ skip: false, date: g.date, home: g.home, away: g.away, neutral: !!g.neutral,
-        hs: g.homeScore, as: g.awayScore, pred: pred, miss: miss, kh: kh, ka: ka,
+        hs: g.homeScore, as: g.awayScore, pred: pred, miss: miss, credit: credit, kh: kh, ka: ka,
         hb: hb, ha: r[g.home], ab: ab, aa: r[g.away] });
     });
     return { current: r, played: played };
@@ -293,6 +309,6 @@ window.CBK = (function () {
   return {
     SIGMA: SIGMA, ALTITUDE_FT: ALTITUDE_FT, NON_D1: NON_D1, normCdf: normCdf, teamKey: teamKey, esc: esc, getJSON: getJSON,
     fmtRating: fmtRating, fmtPct: fmtPct, roundHalf: roundHalf, parseDate: parseDate,
-    gameId: gameId, homeBonus: homeBonus, buildMods: buildMods, replay: replay, parseConfig: parseConfig, load: load
+    gameId: gameId, homeBonus: homeBonus, buildMods: buildMods, replay: replay, parseConfig: parseConfig, blowoutCredit: blowoutCredit, load: load
   };
 })();

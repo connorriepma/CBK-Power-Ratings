@@ -80,8 +80,9 @@ The home team gains `K × miss` and the away team loses the same amount. If the 
    | 19+ | 0.03 |
 
    Each team's K comes from its own game count, so a veteran team and a new team can move by different amounts in the same game.
-3. **Caps.** A single game's miss is capped at 30 points, or 25 when the predicted spread is 25 or more. This stops one blowout from swinging a rating.
-4. **Skipped games.** Games against non-Division I opponents are ignored. They do not change ratings and do not count toward a team's game total.
+3. **Caps.** A single game's miss is capped at 30 points, or 25 when the predicted spread is 25 or more. This stops one blowout from swinging a rating. The cap is applied first, then the blowout credit below.
+4. **Blowout credit.** When the favorite beats the spread in a lopsided game, only part of that credit counts. A favorite keeps all of it up to a predicted spread of 10, and the share slides down in a straight line to 10% at a spread of 25 or more. Example: a 35-point favorite that beats the spread by more than the cap gets 10% of the capped miss. This only applies to a favorite beating the line. A favorite that underperforms is never reduced, and neither is anything in a game with a spread of 10 or less. The reason: a big favorite against a much weaker team plays its bench early, so the margin says little about how good the team is. The opponent's rating moves by the same amount in the other direction.
+5. **Skipped games.** Games against non-Division I opponents are ignored. They do not change ratings and do not count toward a team's game total.
 
 ### Example
 

@@ -17,5 +17,10 @@
  "missCap": {
   "normal": 30,
   "mismatch": 25
+ },
+ "blowoutCredit": {
+  "fullUpTo": 10,
+  "floorAt": 25,
+  "floor": 0.1
  }
 }

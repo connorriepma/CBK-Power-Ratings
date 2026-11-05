@@ -33,7 +33,7 @@
       }
       ev.push({
         skip: false, date: e.date, opp: opp, site: site, score: us + '-' + them,
-        pm: isH ? e.pred : -e.pred, act: us - them, miss: isH ? e.miss : -e.miss,
+        pm: isH ? e.pred : -e.pred, act: us - them, miss: isH ? e.miss : -e.miss, credit: e.credit,
         k: isH ? e.kh : e.ka, before: isH ? e.hb : e.ab, after: isH ? e.ha : e.aa
       });
     });
@@ -68,18 +68,18 @@
   }
 
   function tableHTML(ev) {
-    var t = '<thead><tr><th>Date</th><th>Opponent</th><th>Site</th><th>Score</th><th>Spread</th><th>Margin</th><th>Miss</th><th>K</th><th>Before</th><th>After</th><th>Change</th></tr></thead><tbody>';
-    if (!ev.length) t += '<tr><td colspan="11" class="hx-empty">No results entered for this team yet.</td></tr>';
+    var t = '<thead><tr><th>Date</th><th>Opponent</th><th>Site</th><th>Score</th><th>Spread</th><th>Margin</th><th>Miss</th><th>Credit</th><th>K</th><th>Before</th><th>After</th><th>Change</th></tr></thead><tbody>';
+    if (!ev.length) t += '<tr><td colspan="12" class="hx-empty">No results entered for this team yet.</td></tr>';
     ev.forEach(function (e) {
       if (e.skip) {
         t += '<tr class="skip"><td>' + fmtDate(e.date) + '</td><td>' + esc(e.opp) + '</td><td>' + e.site + '</td><td>' + e.score +
-          '</td><td>-</td><td>-</td><td>-</td><td>-</td><td>' + num(e.before) + '</td><td>' + num(e.after) + '</td><td>skipped</td></tr>';
+          '</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>' + num(e.before) + '</td><td>' + num(e.after) + '</td><td>skipped</td></tr>';
         return;
       }
       var c = e.after - e.before;
       t += '<tr><td>' + fmtDate(e.date) + '</td><td>' + esc(e.opp) + '</td><td>' + e.site + '</td><td>' + e.score + '</td>' +
         '<td>' + (e.pm >= 0 ? '-' : '+') + num(Math.abs(e.pm)) + '</td><td>' + sgn(e.act) + '</td>' +
-        '<td class="' + (e.miss >= 0 ? 'up' : 'dn') + '">' + sgn(e.miss) + '</td><td>' + e.k + '</td>' +
+        '<td class="' + (e.miss >= 0 ? 'up' : 'dn') + '">' + sgn(e.miss) + '</td><td>' + (e.credit < 1 ? Math.round(e.credit * 100) + '%' : '-') + '</td><td>' + e.k + '</td>' +
         '<td>' + num(e.before) + '</td><td>' + num(e.after) + '</td><td class="' + (c >= 0 ? 'up' : 'dn') + '">' + sgn(c) + '</td></tr>';
     });
     return t + '</tbody>';
