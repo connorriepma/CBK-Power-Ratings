@@ -104,6 +104,7 @@ Ratings are stored at full precision and shown to the nearest 0.5, so small chan
 In true mismatches (a top-conference team hosting a team from a different level of basketball) the market runs several points above the rating-based line. For these games the site adds 3-4 points to the favorite's **published** line, so the Schedule, Matchup, win probability and the line locked for ATS all reflect it.
 
 - Games are chosen by hand, one slate at a time, and recorded in `data/buy_games.json` (`date`, `home`, `away`, `favorite`, `bonus`). A bonus of 0 means the game was reviewed and gets no adjustment.
+- Adjusted lines are marked with an asterisk (for example -35.0*) wherever they are shown.
 - It never changes a rating. The rating update uses the rating-only margin, and the Biggest Misses "Model line" is also rating-only. This is why it does not double-count with the blowout credit above.
 - The line is locked when the score is ingested, so a game has to be in the file before it finishes.
 
