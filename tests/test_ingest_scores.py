@@ -108,3 +108,17 @@ class IngestTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SwitchTests(unittest.TestCase):
+    def test_pending_ignores_saved_games_and_non_d1(self):
+        from datetime import datetime, timezone
+        now = datetime(2026, 11, 3, 18, 0, tzinfo=timezone.utc)
+        p = ing.pending_games(ing.cbk.load_json("schedule.json"), [], 0, now)
+        self.assertTrue(p and all(g["date"] == "2026-11-03" for g in p))
+        self.assertTrue(all(g["home"] != ing.NON_D1 and g["away"] != ing.NON_D1 for g in p))
+        done = [{"date": g["date"], "home": ing.cbk_key(g["home"]), "away": ing.cbk_key(g["away"])} for g in p]
+        self.assertEqual(ing.pending_games(ing.cbk.load_json("schedule.json"), done, 0, now), [])
+
+    def test_config_switch_is_on_in_repo(self):
+        self.assertTrue(ing.enabled())

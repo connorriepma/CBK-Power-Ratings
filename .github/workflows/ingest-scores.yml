@@ -1,0 +1,62 @@
+name: Ingest scores
+
+# Pulls finished games from the CollegeBasketballData API and saves new ones to data/results.json on main.
+#   * Scheduled runs SAVE. Manual runs ("Run workflow") only look unless you set save to true.
+#   * Pause everything without touching code: set "enabled": false in data/ingest_config.json.
+#   * Never overwrites a score that is already in results.json.
+# One API call per run, and none when nothing is pending. Free tier = 1,000 calls/month.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days back to look"
+        default: "2"
+      save:
+        description: "Save new scores (true) or only report (false)"
+        default: "false"
+  schedule:
+    - cron: "20 17-23 * * *"
+    - cron: "20 0-9 * * *"
+    - cron: "20 15 * * *"
+  push:
+    branches: [api-live]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-scores
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    env:
+      CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+      DAYS: ${{ github.event.inputs.days || '2' }}
+      SAVE: ${{ github.event_name == 'schedule' || github.event.inputs.save == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'push' && github.ref_name || 'main' }}
+      - name: Pull scores
+        run: |
+          set -eo pipefail
+          if [ "$SAVE" = "true" ]; then FLAG="--write --max-new 250"; else FLAG=""; fi
+          for attempt in 1 2 3; do
+            python3 src/ingest_scores.py --days "$DAYS" $FLAG | tee "$GITHUB_STEP_SUMMARY"
+            if [ "$SAVE" != "true" ] || git diff --quiet data/results.json; then exit 0; fi
+            # New scores were added: refuse to continue if a locked preseason rating would change, then lock new teams.
+            python3 src/lock_preseason.py
+            git config user.name "github-actions"
+            git config user.email "actions@users.noreply.github.com"
+            N=$(git diff -U0 data/results.json | grep -c '^+{' || true)
+            git add data/results.json data/preseason_locks.json
+            git commit -m "Auto-save scores ($N games from the API)"
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Push was rejected (someone saved at the same time). Starting over from the latest main."
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "Could not save after 3 tries" >&2
+          exit 1

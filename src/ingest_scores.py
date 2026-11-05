@@ -11,11 +11,13 @@ Safeguards, all enforced in code:
   * A result already in data/results.json is never overwritten, even if the score differs.
   * Team names resolve only by exact name, cleanup (State->St, punctuation) or data/ingest_aliases.json.
   * --write refuses to add more than --max-new games in one run.
+  * --write does nothing (and makes no API call) when data/ingest_config.json says enabled=false,
+    or when no D1-vs-D1 game in the look-back window is still missing a result (saves API calls).
 
 Usage:
     python src/ingest_scores.py                  # dry run, last 3 days of games
     python src/ingest_scores.py --days 7
-    python src/ingest_scores.py --write          # NOT used by any workflow yet
+    python src/ingest_scores.py --write          # used by .github/workflows/ingest-scores.yml
 Needs CBBD_API_KEY in the environment.
 """
 
@@ -67,6 +69,32 @@ class Names:
         if api_name in self.aliases:
             return self.aliases[api_name]
         return self.by_norm.get(norm(api_name))
+
+
+# ---------- switch and call saver ----------
+
+def pending_games(schedule, results, days, now=None):
+    """D1-vs-D1 schedule rows dated from `days` days ago through today (Pacific) with no result yet."""
+    now = now or datetime.now(timezone.utc)
+    today = now.astimezone(PACIFIC).date()
+    lo = (today - timedelta(days=days)).isoformat()
+    hi = today.isoformat()
+    teams = {t["team"] for t in cbk.load_json("teams.json")}
+    done = {result_id(r["date"], r["home"], r["away"]) for r in results}
+    out = []
+    for g in schedule:
+        if not (lo <= g["date"] <= hi) or g["home"] not in teams or g["away"] not in teams:
+            continue
+        if result_id(g["date"], cbk_key(g["home"]), cbk_key(g["away"])) not in done:
+            out.append(g)
+    return out
+
+
+def enabled() -> bool:
+    try:
+        return bool(cbk.load_json("ingest_config.json").get("enabled", False))
+    except FileNotFoundError:
+        return False
 
 
 # ---------- API ----------
@@ -251,6 +279,13 @@ def main() -> int:
     names = Names(teams, cbk.load_json("ingest_aliases.json"))
     schedule = cbk.load_json("schedule.json")
     results = cbk.load_json("results.json")
+    if args.write:
+        if not enabled():
+            print("Automatic saving is PAUSED (data/ingest_config.json: enabled=false). Nothing done.")
+            return 0
+        if not pending_games(schedule, results, args.days):
+            print("Nothing pending: every D1 game from the last %d days already has a result. No API call made." % args.days)
+            return 0
     games = fetch_games(key, args.days)
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     rows, new = classify(games, names, schedule, results, now_iso)
