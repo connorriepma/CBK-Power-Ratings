@@ -33,6 +33,7 @@ on:
     - cron: "7 16,17 * * 6"       # Saturday 9 am Pacific
     - cron: "45 21,22 * * 6"      # Saturday afternoon hand-off
     - cron: "25 3,4 * * 0"        # Saturday night hand-off (Sunday UTC)
+    - cron: "22 17,19 * * 0"      # Sunday: extra checks at 9:22 am and 11:22 am Pacific for early games
     - cron: "22 21-23,0 * * *"    # hourly, afternoon games
     - cron: "22 6,8 * * *"        # late stragglers
     - cron: "22 15 * * *"         # morning catch-up
