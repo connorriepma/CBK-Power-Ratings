@@ -4,7 +4,11 @@ name: Ingest scores
 #   * Scheduled runs SAVE. Manual runs ("Run workflow") only look unless you set save to true.
 #   * Pause everything without touching code: set "enabled": false in data/ingest_config.json.
 #   * Never overwrites a score that is already in results.json.
-# One API call per run, and none when nothing is pending. Free tier = 1,000 calls/month.
+# One API call per check, and none when nothing is pending. Free tier = 1,000 calls/month.
+#
+# GitHub often delays or skips scheduled starts, so for the evening game window one scheduled start
+# launches a job that stays running and checks every 15 minutes until 06:00 UTC (10 pm Pacific, standard time).
+# Backup starts at 01:37 and 02:07 UTC make sure at least one of them fires.
 on:
   workflow_dispatch:
     inputs:
@@ -14,15 +18,22 @@ on:
       save:
         description: "Save new scores (true) or only report (false)"
         default: "false"
+      loop_minutes:
+        description: "Test only: keep checking for this many minutes (0 = check once)"
+        default: "0"
+      interval:
+        description: "Test only: seconds between checks when looping"
+        default: "900"
   schedule:
-    # Times are UTC. 01:00-05:45 UTC = 5:00-10:45 pm Pacific (standard time), when most games finish.
-    # About 27 runs/day = ~840 API calls/month at most (free tier is 1,000). Shift by an hour when clocks change in March.
-    - cron: "7,22,37,52 1-5 * * *" # every 15 min, evening games (odd minutes: GitHub skips :00/:15/:30 more often)
-    - cron: "17 21-23,0 * * *"    # hourly, afternoon games
-    - cron: "17 6,8 * * *"        # late stragglers
-    - cron: "17 15 * * *"         # morning catch-up
+    # Times are UTC. Shift by an hour when clocks change in March.
+    - cron: "7 1 * * *"           # evening window starts (5:07 pm Pacific), loops until 10 pm Pacific
+    - cron: "37 1 * * *"          # backup start for the evening window
+    - cron: "7 2 * * *"           # backup start for the evening window
+    - cron: "22 21-23,0 * * *"    # hourly, afternoon games
+    - cron: "22 6,8 * * *"        # late stragglers
+    - cron: "22 15 * * *"         # morning catch-up
   push:
-    branches: [api-schedule]
+    branches: [api-loop]
 
 permissions:
   contents: write
@@ -34,32 +45,57 @@ concurrency:
 jobs:
   ingest:
     runs-on: ubuntu-latest
+    timeout-minutes: 340
     env:
       CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
       DAYS: ${{ github.event.inputs.days || '2' }}
       SAVE: ${{ github.event_name == 'schedule' || github.event.inputs.save == 'true' }}
+      EVENT: ${{ github.event_name }}
+      LOOP_MINUTES: ${{ github.event.inputs.loop_minutes || '0' }}
+      INTERVAL: ${{ github.event.inputs.interval || '900' }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event_name == 'push' && github.ref_name || 'main' }}
       - name: Pull scores
         run: |
-          set -eo pipefail
-          if [ "$SAVE" = "true" ]; then FLAG="--write --max-new 250"; else FLAG=""; fi
-          for attempt in 1 2 3; do
-            python3 src/ingest_scores.py --days "$DAYS" $FLAG | tee "$GITHUB_STEP_SUMMARY"
-            if [ "$SAVE" != "true" ] || git diff --quiet data/results.json; then exit 0; fi
-            # New scores were added: refuse to continue if a locked preseason rating would change, then lock new teams.
-            python3 src/lock_preseason.py
-            git config user.name "github-actions"
-            git config user.email "actions@users.noreply.github.com"
-            N=$(python3 -c "import json,subprocess;print(len(json.load(open('data/results.json')))-len(json.loads(subprocess.check_output(['git','show','HEAD:data/results.json']))))")
-            git add data/results.json data/preseason_locks.json
-            git commit -m "Auto-save scores ($N games from the API)"
-            if git push origin HEAD:main; then exit 0; fi
-            echo "Push was rejected (someone saved at the same time). Starting over from the latest main."
-            git fetch origin main
-            git reset --hard origin/main
+          set -o pipefail
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+
+          once() {
+            if [ "$SAVE" = "true" ]; then FLAG="--write --max-new 250"; else FLAG=""; fi
+            for attempt in 1 2 3; do
+              python3 src/ingest_scores.py --days "$DAYS" $FLAG | tee -a "$GITHUB_STEP_SUMMARY" || return 1
+              if [ "$SAVE" != "true" ] || git diff --quiet data/results.json; then return 0; fi
+              # New scores were added: refuse to continue if a locked preseason rating would change, then lock new teams.
+              python3 src/lock_preseason.py || return 1
+              N=$(python3 -c "import json,subprocess;print(len(json.load(open('data/results.json')))-len(json.loads(subprocess.check_output(['git','show','HEAD:data/results.json']))))")
+              git add data/results.json data/preseason_locks.json
+              git commit -m "Auto-save scores ($N games from the API)"
+              if git push origin HEAD:main; then return 0; fi
+              echo "Push was rejected (someone saved at the same time). Starting over from the latest main."
+              git fetch origin main
+              git reset --hard origin/main
+            done
+            echo "Could not save after 3 tries" >&2
+            return 1
+          }
+
+          # How long to keep checking: until 06:00 UTC for the evening scheduled start, or the test minutes.
+          NOW=$(date -u +%s)
+          END=$NOW
+          if [ "$EVENT" = "schedule" ] && [ "$(date -u +%H)" -ge 1 ] && [ "$(date -u +%H)" -lt 6 ]; then
+            END=$(date -u -d "today 06:00" +%s)
+          elif [ "$LOOP_MINUTES" -gt 0 ]; then
+            END=$((NOW + LOOP_MINUTES * 60))
+          fi
+
+          FAILED=0
+          once && FAILED=0 || FAILED=1
+          while [ "$(date -u +%s)" -lt "$((END - 1))" ]; do
+            sleep "$INTERVAL"
+            if [ "$EVENT" != "push" ] && [ "$SAVE" = "true" ]; then git fetch -q origin main && git reset -q --hard origin/main; fi
+            once && FAILED=0 || FAILED=1
           done
-          echo "Could not save after 3 tries" >&2
-          exit 1
+          exit $FAILED
