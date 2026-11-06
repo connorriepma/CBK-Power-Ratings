@@ -17,10 +17,10 @@ on:
   schedule:
     # Times are UTC. 01:00-05:45 UTC = 5:00-10:45 pm Pacific (standard time), when most games finish.
     # About 27 runs/day = ~840 API calls/month at most (free tier is 1,000). Shift by an hour when clocks change in March.
-    - cron: "*/15 1-5 * * *"      # every 15 min, evening games
-    - cron: "20 21-23,0 * * *"    # hourly, afternoon games
-    - cron: "20 6,8 * * *"        # late stragglers
-    - cron: "20 15 * * *"         # morning catch-up
+    - cron: "7,22,37,52 1-5 * * *" # every 15 min, evening games (odd minutes: GitHub skips :00/:15/:30 more often)
+    - cron: "17 21-23,0 * * *"    # hourly, afternoon games
+    - cron: "17 6,8 * * *"        # late stragglers
+    - cron: "17 15 * * *"         # morning catch-up
   push:
     branches: [api-schedule]
 
