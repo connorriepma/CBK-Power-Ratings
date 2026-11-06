@@ -271,6 +271,7 @@ def report(rows, new, dry: bool, missing=None) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=3)
+    ap.add_argument("--usage", action="store_true", help="print the account's API plan and calls remaining, then exit")
     ap.add_argument("--write", action="store_true", help="save NEW results to data/results.json (off by default)")
     ap.add_argument("--max-new", type=int, default=300)
     args = ap.parse_args()
@@ -283,6 +284,14 @@ def main() -> int:
     names = Names(teams, cbk.load_json("ingest_aliases.json"))
     schedule = cbk.load_json("schedule.json")
     results = cbk.load_json("results.json")
+    if args.usage:
+        req = urllib.request.Request("https://api.collegebasketballdata.com/info", headers={"Authorization": "Bearer " + key})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                print("API account info:", r.read().decode()[:500])
+        except Exception as e:  # informational only
+            print("Could not read API account info:", e)
+        return 0
     if args.write:
         if not enabled():
             print("Automatic saving is PAUSED (data/ingest_config.json: enabled=false). Nothing done.")
