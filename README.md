@@ -31,6 +31,8 @@ The full write-up is in [METHODOLOGY.md](METHODOLOGY.md). In short:
 | `rating_plus_80_rounded` | `rating_plus_80` rounded to the nearest 0.5 |
 | `notes` | Flags ratings that were manually moved after the preseason build when major news broke |
 
+Tournament brackets (Players Era 8 and 16) are defined in [`data/brackets.json`](data/brackets.json). When a result decides who plays next, `src/advance_brackets.py` adds that game to the schedule, and the automatic score ingest and a small workflow run it, so later rounds appear on their own.
+
 ## Running it
 
 The rating engine is [`src/cbk_ratings.py`](src/cbk_ratings.py). It uses only the Python standard library.

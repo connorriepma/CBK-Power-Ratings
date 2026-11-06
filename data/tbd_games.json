@@ -12,64 +12,10 @@
   "site": "Lahaina, Hawaii"
  },
  {
-  "team": "Florida",
-  "date": "2026-11-18",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Florida",
-  "date": "2026-11-19",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Miami",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Miami",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Miami",
-  "date": "2026-11-28",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Louisville",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Louisville",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "NC State",
   "date": "2026-11-20",
   "event": "Baha Mar bracket",
   "site": "Nassau, Bahamas"
- },
- {
-  "team": "Notre Dame",
-  "date": "2026-11-18",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Notre Dame",
-  "date": "2026-11-19",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
  },
  {
   "team": "Stanford",
@@ -102,172 +48,16 @@
   "site": "Lahaina, Hawaii"
  },
  {
-  "team": "Houston",
-  "date": "2026-11-18",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Houston",
-  "date": "2026-11-19",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Kansas",
-  "date": "2026-11-18",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Kansas",
-  "date": "2026-11-19",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "West Virginia",
-  "date": "2026-11-18",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "West Virginia",
-  "date": "2026-11-19",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Iowa St",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Iowa St",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Iowa St",
-  "date": "2026-11-28",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Texas Tech",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Texas Tech",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Texas Tech",
-  "date": "2026-11-28",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "TCU",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "TCU",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "TCU",
-  "date": "2026-11-28",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Baylor",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Baylor",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Baylor",
-  "date": "2026-11-28",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Kansas St",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Kansas St",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "Colorado",
   "date": "2026-11-25",
   "event": "Acrisure Series Thanksgiving Event",
   "site": "Palm Desert, Calif."
  },
  {
-  "team": "Tennessee",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Tennessee",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "Texas",
   "date": "2026-11-27",
   "event": "Rady Children's Invitational",
   "site": "San Diego, Calif."
- },
- {
-  "team": "Alabama",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Alabama",
-  "date": "2026-11-27",
-  "event": "Players Era 16 (Nov 27 or 28)",
-  "site": "Las Vegas"
- },
- {
-  "team": "Auburn",
-  "date": "2026-11-18",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "Auburn",
-  "date": "2026-11-19",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
  },
  {
   "team": "Mississippi St",
@@ -286,42 +76,6 @@
   "date": "2026-11-25",
   "event": "Southwest Maui Invitational",
   "site": "Lahaina, Hawaii"
- },
- {
-  "team": "St Johns",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "St Johns",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "St Johns",
-  "date": "2026-11-28",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Creighton",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Creighton",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Creighton",
-  "date": "2026-11-28",
-  "event": "Players Era 16 (championship game only)",
-  "site": "Las Vegas"
  },
  {
   "team": "Villanova",
@@ -354,18 +108,6 @@
   "site": "Nassau, Bahamas"
  },
  {
-  "team": "Gonzaga",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Gonzaga",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "Colorado St",
   "date": "2026-11-24",
   "event": "Southwest Maui Invitational",
@@ -376,24 +118,6 @@
   "date": "2026-11-25",
   "event": "Southwest Maui Invitational",
   "site": "Lahaina, Hawaii"
- },
- {
-  "team": "San Diego St",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "San Diego St",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "San Diego St",
-  "date": "2026-11-28",
-  "event": "Players Era 16 (if necessary)",
-  "site": "Las Vegas"
  },
  {
   "team": "Oregon St",
@@ -466,18 +190,6 @@
   "date": "2026-11-23",
   "event": "Paradise Jam",
   "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "UNLV",
-  "date": "2026-11-18",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
- },
- {
-  "team": "UNLV",
-  "date": "2026-11-19",
-  "event": "Players Era 8",
-  "site": "Las Vegas"
  },
  {
   "team": "Grand Canyon",
@@ -796,5 +508,293 @@
   "date": "2026-11-23",
   "event": "Paradise Jam (opponent TBA)",
   "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "team": "Auburn",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Florida",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Houston",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Notre Dame",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Rutgers",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "UNLV",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "West Virginia",
+  "date": "2026-11-18",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Auburn",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Florida",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Houston",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Notre Dame",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Rutgers",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "UNLV",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "West Virginia",
+  "date": "2026-11-19",
+  "event": "Players Era 8",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Alabama",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Baylor",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Creighton",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Gonzaga",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Iowa St",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas St",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Louisville",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Maryland",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Miami",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Michigan",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Oregon",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "San Diego St",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "St Johns",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "TCU",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Tennessee",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Texas Tech",
+  "date": "2026-11-26",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Alabama",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Baylor",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Creighton",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Gonzaga",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Iowa St",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Kansas St",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Louisville",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Maryland",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Miami",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Michigan",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Oregon",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "San Diego St",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "St Johns",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "TCU",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Tennessee",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
+ },
+ {
+  "team": "Texas Tech",
+  "date": "2026-11-27",
+  "event": "Players Era 16",
+  "site": "Las Vegas"
  }
 ]

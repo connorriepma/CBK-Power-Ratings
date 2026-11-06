@@ -1,0 +1,506 @@
+{
+ "_about": "Tournament brackets. src/advance_brackets.py reads this plus data/results.json and adds each game to data/schedule.json once both teams are known (rows get a 'bracket' id). A slot is a fixed team or the winner/loser of an earlier game id. Games must be listed after the games they depend on. The first slot is listed as home (neutral site, so it only decides display order). Consolation pairings (losers meet losers, then winners and losers again) are the standard ones and are not spelled out in the source.",
+ "events": [
+  {
+   "name": "Players Era 8",
+   "site": "Las Vegas",
+   "guaranteedDates": [
+    "2026-11-18",
+    "2026-11-19"
+   ],
+   "games": [
+    {
+     "id": "PE8-R1-1",
+     "round": "Opening round",
+     "date": "2026-11-17",
+     "slots": [
+      {
+       "team": "Houston"
+      },
+      {
+       "team": "Rutgers"
+      }
+     ]
+    },
+    {
+     "id": "PE8-R1-2",
+     "round": "Opening round",
+     "date": "2026-11-17",
+     "slots": [
+      {
+       "team": "Florida"
+      },
+      {
+       "team": "Notre Dame"
+      }
+     ]
+    },
+    {
+     "id": "PE8-R1-3",
+     "round": "Opening round",
+     "date": "2026-11-17",
+     "slots": [
+      {
+       "team": "West Virginia"
+      },
+      {
+       "team": "Auburn"
+      }
+     ]
+    },
+    {
+     "id": "PE8-R1-4",
+     "round": "Opening round",
+     "date": "2026-11-17",
+     "slots": [
+      {
+       "team": "Kansas"
+      },
+      {
+       "team": "UNLV"
+      }
+     ]
+    },
+    {
+     "id": "PE8-SF1",
+     "round": "Semifinal 1",
+     "date": "2026-11-18",
+     "slots": [
+      {
+       "winner": "PE8-R1-1"
+      },
+      {
+       "winner": "PE8-R1-2"
+      }
+     ]
+    },
+    {
+     "id": "PE8-SF2",
+     "round": "Semifinal 2",
+     "date": "2026-11-18",
+     "slots": [
+      {
+       "winner": "PE8-R1-3"
+      },
+      {
+       "winner": "PE8-R1-4"
+      }
+     ]
+    },
+    {
+     "id": "PE8-C1",
+     "round": "Consolation 1",
+     "date": "2026-11-18",
+     "slots": [
+      {
+       "loser": "PE8-R1-1"
+      },
+      {
+       "loser": "PE8-R1-2"
+      }
+     ]
+    },
+    {
+     "id": "PE8-C2",
+     "round": "Consolation 2",
+     "date": "2026-11-18",
+     "slots": [
+      {
+       "loser": "PE8-R1-3"
+      },
+      {
+       "loser": "PE8-R1-4"
+      }
+     ]
+    },
+    {
+     "id": "PE8-CH",
+     "round": "Championship",
+     "date": "2026-11-19",
+     "slots": [
+      {
+       "winner": "PE8-SF1"
+      },
+      {
+       "winner": "PE8-SF2"
+      }
+     ]
+    },
+    {
+     "id": "PE8-3P",
+     "round": "Third place",
+     "date": "2026-11-19",
+     "slots": [
+      {
+       "loser": "PE8-SF1"
+      },
+      {
+       "loser": "PE8-SF2"
+      }
+     ]
+    },
+    {
+     "id": "PE8-C3",
+     "round": "Consolation 3",
+     "date": "2026-11-19",
+     "slots": [
+      {
+       "winner": "PE8-C1"
+      },
+      {
+       "winner": "PE8-C2"
+      }
+     ]
+    },
+    {
+     "id": "PE8-C4",
+     "round": "Consolation 4",
+     "date": "2026-11-19",
+     "slots": [
+      {
+       "loser": "PE8-C1"
+      },
+      {
+       "loser": "PE8-C2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Players Era 16",
+   "site": "Las Vegas",
+   "guaranteedDates": [
+    "2026-11-26",
+    "2026-11-27"
+   ],
+   "games": [
+    {
+     "id": "PE16-R1-1",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "Tennessee"
+      },
+      {
+       "team": "Maryland"
+      }
+     ]
+    },
+    {
+     "id": "PE16-R1-2",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "San Diego St"
+      },
+      {
+       "team": "Iowa St"
+      }
+     ]
+    },
+    {
+     "id": "PE16-R1-3",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "St Johns"
+      },
+      {
+       "team": "Oregon"
+      }
+     ]
+    },
+    {
+     "id": "PE16-R1-4",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "Louisville"
+      },
+      {
+       "team": "Texas Tech"
+      }
+     ]
+    },
+    {
+     "id": "PE16-R1-5",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "Gonzaga"
+      },
+      {
+       "team": "Kansas St"
+      }
+     ]
+    },
+    {
+     "id": "PE16-R1-6",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "Baylor"
+      },
+      {
+       "team": "Alabama"
+      }
+     ]
+    },
+    {
+     "id": "PE16-R1-7",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "Michigan"
+      },
+      {
+       "team": "Creighton"
+      }
+     ]
+    },
+    {
+     "id": "PE16-R1-8",
+     "round": "Opening round",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "TCU"
+      },
+      {
+       "team": "Miami"
+      }
+     ]
+    },
+    {
+     "id": "PE16-SF1",
+     "round": "Semifinal 1",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "winner": "PE16-R1-1"
+      },
+      {
+       "winner": "PE16-R1-2"
+      }
+     ]
+    },
+    {
+     "id": "PE16-SF2",
+     "round": "Semifinal 2",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "winner": "PE16-R1-3"
+      },
+      {
+       "winner": "PE16-R1-4"
+      }
+     ]
+    },
+    {
+     "id": "PE16-C1",
+     "round": "Consolation 1",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "loser": "PE16-R1-1"
+      },
+      {
+       "loser": "PE16-R1-2"
+      }
+     ]
+    },
+    {
+     "id": "PE16-C2",
+     "round": "Consolation 2",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "loser": "PE16-R1-3"
+      },
+      {
+       "loser": "PE16-R1-4"
+      }
+     ]
+    },
+    {
+     "id": "PE16-SF3",
+     "round": "Semifinal 3",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "winner": "PE16-R1-5"
+      },
+      {
+       "winner": "PE16-R1-6"
+      }
+     ]
+    },
+    {
+     "id": "PE16-SF4",
+     "round": "Semifinal 4",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "winner": "PE16-R1-7"
+      },
+      {
+       "winner": "PE16-R1-8"
+      }
+     ]
+    },
+    {
+     "id": "PE16-C3",
+     "round": "Consolation 3",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "loser": "PE16-R1-5"
+      },
+      {
+       "loser": "PE16-R1-6"
+      }
+     ]
+    },
+    {
+     "id": "PE16-C4",
+     "round": "Consolation 4",
+     "date": "2026-11-26",
+     "slots": [
+      {
+       "loser": "PE16-R1-7"
+      },
+      {
+       "loser": "PE16-R1-8"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B1CH",
+     "round": "Bracket 1 champion",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "winner": "PE16-SF1"
+      },
+      {
+       "winner": "PE16-SF2"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B2CH",
+     "round": "Bracket 2 champion",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "winner": "PE16-SF3"
+      },
+      {
+       "winner": "PE16-SF4"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B13P",
+     "round": "Bracket 1 third place",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "loser": "PE16-SF1"
+      },
+      {
+       "loser": "PE16-SF2"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B15P",
+     "round": "Bracket 1 fifth place",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "winner": "PE16-C1"
+      },
+      {
+       "winner": "PE16-C2"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B17P",
+     "round": "Bracket 1 seventh place",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "loser": "PE16-C1"
+      },
+      {
+       "loser": "PE16-C2"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B23P",
+     "round": "Bracket 2 third place",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "loser": "PE16-SF3"
+      },
+      {
+       "loser": "PE16-SF4"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B25P",
+     "round": "Bracket 2 fifth place",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "winner": "PE16-C3"
+      },
+      {
+       "winner": "PE16-C4"
+      }
+     ]
+    },
+    {
+     "id": "PE16-B27P",
+     "round": "Bracket 2 seventh place",
+     "date": "2026-11-27",
+     "slots": [
+      {
+       "loser": "PE16-C3"
+      },
+      {
+       "loser": "PE16-C4"
+      }
+     ]
+    },
+    {
+     "id": "PE16-CH",
+     "round": "Championship",
+     "date": "2026-11-28",
+     "slots": [
+      {
+       "winner": "PE16-B1CH"
+      },
+      {
+       "winner": "PE16-B2CH"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

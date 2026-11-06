@@ -75,8 +75,10 @@ jobs:
               if [ "$SAVE" != "true" ] || git diff --quiet data/results.json; then return 0; fi
               # New scores were added: refuse to continue if a locked preseason rating would change, then lock new teams.
               python3 src/lock_preseason.py || return 1
+              # Tournament games that are now decided (both teams known) go into the schedule in the same commit.
+              python3 src/advance_brackets.py || return 1
               N=$(python3 -c "import json,subprocess;print(len(json.load(open('data/results.json')))-len(json.loads(subprocess.check_output(['git','show','HEAD:data/results.json']))))")
-              git add data/results.json data/preseason_locks.json
+              git add data/results.json data/preseason_locks.json data/schedule.json data/tbd_games.json
               git commit -m "Auto-save scores ($N games from the API)"
               if git push origin HEAD:main; then return 0; fi
               echo "Push was rejected (someone saved at the same time). Starting over from the latest main."

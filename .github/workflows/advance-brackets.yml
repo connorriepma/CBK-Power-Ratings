@@ -1,0 +1,43 @@
+name: Advance brackets
+
+# When a score is entered by hand on the site (a commit to data/results.json), add any tournament games that are now
+# decided to data/schedule.json (see src/advance_brackets.py and data/brackets.json). The automatic ingest does the same
+# thing itself, because commits made with the built-in token do not start other workflows.
+# Only schedule.json and tbd_games.json are touched, so this never starts itself again.
+on:
+  push:
+    branches: [main]
+    paths: [data/results.json, data/brackets.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: advance-brackets
+  cancel-in-progress: false
+
+jobs:
+  advance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Advance brackets
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          for attempt in 1 2 3 4; do
+            python3 src/advance_brackets.py | tee -a "$GITHUB_STEP_SUMMARY"
+            if git diff --quiet data/schedule.json data/tbd_games.json; then echo "Nothing to add."; exit 0; fi
+            git add data/schedule.json data/tbd_games.json
+            git commit -m "Advance tournament brackets"
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Push rejected (someone saved at the same time). Starting over from the latest main."
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "Could not push after 4 tries" >&2
+          exit 1
