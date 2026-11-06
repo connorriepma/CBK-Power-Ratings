@@ -1,51 +1,9 @@
 [
  {
-  "team": "Clemson",
-  "date": "2026-11-24",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "Clemson",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "NC State",
-  "date": "2026-11-20",
-  "event": "Baha Mar bracket",
-  "site": "Nassau, Bahamas"
- },
- {
   "team": "Stanford",
   "date": "2026-11-25",
   "event": "Acrisure Series Thanksgiving Event",
   "site": "Palm Desert, Calif."
- },
- {
-  "team": "Arizona",
-  "date": "2026-11-24",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "Arizona",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "BYU",
-  "date": "2026-11-24",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "BYU",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
  },
  {
   "team": "Colorado",
@@ -66,34 +24,10 @@
   "site": "Paradise Island, Bahamas"
  },
  {
-  "team": "Ole Miss",
-  "date": "2026-11-24",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "Ole Miss",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
   "team": "Villanova",
   "date": "2026-12-05",
   "event": "Big Five Classic",
   "site": "Philadelphia"
- },
- {
-  "team": "Providence",
-  "date": "2026-11-24",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "Providence",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
  },
  {
   "team": "Georgetown",
@@ -102,40 +36,10 @@
   "site": "San Diego, Calif."
  },
  {
-  "team": "Seton Hall",
-  "date": "2026-11-20",
-  "event": "Baha Mar bracket",
-  "site": "Nassau, Bahamas"
- },
- {
-  "team": "Colorado St",
-  "date": "2026-11-24",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "Colorado St",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
   "team": "Oregon St",
   "date": "2026-11-19",
   "event": "Opponent TBA",
   "site": "TBD"
- },
- {
-  "team": "VCU",
-  "date": "2026-11-24",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "VCU",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
  },
  {
   "team": "Saint Louis",
@@ -214,12 +118,6 @@
   "date": "2026-12-21",
   "event": "El Paso event bracket game (Kent St or Omaha)",
   "site": "El Paso, Texas"
- },
- {
-  "team": "Murray St",
-  "date": "2026-11-20",
-  "event": "Baha Mar bracket (Wisconsin or Seton Hall)",
-  "site": "Nassau, Bahamas"
  },
  {
   "team": "Indiana St",
@@ -796,5 +694,125 @@
   "date": "2026-11-27",
   "event": "Players Era 16",
   "site": "Las Vegas"
+ },
+ {
+  "team": "Arizona",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "BYU",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Clemson",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Colorado St",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Ole Miss",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Providence",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "VCU",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Washington",
+  "date": "2026-11-24",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Arizona",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "BYU",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Clemson",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Colorado St",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Ole Miss",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Providence",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "VCU",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Washington",
+  "date": "2026-11-25",
+  "event": "Southwest Maui Invitational",
+  "site": "Lahaina, Hawaii"
+ },
+ {
+  "team": "Murray St",
+  "date": "2026-11-20",
+  "event": "Baha Mar bracket",
+  "site": "Nassau, Bahamas"
+ },
+ {
+  "team": "NC State",
+  "date": "2026-11-20",
+  "event": "Baha Mar bracket",
+  "site": "Nassau, Bahamas"
+ },
+ {
+  "team": "Seton Hall",
+  "date": "2026-11-20",
+  "event": "Baha Mar bracket",
+  "site": "Nassau, Bahamas"
+ },
+ {
+  "team": "Wisconsin",
+  "date": "2026-11-20",
+  "event": "Baha Mar bracket",
+  "site": "Nassau, Bahamas"
  }
 ]

@@ -36,7 +36,7 @@ def run(schedule, tbd, results, brackets=BRACKETS):
 class AdvanceBrackets(unittest.TestCase):
     def setUp(self):
         self.pe8 = BRACKETS["events"][0]
-        self.sched = first_round_rows(BRACKETS["events"][0]) + first_round_rows(BRACKETS["events"][1])
+        self.sched = [r for ev in BRACKETS["events"] for r in first_round_rows(ev)]
 
     def games_on(self, schedule, date):
         return {frozenset((g["home"], g["away"])) for g in schedule if g["date"] == date}
@@ -46,7 +46,8 @@ class AdvanceBrackets(unittest.TestCase):
         self.assertEqual(s, self.sched)
         s2, t2, _ = run(s, t, [])
         self.assertEqual((s2, t2), (s, t))
-        self.assertEqual(len(t), 16 + 32)  # 8 teams x 2 dates, 16 teams x 2 dates
+        expected = sum(len({s["team"] for g in e["games"] for s in g["slots"] if "team" in s}) * len(e["guaranteedDates"]) for e in BRACKETS["events"])
+        self.assertEqual(len(t), expected)
 
     def test_semifinal_and_consolation_appear_after_first_round(self):
         res = [result("2026-11-17", "Houston", "Rutgers", 70, 60), result("2026-11-17", "Florida", "Notre Dame", 60, 70)]
@@ -63,7 +64,7 @@ class AdvanceBrackets(unittest.TestCase):
 
     def test_full_bracket_plays_out(self):
         for ev in BRACKETS["events"]:
-            sched, tbd, res = first_round_rows(BRACKETS["events"][0]) + first_round_rows(BRACKETS["events"][1]), [], []
+            sched, tbd, res = [r for e in BRACKETS["events"] for r in first_round_rows(e)], [], []
             played = set()
             for _ in range(10):  # play every game that exists, then see what the bracket adds
                 sched, tbd, _ = run(sched, tbd, res)
@@ -82,8 +83,10 @@ class AdvanceBrackets(unittest.TestCase):
             for g in mine:
                 for n in (g["home"], g["away"]):
                     counts[n] = counts.get(n, 0) + 1
-            self.assertTrue(set(counts.values()) <= {3, 4}, counts)  # three guaranteed games, finalists play a fourth (16-team)
-            self.assertEqual(len(counts), 8 if ev["name"] == "Players Era 8" else 16)
+            base = 1 + len(ev["guaranteedDates"])  # opening game plus one per guaranteed date
+            self.assertTrue(set(counts.values()) <= {base, base + 1}, counts)  # finalists of the 16-team event play one more
+            self.assertEqual(min(counts.values()), base, counts)
+            self.assertEqual(len(counts), len({s["team"] for x in ev["games"] for s in x["slots"] if "team" in s}))
 
     def test_corrected_score_moves_the_unplayed_game(self):
         res = [result("2026-11-17", "Houston", "Rutgers", 70, 60), result("2026-11-17", "Florida", "Notre Dame", 60, 70)]

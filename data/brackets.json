@@ -1,5 +1,5 @@
 {
- "_about": "Tournament brackets. src/advance_brackets.py reads this plus data/results.json and adds each game to data/schedule.json once both teams are known (rows get a 'bracket' id). A slot is a fixed team or the winner/loser of an earlier game id. Games must be listed after the games they depend on. The first slot is listed as home (neutral site, so it only decides display order). Consolation pairings (losers meet losers, then winners and losers again) are the standard ones and are not spelled out in the source.",
+ "_about": "Tournament brackets. src/advance_brackets.py reads this plus data/results.json and adds each game to data/schedule.json once both teams are known (rows get a 'bracket' id). A slot is a fixed team or the winner/loser of an earlier game id. Games must be listed after the games they depend on. The first slot is listed as home (neutral site, so it only decides display order). Consolation pairings (losers meet losers, then winners meet winners for fifth place and losers meet losers for seventh) are the standard ones and are not spelled out in the sources.",
  "events": [
   {
    "name": "Players Era 8",
@@ -497,6 +497,233 @@
       },
       {
        "winner": "PE16-B2CH"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Southwest Maui Invitational",
+   "site": "Lahaina, Hawaii",
+   "guaranteedDates": [
+    "2026-11-24",
+    "2026-11-25"
+   ],
+   "games": [
+    {
+     "id": "MAUI-QF1",
+     "round": "Quarterfinal",
+     "date": "2026-11-23",
+     "slots": [
+      {
+       "team": "Ole Miss"
+      },
+      {
+       "team": "Clemson"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-QF2",
+     "round": "Quarterfinal",
+     "date": "2026-11-23",
+     "slots": [
+      {
+       "team": "Washington"
+      },
+      {
+       "team": "BYU"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-QF3",
+     "round": "Quarterfinal",
+     "date": "2026-11-23",
+     "slots": [
+      {
+       "team": "VCU"
+      },
+      {
+       "team": "Providence"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-QF4",
+     "round": "Quarterfinal",
+     "date": "2026-11-23",
+     "slots": [
+      {
+       "team": "Colorado St"
+      },
+      {
+       "team": "Arizona"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-SF1",
+     "round": "Semifinal 1",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "winner": "MAUI-QF1"
+      },
+      {
+       "winner": "MAUI-QF2"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-SF2",
+     "round": "Semifinal 2",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "winner": "MAUI-QF3"
+      },
+      {
+       "winner": "MAUI-QF4"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-C1",
+     "round": "Consolation 1",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "loser": "MAUI-QF1"
+      },
+      {
+       "loser": "MAUI-QF2"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-C2",
+     "round": "Consolation 2",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "loser": "MAUI-QF3"
+      },
+      {
+       "loser": "MAUI-QF4"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-CH",
+     "round": "Championship",
+     "date": "2026-11-25",
+     "slots": [
+      {
+       "winner": "MAUI-SF1"
+      },
+      {
+       "winner": "MAUI-SF2"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-3P",
+     "round": "Third place",
+     "date": "2026-11-25",
+     "slots": [
+      {
+       "loser": "MAUI-SF1"
+      },
+      {
+       "loser": "MAUI-SF2"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-5P",
+     "round": "Fifth place",
+     "date": "2026-11-25",
+     "slots": [
+      {
+       "winner": "MAUI-C1"
+      },
+      {
+       "winner": "MAUI-C2"
+      }
+     ]
+    },
+    {
+     "id": "MAUI-7P",
+     "round": "Seventh place",
+     "date": "2026-11-25",
+     "slots": [
+      {
+       "loser": "MAUI-C1"
+      },
+      {
+       "loser": "MAUI-C2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Baha Mar bracket",
+   "site": "Nassau, Bahamas",
+   "guaranteedDates": [
+    "2026-11-20"
+   ],
+   "games": [
+    {
+     "id": "BAHA-SF1",
+     "round": "Semifinal 1",
+     "date": "2026-11-19",
+     "slots": [
+      {
+       "team": "Wisconsin"
+      },
+      {
+       "team": "Seton Hall"
+      }
+     ]
+    },
+    {
+     "id": "BAHA-SF2",
+     "round": "Semifinal 2",
+     "date": "2026-11-19",
+     "slots": [
+      {
+       "team": "NC State"
+      },
+      {
+       "team": "Murray St"
+      }
+     ]
+    },
+    {
+     "id": "BAHA-CH",
+     "round": "Championship",
+     "date": "2026-11-20",
+     "slots": [
+      {
+       "winner": "BAHA-SF1"
+      },
+      {
+       "winner": "BAHA-SF2"
+      }
+     ]
+    },
+    {
+     "id": "BAHA-3P",
+     "round": "Third place",
+     "date": "2026-11-20",
+     "slots": [
+      {
+       "loser": "BAHA-SF1"
+      },
+      {
+       "loser": "BAHA-SF2"
       }
      ]
     }
