@@ -42686,5 +42686,55 @@
   "away": "Non D1 Opponent",
   "neutral": false,
   "conf": false
+ },
+ {
+  "date": "2026-11-23",
+  "home": "Howard",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-11-29",
+  "home": "Charleston",
+  "away": "Howard",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-31",
+  "home": "Howard",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2027-01-16",
+  "home": "Howard",
+  "away": "North Carolina Central",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-01-18",
+  "home": "Howard",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2027-02-08",
+  "home": "North Carolina Central",
+  "away": "Howard",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-20",
+  "home": "Howard",
+  "away": "Tennessee St",
+  "neutral": true,
+  "conf": false,
+  "site": "Phoenix, AZ"
  }
 ]
