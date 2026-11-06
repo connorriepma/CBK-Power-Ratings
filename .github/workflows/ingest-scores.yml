@@ -6,9 +6,10 @@ name: Ingest scores
 #   * Never overwrites a score that is already in results.json.
 # One API call per check, and none when nothing is pending. Free tier = 1,000 calls/month.
 #
-# GitHub often delays or skips scheduled starts, so for the evening game window one scheduled start
-# launches a job that stays running and checks every 15 minutes until 06:00 UTC (10 pm Pacific, standard time).
-# Backup starts at 01:37 and 02:07 UTC make sure at least one of them fires.
+# GitHub often delays or skips scheduled starts, so inside the game windows one scheduled start launches
+# a job that stays running and checks every 15 minutes. src/ingest_window.py decides how long, in Pacific time:
+#   Mon-Fri and Sun: 5 pm to 10 pm.   Saturday: 9 am to midnight (several back-to-back jobs).
+# Extra starts are listed for both standard and daylight time; a start outside a window just checks once.
 on:
   workflow_dispatch:
     inputs:
@@ -25,15 +26,18 @@ on:
         description: "Test only: seconds between checks when looping"
         default: "900"
   schedule:
-    # Times are UTC. Shift by an hour when clocks change in March.
-    - cron: "7 1 * * *"           # evening window starts (5:07 pm Pacific), loops until 10 pm Pacific
+    # Times are UTC.
+    - cron: "7 0,1 * * *"         # evening window starts (5:07 pm Pacific, daylight or standard time)
     - cron: "37 1 * * *"          # backup start for the evening window
     - cron: "7 2 * * *"           # backup start for the evening window
+    - cron: "7 16,17 * * 6"       # Saturday 9 am Pacific
+    - cron: "45 21,22 * * 6"      # Saturday afternoon hand-off
+    - cron: "25 3,4 * * 0"        # Saturday night hand-off (Sunday UTC)
     - cron: "22 21-23,0 * * *"    # hourly, afternoon games
     - cron: "22 6,8 * * *"        # late stragglers
     - cron: "22 15 * * *"         # morning catch-up
   push:
-    branches: [api-loop]
+    branches: [api-saturday]
 
 permissions:
   contents: write
@@ -82,11 +86,11 @@ jobs:
             return 1
           }
 
-          # How long to keep checking: until 06:00 UTC for the evening scheduled start, or the test minutes.
+          # How long to keep checking: set by src/ingest_window.py for scheduled starts, or the test minutes.
           NOW=$(date -u +%s)
           END=$NOW
-          if [ "$EVENT" = "schedule" ] && [ "$(date -u +%H)" -ge 1 ] && [ "$(date -u +%H)" -lt 6 ]; then
-            END=$(date -u -d "today 06:00" +%s)
+          if [ "$EVENT" = "schedule" ]; then
+            END=$((NOW + $(python3 src/ingest_window.py)))
           elif [ "$LOOP_MINUTES" -gt 0 ]; then
             END=$((NOW + LOOP_MINUTES * 60))
           fi

@@ -122,3 +122,16 @@ class SwitchTests(unittest.TestCase):
 
     def test_config_switch_is_on_in_repo(self):
         self.assertTrue(ing.enabled())
+
+
+class WindowTests(unittest.TestCase):
+    def test_windows(self):
+        from datetime import datetime
+        sys.path.insert(0, str(ROOT / "src")) if "ROOT" in globals() else None
+        import ingest_window as w
+        t = lambda s: w.seconds_to_loop(datetime.fromisoformat(s))
+        self.assertGreater(t("2026-11-07T01:07:00+00:00"), 4 * 3600)   # Friday evening: loops
+        self.assertEqual(t("2026-11-10T23:22:00+00:00"), 0)            # Tuesday 3 pm: single check
+        self.assertEqual(t("2026-11-07T15:22:00+00:00"), 0)            # Saturday 7 am: before the window
+        self.assertEqual(t("2026-11-07T17:07:00+00:00"), w.CAP_MINUTES * 60)  # Saturday 9 am: capped
+        self.assertLess(t("2026-11-08T04:25:00+00:00"), w.CAP_MINUTES * 60)   # Saturday night: runs to midnight
