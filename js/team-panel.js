@@ -50,7 +50,7 @@ window.CBKPanel = (function () {
     return (v > 0 && t !== '0.0' ? '+' : '') + (t === '-0.0' ? '0.0' : t);
   }
 
-  // The four record cells (Record, Conf, ATS, Avg vs Line) for a team's row in the ratings table.
+  // The three record cells (Record, Conf, ATS) for a team's row in the ratings table.
   function recordCells(model, team) {
     var r = model.records.rec[team], a = model.records.ats[team];
     var overall = r ? r.w + '-' + r.l : '&mdash;';
@@ -60,8 +60,7 @@ window.CBKPanel = (function () {
       ? a.n + ' game' + (a.n === 1 ? '' : 's') + ' counted of ' + (r ? r.w + r.l : 0) + ' played'
       : 'No games counted yet';
     return '<td class="num rec-col">' + overall + '</td><td class="num rec-col">' + conf + '</td>' +
-      '<td class="num rec-col" title="' + esc(tip) + '">' + (counted ? atsStr(a.w, a.l, a.p) : '&mdash;') + '</td>' +
-      '<td class="num rec-col" title="' + esc(tip) + '">' + (counted ? atsAvg(a) : '&mdash;') + '</td>';
+      '<td class="num rec-col" title="' + esc(tip) + '">' + (counted ? atsStr(a.w, a.l, a.p) : '&mdash;') + '</td>';
   }
 
   function recBar(model, team) {
