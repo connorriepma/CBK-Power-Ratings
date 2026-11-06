@@ -728,6 +728,128 @@
      ]
     }
    ]
+  },
+  {
+   "name": "Acrisure Series",
+   "site": "Palm Desert, Calif.",
+   "guaranteedDates": [
+    "2026-11-23"
+   ],
+   "games": [
+    {
+     "id": "ACR4-S1",
+     "round": "Opening game",
+     "date": "2026-11-22",
+     "slots": [
+      {
+       "team": "Seattle"
+      },
+      {
+       "team": "UC San Diego"
+      }
+     ]
+    },
+    {
+     "id": "ACR4-S2",
+     "round": "Opening game",
+     "date": "2026-11-22",
+     "slots": [
+      {
+       "team": "San Jose St"
+      },
+      {
+       "team": "Loyola Chicago"
+      }
+     ]
+    },
+    {
+     "id": "ACR4-CH",
+     "round": "Pod 4 championship",
+     "date": "2026-11-23",
+     "slots": [
+      {
+       "winner": "ACR4-S1"
+      },
+      {
+       "winner": "ACR4-S2"
+      }
+     ]
+    },
+    {
+     "id": "ACR4-3P",
+     "round": "Pod 4 third place",
+     "date": "2026-11-23",
+     "slots": [
+      {
+       "loser": "ACR4-S1"
+      },
+      {
+       "loser": "ACR4-S2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Acrisure Series Thanksgiving Event",
+   "site": "Palm Desert, Calif.",
+   "guaranteedDates": [
+    "2026-11-25"
+   ],
+   "games": [
+    {
+     "id": "ACR2-S1",
+     "round": "Opening game",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "Grand Canyon"
+      },
+      {
+       "team": "Saint Louis"
+      }
+     ]
+    },
+    {
+     "id": "ACR2-S2",
+     "round": "Opening game",
+     "date": "2026-11-24",
+     "slots": [
+      {
+       "team": "Stanford"
+      },
+      {
+       "team": "Colorado"
+      }
+     ]
+    },
+    {
+     "id": "ACR2-CH",
+     "round": "Pod 2 championship",
+     "date": "2026-11-25",
+     "slots": [
+      {
+       "winner": "ACR2-S1"
+      },
+      {
+       "winner": "ACR2-S2"
+      }
+     ]
+    },
+    {
+     "id": "ACR2-3P",
+     "round": "Pod 2 third place",
+     "date": "2026-11-25",
+     "slots": [
+      {
+       "loser": "ACR2-S1"
+      },
+      {
+       "loser": "ACR2-S2"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

@@ -113,6 +113,19 @@ class AdvanceBrackets(unittest.TestCase):
         s, _, _ = run(self.sched, [], res)
         self.assertEqual(s, self.sched)
 
+    def test_event_name_that_starts_another_does_not_eat_its_placeholders(self):
+        brackets = {"events": [
+            {"name": "Acrisure Series", "site": "X", "guaranteedDates": ["2026-11-23"], "games": [
+                {"id": "A-1", "round": "r", "date": "2026-11-22", "slots": [{"team": "Seattle"}, {"team": "UC San Diego"}]}]},
+            {"name": "Acrisure Series Thanksgiving Event", "site": "X", "guaranteedDates": ["2026-11-25"], "games": [
+                {"id": "B-1", "round": "r", "date": "2026-11-24", "slots": [{"team": "Stanford"}, {"team": "Colorado"}]}]}]}
+        old = [{"team": "Stanford", "date": "2026-11-25", "event": "Acrisure Series Thanksgiving Event (Stanford or Colorado)", "site": "X"},
+               {"team": "Seattle", "date": "2026-11-23", "event": "Acrisure Series (opponent TBD)", "site": "X"}]
+        _, tbd, _ = ab.advance([], old, [], brackets, TEAMS)
+        self.assertEqual({(x["team"], x["event"]) for x in tbd},
+                         {("Seattle", "Acrisure Series"), ("UC San Diego", "Acrisure Series"),
+                          ("Stanford", "Acrisure Series Thanksgiving Event"), ("Colorado", "Acrisure Series Thanksgiving Event")})
+
     def test_real_data_is_consistent(self):
         sched = json.loads((ROOT / "data/schedule.json").read_text())
         for ev in BRACKETS["events"]:

@@ -1,17 +1,5 @@
 [
  {
-  "team": "Stanford",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event",
-  "site": "Palm Desert, Calif."
- },
- {
-  "team": "Colorado",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event",
-  "site": "Palm Desert, Calif."
- },
- {
   "team": "Texas",
   "date": "2026-11-27",
   "event": "Rady Children's Invitational",
@@ -40,18 +28,6 @@
   "date": "2026-11-19",
   "event": "Opponent TBA",
   "site": "TBD"
- },
- {
-  "team": "Saint Louis",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event",
-  "site": "Palm Desert, Calif."
- },
- {
-  "team": "Loyola Chicago",
-  "date": "2026-11-23",
-  "event": "Acrisure Series",
-  "site": "Palm Desert, Calif."
  },
  {
   "team": "Saint Joseph's",
@@ -96,18 +72,6 @@
   "site": "St. Thomas, U.S. Virgin Islands"
  },
  {
-  "team": "Grand Canyon",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event (Stanford or Colorado)",
-  "site": "Palm Desert, Calif."
- },
- {
-  "team": "San Jose St",
-  "date": "2026-11-23",
-  "event": "Acrisure Series (Seattle or UC San Diego)",
-  "site": "Palm Desert, Calif."
- },
- {
   "team": "UTEP",
   "date": "2026-11-25",
   "event": "Puerto Aventuras tournament (Eastern Michigan or Kennesaw St)",
@@ -142,12 +106,6 @@
   "date": "2026-11-25",
   "event": "Cancun Challenge (North Dakota or Detroit Mercy)",
   "site": "Cancun, Mexico"
- },
- {
-  "team": "UC San Diego",
-  "date": "2026-11-23",
-  "event": "Acrisure Series (opponent TBD)",
-  "site": "Palm Desert, Calif."
  },
  {
   "team": "Utah Valley",
@@ -208,12 +166,6 @@
   "date": "2026-11-27",
   "event": "Rady Children's Invitational (Georgetown or Texas)",
   "site": "San Diego, Calif."
- },
- {
-  "team": "Seattle",
-  "date": "2026-11-23",
-  "event": "Acrisure Series (Loyola Chicago or San Jose St)",
-  "site": "Palm Desert, Calif."
  },
  {
   "team": "Portland",
@@ -814,5 +766,53 @@
   "date": "2026-11-20",
   "event": "Baha Mar bracket",
   "site": "Nassau, Bahamas"
+ },
+ {
+  "team": "Loyola Chicago",
+  "date": "2026-11-23",
+  "event": "Acrisure Series",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "San Jose St",
+  "date": "2026-11-23",
+  "event": "Acrisure Series",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Seattle",
+  "date": "2026-11-23",
+  "event": "Acrisure Series",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "UC San Diego",
+  "date": "2026-11-23",
+  "event": "Acrisure Series",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Colorado",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Grand Canyon",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Saint Louis",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event",
+  "site": "Palm Desert, Calif."
+ },
+ {
+  "team": "Stanford",
+  "date": "2026-11-25",
+  "event": "Acrisure Series Thanksgiving Event",
+  "site": "Palm Desert, Calif."
  }
 ]

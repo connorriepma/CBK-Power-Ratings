@@ -98,7 +98,9 @@ def advance(schedule, tbd, results, brackets, teams):
         names = {s["team"] for g in ev["games"] for s in g["slots"] if "team" in s}
         by_team_date = {(r["home"], r["date"]) for r in schedule} | {(r["away"], r["date"]) for r in schedule}
         prefix = ev["name"]
-        tbd[:] = [t for t in tbd if not t["event"].startswith(prefix)]
+        # Placeholders for this event: the exact name, or the name followed by a note in brackets. Not a plain prefix,
+        # because one event name can start another's ("Acrisure Series" and "Acrisure Series Thanksgiving Event").
+        tbd[:] = [t for t in tbd if not (t["event"] == prefix or t["event"].startswith(prefix + " ("))]
         for d in ev["guaranteedDates"]:
             for team in sorted(names):
                 if (team, d) not in by_team_date:
