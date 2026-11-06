@@ -110,10 +110,15 @@ window.CBKPanel = (function () {
 
   function lineCell(model, g, team) {
     if (g.result) {
-      var isHome = g.home === team;
-      var own = isHome ? g.result.home : g.result.away, opp = isHome ? g.result.away : g.result.home;
-      var won = own > opp;
-      return '<div class="g-line final ' + (won ? 'fav' : 'dog') + '">' + (won ? 'W' : 'L') + ' ' + own + '-' + opp + '</div>';
+      // Finished game: keep the spread locked when the score was first saved (this team's side of it).
+      // The final score itself is in the win % cell.
+      var L = g.lineAtEntry;
+      if (typeof L !== 'number') return '<div class="g-line none" title="No spread was saved with this result">&mdash;</div>';
+      var tl = g.home === team ? L : -L;
+      if (tl === 0) return '<div class="g-line pk" title="Spread when the score was saved: PK">PK</div>';
+      var bgf = model.buyGame && model.buyGame(g);
+      return '<div class="g-line ' + (tl < 0 ? 'fav' : 'dog') + '" title="Spread when the score was saved">' +
+        (tl > 0 ? '+' + tl.toFixed(1) : tl.toFixed(1)) + (bgf ? '*' : '') + '</div>';
     }
     var line = model.teamLine(g, team);
     if (line === null) return '<div class="g-line none">&mdash;</div>';
@@ -127,7 +132,13 @@ window.CBKPanel = (function () {
   }
 
   function winCell(model, g, team) {
-    if (g.result) return '<div class="g-wp"></div>';
+    if (g.result) {
+      var isHome = g.home === team;
+      var own = isHome ? g.result.home : g.result.away, opp = isHome ? g.result.away : g.result.home;
+      var won = own > opp;
+      var tip = window.CBKGames && CBKGames.adjustmentTip ? CBKGames.adjustmentTip(model, g) : 'Final score';
+      return '<div class="g-wp final ' + (won ? 'fav' : 'dog') + '" title="' + esc(tip) + '">' + (won ? 'W' : 'L') + ' ' + own + '-' + opp + '</div>';
+    }
     var wp = model.winProb(g);
     if (!wp) {
       if (g.home === C.NON_D1 || g.away === C.NON_D1) {
@@ -186,7 +197,7 @@ window.CBKPanel = (function () {
       ' points away from it. The spread is the exact predicted margin rounded to the nearest 0.5, so win % and spread agree. Hover a spread to see the exact line.</div>' +
       exactNote;
     var sched = '<div class="schedule-list">' + recBar(model, team) + projBar(model, team) +
-      '<div class="g-head panel"><div></div><div>Date</div><div>Opponent</div><div class="r">Line</div><div class="r">Win %</div></div>' +
+      '<div class="g-head panel"><div></div><div>Date</div><div>Opponent</div><div class="r">Line</div><div class="r">Win % / Final</div></div>' +
       rows + foot + '</div>';
     var rot = rotationHtml(team);
     return rot ? '<div class="panel-split"><div class="panel-sched">' + sched + '</div>' + rot + '</div>' : sched;
