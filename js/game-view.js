@@ -32,7 +32,7 @@ window.CBKGames = (function () {
       var homeWon = g.result.home > g.result.away;
       var win = homeWon ? g.home : g.away, winPts = homeWon ? g.result.home : g.result.away;
       var lose = homeWon ? g.away : g.home, losePts = homeWon ? g.result.away : g.result.home;
-      return '<div class="g-prob final" title="Final score">' +
+      return '<div class="g-prob final" title="' + esc(adjustmentTip(model, g)) + '">' +
         '<div class="fin-w">' + esc(win) + ' ' + winPts + '</div><div class="fin-l">' + esc(lose) + ' ' + losePts + '</div></div>';
     }
     var wp = model.winProb(g);
@@ -52,6 +52,35 @@ window.CBKGames = (function () {
 
   // Combined rating of the two teams (exact current ratings added together), or null if either team is unrated
   // (Non D1 Opponent games and any other unrated opponent).
+  // Hover text for a final score: what that one game did to each team's rating. Read from the replay log
+  // (model.log), so it is exactly what the ratings used. The log is rebuilt on every setResults, so index it per log.
+  var logIndex = { log: null, byId: null };
+  function logEntry(model, g) {
+    if (logIndex.log !== model.log) {
+      logIndex.log = model.log; logIndex.byId = {};
+      model.log.forEach(function (e) { logIndex.byId[e.date + '|' + e.home + '|' + e.away] = e; });
+    }
+    return logIndex.byId[g.date + '|' + C.teamKey(g.home) + '|' + C.teamKey(g.away)] || null;
+  }
+  function signed(x, d) { var v = x.toFixed(d); return (x > 0 ? '+' : '') + v; }
+  function adjustmentTip(model, g) {
+    var e = logEntry(model, g);
+    if (!e) return 'Final score';
+    if (e.skip) return 'Final score. No rating change: the opponent is not a Division I team.';
+    var lines = [];
+    var pm = e.pred, am = e.hs - e.as;
+    lines.push('Model: ' + (Math.abs(pm) < 0.005 ? 'even' : (pm > 0 ? g.home : g.away) + ' by ' + Math.abs(pm).toFixed(2)));
+    lines.push('Actual: ' + (am === 0 ? 'tie' : (am > 0 ? g.home : g.away) + ' by ' + Math.abs(am)));
+    var raw = am - pm;
+    lines.push((Math.abs(raw) < 0.005 ? 'Matched the model' : (raw > 0 ? g.home : g.away) + ' beat the model by ' + Math.abs(raw).toFixed(2)) +
+      (Math.abs(raw - e.miss) > 0.005 ? ' (counted as ' + Math.abs(e.miss).toFixed(2) + ')' : ''));
+    if (e.credit < 0.9995) lines.push('Favorite credit cut to ' + Math.round(e.credit * 100) + '% (big mismatch)');
+    lines.push('');
+    lines.push(g.home + ' ' + signed(e.ha - e.hb, 2) + '  (' + e.hb.toFixed(2) + ' to ' + e.ha.toFixed(2) + ', K ' + e.kh + ')');
+    lines.push(g.away + ' ' + signed(e.aa - e.ab, 2) + '  (' + e.ab.toFixed(2) + ' to ' + e.aa.toFixed(2) + ', K ' + e.ka + ')');
+    return lines.join('\n');
+  }
+
   function combinedRating(model, g) {
     var h = model.current[C.teamKey(g.home)], a = model.current[C.teamKey(g.away)];
     return (typeof h === 'number' && typeof a === 'number') ? h + a : null;
@@ -74,5 +103,5 @@ window.CBKGames = (function () {
     });
   }
 
-  return { lineHTML: lineHTML, probHTML: probHTML, combinedRating: combinedRating, sortBestFirst: sortBestFirst };
+  return { lineHTML: lineHTML, probHTML: probHTML, adjustmentTip: adjustmentTip, combinedRating: combinedRating, sortBestFirst: sortBestFirst };
 })();
