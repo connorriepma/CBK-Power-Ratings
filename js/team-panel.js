@@ -125,7 +125,6 @@ window.CBKPanel = (function () {
     var m = model.exactMargin(g);
     var tip = 'Exact line: ' + (m > 0 ? g.home : g.away) + ' -' + Math.abs(m).toFixed(2);
     var bg = model.buyGame && model.buyGame(g);
-    if (bg) tip += ' (includes +' + bg.bonus + ' buy-game adjustment; ratings are unchanged)';
     var txt = (line > 0 ? '+' + line.toFixed(1) : line.toFixed(1)) + (bg ? '*' : '');
     return '<div class="g-line ' + (line < 0 ? 'fav' : 'dog') + '" title="' + esc(tip) + '">' + txt + '</div>';
   }

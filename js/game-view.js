@@ -14,7 +14,7 @@ window.CBKGames = (function () {
       if (L === 0) return '<div class="g-line pk" title="Spread when the score was saved: PK">PK</div>';
       var favL = L < 0 ? g.home : g.away;
       var bgL = model.buyGame && model.buyGame(g);
-      return '<div class="g-line fav" title="Spread when the score was saved' + (bgL ? ' (buy-game adjusted)' : '') + '">' + esc(favL) + ' -' + Math.abs(L).toFixed(1) + (bgL ? '*' : '') + '</div>';
+      return '<div class="g-line fav" title="Spread when the score was saved">' + esc(favL) + ' -' + Math.abs(L).toFixed(1) + (bgL ? '*' : '') + '</div>';
     }
     var spread = model.homeSpread(g);
     if (spread === null) return '<div class="g-line none">&mdash;</div>';
@@ -23,7 +23,6 @@ window.CBKGames = (function () {
     var fav = spread > 0 ? g.home : g.away;
     var tip = 'Exact line: ' + (m > 0 ? g.home : g.away) + ' -' + Math.abs(m).toFixed(2);
     var bg = model.buyGame && model.buyGame(g);
-    if (bg) tip += ' (includes +' + bg.bonus + ' buy-game adjustment; ratings are unchanged)';
     return '<div class="g-line fav" title="' + esc(tip) + '">' + esc(fav) + ' -' + Math.abs(spread).toFixed(1) + (bg ? '*' : '') + '</div>';
   }
 

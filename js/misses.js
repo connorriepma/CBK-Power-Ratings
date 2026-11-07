@@ -27,8 +27,6 @@
       '<div class="ms-sum">' +
         '<div><b>' + st.mae.toFixed(2) + '</b><span>MAE (pts), all ' + st.n + ' games</span></div>' +
         '<div><b>' + sgn(st.bias) + '</b><span>Favorite vs line (avg pts)</span></div>' +
-        '<div><b>' + st.nBuy + '</b><span>Buy-game adjusted games included*</span></div>' +
-        '<div><b>' + st.maeRating.toFixed(2) + '</b><span>MAE without buy-game adjustments</span></div>' +
       '</div>' +
       '<div class="ms-scroll"><table><thead><tr><th>Week of</th><th>Games</th><th>MAE</th><th>Favorite vs line</th></tr></thead><tbody>' +
       wk.slice().reverse().map(function (w) {
@@ -36,7 +34,6 @@
           '</td><td data-l="MAE" class="ms-num">' + w.mae.toFixed(2) + '</td><td data-l="Favorite vs line" class="ms-num">' + sgn(w.bias) + '</td></tr>';
       }).join('') + '</tbody></table></div>' +
       '<div class="ms-foot">MAE (mean absolute error) is the average number of points the final margin landed from the line, ignoring direction. ' +
-      'Games with a buy-game adjustment (*) are measured against their adjusted line; every other game against the rating line. ' +
       '“Favorite vs line” is the favorite’s margin minus the line: positive means favorites beat the line on average, and zero means no bias.</div>';
   }
 
@@ -74,8 +71,8 @@
           '<td data-l="Too high on">' + esc(nameOf(r.over)) + '</td></tr>';
       }).join('') + '</tbody></table></div>';
     $('ms-foot').textContent = (list.length > LIMIT ? 'Showing the ' + LIMIT + ' biggest of ' + list.length + '. ' : '') +
-      'Miss is how many points the final margin landed from the model’s line going into that game, using the exact rating-based line (not rounded to 0.5). A starred line includes a buy-game adjustment. ' +
-      'It is the raw miss, measured against the published line: the rating update (which never uses the buy-game adjustment) caps it and, for a big favorite beating the line, only counts part of it. This page does neither. “Model too high on” is the team that did worse than the line expected. ' +
+      'Miss is how many points the final margin landed from the model’s line going into that game, using the exact line (not rounded to 0.5). ' +
+      'It is the raw miss: the rating update caps it and, for a big favorite beating the line, only counts part of it. This page does neither. “Model too high on” is the team that did worse than the line expected. ' +
       'Games against unrated opponents are left out. * neutral site.';
   }
 
