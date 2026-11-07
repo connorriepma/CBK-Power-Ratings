@@ -49,19 +49,30 @@ test('lineText names the favorite, PK when dead even', () => {
   assert.equal(M.lineText({ pred: 0.01, home: 'h', away: 'a' }, names), 'PK');
 });
 
-test('buy games: misses are from the favorite side, against the rating line and the adjusted line', () => {
+test('buy-game rows are measured against the adjusted line; summary reports both MAEs', () => {
+  const lookup = e => e.home === 'duke' ? { favorite: 'duke', bonus: 4 } : e.home === 'penn' ? { favorite: 'illinois', bonus: 4 } : null;
   const rows = M.fromLog([
-    g('2026-11-05', 'duke', 'coastal', 100, 60, 30),            // fav home: won by 40 vs rating line 30
-    g('2026-11-05', 'penn', 'illinois', 60, 85, -22),            // fav away: won by 25 vs rating line 22
-    g('2026-11-05', 'a', 'b', 70, 60, 5)                         // not a buy game
-  ]);
-  const lookup = r => r.home === 'duke' ? { favorite: 'duke', bonus: 4 } : r.home === 'penn' ? { favorite: 'illinois', bonus: 4 } : null;
-  const bg = M.buyGames(rows, lookup);
-  assert.equal(bg.length, 2);
-  near(bg[0].ratingLine, 30); near(bg[0].adjLine, 34); near(bg[0].missRating, 10); near(bg[0].missAdj, 6);
-  near(bg[1].ratingLine, 22); near(bg[1].adjLine, 26); near(bg[1].missRating, 3); near(bg[1].missAdj, -1);
-  const st = M.buyStats(bg);
-  assert.equal(st.n, 2); near(st.maeRating, 6.5); near(st.maeAdj, 3.5); near(st.biasRating, 6.5); near(st.biasAdj, 2.5);
-  assert.equal(st.covered, 1);
-  assert.equal(M.buyStats([]), null);
+    g('2026-11-05', 'duke', 'coastal', 100, 60, 30),      // buy: rating line 30 -> 34, margin 40
+    g('2026-11-05', 'penn', 'illinois', 60, 85, -22),     // buy, away favorite: rating line -22 -> -26, margin -25
+    g('2026-11-06', 'a', 'b', 70, 60, 5)                  // not a buy game
+  ], lookup);
+  near(rows[0].pred, 34); near(rows[0].predRating, 30); near(rows[0].miss, 6);
+  near(rows[1].pred, -26); near(rows[1].miss, 1); near(rows[1].abs, 1);
+  near(rows[2].pred, 5); near(rows[2].miss, 5);
+  const st = M.summary(rows);
+  assert.equal(st.n, 3); assert.equal(st.nBuy, 2);
+  near(st.mae, (6 + 1 + 5) / 3);
+  near(st.maeRating, (10 + 3 + 5) / 3);
+  near(st.bias, (6 - 1 + 5) / 3);            // away favorite: miss 1 is toward the away team, so it counts as -1
+  assert.equal(M.summary([]), null);
+  assert.equal(M.fromLog([g('2026-11-05', 'a', 'b', 70, 60, 5)])[0].pred, 5);   // no lookup: unchanged
+});
+
+test('weekly MAE groups by Monday', () => {
+  assert.equal(M.weekStart('2026-11-05'), '2026-11-02');
+  assert.equal(M.weekStart('2026-11-08'), '2026-11-02');
+  assert.equal(M.weekStart('2026-11-09'), '2026-11-09');
+  const rows = M.fromLog([g('2026-11-05', 'a', 'b', 70, 60, 4), g('2026-11-09', 'c', 'd', 80, 60, 10)]);
+  const w = M.byWeek(rows);
+  assert.equal(w.length, 2); assert.equal(w[0].week, '2026-11-02'); near(w[0].mae, 6); near(w[1].mae, 10);
 });

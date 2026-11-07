@@ -11,6 +11,7 @@
   var LIMIT = 200;
 
   var model, rows = [], names = {};
+  function lookup(e) { return model.buyGame({ date: e.date, home: e.home, away: e.away }); }
   function $(id) { return document.getElementById(id); }
 
   function fmtDate(iso) { var p = iso.split('-'); return MON[+p[1] - 1] + ' ' + (+p[2]); }
@@ -18,40 +19,29 @@
 
   function sgn(x, d) { return (x > 0 ? '+' : x < 0 ? '\u2212' : '') + Math.abs(x).toFixed(d == null ? 1 : d); }
 
-  // Only games that carried a buy-game adjustment: how the plain rating line and the adjusted line each did.
-  function renderBuy() {
-    var games = M.buyGames(rows, function (r) { return model.buyGame({ date: r.date, home: r.home, away: r.away }); });
-    var st = M.buyStats(games), el = $('ms-buy');
-    if (!st) {
-      el.innerHTML = '<h2>Buy-game adjusted games</h2><div class="ms-empty"><b>No finished buy games yet</b>This fills in once a game with a starred (*) spread is final.</div>';
-      return;
-    }
-    var by = games.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
-    el.innerHTML = '<h2>Buy-game adjusted games</h2>' +
+  function renderOverall() {
+    var st = M.summary(rows), el = $('ms-buy');
+    if (!st) { el.innerHTML = ''; return; }
+    var wk = M.byWeek(rows);
+    el.innerHTML = '<h2>Model accuracy</h2>' +
       '<div class="ms-sum">' +
-        '<div><b>' + st.n + '</b><span>Finished games</span></div>' +
-        '<div><b>' + st.maeRating.toFixed(1) + ' &rarr; ' + st.maeAdj.toFixed(1) + '</b><span>MAE: rating line &rarr; adjusted line</span></div>' +
-        '<div><b>' + sgn(st.biasRating) + ' &rarr; ' + sgn(st.biasAdj) + '</b><span>Favorite vs line (avg): rating &rarr; adjusted</span></div>' +
-        '<div><b>' + st.covered + '-' + (st.n - st.covered - st.pushed) + (st.pushed ? '-' + st.pushed : '') + '</b><span>Favorite vs adjusted line</span></div>' +
+        '<div><b>' + st.mae.toFixed(2) + '</b><span>MAE (pts), all ' + st.n + ' games</span></div>' +
+        '<div><b>' + sgn(st.bias) + '</b><span>Favorite vs line (avg pts)</span></div>' +
+        '<div><b>' + st.nBuy + '</b><span>Buy-game adjusted games included*</span></div>' +
+        '<div><b>' + st.maeRating.toFixed(2) + '</b><span>MAE without buy-game adjustments</span></div>' +
       '</div>' +
-      '<div class="ms-scroll"><table><thead><tr><th>Date</th><th>Game</th><th>Rating line</th><th>Bonus</th><th>Adjusted line</th><th>Final</th><th>Fav vs adjusted</th></tr></thead><tbody>' +
-      by.map(function (g) {
-        var fav = nameOf(g.favorite), winner = g.hs > g.as ? g.home : g.away, loser = g.hs > g.as ? g.away : g.home;
-        return '<tr><td data-l="Date" class="ms-date">' + fmtDate(g.date) + '</td>' +
-          '<td data-l="Game">' + esc(nameOf(g.away)) + (g.neutral ? ' vs ' : ' @ ') + esc(nameOf(g.home)) + '</td>' +
-          '<td data-l="Rating line" class="ms-num">' + esc(fav) + ' -' + g.ratingLine.toFixed(1) + '</td>' +
-          '<td data-l="Bonus" class="ms-num">+' + g.bonus + '</td>' +
-          '<td data-l="Adjusted line" class="ms-num">' + esc(fav) + ' -' + g.adjLine.toFixed(1) + '*</td>' +
-          '<td data-l="Final" class="ms-num">' + esc(nameOf(winner)) + ' ' + Math.max(g.hs, g.as) + ', ' + esc(nameOf(loser)) + ' ' + Math.min(g.hs, g.as) + '</td>' +
-          '<td data-l="Fav vs adjusted" class="ms-num ms-miss">' + sgn(g.missAdj) + '</td></tr>';
+      '<div class="ms-scroll"><table><thead><tr><th>Week of</th><th>Games</th><th>MAE</th><th>Favorite vs line</th></tr></thead><tbody>' +
+      wk.slice().reverse().map(function (w) {
+        return '<tr><td data-l="Week of" class="ms-date">' + fmtDate(w.week) + '</td><td data-l="Games" class="ms-num">' + w.n +
+          '</td><td data-l="MAE" class="ms-num">' + w.mae.toFixed(2) + '</td><td data-l="Favorite vs line" class="ms-num">' + sgn(w.bias) + '</td></tr>';
       }).join('') + '</tbody></table></div>' +
       '<div class="ms-foot">MAE (mean absolute error) is the average number of points the final margin landed from the line, ignoring direction. ' +
-      '“Favorite vs line” is the favorite’s margin minus the line: positive means the favorite did better than the line said, so a figure near zero for the adjusted line means the bonus is about right. ' +
-      'Only games with a buy-game adjustment are included. Games played before the bonus existed are not.</div>';
+      'Games with a buy-game adjustment (*) are measured against their adjusted line; every other game against the rating line. ' +
+      '“Favorite vs line” is the favorite’s margin minus the line: positive means favorites beat the line on average, and zero means no bias.</div>';
   }
 
   function render() {
-    renderBuy();
+    renderOverall();
     var min = Number($('ms-min').value), q = $('ms-team').value.trim().toLowerCase();
     var list = M.rank(rows).filter(function (r) {
       return r.abs >= min && (!q || nameOf(r.home).toLowerCase().indexOf(q) >= 0 || nameOf(r.away).toLowerCase().indexOf(q) >= 0);
@@ -84,20 +74,20 @@
           '<td data-l="Too high on">' + esc(nameOf(r.over)) + '</td></tr>';
       }).join('') + '</tbody></table></div>';
     $('ms-foot').textContent = (list.length > LIMIT ? 'Showing the ' + LIMIT + ' biggest of ' + list.length + '. ' : '') +
-      'Miss is how many points the final margin landed from the model’s line going into that game, using the exact rating-based line (not rounded to 0.5, and before any buy-game adjustment). ' +
-      'It is the raw miss: the rating update caps it and, for a big favorite beating the line, only counts part of it. This page does neither. “Model too high on” is the team that did worse than the line expected. ' +
+      'Miss is how many points the final margin landed from the model’s line going into that game, using the exact rating-based line (not rounded to 0.5). A starred line includes a buy-game adjustment. ' +
+      'It is the raw miss, measured against the published line: the rating update (which never uses the buy-game adjustment) caps it and, for a big favorite beating the line, only counts part of it. This page does neither. “Model too high on” is the team that did worse than the line expected. ' +
       'Games against unrated opponents are left out. * neutral site.';
   }
 
   C.load().then(function (m) {
     model = m;
     m.teams.forEach(function (t) { names[t.key] = t.team; });
-    rows = M.fromLog(m.log);
+    rows = M.fromLog(m.log, lookup);
     $('ms-min').innerHTML = MINS.map(function (n) { return '<option value="' + n + '">' + (n ? n + '+ point miss' : 'All misses') + '</option>'; }).join('');
     $('ms-min').addEventListener('change', render);
     $('ms-team').addEventListener('input', render);
     // Scores saved on the Schedule page in another tab are picked up the same way the other pages do it.
-    document.addEventListener('cbk-results', function () { rows = M.fromLog(model.log); render(); });
+    document.addEventListener('cbk-results', function () { rows = M.fromLog(model.log, lookup); render(); });
     render();
   }).catch(function (err) {
     console.error(err);
