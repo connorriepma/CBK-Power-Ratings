@@ -94,21 +94,5 @@
   "confidence": "Low",
   "modelLine": 20.5,
   "ts": "2026-11-05T23:49:09.782Z"
- },
- {
-  "id": "2026-11-07_denver_uc-riverside_denver",
-  "gameId": "2026-11-07_denver_uc-riverside",
-  "date": "2026-11-07",
-  "home": "UC Riverside",
-  "away": "Denver",
-  "neutral": false,
-  "pick": "Denver",
-  "line": 2,
-  "odds": -110,
-  "units": 1,
-  "book": "BetOnline",
-  "confidence": "Low",
-  "modelLine": -2,
-  "ts": "2026-11-07T01:57:31.781Z"
  }
 ]
