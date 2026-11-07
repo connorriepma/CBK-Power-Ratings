@@ -48,3 +48,20 @@ test('lineText names the favorite, PK when dead even', () => {
   assert.equal(M.lineText({ pred: -3, home: 'h', away: 'a' }, names), 'Away U -3.0');
   assert.equal(M.lineText({ pred: 0.01, home: 'h', away: 'a' }, names), 'PK');
 });
+
+test('buy games: misses are from the favorite side, against the rating line and the adjusted line', () => {
+  const rows = M.fromLog([
+    g('2026-11-05', 'duke', 'coastal', 100, 60, 30),            // fav home: won by 40 vs rating line 30
+    g('2026-11-05', 'penn', 'illinois', 60, 85, -22),            // fav away: won by 25 vs rating line 22
+    g('2026-11-05', 'a', 'b', 70, 60, 5)                         // not a buy game
+  ]);
+  const lookup = r => r.home === 'duke' ? { favorite: 'duke', bonus: 4 } : r.home === 'penn' ? { favorite: 'illinois', bonus: 4 } : null;
+  const bg = M.buyGames(rows, lookup);
+  assert.equal(bg.length, 2);
+  near(bg[0].ratingLine, 30); near(bg[0].adjLine, 34); near(bg[0].missRating, 10); near(bg[0].missAdj, 6);
+  near(bg[1].ratingLine, 22); near(bg[1].adjLine, 26); near(bg[1].missRating, 3); near(bg[1].missAdj, -1);
+  const st = M.buyStats(bg);
+  assert.equal(st.n, 2); near(st.maeRating, 6.5); near(st.maeAdj, 3.5); near(st.biasRating, 6.5); near(st.biasAdj, 2.5);
+  assert.equal(st.covered, 1);
+  assert.equal(M.buyStats([]), null);
+});

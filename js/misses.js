@@ -16,7 +16,42 @@
   function fmtDate(iso) { var p = iso.split('-'); return MON[+p[1] - 1] + ' ' + (+p[2]); }
   function nameOf(key) { return names[key] || key; }
 
+  function sgn(x, d) { return (x > 0 ? '+' : x < 0 ? '\u2212' : '') + Math.abs(x).toFixed(d == null ? 1 : d); }
+
+  // Only games that carried a buy-game adjustment: how the plain rating line and the adjusted line each did.
+  function renderBuy() {
+    var games = M.buyGames(rows, function (r) { return model.buyGame({ date: r.date, home: r.home, away: r.away }); });
+    var st = M.buyStats(games), el = $('ms-buy');
+    if (!st) {
+      el.innerHTML = '<h2>Buy-game adjusted games</h2><div class="ms-empty"><b>No finished buy games yet</b>This fills in once a game with a starred (*) spread is final.</div>';
+      return;
+    }
+    var by = games.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+    el.innerHTML = '<h2>Buy-game adjusted games</h2>' +
+      '<div class="ms-sum">' +
+        '<div><b>' + st.n + '</b><span>Finished games</span></div>' +
+        '<div><b>' + st.maeRating.toFixed(1) + ' &rarr; ' + st.maeAdj.toFixed(1) + '</b><span>MAE: rating line &rarr; adjusted line</span></div>' +
+        '<div><b>' + sgn(st.biasRating) + ' &rarr; ' + sgn(st.biasAdj) + '</b><span>Favorite vs line (avg): rating &rarr; adjusted</span></div>' +
+        '<div><b>' + st.covered + '-' + (st.n - st.covered - st.pushed) + (st.pushed ? '-' + st.pushed : '') + '</b><span>Favorite vs adjusted line</span></div>' +
+      '</div>' +
+      '<div class="ms-scroll"><table><thead><tr><th>Date</th><th>Game</th><th>Rating line</th><th>Bonus</th><th>Adjusted line</th><th>Final</th><th>Fav vs adjusted</th></tr></thead><tbody>' +
+      by.map(function (g) {
+        var fav = nameOf(g.favorite), winner = g.hs > g.as ? g.home : g.away, loser = g.hs > g.as ? g.away : g.home;
+        return '<tr><td data-l="Date" class="ms-date">' + fmtDate(g.date) + '</td>' +
+          '<td data-l="Game">' + esc(nameOf(g.away)) + (g.neutral ? ' vs ' : ' @ ') + esc(nameOf(g.home)) + '</td>' +
+          '<td data-l="Rating line" class="ms-num">' + esc(fav) + ' -' + g.ratingLine.toFixed(1) + '</td>' +
+          '<td data-l="Bonus" class="ms-num">+' + g.bonus + '</td>' +
+          '<td data-l="Adjusted line" class="ms-num">' + esc(fav) + ' -' + g.adjLine.toFixed(1) + '*</td>' +
+          '<td data-l="Final" class="ms-num">' + esc(nameOf(winner)) + ' ' + Math.max(g.hs, g.as) + ', ' + esc(nameOf(loser)) + ' ' + Math.min(g.hs, g.as) + '</td>' +
+          '<td data-l="Fav vs adjusted" class="ms-num ms-miss">' + sgn(g.missAdj) + '</td></tr>';
+      }).join('') + '</tbody></table></div>' +
+      '<div class="ms-foot">MAE (mean absolute error) is the average number of points the final margin landed from the line, ignoring direction. ' +
+      '“Favorite vs line” is the favorite’s margin minus the line: positive means the favorite did better than the line said, so a figure near zero for the adjusted line means the bonus is about right. ' +
+      'Only games with a buy-game adjustment are included. Games played before the bonus existed are not.</div>';
+  }
+
   function render() {
+    renderBuy();
     var min = Number($('ms-min').value), q = $('ms-team').value.trim().toLowerCase();
     var list = M.rank(rows).filter(function (r) {
       return r.abs >= min && (!q || nameOf(r.home).toLowerCase().indexOf(q) >= 0 || nameOf(r.away).toLowerCase().indexOf(q) >= 0);
