@@ -387,9 +387,12 @@
 {"date":"2026-11-07","home":"lsu-new-orleans","away":"non-d1-opponent","neutral":false,"homeScore":90,"awayScore":65,"line":null,"ts":"2026-11-07T20:59:09.000Z"},
 {"date":"2026-11-07","home":"marshall","away":"toledo","neutral":false,"homeScore":76,"awayScore":81,"line":0,"ts":"2026-11-07T21:14:11.000Z"},
 {"date":"2026-11-07","home":"memphis","away":"vcu","neutral":false,"homeScore":89,"awayScore":88,"line":2.0,"ts":"2026-11-07T22:29:20.000Z"},
+{"date":"2026-11-07","home":"mercyhurst","away":"non-d1-opponent","neutral":false,"homeScore":89,"awayScore":50,"line":null,"ts":"2026-11-07T22:59:24.000Z"},
 {"date":"2026-11-07","home":"montana-st","away":"long-beach-st","neutral":false,"homeScore":83,"awayScore":70,"line":-7.0,"ts":"2026-11-07T22:14:18.000Z"},
 {"date":"2026-11-07","home":"ohio","away":"north-carolina-a-t","neutral":false,"homeScore":80,"awayScore":70,"line":-8.0,"ts":"2026-11-07T20:14:06.000Z"},
 {"date":"2026-11-07","home":"sam-houston-st","away":"non-d1-opponent","neutral":false,"homeScore":102,"awayScore":59,"line":null,"ts":"2026-11-07T22:29:20.000Z"},
+{"date":"2026-11-07","home":"san-diego-st","away":"colorado","neutral":true,"homeScore":77,"awayScore":66,"line":-3.5,"ts":"2026-11-07T22:59:24.000Z"},
 {"date":"2026-11-07","home":"south-dakota","away":"cal-st-fullerton","neutral":false,"homeScore":85,"awayScore":87,"line":5.5,"ts":"2026-11-07T21:14:11.000Z"},
+{"date":"2026-11-07","home":"utah-st","away":"omaha","neutral":false,"homeScore":90,"awayScore":56,"line":-26.5,"ts":"2026-11-07T22:59:24.000Z"},
 {"date":"2026-11-07","home":"winthrop","away":"north-dakota","neutral":false,"homeScore":90,"awayScore":93,"line":-7.0,"ts":"2026-11-07T19:29:02.000Z"}
 ]
