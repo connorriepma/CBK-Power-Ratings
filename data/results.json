@@ -378,5 +378,6 @@
 {"date":"2026-11-07","home":"fairleigh-dickinson","away":"non-d1-opponent","neutral":false,"homeScore":93,"awayScore":56,"line":null,"ts":"2026-11-07T19:29:02.000Z"},
 {"date":"2026-11-07","home":"georgia-st","away":"non-d1-opponent","neutral":false,"homeScore":111,"awayScore":61,"line":null,"ts":"2026-11-07T19:59:04.000Z"},
 {"date":"2026-11-07","home":"louisville","away":"morehead-st","neutral":false,"homeScore":107,"awayScore":57,"line":-33.0,"ts":"2026-11-07T19:29:02.000Z"},
+{"date":"2026-11-07","home":"ohio","away":"north-carolina-a-t","neutral":false,"homeScore":80,"awayScore":70,"line":-8.0,"ts":"2026-11-07T20:14:06.000Z"},
 {"date":"2026-11-07","home":"winthrop","away":"north-dakota","neutral":false,"homeScore":90,"awayScore":93,"line":-7.0,"ts":"2026-11-07T19:29:02.000Z"}
 ]
