@@ -302,5 +302,8 @@
 {"date":"2026-11-05","home":"vanderbilt","away":"wake-forest","neutral":false,"homeScore":74,"awayScore":51,"line":-13.5,"ts":"2026-11-06T01:37:13.000Z"},
 {"date":"2026-11-05","home":"virginia-tech","away":"mercer","neutral":false,"homeScore":96,"awayScore":67,"line":-17.5,"ts":"2026-11-06T02:12:17.000Z"},
 {"date":"2026-11-05","home":"western-kentucky","away":"non-d1-opponent","neutral":false,"homeScore":82,"awayScore":48,"line":null,"ts":"2026-11-06T02:42:21.000Z"},
-{"date":"2026-11-05","home":"western-michigan","away":"non-d1-opponent","neutral":false,"homeScore":99,"awayScore":52,"line":null,"ts":"2026-11-06T02:12:17.000Z"}
+{"date":"2026-11-05","home":"western-michigan","away":"non-d1-opponent","neutral":false,"homeScore":99,"awayScore":52,"line":null,"ts":"2026-11-06T02:12:17.000Z"},
+{"date":"2026-11-06","home":"baylor","away":"arkansas-pine-bluff","neutral":false,"homeScore":109,"awayScore":53,"line":-32.5,"ts":"2026-11-07T00:26:02.000Z"},
+{"date":"2026-11-06","home":"boston-college","away":"umass","neutral":true,"homeScore":71,"awayScore":55,"line":-9.5,"ts":"2026-11-07T00:26:02.000Z"},
+{"date":"2026-11-06","home":"virginia","away":"northeastern","neutral":false,"homeScore":97,"awayScore":72,"line":-32.5,"ts":"2026-11-07T00:26:02.000Z"}
 ]
