@@ -96,22 +96,6 @@
   "ts": "2026-11-05T23:49:09.782Z"
  },
  {
-  "id": "2026-11-07_furman_northern-iowa_northern-iowa",
-  "gameId": "2026-11-07_furman_northern-iowa",
-  "date": "2026-11-07",
-  "home": "Furman",
-  "away": "Northern Iowa",
-  "neutral": false,
-  "pick": "Northern Iowa",
-  "line": 4.5,
-  "odds": -105,
-  "units": 1,
-  "book": "BetMGM",
-  "confidence": "Low",
-  "modelLine": -2.5,
-  "ts": "2026-11-07T01:55:22.046Z"
- },
- {
   "id": "2026-11-07_denver_uc-riverside_denver",
   "gameId": "2026-11-07_denver_uc-riverside",
   "date": "2026-11-07",
