@@ -415,6 +415,7 @@
 {"date":"2026-11-07","home":"niagara","away":"morgan-st","neutral":false,"homeScore":67,"awayScore":73,"line":-6.5,"ts":"2026-11-08T02:09:24.000Z"},
 {"date":"2026-11-07","home":"ohio","away":"north-carolina-a-t","neutral":false,"homeScore":80,"awayScore":70,"line":-8.0,"ts":"2026-11-07T20:14:06.000Z"},
 {"date":"2026-11-07","home":"oral-roberts","away":"non-d1-opponent","neutral":false,"homeScore":94,"awayScore":39,"line":null,"ts":"2026-11-08T03:09:31.000Z"},
+{"date":"2026-11-07","home":"pepperdine","away":"non-d1-opponent","neutral":false,"homeScore":116,"awayScore":43,"line":null,"ts":"2026-11-08T04:09:37.000Z"},
 {"date":"2026-11-07","home":"purdue-fort-wayne","away":"non-d1-opponent","neutral":false,"homeScore":103,"awayScore":65,"line":null,"ts":"2026-11-08T01:54:22.000Z"},
 {"date":"2026-11-07","home":"rhode-island","away":"monmouth","neutral":true,"homeScore":84,"awayScore":66,"line":-6.5,"ts":"2026-11-07T23:14:26.000Z"},
 {"date":"2026-11-07","home":"saint-joseph-s","away":"lafayette","neutral":false,"homeScore":67,"awayScore":57,"line":-16.5,"ts":"2026-11-07T23:44:30.000Z"},
@@ -429,5 +430,6 @@
 {"date":"2026-11-07","home":"ut-rio-grande-valley","away":"prairie-view-a-m","neutral":false,"homeScore":68,"awayScore":61,"line":-8.5,"ts":"2026-11-08T00:59:40.000Z"},
 {"date":"2026-11-07","home":"utah-st","away":"omaha","neutral":false,"homeScore":90,"awayScore":56,"line":-26.5,"ts":"2026-11-07T22:59:24.000Z"},
 {"date":"2026-11-07","home":"utsa","away":"vmi","neutral":false,"homeScore":70,"awayScore":68,"line":-5.0,"ts":"2026-11-08T00:14:34.000Z"},
+{"date":"2026-11-07","home":"weber-st","away":"utah-valley","neutral":false,"homeScore":93,"awayScore":101,"line":5.5,"ts":"2026-11-08T04:09:37.000Z"},
 {"date":"2026-11-07","home":"winthrop","away":"north-dakota","neutral":false,"homeScore":90,"awayScore":93,"line":-7.0,"ts":"2026-11-07T19:29:02.000Z"}
 ]
