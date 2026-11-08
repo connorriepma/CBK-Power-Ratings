@@ -402,6 +402,7 @@
 {"date":"2026-11-07","home":"mercyhurst","away":"non-d1-opponent","neutral":false,"homeScore":89,"awayScore":50,"line":null,"ts":"2026-11-07T22:59:24.000Z"},
 {"date":"2026-11-07","home":"miami-oh","away":"bellarmine","neutral":false,"homeScore":80,"awayScore":73,"line":-15.0,"ts":"2026-11-08T00:14:34.000Z"},
 {"date":"2026-11-07","home":"montana-st","away":"long-beach-st","neutral":false,"homeScore":83,"awayScore":70,"line":-7.0,"ts":"2026-11-07T22:14:18.000Z"},
+{"date":"2026-11-07","home":"nebraska","away":"providence","neutral":true,"homeScore":67,"awayScore":58,"line":-4.5,"ts":"2026-11-08T02:24:26.000Z"},
 {"date":"2026-11-07","home":"new-mexico","away":"northern-arizona","neutral":false,"homeScore":94,"awayScore":65,"line":-24.5,"ts":"2026-11-08T01:09:20.000Z"},
 {"date":"2026-11-07","home":"niagara","away":"morgan-st","neutral":false,"homeScore":67,"awayScore":73,"line":-6.5,"ts":"2026-11-08T02:09:24.000Z"},
 {"date":"2026-11-07","home":"ohio","away":"north-carolina-a-t","neutral":false,"homeScore":80,"awayScore":70,"line":-8.0,"ts":"2026-11-07T20:14:06.000Z"},
