@@ -470,5 +470,6 @@
 {"date":"2026-11-08","home":"virginia","away":"arkansas","neutral":true,"homeScore":91,"awayScore":72,"line":-0.5,"ts":"2026-11-08T21:15:10.000Z"},
 {"date":"2026-11-08","home":"western-michigan","away":"campbell","neutral":false,"homeScore":87,"awayScore":71,"line":-1.5,"ts":"2026-11-08T21:15:10.000Z"},
 {"date":"2026-11-08","home":"william-mary","away":"norfolk-st","neutral":false,"homeScore":104,"awayScore":73,"line":-11.5,"ts":"2026-11-09T01:30:02.000Z"},
-{"date":"2026-11-08","home":"wofford","away":"non-d1-opponent","neutral":false,"homeScore":100,"awayScore":67,"line":null,"ts":"2026-11-08T21:15:10.000Z"}
+{"date":"2026-11-08","home":"wofford","away":"non-d1-opponent","neutral":false,"homeScore":100,"awayScore":67,"line":null,"ts":"2026-11-08T21:15:10.000Z"},
+{"date":"2026-11-09","home":"coppin-st","away":"non-d1-opponent","neutral":false,"homeScore":90,"awayScore":53,"line":null,"ts":"2026-11-09T23:47:45.000Z"}
 ]
