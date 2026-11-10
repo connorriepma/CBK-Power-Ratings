@@ -485,6 +485,7 @@
 {"date":"2026-11-09","home":"coastal-carolina","away":"usc-upstate","neutral":false,"homeScore":65,"awayScore":56,"line":-6.5,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"columbia","away":"stonehill","neutral":false,"homeScore":75,"awayScore":55,"line":-11.5,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"coppin-st","away":"non-d1-opponent","neutral":false,"homeScore":90,"awayScore":53,"line":null,"ts":"2026-11-09T23:47:45.000Z"},
+{"date":"2026-11-09","home":"depaul","away":"alabama-a-m","neutral":false,"homeScore":84,"awayScore":47,"line":-20.0,"ts":"2026-11-10T04:24:05.000Z"},
 {"date":"2026-11-09","home":"georgia","away":"florida-gulf-coast","neutral":false,"homeScore":80,"awayScore":72,"line":-20.5,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"illinois-chicago","away":"unc-greensboro","neutral":false,"homeScore":82,"awayScore":72,"line":-18.0,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"jacksonville","away":"kansas-city","neutral":false,"homeScore":79,"awayScore":61,"line":-8.5,"ts":"2026-11-10T03:38:59.000Z"},
@@ -511,6 +512,7 @@
 {"date":"2026-11-09","home":"uab","away":"florida-a-m","neutral":false,"homeScore":92,"awayScore":64,"line":-13.0,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"uconn","away":"wagner","neutral":false,"homeScore":83,"awayScore":41,"line":-38.0,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"umbc","away":"non-d1-opponent","neutral":false,"homeScore":91,"awayScore":61,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
+{"date":"2026-11-09","home":"ut-arlington","away":"non-d1-opponent","neutral":true,"homeScore":116,"awayScore":65,"line":null,"ts":"2026-11-10T04:24:05.000Z"},
 {"date":"2026-11-09","home":"west-florida","away":"non-d1-opponent","neutral":false,"homeScore":110,"awayScore":59,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"western-illinois","away":"non-d1-opponent","neutral":false,"homeScore":90,"awayScore":48,"line":null,"ts":"2026-11-10T03:38:59.000Z"}
 ]
