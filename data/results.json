@@ -473,6 +473,7 @@
 {"date":"2026-11-08","home":"wofford","away":"non-d1-opponent","neutral":false,"homeScore":100,"awayScore":67,"line":null,"ts":"2026-11-08T21:15:10.000Z"},
 {"date":"2026-11-09","home":"akron","away":"non-d1-opponent","neutral":false,"homeScore":109,"awayScore":64,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"alabama","away":"oakland","neutral":false,"homeScore":109,"awayScore":68,"line":-22.5,"ts":"2026-11-10T03:38:59.000Z"},
+{"date":"2026-11-09","home":"auburn","away":"appalachian-st","neutral":false,"homeScore":75,"awayScore":53,"line":-18.5,"ts":"2026-11-10T04:09:02.000Z"},
 {"date":"2026-11-09","home":"ball-st","away":"non-d1-opponent","neutral":false,"homeScore":89,"awayScore":64,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"bowling-green","away":"cleveland-st","neutral":false,"homeScore":95,"awayScore":79,"line":-11.0,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"buffalo","away":"non-d1-opponent","neutral":false,"homeScore":107,"awayScore":65,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
