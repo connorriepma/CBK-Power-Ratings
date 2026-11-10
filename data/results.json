@@ -478,6 +478,7 @@
 {"date":"2026-11-09","home":"bowling-green","away":"cleveland-st","neutral":false,"homeScore":95,"awayScore":79,"line":-11.0,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"buffalo","away":"non-d1-opponent","neutral":false,"homeScore":107,"awayScore":65,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"canisius","away":"non-d1-opponent","neutral":false,"homeScore":117,"awayScore":60,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
+{"date":"2026-11-09","home":"charlotte","away":"seton-hall","neutral":true,"homeScore":62,"awayScore":68,"line":3.5,"ts":"2026-11-10T04:39:06.000Z"},
 {"date":"2026-11-09","home":"chattanooga","away":"non-d1-opponent","neutral":false,"homeScore":97,"awayScore":67,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"chicago-st","away":"south-carolina-st","neutral":false,"homeScore":67,"awayScore":82,"line":-5.0,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"cincinnati","away":"minnesota","neutral":false,"homeScore":61,"awayScore":63,"line":-8.5,"ts":"2026-11-10T03:38:59.000Z"},
