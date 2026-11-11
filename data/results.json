@@ -545,6 +545,7 @@
 {"date":"2026-11-10","home":"iowa-st","away":"southern","neutral":false,"homeScore":84,"awayScore":47,"line":-31.5,"ts":"2026-11-11T03:03:53.000Z"},
 {"date":"2026-11-10","home":"kansas-st","away":"creighton","neutral":false,"homeScore":89,"awayScore":82,"line":1.0,"ts":"2026-11-11T04:34:07.000Z"},
 {"date":"2026-11-10","home":"kennesaw-st","away":"winthrop","neutral":false,"homeScore":88,"awayScore":79,"line":-6.5,"ts":"2026-11-11T02:33:49.000Z"},
+{"date":"2026-11-10","home":"kentucky","away":"kansas","neutral":true,"homeScore":69,"awayScore":89,"line":5.0,"ts":"2026-11-11T05:04:10.000Z"},
 {"date":"2026-11-10","home":"lipscomb","away":"belmont","neutral":false,"homeScore":88,"awayScore":75,"line":7.0,"ts":"2026-11-11T03:03:53.000Z"},
 {"date":"2026-11-10","home":"longwood","away":"non-d1-opponent","neutral":false,"homeScore":101,"awayScore":45,"line":null,"ts":"2026-11-11T02:18:47.000Z"},
 {"date":"2026-11-10","home":"middle-tennessee","away":"evansville","neutral":false,"homeScore":73,"awayScore":68,"line":-9.0,"ts":"2026-11-11T02:48:51.000Z"},
