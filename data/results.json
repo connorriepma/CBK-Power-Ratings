@@ -520,5 +520,7 @@
 {"date":"2026-11-09","home":"washington","away":"mississippi-valley-st","neutral":false,"homeScore":77,"awayScore":64,"line":-34.0,"ts":"2026-11-10T04:54:12.000Z"},
 {"date":"2026-11-09","home":"west-florida","away":"non-d1-opponent","neutral":false,"homeScore":110,"awayScore":59,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
 {"date":"2026-11-09","home":"western-illinois","away":"non-d1-opponent","neutral":false,"homeScore":90,"awayScore":48,"line":null,"ts":"2026-11-10T03:38:59.000Z"},
-{"date":"2026-11-10","home":"florida-st","away":"florida","neutral":false,"homeScore":72,"awayScore":81,"line":8.5,"ts":"2026-11-11T01:33:41.000Z"}
+{"date":"2026-11-10","home":"florida-st","away":"florida","neutral":false,"homeScore":72,"awayScore":81,"line":8.5,"ts":"2026-11-11T01:33:41.000Z"},
+{"date":"2026-11-10","home":"georgetown","away":"delaware-st","neutral":false,"homeScore":83,"awayScore":78,"line":-33.5,"ts":"2026-11-11T01:48:43.000Z"},
+{"date":"2026-11-10","home":"rutgers","away":"njit","neutral":false,"homeScore":101,"awayScore":64,"line":-27.5,"ts":"2026-11-11T01:48:43.000Z"}
 ]
