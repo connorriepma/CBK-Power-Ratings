@@ -529,6 +529,7 @@
 {"date":"2026-11-10","home":"byu","away":"queens","neutral":false,"homeScore":98,"awayScore":82,"line":-22.5,"ts":"2026-11-11T04:04:01.000Z"},
 {"date":"2026-11-10","home":"central-arkansas","away":"non-d1-opponent","neutral":false,"homeScore":127,"awayScore":54,"line":null,"ts":"2026-11-11T02:33:49.000Z"},
 {"date":"2026-11-10","home":"central-michigan","away":"youngstown-st","neutral":false,"homeScore":91,"awayScore":78,"line":-4.0,"ts":"2026-11-11T02:18:47.000Z"},
+{"date":"2026-11-10","home":"colorado","away":"san-diego","neutral":false,"homeScore":83,"awayScore":75,"line":-11.0,"ts":"2026-11-11T04:19:05.000Z"},
 {"date":"2026-11-10","home":"davidson","away":"bradley","neutral":false,"homeScore":62,"awayScore":45,"line":-7.5,"ts":"2026-11-11T02:03:45.000Z"},
 {"date":"2026-11-10","home":"dayton","away":"siena","neutral":false,"homeScore":87,"awayScore":97,"line":-14.0,"ts":"2026-11-11T02:18:47.000Z"},
 {"date":"2026-11-10","home":"duke","away":"michigan-st","neutral":true,"homeScore":73,"awayScore":79,"line":-5.5,"ts":"2026-11-11T02:33:49.000Z"},
@@ -549,6 +550,7 @@
 {"date":"2026-11-10","home":"murray-st","away":"alcorn-st","neutral":false,"homeScore":94,"awayScore":57,"line":-26.0,"ts":"2026-11-11T03:33:57.000Z"},
 {"date":"2026-11-10","home":"nc-state","away":"presbyterian","neutral":false,"homeScore":94,"awayScore":60,"line":-19.5,"ts":"2026-11-11T02:18:47.000Z"},
 {"date":"2026-11-10","home":"new-haven","away":"army","neutral":false,"homeScore":63,"awayScore":55,"line":-2.0,"ts":"2026-11-11T02:18:47.000Z"},
+{"date":"2026-11-10","home":"new-mexico","away":"little-rock","neutral":false,"homeScore":94,"awayScore":69,"line":-20.0,"ts":"2026-11-11T04:19:05.000Z"},
 {"date":"2026-11-10","home":"north-carolina","away":"wyoming","neutral":false,"homeScore":76,"awayScore":63,"line":-9.5,"ts":"2026-11-11T02:03:45.000Z"},
 {"date":"2026-11-10","home":"northeastern","away":"harvard","neutral":false,"homeScore":74,"awayScore":70,"line":6.5,"ts":"2026-11-11T02:33:49.000Z"},
 {"date":"2026-11-10","home":"northern-colorado","away":"non-d1-opponent","neutral":false,"homeScore":102,"awayScore":52,"line":null,"ts":"2026-11-11T03:03:53.000Z"},
@@ -577,6 +579,7 @@
 {"date":"2026-11-10","home":"vanderbilt","away":"memphis","neutral":false,"homeScore":105,"awayScore":81,"line":-14.5,"ts":"2026-11-11T02:33:49.000Z"},
 {"date":"2026-11-10","home":"villanova","away":"la-salle","neutral":false,"homeScore":80,"awayScore":59,"line":-16.5,"ts":"2026-11-11T02:18:47.000Z"},
 {"date":"2026-11-10","home":"virginia-tech","away":"iowa","neutral":true,"homeScore":93,"awayScore":88,"line":2.5,"ts":"2026-11-11T02:48:51.000Z"},
+{"date":"2026-11-10","home":"virginia","away":"bucknell","neutral":false,"homeScore":95,"awayScore":61,"line":-37.5,"ts":"2026-11-11T04:19:05.000Z"},
 {"date":"2026-11-10","home":"wake-forest","away":"charleston-southern","neutral":false,"homeScore":82,"awayScore":64,"line":-15.5,"ts":"2026-11-11T02:18:47.000Z"},
 {"date":"2026-11-10","home":"wisconsin","away":"fairfield","neutral":false,"homeScore":89,"awayScore":42,"line":-21.5,"ts":"2026-11-11T03:48:59.000Z"},
 {"date":"2026-11-10","home":"xavier","away":"detroit-mercy","neutral":false,"homeScore":100,"awayScore":55,"line":-19.5,"ts":"2026-11-11T02:03:45.000Z"}
