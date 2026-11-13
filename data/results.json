@@ -656,5 +656,15 @@
 {"date":"2026-11-11","home":"western-kentucky","away":"non-d1-opponent","neutral":false,"homeScore":78,"awayScore":51,"line":null,"ts":"2026-11-12T02:18:51.000Z"},
 {"date":"2026-11-11","home":"wichita-st","away":"non-d1-opponent","neutral":false,"homeScore":113,"awayScore":60,"line":null,"ts":"2026-11-12T02:18:51.000Z"},
 {"date":"2026-11-11","home":"wofford","away":"non-d1-opponent","neutral":false,"homeScore":91,"awayScore":47,"line":null,"ts":"2026-11-12T02:18:51.000Z"},
-{"date":"2026-11-12","home":"george-mason","away":"kansas-city","neutral":true,"homeScore":76,"awayScore":68,"line":-15,"ts":"2026-11-12T22:55:41.947Z"}
+{"date":"2026-11-12","home":"boston-u","away":"non-d1-opponent","neutral":false,"homeScore":100,"awayScore":74,"line":null,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"bradley","away":"coppin-st","neutral":true,"homeScore":56,"awayScore":54,"line":-16.0,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"coastal-carolina","away":"non-d1-opponent","neutral":false,"homeScore":103,"awayScore":54,"line":null,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"george-mason","away":"kansas-city","neutral":true,"homeScore":76,"awayScore":68,"line":-15,"ts":"2026-11-12T22:55:41.947Z"},
+{"date":"2026-11-12","home":"indiana","away":"tennessee-tech","neutral":false,"homeScore":90,"awayScore":66,"line":-26.5,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"penn-st","away":"mercyhurst","neutral":false,"homeScore":72,"awayScore":57,"line":-17.5,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"purdue-fort-wayne","away":"western-michigan","neutral":false,"homeScore":59,"awayScore":81,"line":0,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"rhode-island","away":"maryland-eastern-shore","neutral":false,"homeScore":67,"awayScore":47,"line":-25.5,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"sacred-heart","away":"central-connecticut","neutral":false,"homeScore":75,"awayScore":79,"line":-3.5,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"towson","away":"loyola-md","neutral":false,"homeScore":90,"awayScore":60,"line":-13.5,"ts":"2026-11-13T01:56:46.000Z"},
+{"date":"2026-11-12","home":"umbc","away":"morgan-st","neutral":false,"homeScore":85,"awayScore":70,"line":-9.5,"ts":"2026-11-13T01:56:46.000Z"}
 ]
