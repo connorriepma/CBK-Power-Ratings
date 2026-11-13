@@ -72,11 +72,20 @@
     return d.toISOString().slice(0, 10);
   }
 
+  var MIN_FIRST_WEEK = 10;
+
   // One row per week, oldest first: { week, n, mae, bias }.
   function byWeek(rows) {
     var map = {};
     rows.forEach(function (r) { (map[weekStart(r.date)] = map[weekStart(r.date)] || []).push(r); });
-    return Object.keys(map).sort().map(function (w) {
+    var keys = Object.keys(map).sort();
+    // A thin first week (a stray early game) is folded into the next week instead of standing alone.
+    if (keys.length > 1 && map[keys[0]].length < MIN_FIRST_WEEK) {
+      map[keys[1]] = map[keys[0]].concat(map[keys[1]]);
+      delete map[keys[0]];
+      keys.shift();
+    }
+    return keys.map(function (w) {
       var s = summary(map[w]); return { week: w, n: s.n, mae: s.mae, bias: s.bias };
     });
   }

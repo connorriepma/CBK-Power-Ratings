@@ -72,7 +72,14 @@ test('weekly MAE groups by Monday', () => {
   assert.equal(M.weekStart('2026-11-05'), '2026-11-02');
   assert.equal(M.weekStart('2026-11-08'), '2026-11-02');
   assert.equal(M.weekStart('2026-11-09'), '2026-11-09');
-  const rows = M.fromLog([g('2026-11-05', 'a', 'b', 70, 60, 4), g('2026-11-09', 'c', 'd', 80, 60, 10)]);
+  const first = []; for (let i = 0; i < 10; i++) first.push(g('2026-11-05', 'a' + i, 'b' + i, 70, 60, 4));
+  const rows = M.fromLog(first.concat([g('2026-11-09', 'c', 'd', 80, 60, 10)]));
   const w = M.byWeek(rows);
   assert.equal(w.length, 2); assert.equal(w[0].week, '2026-11-02'); near(w[0].mae, 6); near(w[1].mae, 10);
+});
+
+test('a thin first week is folded into the next week', () => {
+  const rows = M.fromLog([g('2026-10-28', 'a', 'b', 70, 60, 4), g('2026-11-03', 'c', 'd', 80, 60, 10)]);
+  const w = M.byWeek(rows);
+  assert.equal(w.length, 1); assert.equal(w[0].week, '2026-11-02'); assert.equal(w[0].n, 2); near(w[0].mae, 8);
 });
