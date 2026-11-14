@@ -685,5 +685,10 @@
 {"date":"2026-11-12","home":"utep","away":"new-mexico-st","neutral":false,"homeScore":60,"awayScore":58,"line":-1.0,"ts":"2026-11-13T04:11:59.000Z"},
 {"date":"2026-11-12","home":"west-virginia","away":"mercer","neutral":false,"homeScore":75,"awayScore":61,"line":-22.0,"ts":"2026-11-13T02:26:50.000Z"},
 {"date":"2026-11-12","home":"western-illinois","away":"cal-st-bakersfield","neutral":false,"homeScore":83,"awayScore":91,"line":8.0,"ts":"2026-11-13T02:11:48.000Z"},
-{"date":"2026-11-13","home":"green-bay","away":"non-d1-opponent","neutral":false,"homeScore":66,"awayScore":46,"line":null,"ts":"2026-11-13T21:27:20.000Z"}
+{"date":"2026-11-13","home":"clemson","away":"georgetown","neutral":false,"homeScore":78,"awayScore":85,"line":-4.5,"ts":"2026-11-14T01:29:48.000Z"},
+{"date":"2026-11-13","home":"florida-st","away":"texas-a-m-cc","neutral":false,"homeScore":84,"awayScore":60,"line":-17.0,"ts":"2026-11-14T01:29:48.000Z"},
+{"date":"2026-11-13","home":"green-bay","away":"non-d1-opponent","neutral":false,"homeScore":66,"awayScore":46,"line":null,"ts":"2026-11-13T21:27:20.000Z"},
+{"date":"2026-11-13","home":"miami","away":"north-alabama","neutral":false,"homeScore":94,"awayScore":52,"line":-28.5,"ts":"2026-11-14T01:29:48.000Z"},
+{"date":"2026-11-13","home":"rutgers","away":"bryant","neutral":false,"homeScore":72,"awayScore":51,"line":-28.5,"ts":"2026-11-14T01:29:48.000Z"},
+{"date":"2026-11-13","home":"west-florida","away":"cleveland-st","neutral":true,"homeScore":67,"awayScore":69,"line":4.0,"ts":"2026-11-14T01:29:48.000Z"}
 ]
