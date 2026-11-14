@@ -745,5 +745,7 @@
 {"date":"2026-11-13","home":"vanderbilt","away":"prairie-view-a-m","neutral":false,"homeScore":89,"awayScore":62,"line":-33.0,"ts":"2026-11-14T01:59:53.000Z"},
 {"date":"2026-11-13","home":"virginia-tech","away":"mount-st-mary-s","neutral":false,"homeScore":82,"awayScore":62,"line":-28.0,"ts":"2026-11-14T02:29:57.000Z"},
 {"date":"2026-11-13","home":"vmi","away":"non-d1-opponent","neutral":false,"homeScore":71,"awayScore":53,"line":null,"ts":"2026-11-14T01:59:53.000Z"},
-{"date":"2026-11-13","home":"west-florida","away":"cleveland-st","neutral":true,"homeScore":67,"awayScore":69,"line":4.0,"ts":"2026-11-14T01:29:48.000Z"}
+{"date":"2026-11-13","home":"west-florida","away":"cleveland-st","neutral":true,"homeScore":67,"awayScore":69,"line":4.0,"ts":"2026-11-14T01:29:48.000Z"},
+{"date":"2026-11-14","home":"akron","away":"tulane","neutral":false,"homeScore":65,"awayScore":63,"line":-9.0,"ts":"2026-11-14T19:57:51.000Z"},
+{"date":"2026-11-14","home":"vermont","away":"non-d1-opponent","neutral":false,"homeScore":104,"awayScore":59,"line":null,"ts":"2026-11-14T19:57:51.000Z"}
 ]
