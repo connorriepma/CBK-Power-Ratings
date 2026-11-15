@@ -110,6 +110,42 @@ if __name__ == "__main__":
     unittest.main()
 
 
+
+class PostponedTests(unittest.TestCase):
+    PP = [{"teams": ["UNC Greensboro", "Cornell"], "conf": False}]
+    SCHED = [g for g in SCHEDULE if {g["home"], g["away"]} != {"UNC Greensboro", "Cornell"}]
+
+    def go(self, games, postponed=None):
+        adds = []
+        rows, new = ing.classify(games, NAMES, self.SCHED, [], NOW, self.PP if postponed is None else postponed, adds)
+        return rows, new, adds
+
+    def test_rescheduled_game_is_added_and_saved(self):
+        rows, new, adds = self.go([api("Cornell", "UNC Greensboro", 70, 65, start="2026-12-06T00:00:00.000Z")])
+        self.assertEqual(rows[0]["status"], "NEW")
+        self.assertEqual(adds, [{"date": "2026-12-05", "home": "Cornell", "away": "UNC Greensboro", "neutral": False, "conf": False}])
+        self.assertEqual((new[0]["date"], new[0]["home"], new[0]["homeScore"]), ("2026-12-05", "cornell", 70))
+
+    def test_placeholder_stamp_uses_utc_date(self):
+        _, _, adds = self.go([api("Cornell", "UNC Greensboro", 70, 65, start="2026-12-06T04:59:00.000Z")])
+        self.assertEqual(adds[0]["date"], "2026-12-06")
+
+    def test_pair_not_listed_is_still_unmatched(self):
+        rows, new, adds = self.go([api("Cornell", "UNC Greensboro", 70, 65, start="2026-12-06T00:00:00.000Z")], postponed=[])
+        self.assertEqual((rows[0]["status"], new, adds), ("UNMATCHED", [], []))
+
+    def test_scheduled_game_does_not_create_a_row(self):
+        rows, new, adds = self.go([api("Duke", "Army", 90, 55)])
+        self.assertEqual((rows[0]["status"], adds), ("NEW", []))
+
+    def test_repo_postponed_list_is_valid(self):
+        names = {t["team"] for t in TEAMS}
+        for p in ing.load_postponed():
+            self.assertEqual(len(p["teams"]), 2)
+            self.assertTrue(set(p["teams"]) <= names)
+            self.assertFalse([g for g in SCHEDULE if {g["home"], g["away"]} == set(p["teams"])],
+                             "listed as postponed but also on the schedule")
+
 class SwitchTests(unittest.TestCase):
     def test_pending_ignores_saved_games_and_non_d1(self):
         from datetime import datetime, timezone
