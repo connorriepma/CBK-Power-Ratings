@@ -138,8 +138,18 @@ def current_line(home: str, away: str, neutral: bool, date: str, ratings: dict, 
     return 0 if s == 0 else -s
 
 
-def classify(games, names: Names, schedule, results, now_iso):
-    """Return (rows, new_entries). Each row is a dict for the report; nothing is written here."""
+def load_postponed() -> list[dict]:
+    path = DATA / "postponed.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+
+
+def classify(games, names: Names, schedule, results, now_iso, postponed=None, adds=None):
+    """Return (rows, new_entries). Each row is a dict for the report; nothing is written here.
+
+    `postponed` is a list of {"teams": [A, B], "conf": bool}: a final score for one of those pairs that matches no
+    schedule row is a rescheduled game. A schedule row is created for it on the API's date and appended to `adds`
+    (a list the caller passes in), then the score is saved like any other."""
+    postponed_pairs = {frozenset(p["teams"]): p for p in (postponed or [])}
     teams = list(names.by_name.values())
     key_of = {t["team"]: t["key"] for t in teams}
     start = {t["key"]: t["preseason_rating"] for t in teams}
@@ -182,6 +192,17 @@ def classify(games, names: Names, schedule, results, now_iso):
                     if {s["home"], s["away"]} == {d1, NON_D1}:
                         cands.append(s)
         cands = list({(s["date"], s["home"], s["away"]): s for s in cands}.values())
+        if not cands and h and a and frozenset((h, a)) in postponed_pairs:
+            # Rescheduled game: date it by US Eastern, except for the API's placeholder stamp (04:59/05:59 UTC),
+            # where the UTC date is the real game date (same rule local_dates() relies on above).
+            st = datetime.fromisoformat(g["startDate"].replace("Z", "+00:00")).astimezone(timezone.utc)
+            d = (st if (st.minute == 59 and st.hour in (4, 5)) else st.astimezone(EASTERN)).date().isoformat()
+            srow = {"date": d, "home": h, "away": a, "neutral": bool(g.get("neutralSite")),
+                    "conf": bool(postponed_pairs[frozenset((h, a))].get("conf", False))}
+            sched_by_date.setdefault(d, []).append(srow)
+            if adds is not None:
+                adds.append(srow)
+            cands = [srow]
         if len(cands) != 1:
             unresolved = [n for n, r in ((g["homeTeam"], h), (g["awayTeam"], a)) if r is None] if (h is None) != (a is None) else []
             why = "no schedule row matches" if not cands else "more than one schedule row matches"
@@ -287,12 +308,13 @@ def main() -> int:
         if not enabled():
             print("Automatic saving is PAUSED (data/ingest_config.json: enabled=false). Nothing done.")
             return 0
-        if not pending_games(schedule, results, args.days):
+        if not pending_games(schedule, results, args.days) and not load_postponed():
             print("Nothing pending: every D1 game from the last %d days already has a result. No API call made." % args.days)
             return 0
     games = fetch_games(key, args.days)
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
-    rows, new = classify(games, names, schedule, results, now_iso)
+    postponed, adds = load_postponed(), []
+    rows, new = classify(games, names, schedule, results, now_iso, postponed, adds)
 
     text = report(rows, new, dry=not args.write, missing=entered_not_in_api(rows, results, games))
     print(text)
@@ -305,6 +327,12 @@ def main() -> int:
             print(f"Refusing to save {len(new)} games (limit {args.max_new}).", file=sys.stderr)
             return 1
         (DATA / "results.json").write_text(serialize(results + new), encoding="utf-8")
+        if adds:
+            (DATA / "schedule.json").write_text(json.dumps(schedule + adds, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+            done = {frozenset((s["home"], s["away"])) for s in adds}
+            left = [p for p in postponed if frozenset(p["teams"]) not in done]
+            (DATA / "postponed.json").write_text(json.dumps(left, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+            print("Added to the schedule (rescheduled games): " + "; ".join(f'{s["date"]} {s["away"]} @ {s["home"]}' for s in adds))
         print(f"Saved {len(new)} new results.")
     return 0
 

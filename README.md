@@ -65,3 +65,5 @@ Preseason ratings are set. Score entry is built and ratings update from results 
 ## Author
 
 Connor Riepma
+
+Postponed games with no new date yet are listed in [`data/postponed.json`](data/postponed.json) and removed from the schedule. When the API reports a final score for one of those pairs, the score ingest adds the game to the schedule on the date it was played, saves the score and drops the pair from the list. If the new date is announced first, add the game to `data/schedule.json` as usual (and remove the pair from `postponed.json`).

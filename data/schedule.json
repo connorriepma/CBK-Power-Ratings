@@ -17742,13 +17742,6 @@
   "conf": false
  },
  {
-  "date": "2026-11-14",
-  "home": "Pacific",
-  "away": "Air Force",
-  "neutral": false,
-  "conf": false
- },
- {
   "date": "2026-11-24",
   "home": "Air Force",
   "away": "Army",
@@ -24439,13 +24432,6 @@
   "conf": false
  },
  {
-  "date": "2026-11-14",
-  "home": "UNC Wilmington",
-  "away": "Louisiana",
-  "neutral": false,
-  "conf": false
- },
- {
   "date": "2026-11-18",
   "home": "Long Island",
   "away": "UNC Wilmington",
@@ -29982,13 +29968,6 @@
   "date": "2026-11-08",
   "home": "Cornell",
   "away": "Non D1 Opponent",
-  "neutral": false,
-  "conf": false
- },
- {
-  "date": "2026-11-14",
-  "home": "Cornell",
-  "away": "UNC Greensboro",
   "neutral": false,
   "conf": false
  },
@@ -42736,5 +42715,12 @@
   "neutral": true,
   "conf": false,
   "site": "Phoenix, AZ"
+ },
+ {
+  "date": "2026-11-15",
+  "home": "Pacific",
+  "away": "Air Force",
+  "neutral": false,
+  "conf": false
  }
 ]
