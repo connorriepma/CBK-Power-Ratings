@@ -42723,5 +42723,13 @@
   "away": "Air Force",
   "neutral": false,
   "conf": false
+ },
+ {
+  "date": "2026-11-14",
+  "home": "Towson",
+  "away": "UMBC",
+  "neutral": true,
+  "conf": false,
+  "site": "Towson, Md."
  }
 ]
