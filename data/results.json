@@ -761,6 +761,7 @@
 {"date":"2026-11-14","home":"george-mason","away":"bradley","neutral":true,"homeScore":61,"awayScore":62,"line":-7,"ts":"2026-11-14T20:12:53.000Z"},
 {"date":"2026-11-14","home":"georgia-tech","away":"unc-asheville","neutral":false,"homeScore":75,"awayScore":74,"line":-16.0,"ts":"2026-11-14T23:28:20.000Z"},
 {"date":"2026-11-14","home":"gonzaga","away":"lsu","neutral":true,"homeScore":80,"awayScore":81,"line":-6.5,"ts":"2026-11-14T22:45:11.735Z"},
+{"date":"2026-11-14","home":"indiana-st","away":"non-d1-opponent","neutral":false,"homeScore":109,"awayScore":37,"line":null,"ts":"2026-11-15T01:38:08.000Z"},
 {"date":"2026-11-14","home":"le-moyne","away":"manhattan","neutral":false,"homeScore":76,"awayScore":62,"line":-2.0,"ts":"2026-11-15T00:58:31.000Z"},
 {"date":"2026-11-14","home":"lsu-new-orleans","away":"non-d1-opponent","neutral":false,"homeScore":98,"awayScore":82,"line":null,"ts":"2026-11-15T00:58:31.000Z"},
 {"date":"2026-11-14","home":"maine","away":"drexel","neutral":false,"homeScore":64,"awayScore":66,"line":4.5,"ts":"2026-11-14T20:12:53.000Z"},
