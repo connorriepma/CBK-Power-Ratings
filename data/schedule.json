@@ -42486,10 +42486,11 @@
  },
  {
   "date": "2026-11-14",
-  "home": "Towson",
+  "home": "Loyola MD",
   "away": "Morgan St",
-  "neutral": false,
-  "conf": false
+  "neutral": true,
+  "conf": false,
+  "site": "Towson, Md."
  },
  {
   "date": "2027-01-16",
