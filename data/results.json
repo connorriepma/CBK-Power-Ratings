@@ -845,9 +845,11 @@
 {"date":"2026-11-15","home":"seattle","away":"idaho-st","neutral":false,"homeScore":77,"awayScore":70,"line":-12.0,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"south-dakota","away":"non-d1-opponent","neutral":false,"homeScore":81,"awayScore":57,"line":null,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"southern-indiana","away":"western-michigan","neutral":false,"homeScore":59,"awayScore":80,"line":8.0,"ts":"2026-11-16T01:08:16.000Z"},
+{"date":"2026-11-15","home":"st-johns","away":"syracuse","neutral":false,"homeScore":79,"awayScore":62,"line":-8.0,"ts":"2026-11-16T02:08:20.000Z"},
 {"date":"2026-11-15","home":"tennessee-tech","away":"non-d1-opponent","neutral":false,"homeScore":101,"awayScore":34,"line":null,"ts":"2026-11-15T21:54:20.000Z"},
 {"date":"2026-11-15","home":"texas","away":"baylor","neutral":true,"homeScore":75,"awayScore":72,"line":-4.5,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"uc-santa-barbara","away":"non-d1-opponent","neutral":false,"homeScore":97,"awayScore":47,"line":null,"ts":"2026-11-16T01:08:16.000Z"},
+{"date":"2026-11-15","home":"usc","away":"arkansas-pine-bluff","neutral":false,"homeScore":122,"awayScore":46,"line":-33.0,"ts":"2026-11-16T02:08:20.000Z"},
 {"date":"2026-11-15","home":"ut-martin","away":"non-d1-opponent","neutral":false,"homeScore":128,"awayScore":44,"line":null,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"yale","away":"non-d1-opponent","neutral":false,"homeScore":103,"awayScore":58,"line":null,"ts":"2026-11-15T21:54:20.000Z"}
 ]
