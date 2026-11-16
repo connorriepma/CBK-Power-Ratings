@@ -50,6 +50,12 @@
    "team": "uconn",
    "points": -0.5,
    "note": "Nik Khamenia out for an extended time after foot surgery (returns 0.5 when he is back)"
+  },
+  {
+   "date": "2026-11-16",
+   "team": "saint-louis",
+   "points": -1.0,
+   "note": "Robbie Avila left for TCU after the CSC ruled Saint Louis had no roster slot for him (preseason +1.5 for his TRO is mostly reversed)"
   }
  ]
 }
