@@ -320,6 +320,8 @@ window.CBK = (function () {
       var m = build(d[0], d[1], d[2], d[3], d[4], d[6]);
       m.ap = {};
       if (d[5] && d[5].teams) d[5].teams.forEach(function (n, i) { m.ap[n] = i + 1; });
+      // Ties: "rank_overrides" gives a team's printed rank when it differs from its list position (e.g. two teams at #18).
+      if (d[5] && d[5].rank_overrides) Object.keys(d[5].rank_overrides).forEach(function (n) { m.ap[n] = d[5].rank_overrides[n]; });
       m.apLabel = d[5] && d[5].label ? d[5].label : '';
       // Small "AP #n" tag for ranked teams; empty for everyone else.
       m.apTag = function (name) {

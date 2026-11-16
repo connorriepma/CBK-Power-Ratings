@@ -1,5 +1,6 @@
 {
-  "label": "Week 2",
-  "date": "2026-11-09",
-  "teams": ["Florida", "Duke", "Illinois", "UConn", "Michigan St", "Virginia", "Texas", "Houston", "UCLA", "Louisville", "Tennessee", "Arizona", "St Johns", "Gonzaga", "Kansas", "Texas Tech", "Miami", "Alabama", "Arkansas", "Michigan", "USC", "Vanderbilt", "BYU", "Kentucky", "Nebraska"]
+  "label": "Week 3",
+  "date": "2026-11-16",
+  "teams": ["Florida", "Michigan St", "UConn", "Virginia", "Duke", "Texas", "UCLA", "Houston", "Texas Tech", "Illinois", "Kansas", "Arizona", "St Johns", "Tennessee", "Vanderbilt", "Alabama", "Miami", "Michigan", "USC", "Arkansas", "BYU", "Gonzaga", "Louisville", "Nebraska", "LSU"],
+  "rank_overrides": {"USC": 18}
 }
