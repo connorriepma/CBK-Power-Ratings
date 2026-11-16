@@ -843,7 +843,7 @@
 {"date":"2026-11-15","home":"robert-morris","away":"non-d1-opponent","neutral":false,"homeScore":94,"awayScore":45,"line":null,"ts":"2026-11-15T21:54:20.000Z"},
 {"date":"2026-11-15","home":"saint-louis","away":"high-point","neutral":false,"homeScore":58,"awayScore":68,"line":-9.5,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"san-diego-st","away":"new-mexico-st","neutral":true,"homeScore":73,"awayScore":61,"line":-9,"ts":"2026-11-16T01:08:16.000Z"},
-{"date":"2026-11-15","home":"san-jose-st","away":"alabama-st","neutral":false,"homeScore":80,"awayScore":68,"line":-10.0,"ts":"2026-11-16T03:53:30.000Z"},
+{"date":"2026-11-15","home":"san-jose-st","away":"alabama-st","neutral":false,"homeScore":80,"awayScore":68,"line":-10,"ts":"2026-11-16T03:53:30.000Z"},
 {"date":"2026-11-15","home":"seattle","away":"idaho-st","neutral":false,"homeScore":77,"awayScore":70,"line":-12,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"south-dakota","away":"non-d1-opponent","neutral":false,"homeScore":81,"awayScore":57,"line":null,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"southern-indiana","away":"western-michigan","neutral":false,"homeScore":59,"awayScore":80,"line":8,"ts":"2026-11-16T01:08:16.000Z"},
@@ -855,5 +855,6 @@
 {"date":"2026-11-15","home":"ut-martin","away":"non-d1-opponent","neutral":false,"homeScore":128,"awayScore":44,"line":null,"ts":"2026-11-16T01:08:16.000Z"},
 {"date":"2026-11-15","home":"utsa","away":"texas-st","neutral":false,"homeScore":67,"awayScore":87,"line":8.5,"ts":"2026-11-16T03:08:25.000Z"},
 {"date":"2026-11-15","home":"wisconsin","away":"coastal-carolina","neutral":false,"homeScore":89,"awayScore":81,"line":-21,"ts":"2026-11-16T03:23:27.000Z"},
-{"date":"2026-11-15","home":"yale","away":"non-d1-opponent","neutral":false,"homeScore":103,"awayScore":58,"line":null,"ts":"2026-11-15T21:54:20.000Z"}
+{"date":"2026-11-15","home":"yale","away":"non-d1-opponent","neutral":false,"homeScore":103,"awayScore":58,"line":null,"ts":"2026-11-15T21:54:20.000Z"},
+{"date":"2026-11-16","home":"utep","away":"florida-a-m","neutral":false,"homeScore":79,"awayScore":46,"line":-13,"ts":"2026-11-16T22:37:19.594Z"}
 ]
