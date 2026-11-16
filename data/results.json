@@ -856,5 +856,8 @@
 {"date":"2026-11-15","home":"utsa","away":"texas-st","neutral":false,"homeScore":67,"awayScore":87,"line":8.5,"ts":"2026-11-16T03:08:25.000Z"},
 {"date":"2026-11-15","home":"wisconsin","away":"coastal-carolina","neutral":false,"homeScore":89,"awayScore":81,"line":-21,"ts":"2026-11-16T03:23:27.000Z"},
 {"date":"2026-11-15","home":"yale","away":"non-d1-opponent","neutral":false,"homeScore":103,"awayScore":58,"line":null,"ts":"2026-11-15T21:54:20.000Z"},
+{"date":"2026-11-16","home":"george-washington","away":"non-d1-opponent","neutral":false,"homeScore":94,"awayScore":57,"line":null,"ts":"2026-11-16T23:45:46.000Z"},
+{"date":"2026-11-16","home":"morehead-st","away":"non-d1-opponent","neutral":false,"homeScore":104,"awayScore":69,"line":null,"ts":"2026-11-16T23:45:46.000Z"},
+{"date":"2026-11-16","home":"north-alabama","away":"non-d1-opponent","neutral":false,"homeScore":87,"awayScore":49,"line":null,"ts":"2026-11-16T23:45:46.000Z"},
 {"date":"2026-11-16","home":"utep","away":"florida-a-m","neutral":false,"homeScore":79,"awayScore":46,"line":-13,"ts":"2026-11-16T22:37:19.594Z"}
 ]
