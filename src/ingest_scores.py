@@ -125,17 +125,29 @@ def result_id(date: str, a: str, b: str) -> str:
     return date + "_" + "_".join(sorted((a, b)))
 
 
-def current_line(home: str, away: str, neutral: bool, date: str, ratings: dict, hc: dict, mods: dict, buy: dict | None = None):
+def current_line(home: str, away: str, neutral: bool, date: str, ratings: dict, hc: dict, mods: dict, buy: dict | None = None, auto=None):
     """The line the site would lock for this game right now (home team's spread, negative = home favored).
 
-    Includes any buy-game adjustment from data/buy_games.json (published line only; ratings are untouched)."""
+    Includes the buy-game adjustment (a hand-entered override from data/buy_games.json, else the automatic rule).
+    `auto` is (conf, upper, BuyAdjust). Published line only; ratings are untouched. Returns (line, bonus) via
+    current_line_and_buy; this wrapper returns just the line."""
+    return current_line_and_buy(home, away, neutral, date, ratings, hc, mods, buy, auto)[0]
+
+
+def current_line_and_buy(home, away, neutral, date, ratings, hc, mods, buy=None, auto=None):
+    """(line, bonus): the locked line and the buy-game bonus points inside it (0 if none)."""
     if home not in ratings or away not in ratings:
-        return None
+        return None, 0
     m = cbk.predicted_margin(ratings[home], ratings[away], hc[home], neutral)
     m += cbk.home_bonus(mods, {"date": date, "home": home, "away": away})
-    m = cbk.buy_adjusted_margin(m, date, home, away, buy)
+    conf, upper, ba = auto if auto else ({}, set(), None)
+    hit = cbk.buy_for_game(date, home, away, m, buy, conf, upper, ba)
+    bonus = 0
+    if hit:
+        favorite, bonus = hit
+        m += bonus if favorite == home else -bonus
     s = cbk.spread(m)
-    return 0 if s == 0 else -s
+    return (0 if s == 0 else -s), bonus
 
 
 def load_postponed() -> list[dict]:
@@ -158,6 +170,8 @@ def classify(games, names: Names, schedule, results, now_iso, postponed=None, ad
     mods = cbk.build_game_mods(schedule, teams)
     buy = cbk.load_buy_games()
     ratings, _ = cbk.replay(start, hc, results, cfg, mods)
+    conf = {t["key"]: t.get("conference") for t in teams}
+    auto = (conf, cbk.upper_teams(ratings, conf, cfg.buy_adjust), cfg.buy_adjust)
 
     sched_by_date: dict[str, list[dict]] = {}
     for g in schedule:
@@ -232,9 +246,12 @@ def classify(games, names: Names, schedule, results, now_iso, postponed=None, ad
             row.update(status="MATCHES YOURS" if same else "DIFFERS FROM YOURS",
                        note=row["note"] + ("" if same else f'you entered {old["awayScore"]}-{old["homeScore"]} (away-home); left untouched'))
             continue
-        line = current_line(hk, ak, bool(s["neutral"]), s["date"], ratings, hc, mods, buy)
+        line, bonus = current_line_and_buy(hk, ak, bool(s["neutral"]), s["date"], ratings, hc, mods, buy, auto)
         entry = {"date": s["date"], "home": hk, "away": ak, "neutral": bool(s["neutral"]),
-                 "homeScore": home_score, "awayScore": away_score, "line": line, "ts": now_iso}
+                 "homeScore": home_score, "awayScore": away_score, "line": line}
+        if bonus:
+            entry["buy"] = bonus          # buy-game points inside the locked line; the site reads it back
+        entry["ts"] = now_iso
         row.update(status="NEW", note=row["note"] + f'would save {away_score}-{home_score} (away-home), line {line}')
         new.append(entry)
     return rows, new

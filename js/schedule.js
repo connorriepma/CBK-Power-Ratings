@@ -321,6 +321,9 @@
       line: existing && 'line' in existing ? existing.line : lockedLine(g),
       ts: new Date().toISOString()
     };
+    // Keep the buy-game points inside the locked line so the site can show them after ratings move on.
+    var kept = existing && 'line' in existing ? existing.buy : (model.buyGame(g) || {}).bonus;
+    if (kept) entry.buy = kept;
     mark.textContent = '\u2026';
     Store.upsert(entry, 'Result: ' + g.away + ' ' + away + ', ' + g.home + ' ' + home + ' (' + g.date + ')').then(done, failed);
   }

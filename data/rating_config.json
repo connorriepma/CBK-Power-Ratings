@@ -22,5 +22,26 @@
   "fullUpTo": 10,
   "floorAt": 20,
   "floor": 0.1
+ },
+ "buyAdjust": {
+  "rampFrom": 14,
+  "rampTo": 20,
+  "max": 4,
+  "autoFrom": "2026-11-16",
+  "topConferences": [
+   "ACC",
+   "Big 12",
+   "Big Ten",
+   "SEC",
+   "Big East",
+   "Pac-12"
+  ],
+  "topHalfConferences": [
+   "A10",
+   "Mountain West",
+   "WCC",
+   "AAC",
+   "Missouri Valley"
+  ]
  }
 }

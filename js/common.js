@@ -70,7 +70,9 @@ window.CBK = (function () {
       mismatchSpread: raw.mismatchSpread,
       missCap: { normal: raw.missCap.normal, mismatch: raw.missCap.mismatch },
       // Optional. Absent means no dampening.
-      blowoutCredit: raw.blowoutCredit ? { fullUpTo: raw.blowoutCredit.fullUpTo, floorAt: raw.blowoutCredit.floorAt, floor: raw.blowoutCredit.floor } : null
+      blowoutCredit: raw.blowoutCredit ? { fullUpTo: raw.blowoutCredit.fullUpTo, floorAt: raw.blowoutCredit.floorAt, floor: raw.blowoutCredit.floor } : null,
+      // Optional automatic buy-game line adjustment. Absent means hand-entered entries only.
+      buyAdjust: raw.buyAdjust ? raw.buyAdjust : null
     };
   }
 
@@ -206,6 +208,35 @@ window.CBK = (function () {
       return Object.assign({}, g, { id: gameId(g.date, g.home, g.away) });
     });
 
+    // Upper-level teams: every team in a top conference plus the top half (by current rating) of each top-half conference.
+    var upper = {};
+    function refreshUpper(current) {
+      var ba = cfg.buyAdjust;
+      upper = {};
+      if (!ba) return;
+      teamList.forEach(function (t) { if (ba.topConferences.indexOf(t.conference) >= 0) upper[t.key] = true; });
+      ba.topHalfConferences.forEach(function (c) {
+        var m = teamList.filter(function (t) { return t.conference === c && typeof current[t.key] === 'number'; })
+          .sort(function (x, y) { return current[y.key] - current[x.key]; });
+        m.slice(0, Math.ceil(m.length / 2)).forEach(function (t) { upper[t.key] = true; });
+      });
+    }
+    // The automatic adjustment for a game not yet played: nothing between same-conference or two upper-level teams,
+    // otherwise 0 up to rampFrom, rising in a straight line to max at rampTo. Mirrors auto_buy in src/cbk_ratings.py.
+    function autoBuy(g, margin) {
+      var ba = cfg.buyAdjust;
+      if (!ba || g.date < ba.autoFrom) return null;
+      var hk = teamKey(g.home), ak = teamKey(g.away);
+      if (byKey[hk] && byKey[ak] && byKey[hk].conference === byKey[ak].conference) return null;
+      if (upper[hk] && upper[ak]) return null;
+      var t = (Math.abs(margin) - ba.rampFrom) / (ba.rampTo - ba.rampFrom);
+      var bonus = Math.round(ba.max * Math.min(1, Math.max(0, t)) * 100) / 100;
+      return bonus < 0.05 ? null : { favorite: margin >= 0 ? hk : ak, bonus: bonus };
+    }
+
+    var gamesById = {};
+    games.forEach(function (g) { gamesById[g.id] = g; });
+
     var model = {
       mods: mods, teams: teamList, byName: byName, byKey: byKey, start: start,
       games: games, tbd: tbdGames, results: [], current: {}, played: {}, log: [], records: { rec: {}, ats: {}, any: false }
@@ -218,26 +249,38 @@ window.CBK = (function () {
       rows.forEach(function (r) { byId[r.date + '_' + [r.home, r.away].sort().join('_')] = r; });
       games.forEach(function (g) {
         var r = byId[g.id];
-        if (!r) { delete g.result; delete g.lineAtEntry; return; }
+        if (!r) { delete g.result; delete g.lineAtEntry; delete g.buyAtEntry; return; }
         var homeIsHome = r.home === teamKey(g.home);
         g.result = {
           home: homeIsHome ? r.homeScore : r.awayScore,
           away: homeIsHome ? r.awayScore : r.homeScore
         };
         if (typeof r.line === 'number') g.lineAtEntry = r.line; else delete g.lineAtEntry;
+        // The buy-game points the locked line carried, written when the score was saved.
+        if (typeof r.buy === 'number' && r.buy > 0 && typeof r.line === 'number') {
+          g.buyAtEntry = { favorite: r.line < 0 ? teamKey(g.home) : teamKey(g.away), bonus: r.buy };
+        } else delete g.buyAtEntry;
       });
       var log = [];
       var out = replay(start, hca, rows, cfg, log, mods);
       model.current = out.current;
+      refreshUpper(out.current);
       model.played = out.played;
       model.log = log;
       model.records = computeRecords(games);
       if (typeof document !== 'undefined') document.dispatchEvent(new CustomEvent('cbk-results'));
     };
 
-    // Buy-game adjustment on this game as { favorite (team key), bonus } or null.
+    // Buy-game adjustment on this game as { favorite (team key), bonus } or null. Order: a hand-entered override,
+    // then the points locked into a finished game's line, then (games not yet played) the automatic rule.
     model.buyGame = function (g) {
-      return buy[gameId(g.date, g.home, g.away)] || null;
+      var hit = buy[gameId(g.date, g.home, g.away)];
+      if (hit) return hit;
+      var id = gameId(g.date, g.home, g.away);
+      var played = gamesById[id];
+      if (played && played.result) return played.buyAtEntry || null;
+      var m = model.ratingMargin(g);
+      return m === null ? null : autoBuy(g, m);
     };
 
     // Predicted home margin from current ratings alone (no buy-game adjustment), or null if either team is unrated.

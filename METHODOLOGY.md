@@ -101,12 +101,15 @@ Ratings are stored at full precision and shown to the nearest 0.5, so small chan
 
 ### Buy-game line adjustment (published lines only)
 
-In true mismatches (a top-conference team hosting a team from a different level of basketball) the market runs several points above the rating-based line. For these games the site adds 3-4 points to the favorite's **published** line, so the Schedule, Matchup, win probability and the line locked for ATS all reflect it.
+In mismatches the market runs several points above the rating-based line, and the model's favorites were beating its lines by 5-7 points in the 18-24 range. For games from 2026-11-16 on, the site adds points to the favorite's **published** line automatically, so the Schedule, Matchup, win probability and the line locked for ATS all reflect it.
 
-- Games are chosen by hand, one slate at a time, and recorded in `data/buy_games.json` (`date`, `home`, `away`, `favorite`, `bonus`). A bonus of 0 means the game was reviewed and gets no adjustment.
+- **Ramp.** The bonus is 0 up to a 14-point rating line, rising in a straight line to +4 at a 20-point line, and +4 beyond that. It is measured on the rating-only line.
+- **Exempt.** Two teams from the same conference get nothing. Two upper-level teams get nothing. Upper-level means any team in the ACC, Big 12, Big Ten, SEC, Big East or Pac-12, plus the top half (by current rating) of the A10, Mountain West, WCC, AAC and Missouri Valley.
+- **Overrides.** An entry in `data/buy_games.json` (`date`, `home`, `away`, `favorite`, `bonus`) beats the rule for that game; the entries from before the rule are kept this way. A bonus of 0 forces no adjustment.
+- **Locked.** When a score is ingested, the adjusted line is stored in `results.json` (`line`) with the points it carried (`buy`), so a finished game keeps its line even after ratings move.
 - Adjusted lines are marked with an asterisk (for example -35.0*) wherever they are shown.
-- It never changes a rating. The rating update uses the rating-only margin, and the Biggest Misses "Model line" is also rating-only. This is why it does not double-count with the blowout credit above.
-- The line is locked when the score is ingested, so a game has to be in the file before it finishes.
+- It never changes a rating. The rating update uses the rating-only margin, which is why it does not double-count with the blowout credit above. Model Accuracy and Biggest Misses measure each game against the line that was published.
+- The settings live in `data/rating_config.json` under `buyAdjust`. The rule was fit on about 640 games from the first two weeks, so it will be refit as more games come in.
 
 ## Known limitations
 

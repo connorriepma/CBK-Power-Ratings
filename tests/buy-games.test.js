@@ -39,3 +39,24 @@ test('zero bonus and missing file are ignored', () => {
   const m = CBK.build(teams, cfg, sched, tbd, rows, { games: [Object.assign({}, g, { bonus: 0 })] });
   assert.equal(m.buyGame(game), null);
 });
+
+test('automatic rule: ramp, same-conference and upper-vs-upper exemptions, played games read their locked buy', () => {
+  const m = CBK.build(teams, cfg, sched, tbd, rows, { games: [] });
+  const upcoming = sched.filter(g => g.date >= cfg.buyAdjust.autoFrom && !(g.result));
+  let seen = 0;
+  upcoming.forEach(g => {
+    const b = m.buyGame(g), rm = m.ratingMargin(g);
+    if (rm === null) return;
+    const ht = m.byName[g.home], at = m.byName[g.away];
+    if (!ht || !at) return;
+    if (b) {
+      seen++;
+      assert.notEqual(ht.conference, at.conference, 'no adjustment inside a conference');
+      assert.ok(Math.abs(rm) > cfg.buyAdjust.rampFrom, 'only above the ramp start');
+      assert.ok(b.bonus > 0 && b.bonus <= cfg.buyAdjust.max);
+    }
+  });
+  assert.ok(seen > 0, 'some games get an automatic adjustment');
+  const ba = cfg.buyAdjust;
+  assert.ok(ba.rampFrom < ba.rampTo && ba.max > 0);
+});

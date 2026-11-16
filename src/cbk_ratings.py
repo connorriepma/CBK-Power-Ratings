@@ -25,6 +25,26 @@ SIGMA = 11.0
 
 
 @dataclass(frozen=True)
+class BuyAdjust:
+    """Automatic line adjustment for mismatched non-conference games (published lines only)."""
+
+    ramp_from: float
+    ramp_to: float
+    max_bonus: float
+    auto_from: str
+    top_conferences: frozenset
+    top_half_conferences: tuple
+
+    @classmethod
+    def from_dict(cls, raw: dict) -> "BuyAdjust":
+        return cls(
+            ramp_from=float(raw["rampFrom"]), ramp_to=float(raw["rampTo"]), max_bonus=float(raw["max"]),
+            auto_from=raw["autoFrom"], top_conferences=frozenset(raw["topConferences"]),
+            top_half_conferences=tuple(raw["topHalfConferences"]),
+        )
+
+
+@dataclass(frozen=True)
 class Config:
     """Rating-update settings, loaded from data/rating_config.json."""
 
@@ -34,6 +54,8 @@ class Config:
     miss_cap_mismatch: float
     # (full_up_to, floor_at, floor) or None. See blowout_credit.
     blowout_credit: tuple[float, float, float] | None = None
+    # Automatic buy-game line adjustment, or None. See auto_buy.
+    buy_adjust: "BuyAdjust | None" = None
 
     @classmethod
     def from_dict(cls, raw: dict) -> "Config":
@@ -50,6 +72,7 @@ class Config:
             blowout_credit=(
                 (float(bc["fullUpTo"]), float(bc["floorAt"]), float(bc["floor"])) if bc else None
             ),
+            buy_adjust=BuyAdjust.from_dict(raw["buyAdjust"]) if raw.get("buyAdjust") else None,
         )
 
 
@@ -144,6 +167,43 @@ def buy_adjusted_margin(margin: float, date: str, home: str, away: str, buy: dic
         return margin
     favorite, bonus = hit
     return margin + (bonus if favorite == home else -bonus)
+
+
+def upper_teams(ratings: dict, conf: dict, ba: "BuyAdjust | None") -> set:
+    """Teams treated as upper-level: any team in a top conference, plus the top half (by current rating) of each
+    top-half conference. Games between two upper-level teams get no automatic adjustment."""
+    if not ba:
+        return set()
+    out = {t for t, c in conf.items() if c in ba.top_conferences}
+    for c in ba.top_half_conferences:
+        members = sorted((t for t, cc in conf.items() if cc == c and t in ratings), key=lambda t: -ratings[t])
+        out.update(members[: math.ceil(len(members) / 2)])
+    return out
+
+
+def auto_buy(date: str, home: str, away: str, margin: float, conf: dict, upper: set, ba: "BuyAdjust | None"):
+    """(favorite key, bonus points) for a game that gets the automatic adjustment, else None.
+
+    `margin` is the rating-only home margin. Nothing for same-conference games or two upper-level teams; otherwise
+    0 up to ramp_from, rising in a straight line to max_bonus at ramp_to. Rounded to 2 decimals (the site matches).
+    """
+    if not ba or date < ba.auto_from:
+        return None
+    if conf.get(home) == conf.get(away) or (home in upper and away in upper):
+        return None
+    t = (abs(margin) - ba.ramp_from) / (ba.ramp_to - ba.ramp_from)
+    bonus = round(ba.max_bonus * min(1.0, max(0.0, t)) * 100) / 100
+    if bonus < 0.05:
+        return None
+    return (home if margin >= 0 else away), bonus
+
+
+def buy_for_game(date: str, home: str, away: str, margin: float, overrides: dict | None, conf: dict, upper: set, ba):
+    """The adjustment for this game: a hand-entered override from data/buy_games.json if there is one, else the rule."""
+    hit = (overrides or {}).get(game_id(date, home, away))
+    if hit:
+        return hit
+    return auto_buy(date, home, away, margin, conf, upper, ba)
 
 
 def build_game_mods(schedule: list[dict], teams: list[dict]) -> dict:
