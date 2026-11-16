@@ -123,3 +123,6 @@ In mismatches the market runs several points above the rating-based line, and th
 **Long conference trips (note only).** Non-neutral conference games where the road team travels 1,500 miles or more (straight line between campuses, every league, coordinates in `data/campuses.json`) carry `travelMiles` in `data/schedule.json` and show a plane marker with the miles. This is a note for grading later. It does not change any rating, spread or win %. Re-run `python src/travel_miles.py` after the schedule changes.
 
 **Altitude (note only).** Teams with `elevation_ft` of 5,000 or more in `data/teams.json` (Wyoming, Air Force, Northern Arizona, Southern Utah, Colorado, Colorado St, Denver, New Mexico) get a mountain marker on non-neutral home games. On the Schedule page it sits next to the host. On a team's own schedule it shows only on that team's road games. It does not change any rating, spread or win %.
+
+### Injury and return adjustments (in-season)
+Preseason ratings are locked once a team plays. Injuries and returns are recorded as dated entries in `adjustments` in `data/rating_config.json` (`date`, `team`, `points`, `note`). Each is added to the team's current rating before any game on or after its date, so earlier games are untouched. Both the Python and browser replays apply them.

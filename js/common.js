@@ -72,7 +72,9 @@ window.CBK = (function () {
       // Optional. Absent means no dampening.
       blowoutCredit: raw.blowoutCredit ? { fullUpTo: raw.blowoutCredit.fullUpTo, floorAt: raw.blowoutCredit.floorAt, floor: raw.blowoutCredit.floor } : null,
       // Optional automatic buy-game line adjustment. Absent means hand-entered entries only.
-      buyAdjust: raw.buyAdjust ? raw.buyAdjust : null
+      buyAdjust: raw.buyAdjust ? raw.buyAdjust : null,
+      // Optional dated hand adjustments (injuries, returns): applied before any game on or after the date.
+      adjustments: (raw.adjustments || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; })
     };
   }
 
@@ -128,7 +130,15 @@ window.CBK = (function () {
       var x = a.home + a.away, y = b.home + b.away;
       return x < y ? -1 : x > y ? 1 : 0;
     });
+    var pending = (cfg.adjustments || []).slice();
+    function applyAdj(through) {
+      while (pending.length && (through === null || pending[0].date <= through)) {
+        var a = pending.shift();
+        if (a.team in r) r[a.team] += a.points;
+      }
+    }
     ordered.forEach(function (g) {
+      applyAdj(g.date);
       if (!(g.home in r) || !(g.away in r)) {
         if (log) log.push({ skip: true, date: g.date, home: g.home, away: g.away, neutral: !!g.neutral,
           hs: g.homeScore, as: g.awayScore, hr: r[g.home], ar: r[g.away] });
@@ -150,6 +160,7 @@ window.CBK = (function () {
         hs: g.homeScore, as: g.awayScore, pred: pred, miss: miss, credit: credit, kh: kh, ka: ka,
         hb: hb, ha: r[g.home], ab: ab, aa: r[g.away] });
     });
+    applyAdj(null);
     return { current: r, played: played };
   }
 

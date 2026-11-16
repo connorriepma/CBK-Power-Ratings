@@ -56,6 +56,9 @@ class Config:
     blowout_credit: tuple[float, float, float] | None = None
     # Automatic buy-game line adjustment, or None. See auto_buy.
     buy_adjust: "BuyAdjust | None" = None
+    # Dated hand adjustments to a current rating: (date, team key, points). Applied before any game on or after
+    # the date, so earlier games are untouched. Used for injuries and returns; preseason ratings stay locked.
+    adjustments: tuple[tuple[str, str, float], ...] = ()
 
     @classmethod
     def from_dict(cls, raw: dict) -> "Config":
@@ -73,6 +76,9 @@ class Config:
                 (float(bc["fullUpTo"]), float(bc["floorAt"]), float(bc["floor"])) if bc else None
             ),
             buy_adjust=BuyAdjust.from_dict(raw["buyAdjust"]) if raw.get("buyAdjust") else None,
+            adjustments=tuple(
+                sorted((a["date"], a["team"], float(a["points"])) for a in raw.get("adjustments", []))
+            ),
         )
 
 
@@ -252,7 +258,16 @@ def replay(
     played = {team: 0 for team in start}
 
     ordered = sorted(results, key=lambda g: (g["date"], g["home"] + g["away"]))
+    pending = list(cfg.adjustments)
+
+    def apply_adjustments(through: str | None) -> None:
+        while pending and (through is None or pending[0][0] <= through):
+            _, team, pts = pending.pop(0)
+            if team in ratings:
+                ratings[team] += pts
+
     for g in ordered:
+        apply_adjustments(g["date"])
         home, away = g["home"], g["away"]
         if home not in ratings or away not in ratings:
             continue
@@ -275,6 +290,7 @@ def replay(
         played[home] += 1
         played[away] += 1
 
+    apply_adjustments(None)
     return ratings, played
 
 

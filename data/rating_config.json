@@ -43,5 +43,13 @@
    "AAC",
    "Missouri Valley"
   ]
- }
+ },
+ "adjustments": [
+  {
+   "date": "2026-11-16",
+   "team": "uconn",
+   "points": -0.5,
+   "note": "Nik Khamenia out for an extended time after foot surgery (returns 0.5 when he is back)"
+  }
+ ]
 }

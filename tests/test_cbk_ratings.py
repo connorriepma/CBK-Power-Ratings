@@ -242,7 +242,9 @@ class RealData(unittest.TestCase):
     def test_preseason_when_no_results(self):
         rows = cbk.build_current_ratings([])
         self.assertEqual(len(rows), 365)
-        self.assertTrue(all(r["change"] == 0 and r["games"] == 0 for r in rows))
+        # Dated injury adjustments still apply with no games; everything else is untouched.
+        adjusted = {a["team"] for a in cbk.load_json("rating_config.json").get("adjustments", [])}
+        self.assertTrue(all(r["games"] == 0 and (r["change"] == 0 or r["key"] in adjusted) for r in rows))
         self.assertEqual(rows[0]["team"], "Duke")
 
 
