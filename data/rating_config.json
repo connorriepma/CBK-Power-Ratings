@@ -56,6 +56,12 @@
    "team": "saint-louis",
    "points": -1.0,
    "note": "Robbie Avila left for TCU after the CSC ruled Saint Louis had no roster slot for him (preseason +1.5 for his TRO is mostly reversed)"
+  },
+  {
+   "date": "2026-11-16",
+   "team": "oklahoma",
+   "points": -0.5,
+   "note": "Duke Brennan out after ankle surgery until mid-to-late February (returns 0.5 when he is back)"
   }
  ]
 }
