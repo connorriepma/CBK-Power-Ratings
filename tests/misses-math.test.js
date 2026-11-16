@@ -83,3 +83,18 @@ test('a thin first week is folded into the next week', () => {
   const w = M.byWeek(rows);
   assert.equal(w.length, 1); assert.equal(w[0].week, '2026-11-02'); assert.equal(w[0].n, 2); near(w[0].mae, 8);
 });
+
+test('buckets by line size, scored from the favorite side', () => {
+  const rows = M.fromLog([
+    g('2026-11-05', 'a', 'b', 70, 60, 2),      // line 2, margin +10 -> miss +8, favorite covers
+    g('2026-11-05', 'c', 'd', 60, 70, 2),      // line 2 home fav, margin -10 -> miss -12, favorite fails
+    g('2026-11-05', 'e', 'f', 100, 60, 31),    // line 31 -> top bucket
+    g('2026-11-05', 'h', 'i', 90, 60, -4)      // away favorite, line 4, margin +30 -> favorite lost vs line by 34... away fav
+  ]);
+  const b = M.byLine(rows);
+  assert.equal(b.length, 11);
+  assert.equal(b[0].n, 2); near(b[0].mae, 10); near(b[0].bias, (8 - 12) / 2); assert.equal(b[0].covered, 1); assert.equal(b[0].lost, 1);
+  assert.equal(b[1].n, 1); near(b[1].bias, -34);
+  assert.equal(b[10].n, 1); assert.equal(b[10].hi, null); near(b[10].avgLine, 31);
+  assert.equal(b[2].n, 0); assert.equal(b[2].mae, null);
+});

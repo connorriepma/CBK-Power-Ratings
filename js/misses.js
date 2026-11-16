@@ -17,28 +17,8 @@
   function fmtDate(iso) { var p = iso.split('-'); return MON[+p[1] - 1] + ' ' + (+p[2]); }
   function nameOf(key) { return names[key] || key; }
 
-  function sgn(x, d) { return (x > 0 ? '+' : x < 0 ? '\u2212' : '') + Math.abs(x).toFixed(d == null ? 1 : d); }
-
-  function renderOverall() {
-    var st = M.summary(rows), el = $('ms-buy');
-    if (!st) { el.innerHTML = ''; return; }
-    var wk = M.byWeek(rows);
-    el.innerHTML = '<h2>Model accuracy</h2>' +
-      '<div class="ms-sum">' +
-        '<div><b>' + st.mae.toFixed(2) + '</b><span>MAE (pts), all ' + st.n + ' games</span></div>' +
-        '<div><b>' + sgn(st.bias) + '</b><span>Favorite vs line (avg pts)</span></div>' +
-      '</div>' +
-      '<div class="ms-scroll"><table><thead><tr><th>Week of</th><th>Games</th><th>MAE</th><th>Favorite vs line</th></tr></thead><tbody>' +
-      wk.slice().reverse().map(function (w) {
-        return '<tr><td data-l="Week of" class="ms-date">' + fmtDate(w.week) + '</td><td data-l="Games" class="ms-num">' + w.n +
-          '</td><td data-l="MAE" class="ms-num">' + w.mae.toFixed(2) + '</td><td data-l="Favorite vs line" class="ms-num">' + sgn(w.bias) + '</td></tr>';
-      }).join('') + '</tbody></table></div>' +
-      '<div class="ms-foot">MAE (mean absolute error) is the average number of points the final margin landed from the line, ignoring direction. ' +
-      '“Favorite vs line” is the favorite’s margin minus the line: positive means favorites beat the line on average, and zero means no bias.</div>';
-  }
 
   function render() {
-    renderOverall();
     var min = Number($('ms-min').value), q = $('ms-team').value.trim().toLowerCase();
     var list = M.rank(rows).filter(function (r) {
       return r.abs >= min && (!q || nameOf(r.home).toLowerCase().indexOf(q) >= 0 || nameOf(r.away).toLowerCase().indexOf(q) >= 0);

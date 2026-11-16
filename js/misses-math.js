@@ -72,6 +72,32 @@
     return d.toISOString().slice(0, 10);
   }
 
+  // Buckets by the size of the published line: 0-3, 3-6, ... 27-30, 30+. Rows are from the favorite's side.
+  // Each: { lo, hi (null for the last), n, mae, bias, avgLine, avgMargin, covered, lost, pushed }
+  var LINE_STEP = 3, LINE_TOP = 30;
+  function byLine(rows) {
+    var out = [], i;
+    for (i = 0; i <= LINE_TOP; i += LINE_STEP) out.push({ lo: i, hi: i < LINE_TOP ? i + LINE_STEP : null, rows: [] });
+    rows.forEach(function (r) {
+      var line = Math.abs(r.pred), idx = Math.min(Math.floor(line / LINE_STEP), out.length - 1);
+      out[idx].rows.push(r);
+    });
+    return out.map(function (b) {
+      var n = b.rows.length, sum = function (f) { return b.rows.reduce(function (s, r) { return s + f(r); }, 0); };
+      var sign = function (r) { return r.pred >= 0 ? 1 : -1; };
+      return {
+        lo: b.lo, hi: b.hi, n: n,
+        mae: n ? sum(function (r) { return r.abs; }) / n : null,
+        bias: n ? sum(function (r) { return sign(r) * r.miss; }) / n : null,
+        avgLine: n ? sum(function (r) { return Math.abs(r.pred); }) / n : null,
+        avgMargin: n ? sum(function (r) { return sign(r) * r.margin; }) / n : null,
+        covered: b.rows.filter(function (r) { return sign(r) * r.miss > 0; }).length,
+        lost: b.rows.filter(function (r) { return sign(r) * r.miss < 0; }).length,
+        pushed: b.rows.filter(function (r) { return r.miss === 0; }).length
+      };
+    });
+  }
+
   var MIN_FIRST_WEEK = 10;
 
   // One row per week, oldest first: { week, n, mae, bias }.
@@ -90,5 +116,5 @@
     });
   }
 
-  return { fromLog: fromLog, rank: rank, avgAbs: avgAbs, lineText: lineText, summary: summary, byWeek: byWeek, weekStart: weekStart };
+  return { fromLog: fromLog, rank: rank, avgAbs: avgAbs, lineText: lineText, summary: summary, byWeek: byWeek, byLine: byLine, weekStart: weekStart };
 });

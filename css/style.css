@@ -772,3 +772,4 @@ body.has-ticker .sidebar { top: 52px; }
 .mv-empty { color: var(--muted); font-style: italic; }
 .mv-more { margin-bottom: 10px; }
 @media (max-width: 900px) { .mv-grid { grid-template-columns: 1fr; } }
+#view-misses h2 { font-family: var(--cond); font-size: 20px; font-weight: 600; margin: 22px 0 10px; }
