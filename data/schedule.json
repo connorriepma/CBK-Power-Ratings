@@ -42724,5 +42724,23 @@
   "neutral": true,
   "conf": false,
   "site": "Towson, Md."
+ },
+ {
+  "date": "2026-11-18",
+  "home": "Houston",
+  "away": "Florida",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-SF1"
+ },
+ {
+  "date": "2026-11-18",
+  "home": "Rutgers",
+  "away": "Notre Dame",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-C1"
  }
 ]
