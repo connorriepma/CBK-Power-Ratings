@@ -954,5 +954,7 @@
 {"date":"2026-11-17","home":"west-florida","away":"green-bay","neutral":false,"homeScore":87,"awayScore":69,"line":7.5,"ts":"2026-11-18T02:57:35.000Z"},
 {"date":"2026-11-17","home":"william-mary","away":"bowling-green","neutral":false,"homeScore":77,"awayScore":73,"line":-1.0,"ts":"2026-11-18T02:57:35.000Z"},
 {"date":"2026-11-17","home":"wyoming","away":"sam-houston-st","neutral":false,"homeScore":81,"awayScore":79,"line":-9.0,"ts":"2026-11-18T03:57:51.000Z"},
-{"date":"2026-11-17","home":"xavier","away":"cleveland-st","neutral":false,"homeScore":75,"awayScore":67,"line":-27.0,"buy":4.0,"ts":"2026-11-18T02:57:35.000Z"}
+{"date":"2026-11-17","home":"xavier","away":"cleveland-st","neutral":false,"homeScore":75,"awayScore":67,"line":-27.0,"buy":4.0,"ts":"2026-11-18T02:57:35.000Z"},
+{"date":"2026-11-18","home":"baylor","away":"jackson-st","neutral":false,"homeScore":104,"awayScore":55,"line":-32.0,"buy":4.0,"ts":"2026-11-18T22:38:10.000Z"},
+{"date":"2026-11-18","home":"rutgers","away":"notre-dame","neutral":true,"homeScore":100,"awayScore":110,"line":1.0,"ts":"2026-11-18T22:38:10.000Z"}
 ]
