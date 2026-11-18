@@ -891,6 +891,7 @@
 {"date":"2026-11-16","home":"virginia-tech","away":"richmond","neutral":false,"homeScore":85,"awayScore":68,"line":-10.5,"ts":"2026-11-17T03:59:27.000Z"},
 {"date":"2026-11-17","home":"alabama","away":"kennesaw-st","neutral":false,"homeScore":109,"awayScore":91,"line":-22.0,"buy":3.28,"ts":"2026-11-18T02:57:35.000Z"},
 {"date":"2026-11-17","home":"army","away":"marist","neutral":false,"homeScore":68,"awayScore":73,"line":2.5,"ts":"2026-11-18T02:57:35.000Z"},
+{"date":"2026-11-17","home":"auburn","away":"west-virginia","neutral":true,"homeScore":70,"awayScore":76,"line":0.5,"ts":"2026-11-18T09:04:11.000Z"},
 {"date":"2026-11-17","home":"austin-peay","away":"non-d1-opponent","neutral":false,"homeScore":70,"awayScore":57,"line":null,"ts":"2026-11-18T03:12:38.000Z"},
 {"date":"2026-11-17","home":"bucknell","away":"akron","neutral":false,"homeScore":53,"awayScore":49,"line":13.0,"ts":"2026-11-18T02:57:35.000Z"},
 {"date":"2026-11-17","home":"butler","away":"western-carolina","neutral":false,"homeScore":89,"awayScore":64,"line":-11.0,"ts":"2026-11-18T02:57:35.000Z"},

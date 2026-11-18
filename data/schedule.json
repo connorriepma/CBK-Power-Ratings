@@ -42742,5 +42742,23 @@
   "conf": false,
   "site": "Las Vegas",
   "bracket": "PE8-C1"
+ },
+ {
+  "date": "2026-11-18",
+  "home": "West Virginia",
+  "away": "Kansas",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-SF2"
+ },
+ {
+  "date": "2026-11-18",
+  "home": "Auburn",
+  "away": "UNLV",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-C2"
  }
 ]
