@@ -42760,5 +42760,23 @@
   "conf": false,
   "site": "Las Vegas",
   "bracket": "PE8-C2"
+ },
+ {
+  "date": "2026-11-19",
+  "home": "Houston",
+  "away": "Kansas",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-CH"
+ },
+ {
+  "date": "2026-11-19",
+  "home": "Florida",
+  "away": "West Virginia",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-3P"
  }
 ]
