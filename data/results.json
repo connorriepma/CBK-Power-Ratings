@@ -1025,5 +1025,6 @@
 {"date":"2026-11-18","home":"west-virginia","away":"kansas","neutral":true,"homeScore":82,"awayScore":86,"line":5.5,"ts":"2026-11-19T03:10:13.000Z"},
 {"date":"2026-11-18","home":"winthrop","away":"chattanooga","neutral":false,"homeScore":79,"awayScore":90,"line":-1.0,"ts":"2026-11-19T02:40:09.000Z"},
 {"date":"2026-11-18","home":"wright-st","away":"non-d1-opponent","neutral":false,"homeScore":77,"awayScore":60,"line":null,"ts":"2026-11-19T02:40:09.000Z"},
-{"date":"2026-11-18","home":"yale","away":"vermont","neutral":false,"homeScore":76,"awayScore":74,"line":-8.0,"ts":"2026-11-19T02:40:09.000Z"}
+{"date":"2026-11-18","home":"yale","away":"vermont","neutral":false,"homeScore":76,"awayScore":74,"line":-8.0,"ts":"2026-11-19T02:40:09.000Z"},
+{"date":"2026-11-19","home":"florida","away":"west-virginia","neutral":true,"homeScore":85,"awayScore":72,"line":-7.0,"ts":"2026-11-19T22:41:15.000Z"}
 ]
