@@ -42778,5 +42778,23 @@
   "conf": false,
   "site": "Las Vegas",
   "bracket": "PE8-3P"
+ },
+ {
+  "date": "2026-11-19",
+  "home": "Notre Dame",
+  "away": "Auburn",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-C3"
+ },
+ {
+  "date": "2026-11-19",
+  "home": "Rutgers",
+  "away": "UNLV",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE8-C4"
  }
 ]
