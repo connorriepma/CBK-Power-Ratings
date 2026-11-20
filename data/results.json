@@ -1035,6 +1035,7 @@
 {"date":"2026-11-19","home":"california","away":"east-texas-a-m","neutral":false,"homeScore":86,"awayScore":54,"line":-18.0,"buy":1.64,"ts":"2026-11-20T04:55:37.000Z"},
 {"date":"2026-11-19","home":"drake","away":"charleston","neutral":false,"homeScore":86,"awayScore":70,"line":0.5,"ts":"2026-11-20T02:40:18.000Z"},
 {"date":"2026-11-19","home":"florida","away":"west-virginia","neutral":true,"homeScore":85,"awayScore":72,"line":-7.0,"ts":"2026-11-19T22:41:15.000Z"},
+{"date":"2026-11-19","home":"grambling-st","away":"southern-miss","neutral":false,"homeScore":100,"awayScore":103,"line":2.0,"ts":"2026-11-20T05:40:42.000Z"},
 {"date":"2026-11-19","home":"high-point","away":"montana-st","neutral":false,"homeScore":85,"awayScore":74,"line":-7.5,"ts":"2026-11-20T02:25:15.000Z"},
 {"date":"2026-11-19","home":"houston-christian","away":"georgia-southern","neutral":false,"homeScore":79,"awayScore":86,"line":1.0,"ts":"2026-11-20T03:25:25.000Z"},
 {"date":"2026-11-19","home":"illinois-st","away":"non-d1-opponent","neutral":false,"homeScore":123,"awayScore":48,"line":null,"ts":"2026-11-20T02:40:18.000Z"},
