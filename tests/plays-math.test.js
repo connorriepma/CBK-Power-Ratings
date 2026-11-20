@@ -27,6 +27,18 @@ test('grade: pick em', () => {
   assert.equal(M.grade(70, 71, 0), 'loss');
 });
 
+test('gradeML: outright win, outright loss, equal score is a push', () => {
+  assert.equal(M.gradeML(70, 68), 'win');
+  assert.equal(M.gradeML(68, 70), 'loss');
+  assert.equal(M.gradeML(70, 70), 'push');
+});
+
+test('moneyline money: win pays units, loss costs the stake, plus-money and minus-money', () => {
+  near(M.net(M.gradeML(70, 60), 1, -150), 1);        // won, 1u to win
+  near(M.net(M.gradeML(60, 70), 1, -150), -1.5);     // lost, risked 1.5u
+  near(M.net(M.gradeML(60, 70), 2, 130), -2 * 100 / 130);
+});
+
 test('half-point lines never push', () => {
   for (let m = -40; m <= 40; m++) {
     for (const line of [-10.5, -3.5, -0.5, 0.5, 6.5]) {

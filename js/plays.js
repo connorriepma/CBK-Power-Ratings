@@ -1,4 +1,4 @@
-// Plays tab: the owner's hypothetical spread plays. Reads data/plays.json and grades each play against the final
+// Plays tab: the owner's hypothetical spread and moneyline plays. Reads data/plays.json and grades each play against the final
 // scores the model already holds from data/results.json. It never touches a rating, spread or simulation.
 (function () {
   'use strict';
@@ -11,6 +11,8 @@
   var CONFIDENCE = ['Low', 'Medium', 'High'];
   // The books offered in the entry form, in this order. To add a book, add it to this list.
   var BOOKS = ['BetOnline', 'Circa', 'Stations', 'BetMGM', 'FanDuel', 'Boomers', 'Draft Kings', 'Wynn'];
+  // Bet types: the label in the entry form, and the value saved in plays.json. Plays saved before moneyline existed have no type: spread.
+  var TYPE_LABEL = { spread: 'Spread', ml: 'Moneyline' };
   var BADGE = {
     win: ['pl-b-win', '✓', 'Win'], loss: ['pl-b-loss', '✕', 'Loss'],
     push: ['pl-b-push', '=', 'Push'], pending: ['pl-b-pend', '○', 'Pending']
@@ -42,16 +44,18 @@
 
   function norm(d) {
     if (!d || !d.id || !d.gameId || !d.date || !d.home || !d.away || !d.pick) return null;
-    if (typeof d.line !== 'number' || typeof d.odds !== 'number' || typeof d.units !== 'number') return null;
+    var type = d.type === 'ml' ? 'ml' : 'spread';
+    if (type === 'spread' && typeof d.line !== 'number') return null;
+    if (typeof d.odds !== 'number' || typeof d.units !== 'number') return null;
     return {
       id: String(d.id), gameId: String(d.gameId), date: String(d.date), home: String(d.home), away: String(d.away),
-      neutral: !!d.neutral, pick: String(d.pick), line: d.line, odds: d.odds, units: d.units,
+      neutral: !!d.neutral, pick: String(d.pick), type: type, line: type === 'ml' ? null : d.line, odds: d.odds, units: d.units,
       book: d.book ? String(d.book) : '', confidence: d.confidence ? String(d.confidence) : '',
       modelLine: typeof d.modelLine === 'number' ? d.modelLine : null, ts: d.ts ? String(d.ts) : ''
     };
   }
 
-  // Attach the grade: the pick's score and the opponent's, win/loss/push against the line, and the units won or lost.
+  // Attach the grade: the pick's score and the opponent's, win/loss/push against the line (or outright for a moneyline), and the units won or lost.
   function evaluate(p) {
     var g = gamesById[p.gameId], r = g && g.result;
     var e = { p: p, result: null, net: null, pickScore: null, oppScore: null, opp: '' };
@@ -62,19 +66,20 @@
     e.pickScore = homePick ? r.home : r.away;
     e.oppScore = homePick ? r.away : r.home;
     e.opp = homePick ? g.away : g.home;
-    e.result = M.grade(e.pickScore, e.oppScore, p.line);
+    e.result = p.type === 'ml' ? M.gradeML(e.pickScore, e.oppScore) : M.grade(e.pickScore, e.oppScore, p.line);
     e.net = M.net(e.result, p.units, p.odds);
     return e;
   }
 
   // Your line minus the model's line, both from the side you took. Positive: you got a better number than the model.
-  function edgeOf(p) { return p.modelLine === null ? null : p.line - p.modelLine; }
+  // A moneyline play has no line to compare, so it has no edge.
+  function edgeOf(p) { return p.modelLine === null || p.type === 'ml' ? null : p.line - p.modelLine; }
 
   function filtered() {
-    var st = $('pl-status').value, cf = $('pl-conf').value, bk = $('pl-book').value;
+    var st = $('pl-status').value, ty = $('pl-type').value, cf = $('pl-conf').value, bk = $('pl-book').value;
     var from = $('pl-from').value, to = $('pl-to').value;
     return rows.map(evaluate).filter(function (e) {
-      return (!st || (e.result || 'pending') === st) && (!cf || e.p.confidence === cf) && (!bk || e.p.book === bk) &&
+      return (!st || (e.result || 'pending') === st) && (!ty || e.p.type === ty) && (!cf || e.p.confidence === cf) && (!bk || e.p.book === bk) &&
         (!from || e.p.date >= from) && (!to || e.p.date <= to);
     }).sort(function (a, b) {
       var ga = a.result ? 1 : 0, gb = b.result ? 1 : 0;
@@ -87,9 +92,9 @@
     });
   }
 
-  function summaryHTML(s) {
+  function summaryHTML(s, type) {
     function box(val, label, cls) { return '<div><b class="' + (cls || '') + '">' + val + '</b><span>' + label + '</span></div>'; }
-    return box(s.w + '-' + s.l + '-' + s.p, 'ATS record (W-L-P)') +
+    return box(s.w + '-' + s.l + '-' + s.p, (type === 'spread' ? 'ATS record' : type === 'ml' ? 'Moneyline record' : 'Record') + ' (W-L-P)') +
       box(s.winPct === null ? '&mdash;' : M.fmtPct(s.winPct, false), 'Win %') +
       box(M.fmtUnits(s.net, true) + 'u', 'Net units', tone(s.net)) +
       box(s.roi === null ? '&mdash;' : M.fmtPct(s.roi, true), 'ROI', s.roi === null ? '' : tone(s.roi)) +
@@ -100,14 +105,14 @@
     var p = e.p, b = BADGE[e.result || 'pending'], edge = edgeOf(p);
     var mdl = p.modelLine === null ? '&mdash;'
       : '<span class="pl-num">' + M.fmtLine(p.modelLine) + '</span>' +
-        '<small class="' + tone(edge) + '">edge ' + signed(edge) + '</small>';
+        (edge === null ? '' : '<small class="' + tone(edge) + '">edge ' + signed(edge) + '</small>');
     var res = '<span class="pl-badge ' + b[0] + '"><span aria-hidden="true">' + b[1] + '</span>' + b[2] + '</span>' +
       (e.result ? '<small>' + esc(p.pick) + ' ' + e.pickScore + ', ' + esc(e.opp) + ' ' + e.oppScore + '</small>' : '');
     var netCell = e.result ? '<span class="pl-num ' + tone(e.net) + '">' + M.fmtUnits(e.net, true) + '</span>' : '<span class="pl-none">&mdash;</span>';
     return '<tr class="pl-row">' +
       '<td data-l="Date" class="pl-date"><span>' + fmtDate(p.date) + (editMode ? '<br><a href="#" data-edit="' + esc(p.id) + '">edit</a>' : '') + '</span></td>' +
       '<td data-l="Game">' + (p.neutral ? esc(p.away) + ' vs ' + esc(p.home) + '*' : esc(p.away) + ' @ ' + esc(p.home)) + '</td>' +
-      '<td data-l="Play" class="pl-play"><span><b>' + esc(p.pick) + '</b> <span class="pl-num">' + M.fmtLine(p.line) + '</span></span></td>' +
+      '<td data-l="Play" class="pl-play"><span><b>' + esc(p.pick) + '</b> <span class="pl-num">' + (p.type === 'ml' ? 'ML' : M.fmtLine(p.line)) + '</span></span></td>' +
       '<td data-l="Odds" class="pl-num">' + M.fmtOdds(p.odds) + '</td>' +
       '<td data-l="Units" class="pl-un"><span><span class="pl-num">' + String(p.units) + '</span><small>risks ' + M.fmtUnits(M.risk(p.units, p.odds), false) + '</small></span></td>' +
       '<td data-l="Conf.">' + esc(p.confidence) + '</td>' +
@@ -124,12 +129,12 @@
     $('pl-count').textContent = rows.length + ' play' + (rows.length === 1 ? '' : 's');
     $('pl-sum').innerHTML = summaryHTML(M.summarize(list.map(function (e) {
       return { result: e.result, units: e.p.units, odds: e.p.odds };
-    })));
+    })), $('pl-type').value);
     $('pl-foot').textContent = list.length
-      ? 'Units are units to win: a win pays that many units at any price, a loss costs the stake the odds imply (1u at -110 loses 1.10u), a push returns the stake (0u). ' +
+      ? 'Units are units to win: a win pays that many units at any price, a loss costs the stake the odds imply (1u at -110 loses 1.10u), a push returns the stake (0u). A moneyline play wins if the team wins the game outright. ' +
         'Net units and ROI count graded plays only; ROI is net units over the units risked on wins and losses. ' +
         'Entered is when you first saved the play, in your local time; editing a play does not change it. ' +
-        'Edge is your line minus the model’s line from the same side, saved when the play was entered: positive means you got a better number than the model.'
+        'Edge (spread plays only) is your line minus the model’s line from the same side, saved when the play was entered: positive means you got a better number than the model.'
       : '';
     if (!list.length) {
       var filteredOut = rows.length > 0;
@@ -183,8 +188,15 @@
     var books = selected && BOOKS.indexOf(selected) < 0 ? BOOKS.concat([selected]) : BOOKS;
     fillSelect($('ed-book'), books.map(function (b) { return { v: b, t: b }; }), selected);
   }
+  // A moneyline play has no line, so its field is hidden.
+  function syncType() {
+    var ml = $('ed-type').value === TYPE_LABEL.ml;
+    $('ed-line').closest('.ed-f').hidden = ml;
+    $('ed-line').closest('form').querySelector('.ed-err').textContent = '';   // a message about the line no longer applies
+  }
   function openForm(v, isEdit) {
     form.open(v, isEdit);
+    syncType();
     fillBooks(v.book);
     fillDates(v.date);
     fillGames($('ed-date').value, v.game);
@@ -200,12 +212,12 @@
     if (!p) return;
     editingId = id;
     openForm({
-      date: p.date, game: p.gameId, pick: p.pick, line: M.fmtLine(p.line), odds: M.fmtOdds(p.odds), book: p.book,
+      date: p.date, game: p.gameId, pick: p.pick, type: TYPE_LABEL[p.type], line: p.type === 'ml' ? '' : M.fmtLine(p.line), odds: M.fmtOdds(p.odds), book: p.book,
       units: String(p.units), confidence: p.confidence
     }, true);
   }
 
-  function label(p) { return p.pick + ' ' + M.fmtLine(p.line) + ' (' + p.away + (p.neutral ? ' vs ' : ' @ ') + p.home + ', ' + p.date + ')'; }
+  function label(p) { return p.pick + ' ' + (p.type === 'ml' ? 'ML' : M.fmtLine(p.line)) + ' (' + p.away + (p.neutral ? ' vs ' : ' @ ') + p.home + ', ' + p.date + ')'; }
 
   // Always returns a promise, so a validation message shows in the form instead of throwing out of the submit handler.
   function save(v, editing) {
@@ -214,8 +226,11 @@
       var g = gamesById[v.game];
       if (!g) throw new Error('Pick a day, then a game from the schedule.');
       if (v.pick !== g.home && v.pick !== g.away) throw new Error('Pick the side you took.');
-      var line = M.parseLine(v.line);
-      if (isNaN(line)) throw new Error('Enter the line in half points, like -4.5 or +3 (PK for pick ’em).');
+      var type = v.type === TYPE_LABEL.ml ? 'ml' : 'spread', line = null;
+      if (type === 'spread') {
+        line = M.parseLine(v.line);
+        if (isNaN(line)) throw new Error('Enter the line in half points, like -4.5 or +3 (PK for pick ’em).');
+      }
       var odds = M.parseOdds(v.odds);
       if (isNaN(odds)) throw new Error('Enter the odds as American odds, like -110 or +105.');
       if (!v.book) throw new Error('Pick the book.');
@@ -227,7 +242,7 @@
       if (!editing && find(id)) throw new Error('There is already a play on ' + v.pick + ' in this game. Edit that one instead.');
       var snap = old ? old.modelLine : model.teamLine(g, v.pick);   // the model’s line is saved once, when the play is first entered
       var entry = {
-        id: id, gameId: g.id, date: g.date, home: g.home, away: g.away, neutral: !!g.neutral, pick: v.pick,
+        id: id, gameId: g.id, date: g.date, home: g.home, away: g.away, neutral: !!g.neutral, pick: v.pick, type: type,
         line: line, odds: odds, units: units, book: v.book, confidence: v.confidence,
         modelLine: typeof snap === 'number' ? snap : null,
         ts: old && old.ts ? old.ts : new Date().toISOString()
@@ -262,6 +277,7 @@
         { k: 'date', label: 'Day', type: 'select', options: [''], lockOnEdit: true },
         { k: 'game', label: 'Game', type: 'select', options: [''], lockOnEdit: true },
         { k: 'pick', label: 'Side you took', type: 'select', options: [''], lockOnEdit: true },
+        { k: 'type', label: 'Bet type', type: 'select', options: [TYPE_LABEL.spread, TYPE_LABEL.ml] },
         { k: 'line', label: 'Line you found (your side, e.g. -4.5 or +3)' },
         { k: 'odds', label: 'Odds (American, e.g. -110)' },
         { k: 'book', label: 'Book', type: 'select', options: [''].concat(BOOKS) },
@@ -271,6 +287,7 @@
     });
     $('ed-date').addEventListener('change', function () { fillGames(this.value); fillPicks(''); });
     $('ed-game').addEventListener('change', function () { fillPicks(this.value); });
+    $('ed-type').addEventListener('change', syncType);
     owner = O.init({
       bar: bar, before: bar, coll: coll,
       onActive: function (list) {
@@ -304,8 +321,9 @@
     dates = Object.keys(byDate).sort();
     $('pl-status').innerHTML = '<option value="">All results</option><option value="pending">Pending</option>' +
       '<option value="win">Win</option><option value="loss">Loss</option><option value="push">Push</option>';
+    $('pl-type').innerHTML = '<option value="">All bet types</option><option value="spread">' + TYPE_LABEL.spread + '</option><option value="ml">' + TYPE_LABEL.ml + '</option>';
     $('pl-conf').innerHTML = '<option value="">All confidence</option>' + CONFIDENCE.map(function (c) { return '<option>' + c + '</option>'; }).join('');
-    ['pl-status', 'pl-conf', 'pl-book', 'pl-from', 'pl-to'].forEach(function (id) { $(id).addEventListener('change', render); });
+    ['pl-status', 'pl-type', 'pl-conf', 'pl-book', 'pl-from', 'pl-to'].forEach(function (id) { $(id).addEventListener('change', render); });
     document.addEventListener('cbk-results', render);
     $('pl-body').addEventListener('click', function (ev) {
       var t = ev.target.closest('a');

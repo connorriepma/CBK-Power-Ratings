@@ -525,6 +525,7 @@ tr.schedule-row .schedule-list { background: transparent; border: none; border-r
 .ed-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; margin-bottom: 12px; }
 .ed-f { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .ed-f.wide { grid-column: 1 / -1; }
+.ed-f[hidden] { display: none; }
 .ed-f label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
 .ed-f input, .ed-f select, .ed-f textarea { font-family: var(--sans); font-size: 14px; background: #F7EFD9; border: 1px solid var(--wood-line); border-radius: 3px; color: var(--ink); padding: 7px 10px; width: 100%; }
 .ed-f input:disabled { opacity: .6; }

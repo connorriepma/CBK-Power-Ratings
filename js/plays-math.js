@@ -22,6 +22,12 @@
     return Math.abs(d) < EPS ? 'push' : d > 0 ? 'win' : 'loss';
   }
 
+  // Grade a moneyline play: the pick has to win the game outright. A tie cannot happen in basketball, so an
+  // equal score is treated as a push (stake returned) rather than guessed at.
+  function gradeML(pickScore, oppScore) {
+    return pickScore > oppScore ? 'win' : pickScore < oppScore ? 'loss' : 'push';
+  }
+
   // Units won or lost. A push returns the stake: 0.
   function net(result, units, odds) {
     if (result === 'win') return units;
@@ -91,7 +97,7 @@
   }
 
   return {
-    risk: risk, grade: grade, net: net, summarize: summarize,
+    risk: risk, grade: grade, gradeML: gradeML, net: net, summarize: summarize,
     parseLine: parseLine, parseOdds: parseOdds, parseUnits: parseUnits,
     fmtLine: fmtLine, fmtOdds: fmtOdds, fmtUnits: fmtUnits, fmtPct: fmtPct
   };
