@@ -1047,9 +1047,11 @@
 {"date":"2026-11-19","home":"notre-dame","away":"auburn","neutral":true,"homeScore":78,"awayScore":73,"line":4.0,"ts":"2026-11-20T02:25:15.000Z"},
 {"date":"2026-11-19","home":"ohio-st","away":"umbc","neutral":false,"homeScore":101,"awayScore":62,"line":-27.5,"buy":4.0,"ts":"2026-11-20T02:25:15.000Z"},
 {"date":"2026-11-19","home":"quinnipiac","away":"maine","neutral":false,"homeScore":67,"awayScore":69,"line":-8.0,"ts":"2026-11-20T02:25:15.000Z"},
+{"date":"2026-11-19","home":"rutgers","away":"unlv","neutral":true,"homeScore":89,"awayScore":70,"line":-2.0,"ts":"2026-11-20T03:55:28.000Z"},
 {"date":"2026-11-19","home":"siu-edwardsville","away":"non-d1-opponent","neutral":false,"homeScore":64,"awayScore":45,"line":null,"ts":"2026-11-20T02:25:15.000Z"},
 {"date":"2026-11-19","home":"st-bonaventure","away":"buffalo","neutral":false,"homeScore":78,"awayScore":69,"line":-12.0,"ts":"2026-11-20T02:25:15.000Z"},
 {"date":"2026-11-19","home":"st-thomas","away":"se-missouri-st","neutral":false,"homeScore":93,"awayScore":61,"line":-7.5,"ts":"2026-11-20T03:10:23.000Z"},
+{"date":"2026-11-19","home":"tcu","away":"texas-a-m","neutral":false,"homeScore":92,"awayScore":97,"line":-0.5,"ts":"2026-11-20T03:55:28.000Z"},
 {"date":"2026-11-19","home":"texas","away":"southern-utah","neutral":false,"homeScore":92,"awayScore":68,"line":-33.0,"buy":4.0,"ts":"2026-11-20T03:25:25.000Z"},
 {"date":"2026-11-19","home":"toledo","away":"robert-morris","neutral":false,"homeScore":83,"awayScore":76,"line":-8.0,"ts":"2026-11-20T02:25:15.000Z"}
 ]
