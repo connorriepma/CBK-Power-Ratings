@@ -110,5 +110,21 @@
   "confidence": "Low",
   "modelLine": -5,
   "ts": "2026-11-08T01:35:43.871Z"
+ },
+ {
+  "id": "2026-11-19_santa-clara_vcu_vcu",
+  "gameId": "2026-11-19_santa-clara_vcu",
+  "date": "2026-11-19",
+  "home": "Santa Clara",
+  "away": "VCU",
+  "neutral": false,
+  "pick": "VCU",
+  "line": 2.5,
+  "odds": 108,
+  "units": 1.08,
+  "book": "BetMGM",
+  "confidence": "High",
+  "modelLine": 0,
+  "ts": "2026-11-20T00:43:44.725Z"
  }
 ]
