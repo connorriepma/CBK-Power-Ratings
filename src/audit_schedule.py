@@ -150,6 +150,34 @@ def plan(games, names, schedule, results, brackets, today: str | None = None):
             changes.append({"type": "add", "row": {"date": r["date"], "home": r["h"], "away": r["a"],
                                                    "neutral": bool(r["g"].get("neutralSite")), "conf": bool(r["g"].get("conferenceGame", False))},
                             "final": r["g"].get("status") == "final"})
+    # A team cannot play twice in one day: a move or an add that would double-book a team is reported, not made.
+    busy = defaultdict(int)
+    for s in schedule:
+        for tm in (s["home"], s["away"]):
+            if tm != ing.NON_D1:
+                busy[(tm, s["date"])] += 1
+    for c in changes:
+        if c["type"] == "date":
+            for tm in (c["row"]["home"], c["row"]["away"]):
+                if tm != ing.NON_D1:
+                    busy[(tm, c["row"]["date"])] -= 1
+    kept = []
+    for c in changes:
+        if c["type"] in ("date", "add"):
+            r, d = c["row"], c.get("to", c["row"]["date"])
+            clash = [tm for tm in (r["home"], r["away"]) if tm != ing.NON_D1 and busy[(tm, d)] > 0]
+            if clash:
+                notes.append(f'CONFLICT, not changed: {describe(c)} would double-book {", ".join(clash)} (already has a game that day)')
+                if c["type"] == "date":
+                    for tm in (r["home"], r["away"]):
+                        if tm != ing.NON_D1:
+                            busy[(tm, r["date"])] += 1
+                continue
+            for tm in (r["home"], r["away"]):
+                if tm != ing.NON_D1:
+                    busy[(tm, d)] += 1
+        kept.append(c)
+    changes = kept
     lo = min((r["date"] for r in api_rows), default="0")
     hi = max((r["date"] for r in api_rows), default="9")
     for s in sorted(schedule, key=lambda s: s["date"]):

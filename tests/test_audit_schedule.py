@@ -78,6 +78,12 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(ch, [])
         self.assertTrue(any("bracket" in n for n in notes))
 
+    def test_double_booking_is_reported_not_made(self):
+        sched = [row("2027-01-05", "Kentucky", "Florida"), row("2027-01-06", "Florida", "Tennessee")]
+        ch, notes = plan([api("Kentucky", "Florida", "2027-01-07T00:00:00.000Z"), api("Florida", "Tennessee", "2027-01-07T00:00:00.000Z")], sched)
+        self.assertEqual(ch, [])
+        self.assertTrue(any("CONFLICT" in n for n in notes))
+
     def test_apply_date_and_add(self):
         sched = [row("2027-01-05", "Kentucky", "Florida")]
         ch, _ = plan([api("Kentucky", "Florida", "2027-01-07T00:00:00.000Z"), api("Pepperdine", "West Coast Baptist", "2026-11-21T01:00:00.000Z")], sched)
