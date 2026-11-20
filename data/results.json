@@ -1038,6 +1038,7 @@
 {"date":"2026-11-19","home":"grambling-st","away":"southern-miss","neutral":false,"homeScore":100,"awayScore":103,"line":2.0,"ts":"2026-11-20T05:40:42.000Z"},
 {"date":"2026-11-19","home":"high-point","away":"montana-st","neutral":false,"homeScore":85,"awayScore":74,"line":-7.5,"ts":"2026-11-20T02:25:15.000Z"},
 {"date":"2026-11-19","home":"houston-christian","away":"georgia-southern","neutral":false,"homeScore":79,"awayScore":86,"line":1.0,"ts":"2026-11-20T03:25:25.000Z"},
+{"date":"2026-11-19","home":"houston","away":"kansas","neutral":true,"homeScore":92,"awayScore":83,"line":-0.5,"ts":"2026-11-20T07:02:02.000Z"},
 {"date":"2026-11-19","home":"illinois-st","away":"non-d1-opponent","neutral":false,"homeScore":123,"awayScore":48,"line":null,"ts":"2026-11-20T02:40:18.000Z"},
 {"date":"2026-11-19","home":"jacksonville","away":"little-rock","neutral":false,"homeScore":72,"awayScore":78,"line":-4.0,"ts":"2026-11-20T02:25:15.000Z"},
 {"date":"2026-11-19","home":"louisiana-tech","away":"tulane","neutral":false,"homeScore":74,"awayScore":67,"line":-1.5,"ts":"2026-11-20T02:40:18.000Z"},
