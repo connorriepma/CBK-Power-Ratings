@@ -42796,5 +42796,12 @@
   "conf": false,
   "site": "Las Vegas",
   "bracket": "PE8-C4"
+ },
+ {
+  "date": "2026-11-19",
+  "home": "Oregon",
+  "away": "Oregon St",
+  "neutral": false,
+  "conf": false
  }
 ]
