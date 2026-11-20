@@ -1053,5 +1053,7 @@
 {"date":"2026-11-19","home":"st-thomas","away":"se-missouri-st","neutral":false,"homeScore":93,"awayScore":61,"line":-7.5,"ts":"2026-11-20T03:10:23.000Z"},
 {"date":"2026-11-19","home":"tcu","away":"texas-a-m","neutral":false,"homeScore":92,"awayScore":97,"line":-0.5,"ts":"2026-11-20T03:55:28.000Z"},
 {"date":"2026-11-19","home":"texas","away":"southern-utah","neutral":false,"homeScore":92,"awayScore":68,"line":-33.0,"buy":4.0,"ts":"2026-11-20T03:25:25.000Z"},
-{"date":"2026-11-19","home":"toledo","away":"robert-morris","neutral":false,"homeScore":83,"awayScore":76,"line":-8.0,"ts":"2026-11-20T02:25:15.000Z"}
+{"date":"2026-11-19","home":"toledo","away":"robert-morris","neutral":false,"homeScore":83,"awayScore":76,"line":-8.0,"ts":"2026-11-20T02:25:15.000Z"},
+{"date":"2026-11-19","home":"washington","away":"utah-tech","neutral":false,"homeScore":82,"awayScore":69,"line":-14.5,"buy":0.28,"ts":"2026-11-20T04:10:31.000Z"},
+{"date":"2026-11-19","home":"wisconsin","away":"seton-hall","neutral":true,"homeScore":69,"awayScore":74,"line":-3.0,"ts":"2026-11-20T04:10:31.000Z"}
 ]

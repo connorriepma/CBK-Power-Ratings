@@ -42831,5 +42831,23 @@
   "away": "Non D1 Opponent",
   "neutral": false,
   "conf": false
+ },
+ {
+  "date": "2026-11-20",
+  "home": "Seton Hall",
+  "away": "NC State",
+  "neutral": true,
+  "conf": false,
+  "site": "Nassau, Bahamas",
+  "bracket": "BAHA-CH"
+ },
+ {
+  "date": "2026-11-20",
+  "home": "Wisconsin",
+  "away": "Murray St",
+  "neutral": true,
+  "conf": false,
+  "site": "Nassau, Bahamas",
+  "bracket": "BAHA-3P"
  }
 ]
