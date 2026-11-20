@@ -42801,7 +42801,7 @@
   "date": "2026-11-19",
   "home": "Oregon",
   "away": "Oregon St",
-  "neutral": false,
+  "neutral": true,
   "conf": false
  },
  {
