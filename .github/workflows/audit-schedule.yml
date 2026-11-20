@@ -1,13 +1,18 @@
 name: Audit schedule
 
-# Read-only: compares data/schedule.json with the API's season schedule and prints a report. Changes nothing.
+# Compares data/schedule.json with the API's season schedule. Dry run unless "apply" is true: then the API's version
+# is written to schedule.json and each change is logged in data/schedule_changes.json (see src/audit_schedule.py).
 on:
   workflow_dispatch:
+    inputs:
+      apply:
+        description: "Write the changes (true) or only report (false)"
+        default: "false"
   push:
     branches: [api-schedule-audit]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   audit:
@@ -18,8 +23,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Audit
-        run: python3 src/audit_schedule.py --dump api_games.json --limit 400
-      - uses: actions/upload-artifact@v4
-        with:
-          name: api-games
-          path: api_games.json
+        run: |
+          if [ "${{ github.event.inputs.apply }}" = "true" ]; then FLAG="--apply"; else FLAG=""; fi
+          python3 src/audit_schedule.py $FLAG | tee out.txt
+          if [ -n "$FLAG" ] && ! git diff --quiet data/; then
+            git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
+            git add data/schedule.json data/postponed.json data/schedule_changes.json
+            git commit -m "Schedule updated from the API ($(grep -c '^- ' out.txt) lines in the report)"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
