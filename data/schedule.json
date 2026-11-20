@@ -42803,5 +42803,33 @@
   "away": "Oregon St",
   "neutral": false,
   "conf": false
+ },
+ {
+  "date": "2026-11-11",
+  "home": "UC Irvine",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-11-14",
+  "home": "UNC Wilmington",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-11-17",
+  "home": "South Alabama",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-11-17",
+  "home": "Washington",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
  }
 ]
