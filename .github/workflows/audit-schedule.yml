@@ -1,0 +1,25 @@
+name: Audit schedule
+
+# Read-only: compares data/schedule.json with the API's season schedule and prints a report. Changes nothing.
+on:
+  workflow_dispatch:
+  push:
+    branches: [api-schedule-audit]
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit
+        run: python3 src/audit_schedule.py --dump api_games.json --limit 400
+      - uses: actions/upload-artifact@v4
+        with:
+          name: api-games
+          path: api_games.json
