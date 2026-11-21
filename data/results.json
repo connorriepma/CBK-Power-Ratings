@@ -1081,6 +1081,7 @@
 {"date":"2026-11-20","home":"holy-cross","away":"harvard","neutral":false,"homeScore":65,"awayScore":77,"line":10.5,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-20","home":"idaho-st","away":"south-dakota-st","neutral":false,"homeScore":86,"awayScore":71,"line":5.5,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-20","home":"indiana-st","away":"stephen-f-austin","neutral":true,"homeScore":76,"awayScore":86,"line":3.0,"ts":"2026-11-21T02:30:20.000Z"},
+{"date":"2026-11-20","home":"indiana","away":"kentucky","neutral":true,"homeScore":90,"awayScore":76,"line":-5.5,"ts":"2026-11-21T03:15:26.000Z"},
 {"date":"2026-11-20","home":"iona","away":"kansas-city","neutral":false,"homeScore":62,"awayScore":61,"line":-7.5,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-20","home":"jacksonville-st","away":"georgia-st","neutral":false,"homeScore":82,"awayScore":77,"line":-1.5,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-20","home":"kansas-st","away":"campbell","neutral":false,"homeScore":70,"awayScore":80,"line":-16.5,"buy":0.92,"ts":"2026-11-21T03:00:24.000Z"},
