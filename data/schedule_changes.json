@@ -1,0 +1,332 @@
+[
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "NEUTRAL 2026-12-19 Lafayette @ Penn St: now neutral (API)",
+  "type": "neutral"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-11-08 Non D1 Opponent @ Portland (neutral) [already final in API]",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-11-15 Non D1 Opponent @ Maryland Eastern Shore",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-11-20 Non D1 Opponent @ Pepperdine",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-11-27 Non D1 Opponent @ USC Upstate",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-05 UTSA @ South Alabama",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-09 Non D1 Opponent @ Charleston",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-09 Non D1 Opponent @ Grambling St",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-15 Non D1 Opponent @ UTSA",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-22 Non D1 Opponent @ UTSA",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-18 New Mexico @ UC Irvine",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-28 Non D1 Opponent @ Florida Atlantic",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2026-12-28 Non D1 Opponent @ South Alabama",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-05 Tennessee @ Auburn -> 2027-01-06",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-05 Mississippi St @ Vanderbilt -> 2027-01-06",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-05 Oklahoma @ Florida -> 2027-01-06",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-05 Arkansas @ South Carolina -> 2027-01-06",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-05 San Diego @ Loyola Marymount -> 2027-01-06",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-05 San Francisco @ Santa Clara -> 2027-01-07",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-01-09 Morgan St @ South Carolina St",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-01-09 Coppin St @ North Carolina Central",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-01-11 Morgan St @ North Carolina Central",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-12 LSU @ Kentucky -> 2027-01-13",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-12 Missouri @ Tennessee -> 2027-01-13",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-12 Ole Miss @ Alabama -> 2027-01-13",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-12 Florida @ Mississippi St -> 2027-01-13",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-15 Louisiana @ Coastal Carolina -> 2027-01-16",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-15 UTEP @ UNLV -> 2027-01-16",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-01-18 Arkansas-Pine Bluff @ Bethune-Cookman",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-20 San Jose St @ New Mexico -> 2027-01-19",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-19 Alabama @ South Carolina -> 2027-01-20",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-19 Texas A&M @ Florida -> 2027-01-20",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-19 Kentucky @ Mississippi St -> 2027-01-20",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-26 Texas @ South Carolina -> 2027-01-27",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-26 Virginia Tech @ Pittsburgh -> 2027-01-27",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-26 Vanderbilt @ Ole Miss -> 2027-01-27",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-01-28 Northern Kentucky @ Purdue Fort Wayne -> 2027-01-29",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-03 Nevada @ UC Davis -> 2027-02-02",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-02 Georgia @ Tennessee -> 2027-02-03",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-02 Missouri @ Mississippi St -> 2027-02-03",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-06 Arkansas-Pine Bluff @ Alcorn St",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-05 Ole Miss @ LSU -> 2027-02-06",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-09 Tennessee @ Oklahoma -> 2027-02-10",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-09 South Carolina @ Kentucky -> 2027-02-10",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-13 Alabama St @ Arkansas-Pine Bluff",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-15 Alabama A&M @ Arkansas-Pine Bluff",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-16 Tennessee @ Ole Miss -> 2027-02-17",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-16 Florida @ LSU -> 2027-02-17",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-16 Texas A&M @ Texas -> 2027-02-17",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-16 Saint Mary's @ Pacific -> 2027-02-18",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-18 Florida A&M @ Alabama A&M",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-20 Bethune-Cookman @ Alabama A&M",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-22 Mississippi Valley St @ Prairie View A&M",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-23 Texas @ Mississippi St -> 2027-02-24",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-23 LSU @ Auburn -> 2027-02-24",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-23 Ole Miss @ Florida -> 2027-02-24",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-02-23 Georgia @ Oklahoma -> 2027-02-24",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-25 Grambling St @ Bethune-Cookman",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-27 Grambling St @ Florida A&M",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-02-27 Arkansas-Pine Bluff @ Mississippi Valley St",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-03-03 Grand Canyon @ Hawaii -> 2027-03-02",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-03-02 Alcorn St @ Mississippi Valley St",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-03-02 Georgia @ Alabama -> 2027-03-03",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-03-02 Texas A&M @ Kentucky -> 2027-03-03",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "DATE 2027-03-02 Vanderbilt @ Oklahoma -> 2027-03-03",
+  "type": "date"
+ },
+ {
+  "at": "2026-11-21T00:10:46Z",
+  "change": "ADD 2027-03-04 Jackson St @ Mississippi Valley St",
+  "type": "add"
+ }
+]
