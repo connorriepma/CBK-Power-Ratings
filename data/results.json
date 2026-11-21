@@ -1135,6 +1135,8 @@
 {"date":"2026-11-21","home":"james-madison","away":"non-d1-opponent","neutral":false,"homeScore":136,"awayScore":45,"line":null,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"lsu","away":"queens","neutral":false,"homeScore":106,"awayScore":75,"line":-23.5,"buy":3.88,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"michigan-st","away":"detroit-mercy","neutral":false,"homeScore":91,"awayScore":70,"line":-33.0,"buy":4.0,"ts":"2026-11-21T20:55:45.000Z"},
+{"date":"2026-11-21","home":"milwaukee","away":"st-thomas","neutral":false,"homeScore":70,"awayScore":98,"line":1.0,"ts":"2026-11-21T21:55:52.000Z"},
+{"date":"2026-11-21","home":"missouri-st","away":"drake","neutral":false,"homeScore":67,"awayScore":65,"line":-3.0,"ts":"2026-11-21T21:55:52.000Z"},
 {"date":"2026-11-21","home":"morgan-st","away":"cornell","neutral":false,"homeScore":63,"awayScore":84,"line":10.0,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"new-haven","away":"new-hampshire","neutral":false,"homeScore":50,"awayScore":47,"line":0.5,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"north-florida","away":"little-rock","neutral":false,"homeScore":99,"awayScore":87,"line":2.0,"ts":"2026-11-21T21:40:50.000Z"},
