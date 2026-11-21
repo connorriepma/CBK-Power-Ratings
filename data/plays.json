@@ -143,5 +143,22 @@
   "confidence": "High",
   "modelLine": -5.5,
   "ts": "2026-11-21T00:16:29.588Z"
+ },
+ {
+  "id": "2026-11-21_cornell_morgan-st_cornell",
+  "gameId": "2026-11-21_cornell_morgan-st",
+  "date": "2026-11-21",
+  "home": "Morgan St",
+  "away": "Cornell",
+  "neutral": false,
+  "pick": "Cornell",
+  "type": "spread",
+  "line": -6.5,
+  "odds": -110,
+  "units": 1,
+  "book": "BetMGM",
+  "confidence": "High",
+  "modelLine": -10,
+  "ts": "2026-11-21T05:32:55.410Z"
  }
 ]
