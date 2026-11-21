@@ -1076,6 +1076,7 @@
 {"date":"2026-11-20","home":"dayton","away":"utah","neutral":true,"homeScore":63,"awayScore":46,"line":0.5,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-20","home":"delaware-st","away":"niagara","neutral":false,"homeScore":101,"awayScore":103,"line":0.5,"ts":"2026-11-21T03:00:24.000Z"},
 {"date":"2026-11-20","home":"drexel","away":"saint-joseph-s","neutral":false,"homeScore":75,"awayScore":62,"line":5.5,"ts":"2026-11-21T02:30:20.000Z"},
+{"date":"2026-11-20","home":"east-carolina","away":"utah-valley","neutral":true,"homeScore":79,"awayScore":90,"line":5.5,"ts":"2026-11-21T03:45:31.000Z"},
 {"date":"2026-11-20","home":"eastern-kentucky","away":"bellarmine","neutral":false,"homeScore":76,"awayScore":79,"line":-6.0,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-20","home":"florida-st","away":"green-bay","neutral":false,"homeScore":87,"awayScore":63,"line":-21.0,"buy":2.78,"ts":"2026-11-20T22:16:18.000Z"},
 {"date":"2026-11-20","home":"george-washington","away":"uab","neutral":true,"homeScore":76,"awayScore":81,"line":-7.5,"ts":"2026-11-20T22:16:18.000Z"},
