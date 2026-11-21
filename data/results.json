@@ -1125,6 +1125,7 @@
 {"date":"2026-11-20","home":"wisconsin","away":"murray-st","neutral":true,"homeScore":53,"awayScore":70,"line":-4.0,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-20","home":"xavier","away":"iowa","neutral":false,"homeScore":65,"awayScore":83,"line":-1.0,"ts":"2026-11-21T02:30:20.000Z"},
 {"date":"2026-11-21","home":"boston-u","away":"columbia","neutral":false,"homeScore":71,"awayScore":80,"line":2.0,"ts":"2026-11-21T20:55:45.000Z"},
+{"date":"2026-11-21","home":"bowling-green","away":"northern-illinois","neutral":false,"homeScore":68,"awayScore":86,"line":-8.0,"ts":"2026-11-21T21:10:47.000Z"},
 {"date":"2026-11-21","home":"bucknell","away":"siena","neutral":false,"homeScore":87,"awayScore":93,"line":5.0,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"cleveland-st","away":"kent-st","neutral":false,"homeScore":62,"awayScore":69,"line":0,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"colgate","away":"non-d1-opponent","neutral":false,"homeScore":87,"awayScore":55,"line":null,"ts":"2026-11-21T20:55:45.000Z"},
@@ -1138,5 +1139,7 @@
 {"date":"2026-11-21","home":"purdue-fort-wayne","away":"non-d1-opponent","neutral":false,"homeScore":99,"awayScore":53,"line":null,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"rider","away":"navy","neutral":false,"homeScore":69,"awayScore":66,"line":6.5,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"unc-greensboro","away":"usc-upstate","neutral":false,"homeScore":85,"awayScore":66,"line":-5.0,"ts":"2026-11-21T20:55:45.000Z"},
-{"date":"2026-11-21","home":"western-illinois","away":"mercyhurst","neutral":true,"homeScore":65,"awayScore":68,"line":7.0,"ts":"2026-11-21T20:55:45.000Z"}
+{"date":"2026-11-21","home":"wake-forest","away":"western-carolina","neutral":false,"homeScore":90,"awayScore":63,"line":-13.5,"ts":"2026-11-21T21:10:47.000Z"},
+{"date":"2026-11-21","home":"western-illinois","away":"mercyhurst","neutral":true,"homeScore":65,"awayScore":68,"line":7.0,"ts":"2026-11-21T20:55:45.000Z"},
+{"date":"2026-11-21","home":"wichita-st","away":"new-mexico","neutral":false,"homeScore":85,"awayScore":60,"line":-2.0,"ts":"2026-11-21T21:10:47.000Z"}
 ]
