@@ -1476,7 +1476,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-05",
+  "date": "2027-01-06",
   "home": "Florida",
   "away": "Oklahoma",
   "neutral": false,
@@ -1491,7 +1491,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-12",
+  "date": "2027-01-13",
   "home": "Mississippi St",
   "away": "Florida",
   "neutral": false,
@@ -1506,7 +1506,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-19",
+  "date": "2027-01-20",
   "home": "Florida",
   "away": "Texas A&M",
   "neutral": false,
@@ -1558,7 +1558,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-16",
+  "date": "2027-02-17",
   "home": "LSU",
   "away": "Florida",
   "neutral": false,
@@ -1573,7 +1573,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-23",
+  "date": "2027-02-24",
   "home": "Florida",
   "away": "Ole Miss",
   "neutral": false,
@@ -1910,7 +1910,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-26",
+  "date": "2027-01-27",
   "home": "Pittsburgh",
   "away": "Virginia Tech",
   "neutral": false,
@@ -5828,7 +5828,7 @@
   "date": "2026-12-19",
   "home": "Penn St",
   "away": "Lafayette",
-  "neutral": false,
+  "neutral": true,
   "conf": false
  },
  {
@@ -8143,7 +8143,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-05",
+  "date": "2027-01-06",
   "home": "Auburn",
   "away": "Tennessee",
   "neutral": false,
@@ -8158,7 +8158,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-12",
+  "date": "2027-01-13",
   "home": "Tennessee",
   "away": "Missouri",
   "neutral": false,
@@ -8188,7 +8188,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-02-02",
+  "date": "2027-02-03",
   "home": "Tennessee",
   "away": "Georgia",
   "neutral": false,
@@ -8203,7 +8203,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-09",
+  "date": "2027-02-10",
   "home": "Oklahoma",
   "away": "Tennessee",
   "neutral": false,
@@ -8218,7 +8218,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-16",
+  "date": "2027-02-17",
   "home": "Ole Miss",
   "away": "Tennessee",
   "neutral": false,
@@ -8378,7 +8378,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-26",
+  "date": "2027-01-27",
   "home": "South Carolina",
   "away": "Texas",
   "neutral": false,
@@ -8408,7 +8408,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-16",
+  "date": "2027-02-17",
   "home": "Texas",
   "away": "Texas A&M",
   "neutral": false,
@@ -8423,7 +8423,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-23",
+  "date": "2027-02-24",
   "home": "Mississippi St",
   "away": "Texas",
   "neutral": false,
@@ -8516,7 +8516,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-05",
+  "date": "2027-01-06",
   "home": "South Carolina",
   "away": "Arkansas",
   "neutral": false,
@@ -8693,7 +8693,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-01-12",
+  "date": "2027-01-13",
   "home": "Alabama",
   "away": "Ole Miss",
   "neutral": false,
@@ -8701,7 +8701,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-01-19",
+  "date": "2027-01-20",
   "home": "South Carolina",
   "away": "Alabama",
   "neutral": false,
@@ -8761,7 +8761,7 @@
   "conf": true
  },
  {
-  "date": "2027-03-02",
+  "date": "2027-03-03",
   "home": "Alabama",
   "away": "Georgia",
   "neutral": false,
@@ -8898,7 +8898,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-23",
+  "date": "2027-02-24",
   "home": "Auburn",
   "away": "LSU",
   "neutral": false,
@@ -9036,7 +9036,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-02-23",
+  "date": "2027-02-24",
   "home": "Oklahoma",
   "away": "Georgia",
   "neutral": false,
@@ -9141,7 +9141,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-12",
+  "date": "2027-01-13",
   "home": "Kentucky",
   "away": "LSU",
   "neutral": false,
@@ -9164,7 +9164,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-02-05",
+  "date": "2027-02-06",
   "home": "LSU",
   "away": "Ole Miss",
   "neutral": false,
@@ -9291,7 +9291,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-19",
+  "date": "2027-01-20",
   "home": "Mississippi St",
   "away": "Kentucky",
   "neutral": false,
@@ -9307,7 +9307,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-02-09",
+  "date": "2027-02-10",
   "home": "Kentucky",
   "away": "South Carolina",
   "neutral": false,
@@ -9323,7 +9323,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-03-02",
+  "date": "2027-03-03",
   "home": "Kentucky",
   "away": "Texas A&M",
   "neutral": false,
@@ -9394,7 +9394,7 @@
   "conf": false
  },
  {
-  "date": "2027-01-05",
+  "date": "2027-01-06",
   "home": "Vanderbilt",
   "away": "Mississippi St",
   "neutral": false,
@@ -9417,7 +9417,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-26",
+  "date": "2027-01-27",
   "home": "Ole Miss",
   "away": "Vanderbilt",
   "neutral": false,
@@ -9439,7 +9439,7 @@
   "conf": true
  },
  {
-  "date": "2027-03-02",
+  "date": "2027-03-03",
   "home": "Oklahoma",
   "away": "Vanderbilt",
   "neutral": false,
@@ -9534,7 +9534,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-02",
+  "date": "2027-02-03",
   "home": "Mississippi St",
   "away": "Missouri",
   "neutral": false,
@@ -16484,7 +16484,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-15",
+  "date": "2027-01-16",
   "home": "UNLV",
   "away": "UTEP",
   "neutral": false,
@@ -16753,7 +16753,7 @@
   "conf": true
  },
  {
-  "date": "2027-03-03",
+  "date": "2027-03-02",
   "home": "Hawaii",
   "away": "Grand Canyon",
   "neutral": false,
@@ -16852,7 +16852,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-20",
+  "date": "2027-01-19",
   "home": "New Mexico",
   "away": "San Jose St",
   "neutral": false,
@@ -17060,7 +17060,7 @@
   "conf": true
  },
  {
-  "date": "2027-02-03",
+  "date": "2027-02-02",
   "home": "UC Davis",
   "away": "Nevada",
   "neutral": false,
@@ -29052,7 +29052,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-28",
+  "date": "2027-01-29",
   "home": "Purdue Fort Wayne",
   "away": "Northern Kentucky",
   "neutral": false,
@@ -30482,7 +30482,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-02-16",
+  "date": "2027-02-18",
   "home": "Pacific",
   "away": "Saint Mary's",
   "neutral": false,
@@ -30558,7 +30558,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-01-05",
+  "date": "2027-01-07",
   "home": "Santa Clara",
   "away": "San Francisco",
   "neutral": false,
@@ -30975,7 +30975,7 @@
   "dateTbd": true
  },
  {
-  "date": "2027-01-05",
+  "date": "2027-01-06",
   "home": "Loyola Marymount",
   "away": "San Diego",
   "neutral": false,
@@ -33758,7 +33758,7 @@
   "conf": true
  },
  {
-  "date": "2027-01-15",
+  "date": "2027-01-16",
   "home": "Coastal Carolina",
   "away": "Louisiana",
   "neutral": false,
@@ -42849,5 +42849,194 @@
   "conf": false,
   "site": "Nassau, Bahamas",
   "bracket": "BAHA-3P"
+ },
+ {
+  "date": "2026-11-08",
+  "home": "Portland",
+  "away": "Non D1 Opponent",
+  "neutral": true,
+  "conf": false
+ },
+ {
+  "date": "2026-11-15",
+  "home": "Maryland Eastern Shore",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-11-20",
+  "home": "Pepperdine",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-11-27",
+  "home": "USC Upstate",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-05",
+  "home": "South Alabama",
+  "away": "UTSA",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-09",
+  "home": "Charleston",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-09",
+  "home": "Grambling St",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-15",
+  "home": "UTSA",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-22",
+  "home": "UTSA",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-18",
+  "home": "UC Irvine",
+  "away": "New Mexico",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-28",
+  "home": "Florida Atlantic",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2026-12-28",
+  "home": "South Alabama",
+  "away": "Non D1 Opponent",
+  "neutral": false,
+  "conf": false
+ },
+ {
+  "date": "2027-01-09",
+  "home": "South Carolina St",
+  "away": "Morgan St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-01-09",
+  "home": "North Carolina Central",
+  "away": "Coppin St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-01-11",
+  "home": "North Carolina Central",
+  "away": "Morgan St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-01-18",
+  "home": "Bethune-Cookman",
+  "away": "Arkansas-Pine Bluff",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-06",
+  "home": "Alcorn St",
+  "away": "Arkansas-Pine Bluff",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-13",
+  "home": "Arkansas-Pine Bluff",
+  "away": "Alabama St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-15",
+  "home": "Arkansas-Pine Bluff",
+  "away": "Alabama A&M",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-18",
+  "home": "Alabama A&M",
+  "away": "Florida A&M",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-20",
+  "home": "Alabama A&M",
+  "away": "Bethune-Cookman",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-22",
+  "home": "Prairie View A&M",
+  "away": "Mississippi Valley St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-25",
+  "home": "Bethune-Cookman",
+  "away": "Grambling St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-27",
+  "home": "Florida A&M",
+  "away": "Grambling St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-02-27",
+  "home": "Mississippi Valley St",
+  "away": "Arkansas-Pine Bluff",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-03-02",
+  "home": "Mississippi Valley St",
+  "away": "Alcorn St",
+  "neutral": false,
+  "conf": true
+ },
+ {
+  "date": "2027-03-04",
+  "home": "Mississippi Valley St",
+  "away": "Jackson St",
+  "neutral": false,
+  "conf": true
  }
 ]
