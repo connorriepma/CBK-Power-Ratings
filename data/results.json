@@ -1136,6 +1136,7 @@
 {"date":"2026-11-21","home":"chattanooga","away":"radford","neutral":false,"homeScore":65,"awayScore":73,"line":-7.5,"ts":"2026-11-22T02:11:21.000Z"},
 {"date":"2026-11-21","home":"cleveland-st","away":"kent-st","neutral":false,"homeScore":62,"awayScore":69,"line":0,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"colgate","away":"non-d1-opponent","neutral":false,"homeScore":87,"awayScore":55,"line":null,"ts":"2026-11-21T20:55:45.000Z"},
+{"date":"2026-11-21","home":"duke","away":"washington-st","neutral":true,"homeScore":78,"awayScore":74,"line":-19.0,"ts":"2026-11-22T06:36:21.000Z"},
 {"date":"2026-11-21","home":"east-tennessee-st","away":"longwood","neutral":false,"homeScore":74,"awayScore":68,"line":-8.0,"ts":"2026-11-21T23:11:04.000Z"},
 {"date":"2026-11-21","home":"eastern-michigan","away":"denver","neutral":false,"homeScore":70,"awayScore":68,"line":-5.0,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"elon","away":"morehead-st","neutral":false,"homeScore":84,"awayScore":61,"line":-8.5,"ts":"2026-11-22T02:11:21.000Z"},
