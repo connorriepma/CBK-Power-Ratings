@@ -24,12 +24,6 @@
   "site": "San Diego, Calif."
  },
  {
-  "team": "Oregon St",
-  "date": "2026-11-19",
-  "event": "Opponent TBA",
-  "site": "TBD"
- },
- {
   "team": "Saint Joseph's",
   "date": "2026-12-05",
   "event": "Big Five Classic",
@@ -66,12 +60,6 @@
   "site": "St. Thomas, U.S. Virgin Islands"
  },
  {
-  "team": "East Carolina",
-  "date": "2026-11-23",
-  "event": "Paradise Jam",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
   "team": "UTEP",
   "date": "2026-11-25",
   "event": "Puerto Aventuras tournament (Eastern Michigan or Kennesaw St)",
@@ -84,46 +72,16 @@
   "site": "El Paso, Texas"
  },
  {
-  "team": "Indiana St",
-  "date": "2026-11-21",
-  "event": "Paradise Jam (Game No. 2)",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "Indiana St",
-  "date": "2026-11-23",
-  "event": "Paradise Jam (Game No. 3)",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "UMBC",
-  "date": "2026-11-14",
-  "event": "Towson/Loyola (Md.) doubleheader (opponent TBD)",
-  "site": "Towson, MD"
- },
- {
   "team": "Northern Colorado",
   "date": "2026-11-25",
   "event": "Cancun Challenge (North Dakota or Detroit Mercy)",
   "site": "Cancun, Mexico"
  },
  {
-  "team": "Utah Valley",
-  "date": "2026-11-21",
-  "event": "Paradise Jam (opponent TBA)",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
   "team": "Charleston",
   "date": "2026-11-25",
   "event": "Cancun Challenge (Eastern Michigan or Kennesaw St)",
   "site": "Puerto Aventuras, Mexico"
- },
- {
-  "team": "Towson",
-  "date": "2026-11-14",
-  "event": "Home game vs UMBC or Morgan St (opponent TBD)",
-  "site": "Towson, MD"
  },
  {
   "team": "Drexel",
@@ -144,12 +102,6 @@
   "site": "St. Thomas, U.S. Virgin Islands"
  },
  {
-  "team": "Middle Tennessee",
-  "date": "2026-11-23",
-  "event": "Paradise Jam",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
   "team": "FIU",
   "date": "2026-12-21",
   "event": "Home game (opponent TBA)",
@@ -166,12 +118,6 @@
   "date": "2026-11-27",
   "event": "Rady Children's Invitational (Georgetown or Texas)",
   "site": "San Diego, Calif."
- },
- {
-  "team": "Portland",
-  "date": "2026-11-08",
-  "event": "Rainbow Classic (opponent TBA)",
-  "site": "Honolulu, Hawaii"
  },
  {
   "team": "Miami OH",
@@ -340,12 +286,6 @@
   "date": "2026-11-23",
   "event": "Paradise Jam",
   "site": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "Loyola MD",
-  "date": "2026-11-14",
-  "event": "Neutral game vs UMBC or Morgan St (opponent TBD)",
-  "site": "Towson, MD"
  },
  {
   "team": "UT Martin",

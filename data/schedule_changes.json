@@ -328,5 +328,35 @@
   "at": "2026-11-21T00:10:46Z",
   "change": "ADD 2027-03-04 Jackson St @ Mississippi Valley St",
   "type": "add"
+ },
+ {
+  "at": "2026-11-22T02:09:57Z",
+  "change": "ADD 2026-11-21 Indiana St @ Middle Tennessee (neutral) [already final in API]",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-22T02:09:57Z",
+  "change": "ADD 2026-11-21 Southern Illinois @ Utah Valley (neutral) [already final in API]",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-22T02:09:57Z",
+  "change": "ADD 2026-11-22 Temple @ Stephen F Austin (neutral)",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-22T02:09:57Z",
+  "change": "ADD 2026-11-22 UT Martin @ Utah Valley (neutral)",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-22T02:09:57Z",
+  "change": "ADD 2026-11-23 Indiana St @ East Carolina (neutral)",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-22T02:09:57Z",
+  "change": "ADD 2026-11-23 Middle Tennessee @ Southern Illinois (neutral)",
+  "type": "add"
  }
 ]

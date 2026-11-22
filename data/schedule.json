@@ -43038,5 +43038,51 @@
   "away": "Jackson St",
   "neutral": false,
   "conf": true
+ },
+ {
+  "date": "2026-11-21",
+  "home": "Middle Tennessee",
+  "away": "Indiana St",
+  "neutral": true,
+  "conf": false,
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "date": "2026-11-21",
+  "home": "Utah Valley",
+  "away": "Southern Illinois",
+  "neutral": true,
+  "conf": false,
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "date": "2026-11-22",
+  "home": "Stephen F Austin",
+  "away": "Temple",
+  "neutral": true,
+  "conf": false
+ },
+ {
+  "date": "2026-11-22",
+  "home": "Utah Valley",
+  "away": "UT Martin",
+  "neutral": true,
+  "conf": false
+ },
+ {
+  "date": "2026-11-23",
+  "home": "East Carolina",
+  "away": "Indiana St",
+  "neutral": true,
+  "conf": false,
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "date": "2026-11-23",
+  "home": "Southern Illinois",
+  "away": "Middle Tennessee",
+  "neutral": true,
+  "conf": false,
+  "site": "St. Thomas, U.S. Virgin Islands"
  }
 ]
