@@ -1,18 +1,26 @@
 name: Audit schedule
 
-# Compares data/schedule.json with the API's season schedule. Dry run unless "apply" is true: then the API's version
-# is written to schedule.json and each change is logged in data/schedule_changes.json (see src/audit_schedule.py).
+# Compares data/schedule.json with the API's season schedule (src/audit_schedule.py).
+#   * On the schedule below, and when started by hand with "apply" = true: the API's version is written to
+#     schedule.json / tbd_games.json / postponed.json and every change is logged in data/schedule_changes.json.
+#   * Started by hand with "apply" = false: report only, nothing is written.
 on:
   workflow_dispatch:
     inputs:
       apply:
         description: "Write the changes (true) or only report (false)"
         default: "false"
+  schedule:
+    - cron: "17 */3 * * *"      # every 3 hours (UTC)
   push:
     branches: [api-schedule-audit, api-schedule-apply]
 
 permissions:
   contents: write
+
+concurrency:
+  group: schedule-audit
+  cancel-in-progress: false
 
 jobs:
   audit:
@@ -20,15 +28,28 @@ jobs:
     timeout-minutes: 20
     env:
       CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+      EVENT: ${{ github.event_name }}
+      APPLY_INPUT: ${{ github.event.inputs.apply }}
+      REF: ${{ github.ref_name }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'schedule' && 'main' || github.ref_name }}
       - name: Audit
         run: |
-          if [ "${{ github.event.inputs.apply }}" = "true" ] || [ "${{ github.ref_name }}" = "api-schedule-apply" ]; then FLAG="--apply"; else FLAG=""; fi
-          python3 src/audit_schedule.py $FLAG | tee out.txt
-          if [ -n "$FLAG" ] && ! git diff --quiet data/; then
-            git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
+          set -o pipefail
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          if [ "$EVENT" = "schedule" ] || [ "$APPLY_INPUT" = "true" ] || [ "$REF" = "api-schedule-apply" ]; then FLAG="--apply"; else FLAG=""; fi
+          for attempt in 1 2 3; do
+            python3 src/audit_schedule.py $FLAG | tee out.txt || exit 1
+            if [ -z "$FLAG" ] || git diff --quiet data/; then exit 0; fi
             git add data/schedule.json data/postponed.json data/schedule_changes.json data/tbd_games.json
-            git commit -m "Schedule updated from the API ($(grep -c '^- ' out.txt) lines in the report)"
-            git push origin HEAD:${{ github.ref_name }}
-          fi
+            git commit -m "Schedule updated from the API ($(grep -c '^- ADD\|^- DATE\|^- NEUTRAL\|^- POSTPONED' out.txt) changes)"
+            if git push origin HEAD:${{ github.event_name == 'schedule' && 'main' || github.ref_name }}; then exit 0; fi
+            echo "Push was rejected (someone saved at the same time). Starting over from the latest."
+            git fetch origin ${{ github.event_name == 'schedule' && 'main' || github.ref_name }}
+            git reset --hard FETCH_HEAD
+          done
+          echo "Could not save after 3 tries" >&2
+          exit 1
