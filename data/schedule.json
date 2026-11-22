@@ -43048,14 +43048,6 @@
   "site": "St. Thomas, U.S. Virgin Islands"
  },
  {
-  "date": "2026-11-21",
-  "home": "Utah Valley",
-  "away": "Southern Illinois",
-  "neutral": true,
-  "conf": false,
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
   "date": "2026-11-22",
   "home": "Stephen F Austin",
   "away": "Temple",
@@ -43081,6 +43073,14 @@
   "date": "2026-11-23",
   "home": "Southern Illinois",
   "away": "Middle Tennessee",
+  "neutral": true,
+  "conf": false,
+  "site": "St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "date": "2026-11-21",
+  "home": "East Carolina",
+  "away": "Southern Illinois",
   "neutral": true,
   "conf": false,
   "site": "St. Thomas, U.S. Virgin Islands"

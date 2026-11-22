@@ -93,6 +93,13 @@ class AuditTests(unittest.TestCase):
         left = aud.drop_filled_placeholders(new, tbd)
         self.assertEqual([(x["team"], x["date"]) for x in left], [("Temple", "2026-11-23")])
 
+    def test_tied_final_is_ignored(self):
+        g = api("Utah Valley", "Southern Illinois", "2026-11-21T22:30:00.000Z", status="final", neutral=True)
+        g.update(homePoints=0, awayPoints=0)
+        ch, notes = plan([g], [])
+        self.assertEqual(ch, [])
+        self.assertTrue(any("tied score" in n for n in notes))
+
     def test_apply_date_and_add(self):
         sched = [row("2027-01-05", "Kentucky", "Florida")]
         ch, _ = plan([api("Kentucky", "Florida", "2027-01-07T00:00:00.000Z"), api("Pepperdine", "West Coast Baptist", "2026-11-21T01:00:00.000Z")], sched)

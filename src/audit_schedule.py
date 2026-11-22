@@ -85,19 +85,23 @@ def plan(games, names, schedule, results, brackets, tbd=None):
     for s in schedule:
         by_pair[frozenset((s["home"], s["away"]))].append(s)
 
-    api_rows = []
+    api_rows, notes = [], []
     for g in games:
         if g.get("season") != ing.SEASON or g.get("seasonLabel") != ing.SEASON_LABEL:
             continue
         h, a = names.resolve(g["homeTeam"]), names.resolve(g["awayTeam"])
         if h is None and a is None:
             continue
+        if g.get("status") == "final" and g.get("homePoints") == g.get("awayPoints"):
+            # "final" with a tied score (0-0): the API's placeholder for a pairing that was never played.
+            notes.append(f'ignored, API lists it final with a tied score: {game_date(g["startDate"])} {g["awayTeam"]} @ {g["homeTeam"]}')
+            continue
         if (h is None) != (a is None):
             h, a = (h or ing.NON_D1), (a or ing.NON_D1)
         api_rows.append({"g": g, "h": h, "a": a, "pair": frozenset((h, a)), "date": game_date(g["startDate"]),
                          "cands": ing.local_dates(g["startDate"])})
 
-    changes, notes, matched = [], [], set()
+    changes, matched = [], set()
     unmatched = []
     for r in api_rows:
         hit = next((by_dp[(d, r["pair"])] for d in [r["date"]] + r["cands"] if (d, r["pair"]) in by_dp), None)
