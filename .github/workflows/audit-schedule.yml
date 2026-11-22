@@ -28,7 +28,7 @@ jobs:
           python3 src/audit_schedule.py $FLAG | tee out.txt
           if [ -n "$FLAG" ] && ! git diff --quiet data/; then
             git config user.name "github-actions"; git config user.email "actions@users.noreply.github.com"
-            git add data/schedule.json data/postponed.json data/schedule_changes.json
+            git add data/schedule.json data/postponed.json data/schedule_changes.json data/tbd_games.json
             git commit -m "Schedule updated from the API ($(grep -c '^- ' out.txt) lines in the report)"
             git push origin HEAD:${{ github.ref_name }}
           fi

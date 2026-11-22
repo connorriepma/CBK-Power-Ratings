@@ -64,8 +64,10 @@ def bracket_pairs(brackets: dict) -> set:
     return out
 
 
-def plan(games, names, schedule, results, brackets, today: str | None = None):
+def plan(games, names, schedule, results, brackets, tbd=None):
     """Return (changes, notes). changes: list of dicts {type, ...}; nothing is modified."""
+    tbd = tbd or []
+    tbd_site = {(x["team"], x["date"]): x.get("site") for x in tbd}
     done = {ing.result_id(r["date"], r["home"], r["away"]) for r in results}
     ev_teams = [set(t) for t in bracket_pairs(brackets)]
 
@@ -147,9 +149,12 @@ def plan(games, names, schedule, results, brackets, today: str | None = None):
             if in_bracket_event(r["h"], r["a"]):
                 notes.append(f'bracket game left to the bracket automation: {r["date"]} {r["g"]["awayTeam"]} @ {r["g"]["homeTeam"]}')
                 continue
-            changes.append({"type": "add", "row": {"date": r["date"], "home": r["h"], "away": r["a"],
-                                                   "neutral": bool(r["g"].get("neutralSite")), "conf": bool(r["g"].get("conferenceGame", False))},
-                            "final": r["g"].get("status") == "final"})
+            row = {"date": r["date"], "home": r["h"], "away": r["a"],
+                   "neutral": bool(r["g"].get("neutralSite")), "conf": bool(r["g"].get("conferenceGame", False))}
+            site = tbd_site.get((r["h"], r["date"])) or tbd_site.get((r["a"], r["date"]))
+            if site:                    # a tournament game we had a placeholder for: keep the event's site
+                row["site"] = site
+            changes.append({"type": "add", "row": row, "final": r["g"].get("status") == "final"})
     # A team cannot play twice in one day: a move or an add that would double-book a team is reported, not made.
     busy = defaultdict(int)
     for s in schedule:
@@ -199,6 +204,13 @@ def describe(c) -> str:
     return f'POSTPONED {base}: removed, added to postponed list'
 
 
+def drop_filled_placeholders(schedule, tbd):
+    """TBD placeholders (data/tbd_games.json) are one per team per tournament date with no real game: drop the ones
+    that now have a real game (same rule as src/advance_brackets.py)."""
+    busy = {(tm, s["date"]) for s in schedule for tm in (s["home"], s["away"])}
+    return [x for x in tbd if (x["team"], x["date"]) not in busy]
+
+
 def apply(changes, schedule, postponed):
     sched = list(schedule)
     for c in changes:
@@ -232,8 +244,9 @@ def main() -> int:
     names = ing.Names(teams, cbk.load_json("ingest_aliases.json"))
     schedule, results = cbk.load_json("schedule.json"), cbk.load_json("results.json")
     brackets, postponed = cbk.load_json("brackets.json"), ing.load_postponed()
+    tbd = cbk.load_json("tbd_games.json")
     games = fetch_season(key, date.fromisoformat(args.start), date.fromisoformat(args.end))
-    changes, notes = plan(games, names, schedule, results, brackets)
+    changes, notes = plan(games, names, schedule, results, brackets, tbd)
 
     out = [f"API games: {len(games)}", f"Mode: {'APPLY' if args.apply else 'dry run (nothing written)'}", ""]
     for t in ("add", "date", "neutral", "postpone"):
@@ -250,6 +263,10 @@ def main() -> int:
         new_sched, new_post = apply(changes, schedule, postponed)
         (ing.DATA / "schedule.json").write_text(json.dumps(new_sched, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
         (ing.DATA / "postponed.json").write_text(json.dumps(new_post, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+        new_tbd = drop_filled_placeholders(new_sched, tbd)
+        if len(new_tbd) != len(tbd):
+            (ing.DATA / "tbd_games.json").write_text(json.dumps(new_tbd, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+            print(f"Dropped {len(tbd) - len(new_tbd)} TBD placeholders that now have a real game.")
         log_path = ing.DATA / "schedule_changes.json"
         log = json.loads(log_path.read_text(encoding="utf-8")) if log_path.exists() else []
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")

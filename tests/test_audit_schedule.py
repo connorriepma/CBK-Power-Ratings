@@ -84,6 +84,15 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(ch, [])
         self.assertTrue(any("CONFLICT" in n for n in notes))
 
+    def test_tournament_add_keeps_site_and_clears_placeholder(self):
+        tbd = [{"team": "Temple", "date": "2026-11-21", "event": "Paradise Jam", "site": "St. Thomas, U.S. Virgin Islands"},
+               {"team": "Temple", "date": "2026-11-23", "event": "Paradise Jam", "site": "St. Thomas, U.S. Virgin Islands"}]
+        ch, _ = aud.plan([api("Stephen F Austin", "Temple", "2026-11-22T00:30:00.000Z", neutral=True)], NAMES, [], [], BRACKETS, tbd)
+        self.assertEqual(ch[0]["row"].get("site"), "St. Thomas, U.S. Virgin Islands")
+        new, _ = aud.apply(ch, [], [])
+        left = aud.drop_filled_placeholders(new, tbd)
+        self.assertEqual([(x["team"], x["date"]) for x in left], [("Temple", "2026-11-23")])
+
     def test_apply_date_and_add(self):
         sched = [row("2027-01-05", "Kentucky", "Florida")]
         ch, _ = plan([api("Kentucky", "Florida", "2027-01-07T00:00:00.000Z"), api("Pepperdine", "West Coast Baptist", "2026-11-21T01:00:00.000Z")], sched)
