@@ -1169,6 +1169,7 @@
 {"date":"2026-11-21","home":"umass","away":"maine","neutral":false,"homeScore":76,"awayScore":44,"line":-10.5,"ts":"2026-11-22T00:56:15.000Z"},
 {"date":"2026-11-21","home":"unc-greensboro","away":"usc-upstate","neutral":false,"homeScore":85,"awayScore":66,"line":-5.0,"ts":"2026-11-21T20:55:45.000Z"},
 {"date":"2026-11-21","home":"utsa","away":"air-force","neutral":false,"homeScore":90,"awayScore":68,"line":-7.5,"ts":"2026-11-22T00:11:11.000Z"},
+{"date":"2026-11-21","home":"valparaiso","away":"troy","neutral":true,"homeScore":77,"awayScore":72,"line":-5.0,"ts":"2026-11-22T03:21:07.000Z"},
 {"date":"2026-11-21","home":"vermont","away":"brown","neutral":false,"homeScore":84,"awayScore":71,"line":-4.0,"ts":"2026-11-22T02:11:21.000Z"},
 {"date":"2026-11-21","home":"villanova","away":"michigan","neutral":false,"homeScore":79,"awayScore":73,"line":1.5,"ts":"2026-11-22T02:26:23.000Z"},
 {"date":"2026-11-21","home":"vmi","away":"gardner-webb","neutral":false,"homeScore":71,"awayScore":68,"line":-5.0,"ts":"2026-11-22T02:26:23.000Z"},
