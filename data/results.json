@@ -1160,5 +1160,6 @@
 {"date":"2026-11-21","home":"utsa","away":"air-force","neutral":false,"homeScore":90,"awayScore":68,"line":-7.5,"ts":"2026-11-22T00:11:11.000Z"},
 {"date":"2026-11-21","home":"wake-forest","away":"western-carolina","neutral":false,"homeScore":90,"awayScore":63,"line":-13.5,"ts":"2026-11-21T21:10:47.000Z"},
 {"date":"2026-11-21","home":"western-illinois","away":"mercyhurst","neutral":true,"homeScore":65,"awayScore":68,"line":7.0,"ts":"2026-11-21T20:55:45.000Z"},
-{"date":"2026-11-21","home":"wichita-st","away":"new-mexico","neutral":false,"homeScore":85,"awayScore":60,"line":-2.0,"ts":"2026-11-21T21:10:47.000Z"}
+{"date":"2026-11-21","home":"wichita-st","away":"new-mexico","neutral":false,"homeScore":85,"awayScore":60,"line":-2.0,"ts":"2026-11-21T21:10:47.000Z"},
+{"date":"2026-11-21","home":"wofford","away":"winthrop","neutral":false,"homeScore":91,"awayScore":86,"line":-2.0,"ts":"2026-11-22T00:26:13.000Z"}
 ]
