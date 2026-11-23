@@ -111,6 +111,10 @@ In mismatches the market runs several points above the rating-based line, and th
 - It never changes a rating. The rating update uses the rating-only margin, which is why it does not double-count with the blowout credit above. Model Accuracy and Biggest Misses measure each game against the line that was published.
 - The settings live in `data/rating_config.json` under `buyAdjust`. The rule was fit on about 640 games from the first two weeks, so it will be refit as more games come in.
 
+### Model vs Market
+
+The Model vs Market tab compares the published line with the market's closing line on every finished game that has one. Lines come from the CollegeBasketballData API (`src/ingest_lines.py`, `.github/workflows/ingest-lines.yml`) and are saved to `data/market_lines.json` once a game is final: Draft Kings and Bovada, with the spread, the opening spread and the total. A saved line is never overwritten. The tab uses Draft Kings. The API has no Caesars line, and it is not certain that the line it returns after a game is the true closing line, so treat the figures as approximate. It reports MAE for the model and the market on the same games, and how a bet on the model's side of the market line does against that line, grouped by how far apart the two are. It never changes a rating or line.
+
 ## Known limitations
 
 - Conference-mean shrinkage over-regresses strong programs in weak conferences (Gonzaga is the clearest case). Replacing it with each program's own multi-year baseline was considered and shelved.

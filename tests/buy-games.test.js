@@ -42,7 +42,13 @@ test('zero bonus and missing file are ignored', () => {
 
 test('automatic rule: ramp, same-conference and upper-vs-upper exemptions, played games read their locked buy', () => {
   const m = CBK.build(teams, cfg, sched, tbd, rows, { games: [] });
-  const upcoming = sched.filter(g => g.date >= cfg.buyAdjust.autoFrom && !(g.result));
+  // Games already played keep the bonus locked at the time, which can differ from today's margin, so only check unplayed ones.
+  const played = new Set(rows.map(r => r.date + '_' + [r.home, r.away].sort().join('_')));
+  const upcoming = sched.filter(g => {
+    if (g.date < cfg.buyAdjust.autoFrom) return false;
+    const h = m.byName[g.home], a = m.byName[g.away];
+    return !(h && a && played.has(g.date + '_' + [h.key, a.key].sort().join('_')));
+  });
   let seen = 0;
   upcoming.forEach(g => {
     const b = m.buyGame(g), rm = m.ratingMargin(g);
