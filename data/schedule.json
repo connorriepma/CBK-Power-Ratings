@@ -43100,5 +43100,23 @@
   "neutral": true,
   "conf": false,
   "site": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands"
+ },
+ {
+  "date": "2026-11-23",
+  "home": "Seattle",
+  "away": "Loyola Chicago",
+  "neutral": true,
+  "conf": false,
+  "site": "Palm Desert, Calif.",
+  "bracket": "ACR4-CH"
+ },
+ {
+  "date": "2026-11-23",
+  "home": "UC San Diego",
+  "away": "San Jose St",
+  "neutral": true,
+  "conf": false,
+  "site": "Palm Desert, Calif.",
+  "bracket": "ACR4-3P"
  }
 ]
