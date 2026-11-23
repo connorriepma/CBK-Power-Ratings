@@ -1,21 +1,5 @@
 [
  {
-  "id": "2026-11-02_james-madison_miami-oh_miami-oh",
-  "gameId": "2026-11-02_james-madison_miami-oh",
-  "date": "2026-11-02",
-  "home": "James Madison",
-  "away": "Miami OH",
-  "neutral": false,
-  "pick": "Miami OH",
-  "line": 1.5,
-  "odds": 110,
-  "units": 1,
-  "book": "Draft Kings",
-  "confidence": "Low",
-  "modelLine": -2.5,
-  "ts": "2026-11-02T02:25:13.093Z"
- },
- {
   "id": "2026-11-02_oregon-st_weber-st_weber-st",
   "gameId": "2026-11-02_oregon-st_weber-st",
   "date": "2026-11-02",
