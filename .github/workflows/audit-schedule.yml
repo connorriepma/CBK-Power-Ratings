@@ -10,6 +10,9 @@ on:
       apply:
         description: "Write the changes (true) or only report (false)"
         default: "false"
+      day:
+        description: "Optional YYYY-MM-DD: list that day's API games and what is missing (report only)"
+        default: ""
   schedule:
     - cron: "17 */3 * * *"      # every 3 hours (UTC)
   push:
@@ -31,6 +34,7 @@ jobs:
       EVENT: ${{ github.event_name }}
       APPLY_INPUT: ${{ github.event.inputs.apply }}
       REF: ${{ github.ref_name }}
+      DAY: ${{ github.event.inputs.day }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,6 +42,7 @@ jobs:
       - name: Audit
         run: |
           set -o pipefail
+          if [ -n "$DAY" ]; then python3 src/audit_schedule.py --day "$DAY"; exit $?; fi
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
           if [ "$EVENT" = "schedule" ] || [ "$APPLY_INPUT" = "true" ] || [ "$REF" = "api-schedule-apply" ]; then FLAG="--apply"; else FLAG=""; fi

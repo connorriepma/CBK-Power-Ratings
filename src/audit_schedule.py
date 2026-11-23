@@ -239,6 +239,7 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true", help="write the changes (default: dry run)")
     ap.add_argument("--from", dest="start", default="2026-11-01")
     ap.add_argument("--to", dest="end", default="2027-04-15")
+    ap.add_argument("--day", help="YYYY-MM-DD: list every API game that day and whether our schedule has it (report only)")
     args = ap.parse_args()
     key = os.environ.get("CBBD_API_KEY")
     if not key:
@@ -249,6 +250,28 @@ def main() -> int:
     schedule, results = cbk.load_json("schedule.json"), cbk.load_json("results.json")
     brackets, postponed = cbk.load_json("brackets.json"), ing.load_postponed()
     tbd = cbk.load_json("tbd_games.json")
+    if args.day:
+        d0 = date.fromisoformat(args.day)
+        games = fetch_season(key, d0 - timedelta(days=1), d0 + timedelta(days=1))
+        have = {(s["date"], frozenset((s["home"], s["away"]))) for s in schedule}
+        lines = []
+        for g in games:
+            if game_date(g["startDate"]) != args.day:
+                continue
+            h, a = names.resolve(g["homeTeam"]), names.resolve(g["awayTeam"])
+            if h is None and a is None:
+                tag = "both non-D1/unknown"
+            else:
+                pair = frozenset(((h or ing.NON_D1), (a or ing.NON_D1)))
+                tag = "on schedule" if (args.day, pair) in have else "MISSING FROM SCHEDULE"
+                if h is None or a is None:
+                    tag += f' (unrecognized name: {g["homeTeam"] if h is None else g["awayTeam"]})'
+            lines.append(f'{tag}: {g["awayTeam"]} @ {g["homeTeam"]} [{g["startDate"][11:16]}Z {g.get("status")} neutral={g.get("neutralSite")}]')
+        lines.sort()
+        sched_day = [s for s in schedule if s["date"] == args.day]
+        print(f"API games dated {args.day}: {len(lines)}; our schedule: {len(sched_day)}")
+        print("\n".join(lines))
+        return 0
     games = fetch_season(key, date.fromisoformat(args.start), date.fromisoformat(args.end))
     changes, notes = plan(games, names, schedule, results, brackets, tbd)
 
