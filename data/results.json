@@ -1223,5 +1223,7 @@
 {"date":"2026-11-22","home":"utah-valley","away":"ut-martin","neutral":true,"homeScore":78,"awayScore":76,"line":-9.0,"ts":"2026-11-23T04:05:44.000Z"},
 {"date":"2026-11-22","home":"valparaiso","away":"southern-miss","neutral":true,"homeScore":89,"awayScore":99,"line":-6.5,"ts":"2026-11-23T01:50:33.000Z"},
 {"date":"2026-11-22","home":"virginia-tech","away":"oklahoma-st","neutral":true,"homeScore":80,"awayScore":106,"line":-2.5,"ts":"2026-11-22T22:36:28.000Z"},
-{"date":"2026-11-22","home":"youngstown-st","away":"william-mary","neutral":false,"homeScore":63,"awayScore":75,"line":1.0,"ts":"2026-11-22T21:06:14.000Z"}
+{"date":"2026-11-22","home":"youngstown-st","away":"william-mary","neutral":false,"homeScore":63,"awayScore":75,"line":1.0,"ts":"2026-11-22T21:06:14.000Z"},
+{"date":"2026-11-23","home":"davidson","away":"northern-iowa","neutral":true,"homeScore":79,"awayScore":48,"line":-3.0,"ts":"2026-11-23T18:30:18.000Z"},
+{"date":"2026-11-23","home":"st-bonaventure","away":"appalachian-st","neutral":true,"homeScore":71,"awayScore":65,"line":-3.5,"ts":"2026-11-23T18:30:18.000Z"}
 ]
