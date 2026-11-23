@@ -1,21 +1,5 @@
 [
  {
-  "id": "2026-11-06_james-madison_kentucky_james-madison",
-  "gameId": "2026-11-06_james-madison_kentucky",
-  "date": "2026-11-06",
-  "home": "Kentucky",
-  "away": "James Madison",
-  "neutral": false,
-  "pick": "James Madison",
-  "line": 25.5,
-  "odds": -110,
-  "units": 1,
-  "book": "FanDuel",
-  "confidence": "Low",
-  "modelLine": 20.5,
-  "ts": "2026-11-05T23:49:09.782Z"
- },
- {
   "id": "2026-11-08_air-force_idaho-st_idaho-st",
   "gameId": "2026-11-08_air-force_idaho-st",
   "date": "2026-11-08",
