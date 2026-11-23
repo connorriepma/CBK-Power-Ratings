@@ -48,12 +48,10 @@ def fetch_season(key: str, start: date, end: date, step: int = 10) -> list[dict]
 
 
 def game_date(start_iso: str) -> str:
-    """The date a game is listed under. Evening starts (00:00-04:58 UTC) belong to the previous US day; stamps from
-    04:59 UTC on are date-only placeholders, so the UTC date is the game date (same convention as the ingest)."""
+    """The date a game is listed under: its US Eastern date. Evening starts (7 pm ET = 00:00 UTC) stay on the day they
+    were played, and the API's date-only stamps (midnight ET, or 23:59 ET for the previous day) land on their own day."""
     t = datetime.fromisoformat(start_iso.replace("Z", "+00:00")).astimezone(timezone.utc)
-    if t.hour <= 3 or (t.hour == 4 and t.minute != 59):
-        t = t - timedelta(days=1)
-    return t.date().isoformat()
+    return t.astimezone(ing.EASTERN).date().isoformat()
 
 
 def bracket_pairs(brackets: dict) -> set:

@@ -29,8 +29,10 @@ def plan(games, schedule, results=None):
 class AuditTests(unittest.TestCase):
     def test_game_date_convention(self):
         self.assertEqual(aud.game_date("2027-01-07T00:00:00.000Z"), "2027-01-06")   # 7 pm ET
-        self.assertEqual(aud.game_date("2027-01-07T04:59:00.000Z"), "2027-01-07")   # placeholder stamp
-        self.assertEqual(aud.game_date("2027-01-07T05:00:00.000Z"), "2027-01-07")
+        self.assertEqual(aud.game_date("2027-01-07T03:00:00.000Z"), "2027-01-06")   # 10 pm ET / 7 pm PT
+        self.assertEqual(aud.game_date("2026-11-23T04:59:00.000Z"), "2026-11-22")   # 23:59 ET
+        self.assertEqual(aud.game_date("2027-01-07T05:00:00.000Z"), "2027-01-07")   # midnight ET stamp
+        self.assertEqual(aud.game_date("2027-03-20T04:00:00.000Z"), "2027-03-20")   # midnight ET stamp in daylight time
         self.assertEqual(aud.game_date("2027-01-07T18:00:00.000Z"), "2027-01-07")
 
     def test_same_game_same_date_no_change(self):
