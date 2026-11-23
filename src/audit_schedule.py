@@ -18,6 +18,8 @@ import argparse
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -39,8 +41,15 @@ def fetch_season(key: str, start: date, end: date, step: int = 10) -> list[dict]
         q = {"season": ing.SEASON, "startDateRange": d.strftime("%Y-%m-%dT00:00:00Z"),
              "endDateRange": e.strftime("%Y-%m-%dT00:00:00Z")}
         req = urllib.request.Request(ing.API + "?" + urllib.parse.urlencode(q), headers={"Authorization": "Bearer " + key})
-        with urllib.request.urlopen(req, timeout=120) as r:
-            chunk = json.load(r)
+        for attempt in range(4):        # the API now and then answers 502; wait and try again
+            try:
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    chunk = json.load(r)
+                break
+            except urllib.error.HTTPError as e:
+                if e.code < 500 or attempt == 3:
+                    raise
+                time.sleep(5 * (attempt + 1))
         for g in chunk:
             games[g.get("id", id(g))] = g
         d = e
