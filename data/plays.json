@@ -1,21 +1,5 @@
 [
  {
-  "id": "2026-11-02_oregon-st_weber-st_weber-st",
-  "gameId": "2026-11-02_oregon-st_weber-st",
-  "date": "2026-11-02",
-  "home": "Oregon St",
-  "away": "Weber St",
-  "neutral": false,
-  "pick": "Weber St",
-  "line": 17.5,
-  "odds": -110,
-  "units": 1,
-  "book": "BetMGM",
-  "confidence": "Low",
-  "modelLine": 13,
-  "ts": "2026-11-02T02:25:47.949Z"
- },
- {
   "id": "2026-11-02_montana_oregon_montana",
   "gameId": "2026-11-02_montana_oregon",
   "date": "2026-11-02",
