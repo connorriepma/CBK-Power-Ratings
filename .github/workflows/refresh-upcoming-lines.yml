@@ -1,0 +1,55 @@
+name: Refresh upcoming lines
+
+# Saves the current market line for games not yet played to data/upcoming_lines.json (see src/ingest_lines.py --upcoming).
+# The Plays tab uses it for Suggested plays. The file is replaced each run; it never touches ratings, results or the lines on the site.
+#   * Scheduled: three times a day (about 8 am, noon and 4 pm Pacific). Each run is one API call.
+#   * Manual: "Run workflow". Leave save as false to only look.
+on:
+  workflow_dispatch:
+    inputs:
+      ahead:
+        description: "How many days ahead to look"
+        default: "7"
+      save:
+        description: "Save the lines (true) or only report (false)"
+        default: "false"
+  schedule:
+    - cron: "10 16,20,0 * * *"    # 8:10 am, 12:10 pm, 4:10 pm Pacific (an hour later in daylight time)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-upcoming-lines
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+      AHEAD: ${{ github.event.inputs.ahead || '7' }}
+      SAVE: ${{ github.event_name == 'schedule' || github.event.inputs.save == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Pull lines
+        run: |
+          set -o pipefail
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          if [ "$SAVE" = "true" ]; then FLAG="--write"; else FLAG=""; fi
+          for attempt in 1 2 3; do
+            python3 src/ingest_lines.py --upcoming --ahead "$AHEAD" $FLAG | tee -a "$GITHUB_STEP_SUMMARY"
+            if [ "$SAVE" != "true" ] || [ -z "$(git status --porcelain data/upcoming_lines.json)" ]; then exit 0; fi
+            git add data/upcoming_lines.json
+            git commit -m "Refresh upcoming market lines"
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Push was rejected (someone saved at the same time). Starting over from the latest main."
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "Could not save after 3 tries" >&2
+          exit 1

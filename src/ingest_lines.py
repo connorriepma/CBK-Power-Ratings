@@ -11,9 +11,13 @@ Rules, all enforced in code:
   * Spread convention is the site's: negative means the HOME team is favored (a line of -7.5 is home by 7.5).
     The report checks that sign against the model's own line on the same games and warns loudly if it looks flipped.
 
+  * --upcoming is the other mode: it saves the CURRENT line for games not yet played to data/upcoming_lines.json
+    (replaced on every run, never used to grade anything). The Plays tab uses it for Suggested plays.
+
 Usage:
     python src/ingest_lines.py --days 30          # dry run
     python src/ingest_lines.py --days 30 --write  # used by .github/workflows/ingest-lines.yml
+    python src/ingest_lines.py --upcoming --write # used by .github/workflows/refresh-upcoming-lines.yml
 Needs CBBD_API_KEY in the environment.
 """
 
@@ -35,15 +39,16 @@ import ingest_scores as ing  # noqa: E402
 
 API = "https://api.collegebasketballdata.com/lines"
 FILE = "market_lines.json"
+UPCOMING = "upcoming_lines.json"
 PREFERRED = ("Caesars", "Consensus", "consensus")
 
 
-def fetch_lines(key: str, days: int) -> list[dict]:
+def fetch_lines(key: str, days: int, ahead: int = 1) -> list[dict]:
     now = datetime.now(timezone.utc)
     q = {
         "season": ing.SEASON,
         "startDateRange": (now - timedelta(days=days)).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "endDateRange": (now + timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "endDateRange": (now + timedelta(days=ahead)).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
     req = urllib.request.Request(API + "?" + urllib.parse.urlencode(q), headers={"Authorization": "Bearer " + key})
     with urllib.request.urlopen(req, timeout=90) as r:
@@ -65,8 +70,11 @@ def provider_lines(game: dict) -> dict:
     return out
 
 
-def match(games, names, schedule, results, existing):
-    """-> (new entries keyed by result id, report rows). Only games that already have a result are saved."""
+def match(games, names, schedule, results, existing, upcoming=False):
+    """-> (new entries keyed by result id, report rows).
+
+    Normal mode saves only games that already have a result. upcoming=True is the reverse: only games with NO result yet.
+    """
     sched_by_date: dict[str, list[dict]] = {}
     for s in schedule:
         sched_by_date.setdefault(s["date"], []).append(s)
@@ -102,10 +110,15 @@ def match(games, names, schedule, results, existing):
         rid = ing.result_id(s["date"], hk, ak)
         # Match the key style used in results.json (it can differ from a plain slug).
         r = have.get(rid)
-        if r is None:
+        if upcoming:
+            if r is not None:
+                row.update(status="ALREADY PLAYED", note="has a result")
+                continue
+            r = {"date": s["date"], "home": hk, "away": ak}
+        elif r is None:
             row.update(status="NOT FINAL YET", note="no result saved for this game yet")
             continue
-        if rid in existing or rid in new:
+        if rid in new or (not upcoming and rid in existing):
             row.update(status="ALREADY SAVED", note="kept as is")
             continue
         if names.resolve(g["homeTeam"]) != s["home"]:
@@ -146,6 +159,8 @@ def sanity(new: dict, results: list[dict]) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=3)
+    ap.add_argument("--upcoming", action="store_true", help=f"save current lines for games not yet played to data/{UPCOMING}")
+    ap.add_argument("--ahead", type=int, default=7, help="with --upcoming: how many days ahead to look")
     ap.add_argument("--write", action="store_true", help=f"save NEW lines to data/{FILE} (off by default)")
     args = ap.parse_args()
     key = os.environ.get("CBBD_API_KEY")
@@ -157,14 +172,18 @@ def main() -> int:
     path = cbk.DATA_DIR / FILE
     existing = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
 
-    games = fetch_lines(key, args.days)
-    new, rows = match(games, names, schedule, results, existing)
+    if args.upcoming:
+        games = fetch_lines(key, 0, args.ahead)
+        new, rows = match(games, names, schedule, results, {}, upcoming=True)
+    else:
+        games = fetch_lines(key, args.days)
+        new, rows = match(games, names, schedule, results, existing)
     counts = Counter(r["status"] for r in rows)
     provs = Counter(p for g in games for p in provider_lines(g))
     out = [f"## Market lines ({'WRITE' if args.write else 'dry run'})", "",
            f"API games: {len(games)}. " + ", ".join(f"{k}: {v}" for k, v in sorted(counts.items())),
            "Providers seen (games): " + (", ".join(f"{k} {v}" for k, v in provs.most_common()) or "none"),
-           sanity(new, results), ""]
+           "" if args.upcoming else sanity(new, results), ""]
     if games and not provs:
         out.append("The API answered but no game had a spread. Fields in the first game: " + ", ".join(sorted(games[0])))
     for r in rows[:60]:
@@ -174,6 +193,13 @@ def main() -> int:
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         Path(summary).write_text(text + "\n", encoding="utf-8")
+    if args.upcoming:
+        up = cbk.DATA_DIR / UPCOMING
+        if args.write and new:      # an empty answer never replaces the last good file
+            stamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            up.write_text(json.dumps({"updated": stamp, "games": new}, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+            print(f"Saved current lines for {len(new)} upcoming games.")
+        return 0
     if args.write and new:
         merged = {**existing, **new}
         path.write_text(json.dumps(merged, indent=1, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")

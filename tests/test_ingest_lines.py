@@ -60,3 +60,20 @@ class Lines(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Upcoming(unittest.TestCase):
+    def test_upcoming_saves_unplayed_and_skips_played(self):
+        sched = SCHED + [{"date": "2026-11-25", "home": "Vermont", "away": "Duke", "neutral": False}]
+        g_future = game(home="Vermont", away="Duke", startDate="2026-11-26T00:30:00.000Z")
+        new, rows = il.match([game(), g_future], NAMES, sched, RES, {}, upcoming=True)
+        self.assertEqual([r["status"] for r in rows], ["ALREADY PLAYED", "NEW"])
+        e = new["2026-11-25_duke_vermont"]
+        self.assertEqual((e["date"], e["home"], e["away"]), ("2026-11-25", "vermont", "duke"))
+        self.assertEqual(e["lines"]["Caesars"]["spread"], -21.5)
+
+    def test_normal_mode_still_skips_unplayed(self):
+        sched = SCHED + [{"date": "2026-11-25", "home": "Vermont", "away": "Duke", "neutral": False}]
+        new, rows = il.match([game(home="Vermont", away="Duke", startDate="2026-11-26T00:30:00.000Z")], NAMES, sched, RES, {})
+        self.assertEqual(new, {})
+        self.assertEqual(rows[0]["status"], "NOT FINAL YET")

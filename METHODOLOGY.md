@@ -115,6 +115,10 @@ In mismatches the market runs several points above the rating-based line, and th
 
 The Model vs Market tab compares the published line with the market's closing line on every finished game that has one. Lines come from the CollegeBasketballData API (`src/ingest_lines.py`, `.github/workflows/ingest-lines.yml`) and are saved to `data/market_lines.json` once a game is final: Draft Kings and Bovada, with the spread, the opening spread and the total. A saved line is never overwritten. The tab uses Draft Kings. The API has no Caesars line, and it is not certain that the line it returns after a game is the true closing line, so treat the figures as approximate. It reports MAE for the model and the market on the same games, and how a bet on the model's side of the market line does against that line, grouped by how far apart the two are. It never changes a rating or line.
 
+### Suggested plays
+
+The bottom of the Plays tab lists upcoming games where the model's published line is at least 2.5 points from the current Draft Kings line (a selector offers 3, 4 and 5). The market lines come from `src/ingest_lines.py --upcoming`, run three times a day by `.github/workflows/refresh-upcoming-lines.yml`, and are saved to `data/upcoming_lines.json`, which each run replaces. Each row shows the side the model likes, the market number for that side, the model's number for the same side and the gap. It is a list of disagreements with the market, not a recommendation, and it never changes a rating or line.
+
 ## Known limitations
 
 - Conference-mean shrinkage over-regresses strong programs in weak conferences (Gonzaga is the clearest case). Replacing it with each program's own multi-year baseline was considered and shelved.
