@@ -1184,6 +1184,7 @@
 {"date":"2026-11-21","home":"wofford","away":"winthrop","neutral":false,"homeScore":91,"awayScore":86,"line":-2.0,"ts":"2026-11-22T00:26:13.000Z"},
 {"date":"2026-11-22","home":"american","away":"towson","neutral":false,"homeScore":86,"awayScore":75,"line":0.5,"ts":"2026-11-22T21:06:14.000Z"},
 {"date":"2026-11-22","home":"boston-college","away":"njit","neutral":false,"homeScore":79,"awayScore":59,"line":-25.5,"buy":4.0,"ts":"2026-11-23T01:50:33.000Z"},
+{"date":"2026-11-22","home":"cal-baptist","away":"portland","neutral":true,"homeScore":79,"awayScore":71,"line":5.5,"ts":"2026-11-23T02:20:36.000Z"},
 {"date":"2026-11-22","home":"canisius","away":"western-illinois","neutral":false,"homeScore":46,"awayScore":66,"line":-6.0,"ts":"2026-11-22T21:06:14.000Z"},
 {"date":"2026-11-22","home":"cincinnati","away":"umass-lowell","neutral":false,"homeScore":78,"awayScore":68,"line":-32.5,"buy":4.0,"ts":"2026-11-22T21:06:14.000Z"},
 {"date":"2026-11-22","home":"duquesne","away":"wyoming","neutral":true,"homeScore":61,"awayScore":79,"line":5.5,"ts":"2026-11-22T21:06:14.000Z"},
