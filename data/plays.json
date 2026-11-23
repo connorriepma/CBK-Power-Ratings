@@ -160,5 +160,22 @@
   "confidence": "High",
   "modelLine": -10,
   "ts": "2026-11-21T05:32:55.410Z"
+ },
+ {
+  "id": "2026-11-23_middle-tennessee_southern-illinois_middle-tennessee",
+  "gameId": "2026-11-23_middle-tennessee_southern-illinois",
+  "date": "2026-11-23",
+  "home": "Southern Illinois",
+  "away": "Middle Tennessee",
+  "neutral": true,
+  "pick": "Middle Tennessee",
+  "type": "spread",
+  "line": 2.5,
+  "odds": -105,
+  "units": 1,
+  "book": "BetMGM",
+  "confidence": "High",
+  "modelLine": -0.5,
+  "ts": "2026-11-23T02:50:37.548Z"
  }
 ]
