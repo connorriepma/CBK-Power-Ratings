@@ -1,0 +1,55 @@
+name: Ingest market lines
+
+# Saves the market closing line for each finished game to data/market_lines.json (see src/ingest_lines.py).
+#   * First run: use "Run workflow" with days = 30 and save = false to look, then again with save = true to backfill.
+#   * Scheduled runs (every morning, Pacific) SAVE the last 3 days. Lines already saved are never changed.
+# One API call per run. Only data/market_lines.json is touched. It does not change any rating or line on the site.
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "How many days back to look"
+        default: "30"
+      save:
+        description: "Save new lines (true) or only report (false)"
+        default: "false"
+  schedule:
+    - cron: "40 14 * * *"      # 6:40 am Pacific (7:40 am in daylight time)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-lines
+  cancel-in-progress: false
+
+jobs:
+  lines:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+      DAYS: ${{ github.event.inputs.days || '3' }}
+      SAVE: ${{ github.event_name == 'schedule' || github.event.inputs.save == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Pull lines
+        run: |
+          set -o pipefail
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          if [ "$SAVE" = "true" ]; then FLAG="--write"; else FLAG=""; fi
+          for attempt in 1 2 3; do
+            python3 src/ingest_lines.py --days "$DAYS" $FLAG | tee -a "$GITHUB_STEP_SUMMARY"
+            if [ "$SAVE" != "true" ] || [ -z "$(git status --porcelain data/market_lines.json)" ]; then exit 0; fi
+            git add data/market_lines.json
+            git commit -m "Save market closing lines"
+            if git push origin HEAD:main; then exit 0; fi
+            echo "Push was rejected (someone saved at the same time). Starting over from the latest main."
+            git fetch origin main
+            git reset --hard origin/main
+          done
+          echo "Could not save after 3 tries" >&2
+          exit 1
