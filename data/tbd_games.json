@@ -37,12 +37,6 @@
  },
  {
   "team": "Temple",
-  "date": "2026-11-21",
-  "event": "Paradise Jam (Nov 21 or 22; Indiana St or Stephen F Austin)",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "Temple",
   "date": "2026-12-05",
   "event": "Big Five Classic",
   "site": "Philadelphia"
@@ -82,12 +76,6 @@
   "date": "2026-12-05",
   "event": "Big Five Classic",
   "site": "Philadelphia"
- },
- {
-  "team": "Middle Tennessee",
-  "date": "2026-11-22",
-  "event": "Paradise Jam",
-  "site": "St. Thomas, U.S. Virgin Islands"
  },
  {
   "team": "FIU",
@@ -262,24 +250,6 @@
   "date": "2026-11-25",
   "event": "Cancun Challenge (Northern Colorado or SE Louisiana)",
   "site": "Cancun, Mexico"
- },
- {
-  "team": "Stephen F Austin",
-  "date": "2026-11-21",
-  "event": "Paradise Jam (Temple or Middle Tennessee)",
-  "site": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "UT Martin",
-  "date": "2026-11-21",
-  "event": "Paradise Jam (East Carolina or Utah Valley)",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "UT Martin",
-  "date": "2026-11-23",
-  "event": "Paradise Jam (opponent TBA)",
-  "site": "St. Thomas, U.S. Virgin Islands"
  },
  {
   "team": "Howard",
