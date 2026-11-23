@@ -1,21 +1,5 @@
 [
  {
-  "id": "2026-11-02_montana_oregon_montana",
-  "gameId": "2026-11-02_montana_oregon",
-  "date": "2026-11-02",
-  "home": "Oregon",
-  "away": "Montana",
-  "neutral": false,
-  "pick": "Montana",
-  "line": 19,
-  "odds": -110,
-  "units": 1,
-  "book": "Circa",
-  "confidence": "Low",
-  "modelLine": 12,
-  "ts": "2026-11-02T02:26:45.172Z"
- },
- {
   "id": "2026-11-06_boston-college_umass_boston-college",
   "gameId": "2026-11-06_boston-college_umass",
   "date": "2026-11-06",
