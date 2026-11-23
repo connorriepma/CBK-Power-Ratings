@@ -1,21 +1,5 @@
 [
  {
-  "id": "2026-11-08_air-force_idaho-st_idaho-st",
-  "gameId": "2026-11-08_air-force_idaho-st",
-  "date": "2026-11-08",
-  "home": "Air Force",
-  "away": "Idaho St",
-  "neutral": false,
-  "pick": "Idaho St",
-  "line": 6.5,
-  "odds": -105,
-  "units": 1,
-  "book": "Draft Kings",
-  "confidence": "Low",
-  "modelLine": -5,
-  "ts": "2026-11-08T01:35:43.871Z"
- },
- {
   "id": "2026-11-19_santa-clara_vcu_vcu",
   "gameId": "2026-11-19_santa-clara_vcu",
   "date": "2026-11-19",
