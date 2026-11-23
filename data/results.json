@@ -1205,6 +1205,7 @@
 {"date":"2026-11-22","home":"rhode-island","away":"uab","neutral":true,"homeScore":79,"awayScore":64,"line":-0.5,"ts":"2026-11-23T02:35:38.000Z"},
 {"date":"2026-11-22","home":"rice","away":"lamar","neutral":true,"homeScore":85,"awayScore":81,"line":-0.5,"ts":"2026-11-23T01:50:33.000Z"},
 {"date":"2026-11-22","home":"richmond","away":"liberty","neutral":true,"homeScore":92,"awayScore":88,"line":-1.0,"ts":"2026-11-23T01:50:33.000Z"},
+{"date":"2026-11-22","home":"saint-mary-s","away":"non-d1-opponent","neutral":false,"homeScore":94,"awayScore":78,"line":null,"ts":"2026-11-23T02:50:39.000Z"},
 {"date":"2026-11-22","home":"samford","away":"unc-asheville","neutral":false,"homeScore":80,"awayScore":77,"line":-5.0,"ts":"2026-11-23T01:50:33.000Z"},
 {"date":"2026-11-22","home":"south-alabama","away":"west-florida","neutral":false,"homeScore":79,"awayScore":66,"line":-8.0,"ts":"2026-11-22T22:36:28.000Z"},
 {"date":"2026-11-22","home":"stephen-f-austin","away":"temple","neutral":true,"homeScore":72,"awayScore":70,"line":0.5,"ts":"2026-11-23T01:50:33.000Z"},
