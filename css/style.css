@@ -776,3 +776,7 @@ body.has-ticker .sidebar { top: 52px; }
 .mv-more { margin-bottom: 10px; }
 @media (max-width: 900px) { .mv-grid { grid-template-columns: 1fr; } }
 #view-misses h2 { font-family: var(--cond); font-size: 20px; font-weight: 600; margin: 22px 0 10px; }
+
+/* Brand: "CR" stands out from "atings" */
+.brand { font-weight: 500; font-size: 26px; }
+.brand .brand-cr { color: var(--paint); font-weight: 800; font-size: 1.25em; letter-spacing: -.03em; }
