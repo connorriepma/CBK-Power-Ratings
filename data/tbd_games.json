@@ -43,21 +43,9 @@
  },
  {
   "team": "Temple",
-  "date": "2026-11-23",
-  "event": "Paradise Jam",
-  "site": "St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "Temple",
   "date": "2026-12-05",
   "event": "Big Five Classic",
   "site": "Philadelphia"
- },
- {
-  "team": "East Carolina",
-  "date": "2026-11-21",
-  "event": "Paradise Jam",
-  "site": "St. Thomas, U.S. Virgin Islands"
  },
  {
   "team": "UTEP",
@@ -279,12 +267,6 @@
   "team": "Stephen F Austin",
   "date": "2026-11-21",
   "event": "Paradise Jam (Temple or Middle Tennessee)",
-  "site": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands"
- },
- {
-  "team": "Stephen F Austin",
-  "date": "2026-11-23",
-  "event": "Paradise Jam",
   "site": "Charlotte Amalie, St. Thomas, U.S. Virgin Islands"
  },
  {
