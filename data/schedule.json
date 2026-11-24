@@ -43118,5 +43118,23 @@
   "conf": false,
   "site": "Palm Desert, Calif.",
   "bracket": "ACR4-3P"
+ },
+ {
+  "date": "2026-11-24",
+  "home": "Ole Miss",
+  "away": "BYU",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-SF1"
+ },
+ {
+  "date": "2026-11-24",
+  "home": "Clemson",
+  "away": "Washington",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-C1"
  }
 ]
