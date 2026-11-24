@@ -1267,5 +1267,6 @@
 {"date":"2026-11-23","home":"wichita-st","away":"texas-a-m-cc","neutral":false,"homeScore":91,"awayScore":73,"line":-18.5,"buy":1.84,"ts":"2026-11-24T02:34:38.000Z"},
 {"date":"2026-11-23","home":"william-mary","away":"iu-indy","neutral":true,"homeScore":87,"awayScore":82,"line":-7.0,"ts":"2026-11-24T02:19:35.000Z"},
 {"date":"2026-11-23","home":"wright-st","away":"akron","neutral":true,"homeScore":66,"awayScore":64,"line":-3.0,"ts":"2026-11-24T02:19:35.000Z"},
-{"date":"2026-11-23","home":"youngstown-st","away":"maryland-eastern-shore","neutral":false,"homeScore":69,"awayScore":65,"line":-13.5,"ts":"2026-11-24T02:19:35.000Z"}
+{"date":"2026-11-23","home":"youngstown-st","away":"maryland-eastern-shore","neutral":false,"homeScore":69,"awayScore":65,"line":-13.5,"ts":"2026-11-24T02:19:35.000Z"},
+{"date":"2026-11-24","home":"st-bonaventure","away":"wright-st","neutral":true,"homeScore":72,"awayScore":70,"line":1.0,"ts":"2026-11-24T17:58:04.000Z"}
 ]
