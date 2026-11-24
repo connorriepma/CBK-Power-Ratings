@@ -1243,6 +1243,7 @@
 {"date":"2026-11-23","home":"kansas","away":"denver","neutral":false,"homeScore":84,"awayScore":67,"line":-28.0,"buy":4.0,"ts":"2026-11-24T03:04:41.000Z"},
 {"date":"2026-11-23","home":"la-salle","away":"non-d1-opponent","neutral":false,"homeScore":90,"awayScore":42,"line":null,"ts":"2026-11-24T02:19:35.000Z"},
 {"date":"2026-11-23","home":"le-moyne","away":"non-d1-opponent","neutral":false,"homeScore":68,"awayScore":58,"line":null,"ts":"2026-11-24T02:19:35.000Z"},
+{"date":"2026-11-23","home":"montana","away":"non-d1-opponent","neutral":false,"homeScore":82,"awayScore":54,"line":null,"ts":"2026-11-24T03:49:47.000Z"},
 {"date":"2026-11-23","home":"nevada","away":"san-francisco","neutral":true,"homeScore":71,"awayScore":62,"line":-7.0,"ts":"2026-11-24T02:19:35.000Z"},
 {"date":"2026-11-23","home":"north-carolina-central","away":"non-d1-opponent","neutral":false,"homeScore":105,"awayScore":46,"line":null,"ts":"2026-11-24T02:19:35.000Z"},
 {"date":"2026-11-23","home":"north-carolina","away":"monmouth","neutral":false,"homeScore":85,"awayScore":45,"line":-20.5,"buy":2.51,"ts":"2026-11-24T03:19:43.000Z"},
