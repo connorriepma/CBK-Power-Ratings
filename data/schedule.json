@@ -43136,5 +43136,23 @@
   "conf": false,
   "site": "Lahaina, Hawaii",
   "bracket": "MAUI-C1"
+ },
+ {
+  "date": "2026-11-24",
+  "home": "Providence",
+  "away": "Arizona",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-SF2"
+ },
+ {
+  "date": "2026-11-24",
+  "home": "VCU",
+  "away": "Colorado St",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-C2"
  }
 ]
