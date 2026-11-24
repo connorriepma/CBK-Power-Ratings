@@ -1,286 +1,19 @@
 {
  "games": {
-  "2026-11-23_alabama-st_california": {
-   "away": "alabama-st",
-   "date": "2026-11-23",
-   "home": "california",
+  "2026-11-24_air-force_army": {
+   "away": "army",
+   "date": "2026-11-24",
+   "home": "air-force",
    "lines": {
     "Bovada": {
-     "open": -19.5,
-     "spread": -19.0,
-     "total": 142.5
-    },
-    "Draft Kings": {
-     "open": -19.5,
-     "spread": -19.5,
-     "total": 143.5
-    }
-   }
-  },
-  "2026-11-23_arizona_colorado-st": {
-   "away": "colorado-st",
-   "date": "2026-11-23",
-   "home": "arizona",
-   "lines": {
-    "Bovada": {
-     "open": -16.5,
-     "spread": -16.5,
-     "total": 159.0
-    },
-    "Draft Kings": {
-     "open": -17.5,
-     "spread": -16.5,
-     "total": 158.5
-    }
-   }
-  },
-  "2026-11-23_central-arkansas_north-florida": {
-   "away": "central-arkansas",
-   "date": "2026-11-23",
-   "home": "north-florida",
-   "lines": {
-    "Bovada": {
-     "open": 9.5,
-     "spread": 8.5,
-     "total": 166.5
-    },
-    "Draft Kings": {
-     "open": 8.5,
-     "spread": 8.5,
-     "total": 167.5
-    }
-   }
-  },
-  "2026-11-23_denver_kansas": {
-   "away": "denver",
-   "date": "2026-11-23",
-   "home": "kansas",
-   "lines": {
-    "Bovada": {
-     "open": -36.5,
-     "spread": -31.0,
+     "open": -3.5,
+     "spread": -3.5,
      "total": 157.5
-    },
-    "Draft Kings": {
-     "open": -37.5,
-     "spread": -31.5,
-     "total": 157.5
-    }
-   }
-  },
-  "2026-11-23_eastern-washington_unlv": {
-   "away": "eastern-washington",
-   "date": "2026-11-23",
-   "home": "unlv",
-   "lines": {
-    "Bovada": {
-     "open": -8.0,
-     "spread": -8.0,
-     "total": 161.0
-    },
-    "Draft Kings": {
-     "open": -7.5,
-     "spread": -8.5,
-     "total": 160.5
-    }
-   }
-  },
-  "2026-11-23_fairleigh-dickinson_iona": {
-   "away": "fairleigh-dickinson",
-   "date": "2026-11-23",
-   "home": "iona",
-   "lines": {
-    "Bovada": {
-     "open": -9.5,
-     "spread": -9.0,
-     "total": 136.5
-    },
-    "Draft Kings": {
-     "open": -8.5,
-     "spread": -9.5,
-     "total": 136.5
-    }
-   }
-  },
-  "2026-11-23_georgia-southern_northern-kentucky": {
-   "away": "georgia-southern",
-   "date": "2026-11-23",
-   "home": "northern-kentucky",
-   "lines": {
-    "Bovada": {
-     "open": -3.0,
-     "spread": -3.0,
-     "total": 165.5
     },
     "Draft Kings": {
      "open": -3.5,
      "spread": -3.5,
-     "total": 164.5
-    }
-   }
-  },
-  "2026-11-23_illinois-st_santa-clara": {
-   "away": "santa-clara",
-   "date": "2026-11-23",
-   "home": "illinois-st",
-   "lines": {
-    "Bovada": {
-     "open": 5.0,
-     "spread": 3.0,
-     "total": 150.5
-    },
-    "Draft Kings": {
-     "open": 5.5,
-     "spread": 3.5,
-     "total": 150.5
-    }
-   }
-  },
-  "2026-11-23_illinois_winthrop": {
-   "away": "winthrop",
-   "date": "2026-11-23",
-   "home": "illinois",
-   "lines": {
-    "Bovada": {
-     "open": -43.5,
-     "spread": -42.5,
-     "total": 182.0
-    },
-    "Draft Kings": {
-     "open": -45.5,
-     "spread": -42.5,
-     "total": 181.5
-    }
-   }
-  },
-  "2026-11-23_loyola-chicago_seattle": {
-   "away": "loyola-chicago",
-   "date": "2026-11-23",
-   "home": "seattle",
-   "lines": {
-    "Bovada": {
-     "open": -1.5,
-     "spread": -1.5,
-     "total": 140.5
-    },
-    "Draft Kings": {
-     "open": -1.5,
-     "spread": -1.5,
-     "total": 140.5
-    }
-   }
-  },
-  "2026-11-23_maryland-eastern-shore_youngstown-st": {
-   "away": "maryland-eastern-shore",
-   "date": "2026-11-23",
-   "home": "youngstown-st",
-   "lines": {
-    "Draft Kings": {
-     "open": -14.5,
-     "spread": -12.5,
-     "total": 133.5
-    }
-   }
-  },
-  "2026-11-23_monmouth_north-carolina": {
-   "away": "monmouth",
-   "date": "2026-11-23",
-   "home": "north-carolina",
-   "lines": {
-    "Bovada": {
-     "open": -20.0,
-     "spread": -19.0,
-     "total": 153.0
-    },
-    "Draft Kings": {
-     "open": -20.5,
-     "spread": -18.5,
-     "total": 152.5
-    }
-   }
-  },
-  "2026-11-23_north-carolina-a-t_south-carolina-st": {
-   "away": "north-carolina-a-t",
-   "date": "2026-11-23",
-   "home": "south-carolina-st",
-   "lines": {
-    "Bovada": {
-     "open": 2.5,
-     "spread": 2.0,
-     "total": 147.0
-    },
-    "Draft Kings": {
-     "open": 2.5,
-     "spread": 1.5,
-     "total": 147.5
-    }
-   }
-  },
-  "2026-11-23_pepperdine_unc-greensboro": {
-   "away": "unc-greensboro",
-   "date": "2026-11-23",
-   "home": "pepperdine",
-   "lines": {
-    "Bovada": {
-     "open": -11.0,
-     "spread": -10.5,
-     "total": 153.5
-    },
-    "Draft Kings": {
-     "open": -11.5,
-     "spread": -10.5,
-     "total": 153.5
-    }
-   }
-  },
-  "2026-11-23_providence_vcu": {
-   "away": "vcu",
-   "date": "2026-11-23",
-   "home": "providence",
-   "lines": {
-    "Bovada": {
-     "open": -1.5,
-     "spread": -1.5,
-     "total": 154.5
-    },
-    "Draft Kings": {
-     "open": null,
-     "spread": -1.5,
-     "total": 154.5
-    }
-   }
-  },
-  "2026-11-23_san-jose-st_uc-san-diego": {
-   "away": "san-jose-st",
-   "date": "2026-11-23",
-   "home": "uc-san-diego",
-   "lines": {
-    "Bovada": {
-     "open": -2.0,
-     "spread": -2.0,
-     "total": 157.0
-    },
-    "Draft Kings": {
-     "open": -1.5,
-     "spread": -1.5,
      "total": 156.5
-    }
-   }
-  },
-  "2026-11-23_texas-a-m-cc_wichita-st": {
-   "away": "texas-a-m-cc",
-   "date": "2026-11-23",
-   "home": "wichita-st",
-   "lines": {
-    "Bovada": {
-     "open": -21.5,
-     "spread": -19.5,
-     "total": 143.0
-    },
-    "Draft Kings": {
-     "open": -21.5,
-     "spread": -19.5,
-     "total": 142.5
     }
    }
   },
@@ -289,10 +22,32 @@
    "date": "2026-11-24",
    "home": "belmont",
    "lines": {
+    "Bovada": {
+     "open": 3.5,
+     "spread": 3.0,
+     "total": 144.5
+    },
     "Draft Kings": {
      "open": 2.5,
-     "spread": 3.5,
-     "total": 141.5
+     "spread": 2.5,
+     "total": 143.5
+    }
+   }
+  },
+  "2026-11-24_alabama-a-m_north-alabama": {
+   "away": "alabama-a-m",
+   "date": "2026-11-24",
+   "home": "north-alabama",
+   "lines": {
+    "Bovada": {
+     "open": -3.5,
+     "spread": -3.5,
+     "total": 142.5
+    },
+    "Draft Kings": {
+     "open": -3.5,
+     "spread": -3.5,
+     "total": 142.5
     }
    }
   },
@@ -301,10 +56,202 @@
    "date": "2026-11-24",
    "home": "alabama",
    "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 175.5
+    },
     "Draft Kings": {
      "open": -1.5,
      "spread": -1.5,
-     "total": 173.5
+     "total": 175.5
+    }
+   }
+  },
+  "2026-11-24_alcorn-st_louisiana-tech": {
+   "away": "alcorn-st",
+   "date": "2026-11-24",
+   "home": "louisiana-tech",
+   "lines": {
+    "Bovada": {
+     "open": -17.5,
+     "spread": -17.5,
+     "total": 145.5
+    },
+    "Draft Kings": {
+     "open": -17.5,
+     "spread": -17.5,
+     "total": 146.5
+    }
+   }
+  },
+  "2026-11-24_appalachian-st_yale": {
+   "away": "appalachian-st",
+   "date": "2026-11-24",
+   "home": "yale",
+   "lines": {
+    "Bovada": {
+     "open": 1.5,
+     "spread": 1.0,
+     "total": 134.5
+    },
+    "Draft Kings": {
+     "open": 1.5,
+     "spread": 1.5,
+     "total": 134.5
+    }
+   }
+  },
+  "2026-11-24_arkansas-st_long-beach-st": {
+   "away": "arkansas-st",
+   "date": "2026-11-24",
+   "home": "long-beach-st",
+   "lines": {
+    "Bovada": {
+     "open": 4.5,
+     "spread": 4.5,
+     "total": 158.5
+    },
+    "Draft Kings": {
+     "open": 3.5,
+     "spread": 4.5,
+     "total": 158.5
+    }
+   }
+  },
+  "2026-11-24_auburn_lipscomb": {
+   "away": "lipscomb",
+   "date": "2026-11-24",
+   "home": "auburn",
+   "lines": {
+    "Bovada": {
+     "open": -24.5,
+     "spread": -24.5,
+     "total": 157.5
+    },
+    "Draft Kings": {
+     "open": -20.5,
+     "spread": -24.5,
+     "total": 157.5
+    }
+   }
+  },
+  "2026-11-24_bellarmine_georgia-southern": {
+   "away": "georgia-southern",
+   "date": "2026-11-24",
+   "home": "bellarmine",
+   "lines": {
+    "Bovada": {
+     "open": 2.5,
+     "spread": 2.5,
+     "total": 153.5
+    },
+    "Draft Kings": {
+     "open": 1.5,
+     "spread": 2.5,
+     "total": 153.5
+    }
+   }
+  },
+  "2026-11-24_binghamton_lehigh": {
+   "away": "binghamton",
+   "date": "2026-11-24",
+   "home": "lehigh",
+   "lines": {
+    "Bovada": {
+     "open": -8.5,
+     "spread": -8.5,
+     "total": 138.5
+    },
+    "Draft Kings": {
+     "open": -8.5,
+     "spread": -8.5,
+     "total": 138.5
+    }
+   }
+  },
+  "2026-11-24_boston-u_harvard": {
+   "away": "boston-u",
+   "date": "2026-11-24",
+   "home": "harvard",
+   "lines": {
+    "Bovada": {
+     "open": -5.5,
+     "spread": -5.5,
+     "total": 136.5
+    },
+    "Draft Kings": {
+     "open": -5.5,
+     "spread": -5.5,
+     "total": 136.5
+    }
+   }
+  },
+  "2026-11-24_bowling-green_gardner-webb": {
+   "away": "gardner-webb",
+   "date": "2026-11-24",
+   "home": "bowling-green",
+   "lines": {
+    "Bovada": {
+     "open": -13.5,
+     "spread": -13.5,
+     "total": 146.5
+    },
+    "Draft Kings": {
+     "open": -12.5,
+     "spread": -12.5,
+     "total": 146.5
+    }
+   }
+  },
+  "2026-11-24_bryant_marist": {
+   "away": "bryant",
+   "date": "2026-11-24",
+   "home": "marist",
+   "lines": {
+    "Bovada": {
+     "open": -4.5,
+     "spread": -4.5,
+     "total": 132.5
+    },
+    "Draft Kings": {
+     "open": -4.5,
+     "spread": -4.5,
+     "total": 132.5
+    }
+   }
+  },
+  "2026-11-24_bucknell_cornell": {
+   "away": "bucknell",
+   "date": "2026-11-24",
+   "home": "cornell",
+   "lines": {
+    "Bovada": {
+     "open": -10.5,
+     "spread": -10.5,
+     "total": 156.5
+    },
+    "Draft Kings": {
+     "open": -10.5,
+     "spread": -10.5,
+     "total": 156.5
+    }
+   }
+  },
+  "2026-11-24_byu_ole-miss": {
+   "away": "byu",
+   "date": "2026-11-24",
+   "home": "ole-miss",
+   "lines": {
+    "Bovada": {
+     "open": 1.5,
+     "spread": 1.5,
+     "total": 160.5
+    },
+    "Draft Kings": {
+     "open": 1.5,
+     "spread": 1.5,
+     "total": 160.5
     }
    }
   },
@@ -313,10 +260,15 @@
    "date": "2026-11-24",
    "home": "coastal-carolina",
    "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -2.0,
+     "total": 149.0
+    },
     "Draft Kings": {
      "open": -1.5,
      "spread": -1.5,
-     "total": 149.5
+     "total": 148.5
     }
    }
   },
@@ -325,10 +277,32 @@
    "date": "2026-11-24",
    "home": "notre-dame",
    "lines": {
+    "Bovada": {
+     "open": -21.5,
+     "spread": -20.5,
+     "total": 152.5
+    },
     "Draft Kings": {
      "open": -20.5,
-     "spread": -20.5,
-     "total": 151.5
+     "spread": -21.5,
+     "total": 152.5
+    }
+   }
+  },
+  "2026-11-24_charleston-southern_james-madison": {
+   "away": "charleston-southern",
+   "date": "2026-11-24",
+   "home": "james-madison",
+   "lines": {
+    "Bovada": {
+     "open": -13.5,
+     "spread": -13.5,
+     "total": 154.5
+    },
+    "Draft Kings": {
+     "open": -13.5,
+     "spread": -13.5,
+     "total": 154.5
     }
    }
   },
@@ -340,7 +314,70 @@
     "Draft Kings": {
      "open": 1.5,
      "spread": 1.5,
+     "total": 148.5
+    }
+   }
+  },
+  "2026-11-24_chattanooga_delaware-st": {
+   "away": "delaware-st",
+   "date": "2026-11-24",
+   "home": "chattanooga",
+   "lines": {
+    "Bovada": {
+     "open": -15.5,
+     "spread": -15.5,
      "total": 150.5
+    },
+    "Draft Kings": {
+     "open": -15.5,
+     "spread": -15.5,
+     "total": 149.5
+    }
+   }
+  },
+  "2026-11-24_clemson_washington": {
+   "away": "washington",
+   "date": "2026-11-24",
+   "home": "clemson",
+   "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 152.5
+    },
+    "Draft Kings": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 152.5
+    }
+   }
+  },
+  "2026-11-24_colorado_stanford": {
+   "away": "colorado",
+   "date": "2026-11-24",
+   "home": "stanford",
+   "lines": {
+    "Draft Kings": {
+     "open": -2.5,
+     "spread": -4.5,
+     "total": 143.5
+    }
+   }
+  },
+  "2026-11-24_coppin-st_villanova": {
+   "away": "coppin-st",
+   "date": "2026-11-24",
+   "home": "villanova",
+   "lines": {
+    "Bovada": {
+     "open": -32.5,
+     "spread": -32.5,
+     "total": 143.5
+    },
+    "Draft Kings": {
+     "open": -32.5,
+     "spread": -32.5,
+     "total": 144.5
     }
    }
   },
@@ -349,10 +386,15 @@
    "date": "2026-11-24",
    "home": "michigan",
    "lines": {
+    "Bovada": {
+     "open": -6.5,
+     "spread": -6.5,
+     "total": 162.5
+    },
     "Draft Kings": {
      "open": -4.5,
-     "spread": -5.5,
-     "total": 161.5
+     "spread": -6.5,
+     "total": 162.5
     }
    }
   },
@@ -361,10 +403,15 @@
    "date": "2026-11-24",
    "home": "purdue",
    "lines": {
+    "Bovada": {
+     "open": -4.5,
+     "spread": -4.0,
+     "total": 135.5
+    },
     "Draft Kings": {
      "open": -4.5,
      "spread": -4.5,
-     "total": 134.5
+     "total": 135.5
     }
    }
   },
@@ -373,10 +420,15 @@
    "date": "2026-11-24",
    "home": "detroit-mercy",
    "lines": {
+    "Bovada": {
+     "open": 4.5,
+     "spread": 4.5,
+     "total": 150.5
+    },
     "Draft Kings": {
      "open": 3.5,
-     "spread": 3.5,
-     "total": 154.5
+     "spread": 4.5,
+     "total": 150.5
     }
    }
   },
@@ -385,10 +437,32 @@
    "date": "2026-11-24",
    "home": "penn",
    "lines": {
+    "Bovada": {
+     "open": -6.5,
+     "spread": -6.0,
+     "total": 144.0
+    },
     "Draft Kings": {
      "open": -6.5,
      "spread": -6.5,
-     "total": 144.5
+     "total": 143.5
+    }
+   }
+  },
+  "2026-11-24_duquesne_high-point": {
+   "away": "high-point",
+   "date": "2026-11-24",
+   "home": "duquesne",
+   "lines": {
+    "Bovada": {
+     "open": 10.5,
+     "spread": 10.5,
+     "total": 140.5
+    },
+    "Draft Kings": {
+     "open": 9.5,
+     "spread": 10.5,
+     "total": 140.5
     }
    }
   },
@@ -397,10 +471,15 @@
    "date": "2026-11-24",
    "home": "kennesaw-st",
    "lines": {
+    "Bovada": {
+     "open": -4.5,
+     "spread": -4.0,
+     "total": 148.0
+    },
     "Draft Kings": {
      "open": -4.5,
      "spread": -4.5,
-     "total": 145.5
+     "total": 147.5
     }
    }
   },
@@ -409,10 +488,49 @@
    "date": "2026-11-24",
    "home": "furman",
    "lines": {
+    "Bovada": {
+     "open": -8.5,
+     "spread": -8.0,
+     "total": 149.0
+    },
     "Draft Kings": {
      "open": -8.5,
      "spread": -8.5,
      "total": 148.5
+    }
+   }
+  },
+  "2026-11-24_fiu_southern-utah": {
+   "away": "southern-utah",
+   "date": "2026-11-24",
+   "home": "fiu",
+   "lines": {
+    "Bovada": {
+     "open": -8.5,
+     "spread": -8.5,
+     "total": 167.5
+    },
+    "Draft Kings": {
+     "open": -7.5,
+     "spread": -8.5,
+     "total": 167.5
+    }
+   }
+  },
+  "2026-11-24_florida-a-m_south-alabama": {
+   "away": "florida-a-m",
+   "date": "2026-11-24",
+   "home": "south-alabama",
+   "lines": {
+    "Bovada": {
+     "open": -18.5,
+     "spread": -18.5,
+     "total": 142.5
+    },
+    "Draft Kings": {
+     "open": -16.5,
+     "spread": -18.5,
+     "total": 142.5
     }
    }
   },
@@ -421,10 +539,32 @@
    "date": "2026-11-24",
    "home": "florida-atlantic",
    "lines": {
+    "Bovada": {
+     "open": -7.5,
+     "spread": -7.0,
+     "total": 160.0
+    },
     "Draft Kings": {
      "open": -7.5,
      "spread": -7.5,
-     "total": 161.5
+     "total": 159.5
+    }
+   }
+  },
+  "2026-11-24_florida-st_unc-asheville": {
+   "away": "unc-asheville",
+   "date": "2026-11-24",
+   "home": "florida-st",
+   "lines": {
+    "Bovada": {
+     "open": -29.5,
+     "spread": -29.5,
+     "total": 157.5
+    },
+    "Draft Kings": {
+     "open": -25.5,
+     "spread": -29.5,
+     "total": 158.5
     }
    }
   },
@@ -433,10 +573,15 @@
    "date": "2026-11-24",
    "home": "florida",
    "lines": {
+    "Bovada": {
+     "open": -35.5,
+     "spread": -35.5,
+     "total": 156.5
+    },
     "Draft Kings": {
      "open": -38.5,
-     "spread": -38.5,
-     "total": 158.5
+     "spread": -35.5,
+     "total": 156.5
     }
    }
   },
@@ -445,6 +590,11 @@
    "date": "2026-11-24",
    "home": "georgia-tech",
    "lines": {
+    "Bovada": {
+     "open": -10.5,
+     "spread": -10.5,
+     "total": 161.0
+    },
     "Draft Kings": {
      "open": -10.5,
      "spread": -10.5,
@@ -469,10 +619,56 @@
    "date": "2026-11-24",
    "home": "saint-louis",
    "lines": {
+    "Bovada": {
+     "open": 1.5,
+     "spread": 1.5,
+     "total": 166.5
+    },
     "Draft Kings": {
      "open": 1.5,
      "spread": 1.5,
-     "total": 165.5
+     "total": 166.5
+    }
+   }
+  },
+  "2026-11-24_green-bay_kansas-city": {
+   "away": "green-bay",
+   "date": "2026-11-24",
+   "home": "kansas-city",
+   "lines": {
+    "Draft Kings": {
+     "open": 1.5,
+     "spread": -1.5,
+     "total": 144.5
+    }
+   }
+  },
+  "2026-11-24_hampton_old-dominion": {
+   "away": "hampton",
+   "date": "2026-11-24",
+   "home": "old-dominion",
+   "lines": {
+    "Bovada": {
+     "open": -8.5,
+     "spread": -8.0,
+     "total": 132.5
+    },
+    "Draft Kings": {
+     "open": -8.5,
+     "spread": -7.5,
+     "total": 132.5
+    }
+   }
+  },
+  "2026-11-24_houston-christian_louisiana-monroe": {
+   "away": "houston-christian",
+   "date": "2026-11-24",
+   "home": "louisiana-monroe",
+   "lines": {
+    "Draft Kings": {
+     "open": 1.5,
+     "spread": 1.5,
+     "total": 153.5
     }
    }
   },
@@ -481,10 +677,44 @@
    "date": "2026-11-24",
    "home": "rice",
    "lines": {
+    "Bovada": {
+     "open": 7.5,
+     "spread": 7.0,
+     "total": 143.0
+    },
     "Draft Kings": {
      "open": 7.5,
      "spread": 7.5,
+     "total": 142.5
+    }
+   }
+  },
+  "2026-11-24_illinois-st_tulsa": {
+   "away": "illinois-st",
+   "date": "2026-11-24",
+   "home": "tulsa",
+   "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -1.5,
      "total": 141.5
+    },
+    "Draft Kings": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 142.5
+    }
+   }
+  },
+  "2026-11-24_indiana_jacksonville": {
+   "away": "jacksonville",
+   "date": "2026-11-24",
+   "home": "indiana",
+   "lines": {
+    "Draft Kings": {
+     "open": -27.5,
+     "spread": -28.5,
+     "total": 147.5
     }
    }
   },
@@ -493,10 +723,27 @@
    "date": "2026-11-24",
    "home": "san-diego-st",
    "lines": {
+    "Bovada": {
+     "open": 7.5,
+     "spread": 7.5,
+     "total": 142.5
+    },
     "Draft Kings": {
      "open": 7.5,
-     "spread": 9.5,
-     "total": 143.5
+     "spread": 7.5,
+     "total": 141.5
+    }
+   }
+  },
+  "2026-11-24_iowa_umbc": {
+   "away": "umbc",
+   "date": "2026-11-24",
+   "home": "iowa",
+   "lines": {
+    "Draft Kings": {
+     "open": -26.5,
+     "spread": -28.5,
+     "total": 145.5
     }
    }
   },
@@ -505,10 +752,49 @@
    "date": "2026-11-24",
    "home": "wyoming",
    "lines": {
+    "Bovada": {
+     "open": -9.5,
+     "spread": -8.5,
+     "total": 146.0
+    },
     "Draft Kings": {
      "open": -8.5,
      "spread": -8.5,
      "total": 145.5
+    }
+   }
+  },
+  "2026-11-24_lamar_robert-morris": {
+   "away": "lamar",
+   "date": "2026-11-24",
+   "home": "robert-morris",
+   "lines": {
+    "Bovada": {
+     "open": 3.5,
+     "spread": 3.5,
+     "total": 157.5
+    },
+    "Draft Kings": {
+     "open": 3.5,
+     "spread": 3.5,
+     "total": 157.5
+    }
+   }
+  },
+  "2026-11-24_lindenwood_new-haven": {
+   "away": "new-haven",
+   "date": "2026-11-24",
+   "home": "lindenwood",
+   "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 132.5
+    },
+    "Draft Kings": {
+     "open": -2.5,
+     "spread": -1.5,
+     "total": 132.5
     }
    }
   },
@@ -517,10 +803,32 @@
    "date": "2026-11-24",
    "home": "louisville",
    "lines": {
+    "Bovada": {
+     "open": 3.5,
+     "spread": 3.5,
+     "total": 153.5
+    },
     "Draft Kings": {
      "open": 5.5,
-     "spread": 5.5,
-     "total": 154.5
+     "spread": 3.5,
+     "total": 152.5
+    }
+   }
+  },
+  "2026-11-24_loyola-md_rider": {
+   "away": "rider",
+   "date": "2026-11-24",
+   "home": "loyola-md",
+   "lines": {
+    "Bovada": {
+     "open": -3.5,
+     "spread": -3.5,
+     "total": 139.5
+    },
+    "Draft Kings": {
+     "open": -3.5,
+     "spread": -3.5,
+     "total": 139.5
     }
    }
   },
@@ -529,6 +837,11 @@
    "date": "2026-11-24",
    "home": "maryland",
    "lines": {
+    "Bovada": {
+     "open": 4.5,
+     "spread": 4.5,
+     "total": 145.5
+    },
     "Draft Kings": {
      "open": 5.5,
      "spread": 4.5,
@@ -541,10 +854,66 @@
    "date": "2026-11-24",
    "home": "miami",
    "lines": {
+    "Bovada": {
+     "open": -6.5,
+     "spread": -6.5,
+     "total": 154.5
+    },
     "Draft Kings": {
      "open": -7.5,
      "spread": -6.5,
-     "total": 155.5
+     "total": 154.5
+    }
+   }
+  },
+  "2026-11-24_morgan-st_mount-st-mary-s": {
+   "away": "mount-st-mary-s",
+   "date": "2026-11-24",
+   "home": "morgan-st",
+   "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 148.5
+    },
+    "Draft Kings": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 147.5
+    }
+   }
+  },
+  "2026-11-24_nevada_santa-clara": {
+   "away": "santa-clara",
+   "date": "2026-11-24",
+   "home": "nevada",
+   "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -1.0,
+     "total": 158.5
+    },
+    "Draft Kings": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 158.5
+    }
+   }
+  },
+  "2026-11-24_new-hampshire_seton-hall": {
+   "away": "new-hampshire",
+   "date": "2026-11-24",
+   "home": "seton-hall",
+   "lines": {
+    "Bovada": {
+     "open": -21.5,
+     "spread": -21.5,
+     "total": 129.5
+    },
+    "Draft Kings": {
+     "open": -19.5,
+     "spread": -21.5,
+     "total": 129.5
     }
    }
   },
@@ -553,6 +922,11 @@
    "date": "2026-11-24",
    "home": "new-mexico-st",
    "lines": {
+    "Bovada": {
+     "open": 4.5,
+     "spread": 5.0,
+     "total": 151.0
+    },
     "Draft Kings": {
      "open": 4.5,
      "spread": 4.5,
@@ -565,10 +939,15 @@
    "date": "2026-11-24",
    "home": "northern-colorado",
    "lines": {
+    "Bovada": {
+     "open": -3.5,
+     "spread": -3.5,
+     "total": 145.5
+    },
     "Draft Kings": {
      "open": -3.5,
-     "spread": -2.5,
-     "total": 142.5
+     "spread": -3.5,
+     "total": 145.5
     }
    }
   },
@@ -577,10 +956,15 @@
    "date": "2026-11-24",
    "home": "ohio-st",
    "lines": {
+    "Bovada": {
+     "open": 2.5,
+     "spread": 2.0,
+     "total": 157.0
+    },
     "Draft Kings": {
      "open": 1.5,
      "spread": 2.5,
-     "total": 156.5
+     "total": 157.5
     }
    }
   },
@@ -589,10 +973,49 @@
    "date": "2026-11-24",
    "home": "pittsburgh",
    "lines": {
+    "Bovada": {
+     "open": -2.5,
+     "spread": -3.0,
+     "total": 148.5
+    },
     "Draft Kings": {
      "open": -2.5,
      "spread": -2.5,
-     "total": 146.5
+     "total": 148.5
+    }
+   }
+  },
+  "2026-11-24_oral-roberts_ut-arlington": {
+   "away": "oral-roberts",
+   "date": "2026-11-24",
+   "home": "ut-arlington",
+   "lines": {
+    "Bovada": {
+     "open": -4.5,
+     "spread": -4.0,
+     "total": 148.5
+    },
+    "Draft Kings": {
+     "open": -5.5,
+     "spread": -4.5,
+     "total": 148.5
+    }
+   }
+  },
+  "2026-11-24_oregon-st_san-francisco": {
+   "away": "san-francisco",
+   "date": "2026-11-24",
+   "home": "oregon-st",
+   "lines": {
+    "Bovada": {
+     "open": -9.5,
+     "spread": -9.0,
+     "total": 150.5
+    },
+    "Draft Kings": {
+     "open": -10.5,
+     "spread": -8.5,
+     "total": 150.5
     }
    }
   },
@@ -603,8 +1026,32 @@
    "lines": {
     "Draft Kings": {
      "open": 8.5,
-     "spread": 8.5,
-     "total": 158.5
+     "spread": 9.5,
+     "total": 155.5
+    }
+   }
+  },
+  "2026-11-24_purdue-fort-wayne_se-missouri-st": {
+   "away": "purdue-fort-wayne",
+   "date": "2026-11-24",
+   "home": "se-missouri-st",
+   "lines": {
+    "Draft Kings": {
+     "open": -2.5,
+     "spread": -3.5,
+     "total": 149.5
+    }
+   }
+  },
+  "2026-11-24_queens_wofford": {
+   "away": "queens",
+   "date": "2026-11-24",
+   "home": "wofford",
+   "lines": {
+    "Draft Kings": {
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 173.5
     }
    }
   },
@@ -613,10 +1060,49 @@
    "date": "2026-11-24",
    "home": "rutgers",
    "lines": {
+    "Bovada": {
+     "open": -23.5,
+     "spread": -23.5,
+     "total": 158.5
+    },
     "Draft Kings": {
      "open": -23.5,
      "spread": -23.5,
-     "total": 156.5
+     "total": 157.5
+    }
+   }
+  },
+  "2026-11-24_siena_vermont": {
+   "away": "vermont",
+   "date": "2026-11-24",
+   "home": "siena",
+   "lines": {
+    "Bovada": {
+     "open": -3.5,
+     "spread": -3.5,
+     "total": 159.5
+    },
+    "Draft Kings": {
+     "open": -3.5,
+     "spread": -3.5,
+     "total": 159.5
+    }
+   }
+  },
+  "2026-11-24_south-florida_stetson": {
+   "away": "stetson",
+   "date": "2026-11-24",
+   "home": "south-florida",
+   "lines": {
+    "Bovada": {
+     "open": -18.5,
+     "spread": -18.5,
+     "total": 152.5
+    },
+    "Draft Kings": {
+     "open": -18.5,
+     "spread": -18.5,
+     "total": 152.5
     }
    }
   },
@@ -625,10 +1111,15 @@
    "date": "2026-11-24",
    "home": "vmi",
    "lines": {
+    "Bovada": {
+     "open": -4.5,
+     "spread": -5.0,
+     "total": 143.0
+    },
     "Draft Kings": {
      "open": -5.5,
-     "spread": -5.5,
-     "total": 144.5
+     "spread": -4.5,
+     "total": 143.5
     }
    }
   },
@@ -637,13 +1128,69 @@
    "date": "2026-11-24",
    "home": "st-bonaventure",
    "lines": {
+    "Bovada": {
+     "open": -1.5,
+     "spread": -1.0,
+     "total": 147.0
+    },
     "Draft Kings": {
      "open": 1.5,
+     "spread": -1.5,
+     "total": 146.5
+    }
+   }
+  },
+  "2026-11-24_tarleton-st_weber-st": {
+   "away": "tarleton-st",
+   "date": "2026-11-24",
+   "home": "weber-st",
+   "lines": {
+    "Bovada": {
+     "open": 1.5,
+     "spread": 1.0,
+     "total": 158.0
+    },
+    "Draft Kings": {
+     "open": -1.5,
      "spread": 1.5,
-     "total": 148.5
+     "total": 158.5
+    }
+   }
+  },
+  "2026-11-24_tennessee-tech_west-georgia": {
+   "away": "west-georgia",
+   "date": "2026-11-24",
+   "home": "tennessee-tech",
+   "lines": {
+    "Bovada": {
+     "open": -16.5,
+     "spread": -15.5,
+     "total": 163.5
+    },
+    "Draft Kings": {
+     "open": -17.5,
+     "spread": -15.5,
+     "total": 163.5
+    }
+   }
+  },
+  "2026-11-24_uc-santa-barbara_unc-greensboro": {
+   "away": "unc-greensboro",
+   "date": "2026-11-24",
+   "home": "uc-santa-barbara",
+   "lines": {
+    "Bovada": {
+     "open": -18.5,
+     "spread": -18.5,
+     "total": 146.5
+    },
+    "Draft Kings": {
+     "open": -19.5,
+     "spread": -18.5,
+     "total": 146.5
     }
    }
   }
  },
- "updated": "2026-11-23T23:29:08Z"
+ "updated": "2026-11-24T09:44:14Z"
 }
