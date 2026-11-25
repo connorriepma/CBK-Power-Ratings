@@ -383,5 +383,15 @@
   "at": "2026-11-24T23:57:01Z",
   "change": "ADD 2026-11-25 SE Louisiana @ Non D1 Opponent (neutral)",
   "type": "add"
+ },
+ {
+  "at": "2026-11-25T08:50:07Z",
+  "change": "ADD 2026-11-25 Kennesaw St @ Charleston (neutral)",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-25T08:50:07Z",
+  "change": "ADD 2026-11-25 Eastern Michigan @ UTEP (neutral)",
+  "type": "add"
  }
 ]

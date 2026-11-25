@@ -43,21 +43,9 @@
  },
  {
   "team": "UTEP",
-  "date": "2026-11-25",
-  "event": "Puerto Aventuras tournament (Eastern Michigan or Kennesaw St)",
-  "site": "Puerto Aventuras, Mexico"
- },
- {
-  "team": "UTEP",
   "date": "2026-12-21",
   "event": "El Paso event bracket game (Kent St or Omaha)",
   "site": "El Paso, Texas"
- },
- {
-  "team": "Charleston",
-  "date": "2026-11-25",
-  "event": "Cancun Challenge (Eastern Michigan or Kennesaw St)",
-  "site": "Puerto Aventuras, Mexico"
  },
  {
   "team": "Drexel",
@@ -124,12 +112,6 @@
   "date": "2027-02-06",
   "event": "MAC-SBC Challenge (Sun Belt opponent TBA)",
   "site": "Kent, Ohio"
- },
- {
-  "team": "Eastern Michigan",
-  "date": "2026-11-25",
-  "event": "Cancun Challenge (UTEP or Charleston)",
-  "site": "Cancun, Mexico"
  },
  {
   "team": "Eastern Michigan",

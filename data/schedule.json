@@ -43303,5 +43303,21 @@
   "conf": false,
   "site": "Palm Desert, Calif.",
   "bracket": "ACR2-3P"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "Charleston",
+  "away": "Kennesaw St",
+  "neutral": true,
+  "conf": false,
+  "site": "Puerto Aventuras, Mexico"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "UTEP",
+  "away": "Eastern Michigan",
+  "neutral": true,
+  "conf": false,
+  "site": "Puerto Aventuras, Mexico"
  }
 ]
