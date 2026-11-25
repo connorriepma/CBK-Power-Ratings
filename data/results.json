@@ -1354,5 +1354,6 @@
 {"date":"2026-11-24","home":"weber-st","away":"tarleton-st","neutral":false,"homeScore":89,"awayScore":87,"line":-2.0,"ts":"2026-11-25T04:20:04.000Z"},
 {"date":"2026-11-24","home":"wofford","away":"queens","neutral":false,"homeScore":86,"awayScore":77,"line":0,"ts":"2026-11-25T04:20:04.000Z"},
 {"date":"2026-11-24","home":"wyoming","away":"kent-st","neutral":true,"homeScore":75,"awayScore":78,"line":-10.5,"ts":"2026-11-25T04:20:04.000Z"},
-{"date":"2026-11-24","home":"yale","away":"appalachian-st","neutral":true,"homeScore":57,"awayScore":50,"line":0.5,"ts":"2026-11-24T23:56:39.000Z"}
+{"date":"2026-11-24","home":"yale","away":"appalachian-st","neutral":true,"homeScore":57,"awayScore":50,"line":0.5,"ts":"2026-11-24T23:56:39.000Z"},
+{"date":"2026-11-25","home":"st-bonaventure","away":"belmont","neutral":true,"homeScore":71,"awayScore":68,"line":-3.5,"ts":"2026-11-25T17:27:00.000Z"}
 ]
