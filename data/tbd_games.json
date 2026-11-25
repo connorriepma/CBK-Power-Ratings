@@ -264,19 +264,7 @@
   "site": "Las Vegas"
  },
  {
-  "team": "Creighton",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "Gonzaga",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Iowa St",
   "date": "2026-11-26",
   "event": "Players Era 16",
   "site": "Las Vegas"
@@ -294,49 +282,13 @@
   "site": "Las Vegas"
  },
  {
-  "team": "Maryland",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Miami",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Michigan",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "Oregon",
   "date": "2026-11-26",
   "event": "Players Era 16",
   "site": "Las Vegas"
  },
  {
-  "team": "San Diego St",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "St Johns",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "TCU",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Tennessee",
   "date": "2026-11-26",
   "event": "Players Era 16",
   "site": "Las Vegas"
@@ -444,18 +396,6 @@
   "site": "Las Vegas"
  },
  {
-  "team": "Arizona",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "BYU",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
   "team": "Clemson",
   "date": "2026-11-25",
   "event": "Southwest Maui Invitational",
@@ -463,12 +403,6 @@
  },
  {
   "team": "Colorado St",
-  "date": "2026-11-25",
-  "event": "Southwest Maui Invitational",
-  "site": "Lahaina, Hawaii"
- },
- {
-  "team": "Providence",
   "date": "2026-11-25",
   "event": "Southwest Maui Invitational",
   "site": "Lahaina, Hawaii"

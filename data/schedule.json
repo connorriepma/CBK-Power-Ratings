@@ -43177,5 +43177,59 @@
   "away": "SE Louisiana",
   "neutral": true,
   "conf": false
+ },
+ {
+  "date": "2026-11-26",
+  "home": "Tennessee",
+  "away": "Iowa St",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-SF1"
+ },
+ {
+  "date": "2026-11-26",
+  "home": "Maryland",
+  "away": "San Diego St",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-C1"
+ },
+ {
+  "date": "2026-11-26",
+  "home": "Creighton",
+  "away": "TCU",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-SF4"
+ },
+ {
+  "date": "2026-11-26",
+  "home": "Michigan",
+  "away": "Miami",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-C4"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "Ole Miss",
+  "away": "Arizona",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-CH"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "BYU",
+  "away": "Providence",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-3P"
  }
 ]
