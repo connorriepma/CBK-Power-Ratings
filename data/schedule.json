@@ -43249,5 +43249,59 @@
   "conf": false,
   "site": "Lahaina, Hawaii",
   "bracket": "MAUI-7P"
+ },
+ {
+  "date": "2026-11-26",
+  "home": "St Johns",
+  "away": "Louisville",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-SF2"
+ },
+ {
+  "date": "2026-11-26",
+  "home": "Oregon",
+  "away": "Texas Tech",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-C2"
+ },
+ {
+  "date": "2026-11-26",
+  "home": "Gonzaga",
+  "away": "Baylor",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-SF3"
+ },
+ {
+  "date": "2026-11-26",
+  "home": "Kansas St",
+  "away": "Alabama",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-C3"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "Grand Canyon",
+  "away": "Colorado",
+  "neutral": true,
+  "conf": false,
+  "site": "Palm Desert, Calif.",
+  "bracket": "ACR2-CH"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "Saint Louis",
+  "away": "Stanford",
+  "neutral": true,
+  "conf": false,
+  "site": "Palm Desert, Calif.",
+  "bracket": "ACR2-3P"
  }
 ]

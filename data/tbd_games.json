@@ -253,54 +253,6 @@
  },
  {
   "team": "Alabama",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Baylor",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Gonzaga",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Kansas St",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Louisville",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Oregon",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "St Johns",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Texas Tech",
-  "date": "2026-11-26",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Alabama",
   "date": "2026-11-27",
   "event": "Players Era 16",
   "site": "Las Vegas"
@@ -394,29 +346,5 @@
   "date": "2026-11-27",
   "event": "Players Era 16",
   "site": "Las Vegas"
- },
- {
-  "team": "Colorado",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event",
-  "site": "Palm Desert, Calif."
- },
- {
-  "team": "Grand Canyon",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event",
-  "site": "Palm Desert, Calif."
- },
- {
-  "team": "Saint Louis",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event",
-  "site": "Palm Desert, Calif."
- },
- {
-  "team": "Stanford",
-  "date": "2026-11-25",
-  "event": "Acrisure Series Thanksgiving Event",
-  "site": "Palm Desert, Calif."
  }
 ]
