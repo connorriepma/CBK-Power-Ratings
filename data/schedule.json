@@ -43231,5 +43231,23 @@
   "conf": false,
   "site": "Lahaina, Hawaii",
   "bracket": "MAUI-3P"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "Washington",
+  "away": "VCU",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-5P"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "Clemson",
+  "away": "Colorado St",
+  "neutral": true,
+  "conf": false,
+  "site": "Lahaina, Hawaii",
+  "bracket": "MAUI-7P"
  }
 ]

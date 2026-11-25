@@ -1343,6 +1343,7 @@
 {"date":"2026-11-24","home":"uc-santa-barbara","away":"unc-greensboro","neutral":false,"homeScore":85,"awayScore":65,"line":-19.0,"buy":2.0,"ts":"2026-11-25T04:20:04.000Z"},
 {"date":"2026-11-24","home":"ut-arlington","away":"oral-roberts","neutral":false,"homeScore":80,"awayScore":84,"line":-10.0,"ts":"2026-11-25T04:20:04.000Z"},
 {"date":"2026-11-24","home":"utep","away":"charleston","neutral":true,"homeScore":80,"awayScore":69,"line":1.0,"ts":"2026-11-25T04:20:04.000Z"},
+{"date":"2026-11-24","home":"vcu","away":"colorado-st","neutral":true,"homeScore":84,"awayScore":81,"line":-3.5,"ts":"2026-11-25T06:05:16.000Z"},
 {"date":"2026-11-24","home":"villanova","away":"coppin-st","neutral":false,"homeScore":70,"awayScore":52,"line":-34.0,"buy":4.0,"ts":"2026-11-25T04:20:04.000Z"},
 {"date":"2026-11-24","home":"vmi","away":"southern-indiana","neutral":false,"homeScore":87,"awayScore":83,"line":-4.5,"ts":"2026-11-25T04:20:04.000Z"},
 {"date":"2026-11-24","home":"wagner","away":"non-d1-opponent","neutral":false,"homeScore":96,"awayScore":44,"line":null,"ts":"2026-11-24T23:56:39.000Z"},
