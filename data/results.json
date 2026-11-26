@@ -1371,6 +1371,7 @@
 {"date":"2026-11-25","home":"fordham","away":"non-d1-opponent","neutral":false,"homeScore":104,"awayScore":56,"line":null,"ts":"2026-11-25T23:41:02.000Z"},
 {"date":"2026-11-25","home":"george-mason","away":"longwood","neutral":false,"homeScore":93,"awayScore":58,"line":-14.0,"ts":"2026-11-26T03:39:17.000Z"},
 {"date":"2026-11-25","home":"grand-canyon","away":"colorado","neutral":true,"homeScore":79,"awayScore":73,"line":-5.5,"ts":"2026-11-26T05:39:29.000Z"},
+{"date":"2026-11-25","home":"jacksonville-st","away":"pacific","neutral":true,"homeScore":83,"awayScore":76,"line":6.0,"ts":"2026-11-26T06:09:32.000Z"},
 {"date":"2026-11-25","home":"liberty","away":"princeton","neutral":true,"homeScore":72,"awayScore":79,"line":-4.0,"ts":"2026-11-25T23:41:02.000Z"},
 {"date":"2026-11-25","home":"long-beach-st","away":"southern-utah","neutral":true,"homeScore":65,"awayScore":64,"line":-2.0,"ts":"2026-11-25T23:41:02.000Z"},
 {"date":"2026-11-25","home":"loyola-marymount","away":"eastern-washington","neutral":false,"homeScore":81,"awayScore":72,"line":-5.0,"ts":"2026-11-26T04:09:22.000Z"},
