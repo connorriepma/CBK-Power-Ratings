@@ -43319,5 +43319,20 @@
   "neutral": true,
   "conf": false,
   "site": "Puerto Aventuras, Mexico"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Memphis",
+  "away": "Wake Forest",
+  "neutral": true,
+  "conf": false
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Penn St",
+  "away": "Mississippi St",
+  "neutral": true,
+  "conf": false,
+  "site": "Paradise Island, Bahamas"
  }
 ]
