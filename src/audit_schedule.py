@@ -47,9 +47,9 @@ def fetch_season(key: str, start: date, end: date, step: int = 10) -> list[dict]
                     chunk = json.load(r)
                 break
             except urllib.error.HTTPError as e:
-                if e.code < 500 or attempt == 3:
+                if (e.code < 500 and e.code != 429) or attempt == 3:
                     raise
-                time.sleep(5 * (attempt + 1))
+                time.sleep(20 * (attempt + 1) if e.code == 429 else 5 * (attempt + 1))
         for g in chunk:
             games[g.get("id", id(g))] = g
         d = e
