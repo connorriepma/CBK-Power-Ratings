@@ -43358,5 +43358,41 @@
   "neutral": true,
   "conf": false,
   "site": "San Diego, Calif."
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Tennessee",
+  "away": "Louisville",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B1CH"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Iowa St",
+  "away": "St Johns",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B13P"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Alabama",
+  "away": "Miami",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B25P"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Kansas St",
+  "away": "Michigan",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B27P"
  }
 ]

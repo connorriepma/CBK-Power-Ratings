@@ -216,12 +216,6 @@
   "site": "El Paso, TX"
  },
  {
-  "team": "Alabama",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "Baylor",
   "date": "2026-11-27",
   "event": "Players Era 16",
@@ -240,36 +234,6 @@
   "site": "Las Vegas"
  },
  {
-  "team": "Iowa St",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Kansas St",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Louisville",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Miami",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Michigan",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "Oregon",
   "date": "2026-11-27",
   "event": "Players Era 16",
@@ -282,19 +246,7 @@
   "site": "Las Vegas"
  },
  {
-  "team": "St Johns",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
   "team": "TCU",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Tennessee",
   "date": "2026-11-27",
   "event": "Players Era 16",
   "site": "Las Vegas"
