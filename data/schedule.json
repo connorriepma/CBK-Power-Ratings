@@ -43394,5 +43394,41 @@
   "conf": false,
   "site": "Las Vegas",
   "bracket": "PE16-B27P"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Gonzaga",
+  "away": "Creighton",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B2CH"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "San Diego St",
+  "away": "Texas Tech",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B15P"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Maryland",
+  "away": "Oregon",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B17P"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Baylor",
+  "away": "TCU",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-B23P"
  }
 ]
