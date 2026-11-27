@@ -99,5 +99,22 @@
   "confidence": "High",
   "modelLine": 11,
   "ts": "2026-11-25T08:16:00.000Z"
+ },
+ {
+  "id": "2026-11-27_pacific_uc-davis_uc-davis",
+  "gameId": "2026-11-27_pacific_uc-davis",
+  "date": "2026-11-27",
+  "home": "UC Davis",
+  "away": "Pacific",
+  "neutral": true,
+  "pick": "UC Davis",
+  "type": "spread",
+  "line": 6.5,
+  "odds": -115,
+  "units": 1,
+  "book": "BetMGM",
+  "confidence": "High",
+  "modelLine": 2,
+  "ts": "2026-11-27T23:38:11.412Z"
  }
 ]
