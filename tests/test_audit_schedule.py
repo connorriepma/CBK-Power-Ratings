@@ -102,6 +102,24 @@ class AuditTests(unittest.TestCase):
         self.assertEqual(ch, [])
         self.assertTrue(any("tied score" in n for n in notes))
 
+    def test_non_d1_stand_in_is_replaced_by_the_real_game(self):
+        sched = [row("2026-11-25", "Detroit Mercy", "Non D1 Opponent", True, site="Cancun, Mexico"),
+                 row("2026-11-25", "Non D1 Opponent", "Northern Colorado", True)]
+        g = api("Detroit Mercy", "Northern Colorado", "2026-11-25T17:30:00.000Z", status="final", neutral=True)
+        g.update(homePoints=70, awayPoints=72)
+        ch, notes = plan([g], sched)
+        self.assertEqual([c["type"] for c in ch], ["replace"])
+        new, _ = aud.apply(ch, sched, [])
+        self.assertEqual([(s["away"], s["home"], s.get("site")) for s in new], [("Northern Colorado", "Detroit Mercy", "Cancun, Mexico")])
+
+    def test_stand_in_with_a_saved_score_is_not_replaced(self):
+        sched = [row("2026-11-25", "Detroit Mercy", "Non D1 Opponent")]
+        res = [{"date": "2026-11-25", "home": "detroit-mercy", "away": "non-d1-opponent"}]
+        g = api("Detroit Mercy", "Northern Colorado", "2026-11-25T17:30:00.000Z", status="final", neutral=True)
+        g.update(homePoints=70, awayPoints=72)
+        ch, _ = plan([g], sched, res)
+        self.assertEqual([c["type"] for c in ch if c["type"] == "replace"], [])
+
     def test_apply_date_and_add(self):
         sched = [row("2027-01-05", "Kentucky", "Florida")]
         ch, _ = plan([api("Kentucky", "Florida", "2027-01-07T00:00:00.000Z"), api("Pepperdine", "West Coast Baptist", "2026-11-21T01:00:00.000Z")], sched)

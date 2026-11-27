@@ -87,6 +87,9 @@ def plan(games, names, schedule, results, brackets, tbd=None):
     def protected(s):
         return has_result(s) or any(k in s for k in PROTECTED_KEYS)
 
+    def protected_nosite(s):         # a placeholder row may carry its tournament's site; it is still a placeholder
+        return has_result(s) or any(k in s for k in ("bracket", "hcaMod"))
+
     by_dp = {(s["date"], frozenset((s["home"], s["away"]))): s for s in schedule}
     by_pair = defaultdict(list)
     for s in schedule:
@@ -165,6 +168,15 @@ def plan(games, names, schedule, results, brackets, tbd=None):
             site = tbd_site.get((r["h"], r["date"])) or tbd_site.get((r["a"], r["date"]))
             if site:                    # a tournament game we had a placeholder for: keep the event's site
                 row["site"] = site
+            stand_ins = [s for s in schedule if s["date"] == r["date"] and ing.NON_D1 in (s["home"], s["away"])
+                         and ({s["home"], s["away"]} - {ing.NON_D1}) <= {r["h"], r["a"]} and not protected_nosite(s)]
+            if stand_ins and ing.NON_D1 not in (r["h"], r["a"]):
+                row.setdefault("site", next((s["site"] for s in stand_ins if s.get("site")), None) or None)
+                if row.get("site") is None:
+                    del row["site"]
+                changes.append({"type": "replace", "row": row, "remove": [dict(s) for s in stand_ins],
+                                "final": r["g"].get("status") == "final"})
+                continue
             changes.append({"type": "add", "row": row, "final": r["g"].get("status") == "final"})
     # A team cannot play twice in one day: a move or an add that would double-book a team is reported, not made.
     busy = defaultdict(int)
@@ -177,9 +189,14 @@ def plan(games, names, schedule, results, brackets, tbd=None):
             for tm in (c["row"]["home"], c["row"]["away"]):
                 if tm != ing.NON_D1:
                     busy[(tm, c["row"]["date"])] -= 1
+        elif c["type"] == "replace":
+            for s in c["remove"]:
+                for tm in (s["home"], s["away"]):
+                    if tm != ing.NON_D1:
+                        busy[(tm, s["date"])] -= 1
     kept = []
     for c in changes:
-        if c["type"] in ("date", "add"):
+        if c["type"] in ("date", "add", "replace"):
             r, d = c["row"], c.get("to", c["row"]["date"])
             clash = [tm for tm in (r["home"], r["away"]) if tm != ing.NON_D1 and busy[(tm, d)] > 0]
             if clash:
@@ -208,6 +225,9 @@ def describe(c) -> str:
     base = f'{r["date"]} {r["away"]} @ {r["home"]}'
     if c["type"] == "add":
         return f'ADD {base}' + (" (neutral)" if r["neutral"] else "") + (" [already final in API]" if c.get("final") else "")
+    if c["type"] == "replace":
+        gone = ", ".join(f'{s["away"]} @ {s["home"]}' for s in c["remove"])
+        return f'REPLACE {gone} -> {base}' + (" [already final in API]" if c.get("final") else "")
     if c["type"] == "date":
         return f'DATE {base} -> {c["to"]}'
     if c["type"] == "neutral":
@@ -227,6 +247,10 @@ def apply(changes, schedule, postponed):
     for c in changes:
         r = c["row"]
         if c["type"] == "add":
+            sched.append(r)
+        elif c["type"] == "replace":
+            gone = {(s["date"], s["home"], s["away"]) for s in c["remove"]}
+            sched = [s for s in sched if (s["date"], s["home"], s["away"]) not in gone]
             sched.append(r)
         else:
             idx = next(i for i, s in enumerate(sched) if (s["date"], s["home"], s["away"]) == (r["date"], r["home"], r["away"]))
@@ -270,7 +294,7 @@ def main() -> int:
                 tag = "both non-D1/unknown"
             else:
                 pair = frozenset(((h or ing.NON_D1), (a or ing.NON_D1)))
-                tag = "on schedule" if (args.day, pair) in have else "MISSING FROM SCHEDULE"
+                tag = "on schedule" if any((d, pair) in have for d in [args.day] + ing.local_dates(g["startDate"])) else "MISSING FROM SCHEDULE"
                 if h is None or a is None:
                     tag += f' (unrecognized name: {g["homeTeam"] if h is None else g["awayTeam"]})'
             lines.append(f'{tag}: {g["awayTeam"]} @ {g["homeTeam"]} [{g["startDate"][11:16]}Z {g.get("status")} neutral={g.get("neutralSite")}]')
@@ -283,7 +307,7 @@ def main() -> int:
     changes, notes = plan(games, names, schedule, results, brackets, tbd)
 
     out = [f"API games: {len(games)}", f"Mode: {'APPLY' if args.apply else 'dry run (nothing written)'}", ""]
-    for t in ("add", "date", "neutral", "postpone"):
+    for t in ("add", "replace", "date", "neutral", "postpone"):
         sel = [c for c in changes if c["type"] == t]
         out += [f"### {t.upper()} ({len(sel)})", ""] + [f"- {describe(c)}" for c in sel] + [""]
     out += [f"### NOT CHANGED, FOR YOUR INFORMATION ({len(notes)})", ""] + [f"- {n}" for n in notes] + [""]

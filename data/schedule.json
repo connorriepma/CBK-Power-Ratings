@@ -35719,13 +35719,6 @@
   "conf": false
  },
  {
-  "date": "2026-11-24",
-  "home": "South Dakota St",
-  "away": "Arkansas-Pine Bluff",
-  "neutral": false,
-  "conf": false
- },
- {
   "date": "2026-12-12",
   "home": "Eastern Illinois",
   "away": "Arkansas-Pine Bluff",
@@ -43162,14 +43155,6 @@
   "neutral": true,
   "conf": false,
   "site": "Cancun, Mexico"
- },
- {
-  "date": "2026-11-25",
-  "home": "Non D1 Opponent",
-  "away": "Ole Miss",
-  "neutral": true,
-  "conf": false,
-  "site": "Lahaina, Hawaii"
  },
  {
   "date": "2026-11-25",
