@@ -403,5 +403,20 @@
   "at": "2026-11-26T17:04:27Z",
   "change": "ADD 2026-11-27 Mississippi St @ Penn St (neutral)",
   "type": "add"
+ },
+ {
+  "at": "2026-11-27T01:47:17Z",
+  "change": "ADD 2026-11-27 Non D1 Opponent @ Georgetown (neutral)",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-27T01:47:17Z",
+  "change": "ADD 2026-11-27 Non D1 Opponent @ Maryland (neutral)",
+  "type": "add"
+ },
+ {
+  "at": "2026-11-27T01:47:17Z",
+  "change": "ADD 2026-11-27 Non D1 Opponent @ Texas (neutral)",
+  "type": "add"
  }
 ]

@@ -1,21 +1,9 @@
 [
  {
-  "team": "Texas",
-  "date": "2026-11-27",
-  "event": "Rady Children's Invitational",
-  "site": "San Diego, Calif."
- },
- {
   "team": "Villanova",
   "date": "2026-12-05",
   "event": "Big Five Classic",
   "site": "Philadelphia"
- },
- {
-  "team": "Georgetown",
-  "date": "2026-11-27",
-  "event": "Rady Children's Invitational",
-  "site": "San Diego, Calif."
  },
  {
   "team": "Saint Joseph's",
@@ -265,12 +253,6 @@
  },
  {
   "team": "Louisville",
-  "date": "2026-11-27",
-  "event": "Players Era 16",
-  "site": "Las Vegas"
- },
- {
-  "team": "Maryland",
   "date": "2026-11-27",
   "event": "Players Era 16",
   "site": "Las Vegas"
