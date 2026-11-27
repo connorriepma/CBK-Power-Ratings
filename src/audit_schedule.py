@@ -268,10 +268,17 @@ def apply(changes, schedule, postponed):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write the changes (default: dry run)")
-    ap.add_argument("--from", dest="start", default="2026-11-01")
-    ap.add_argument("--to", dest="end", default="2027-04-15")
+    ap.add_argument("--full", action="store_true", help="whole season (about 35 API calls); default is a window around today (3 calls)")
+    ap.add_argument("--from", dest="start", default=None)
+    ap.add_argument("--to", dest="end", default=None)
     ap.add_argument("--day", help="YYYY-MM-DD: list every API game that day and whether our schedule has it (report only)")
     args = ap.parse_args()
+    today = datetime.now(timezone.utc).date()
+    if args.full:
+        args.start, args.end = args.start or "2026-11-01", args.end or "2027-04-15"
+    else:       # the API is rate limited and the score ingest shares the key: keep the routine run small
+        args.start = args.start or (today - timedelta(days=3)).isoformat()
+        args.end = args.end or (today + timedelta(days=28)).isoformat()
     key = os.environ.get("CBBD_API_KEY")
     if not key:
         print("CBBD_API_KEY is not set", file=sys.stderr)

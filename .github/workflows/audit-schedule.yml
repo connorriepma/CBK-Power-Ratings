@@ -10,6 +10,9 @@ on:
       apply:
         description: "Write the changes (true) or only report (false)"
         default: "false"
+      full:
+        description: "true = whole season (about 35 API calls, use sparingly); default is a window around today"
+        default: "false"
       day:
         description: "Optional YYYY-MM-DD: list that day's API games and what is missing (report only)"
         default: ""
@@ -35,6 +38,7 @@ jobs:
       APPLY_INPUT: ${{ github.event.inputs.apply }}
       REF: ${{ github.ref_name }}
       DAY: ${{ github.event.inputs.day }}
+      FULL: ${{ github.event.inputs.full }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -45,9 +49,10 @@ jobs:
           if [ -n "$DAY" ]; then python3 src/audit_schedule.py --day "$DAY"; exit $?; fi
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
+          EXTRA=""; if [ "$FULL" = "true" ]; then EXTRA="--full"; fi
           if [ "$EVENT" = "schedule" ] || [ "$APPLY_INPUT" = "true" ] || [ "$REF" = "api-schedule-apply" ]; then FLAG="--apply"; else FLAG=""; fi
           for attempt in 1 2 3; do
-            python3 src/audit_schedule.py $FLAG | tee out.txt || exit 1
+            python3 src/audit_schedule.py $FLAG $EXTRA | tee out.txt || exit 1
             if [ -z "$FLAG" ] || git diff --quiet data/; then exit 0; fi
             git add data/schedule.json data/postponed.json data/schedule_changes.json data/tbd_games.json
             git commit -m "Schedule updated from the API ($(grep -c '^- ADD\|^- DATE\|^- NEUTRAL\|^- POSTPONED' out.txt) changes)"
