@@ -43149,21 +43149,6 @@
   "bracket": "MAUI-C2"
  },
  {
-  "date": "2026-11-25",
-  "home": "Non D1 Opponent",
-  "away": "Northern Colorado",
-  "neutral": true,
-  "conf": false,
-  "site": "Cancun, Mexico"
- },
- {
-  "date": "2026-11-25",
-  "home": "Non D1 Opponent",
-  "away": "SE Louisiana",
-  "neutral": true,
-  "conf": false
- },
- {
   "date": "2026-11-26",
   "home": "Tennessee",
   "away": "Iowa St",
@@ -43415,5 +43400,21 @@
   "conf": false,
   "site": "Las Vegas",
   "bracket": "PE16-B23P"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "Detroit Mercy",
+  "away": "Northern Colorado",
+  "neutral": true,
+  "conf": false,
+  "site": "Cancun, Mexico"
+ },
+ {
+  "date": "2026-11-25",
+  "home": "North Dakota",
+  "away": "SE Louisiana",
+  "neutral": true,
+  "conf": false,
+  "site": "Cancun, Mexico"
  }
 ]

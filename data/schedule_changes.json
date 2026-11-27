@@ -418,5 +418,15 @@
   "at": "2026-11-27T01:47:17Z",
   "change": "ADD 2026-11-27 Non D1 Opponent @ Texas (neutral)",
   "type": "add"
+ },
+ {
+  "at": "2026-11-27T21:35:00Z",
+  "change": "REPLACE Northern Colorado @ Non D1 Opponent -> 2026-11-25 Northern Colorado @ Detroit Mercy",
+  "type": "replace"
+ },
+ {
+  "at": "2026-11-27T21:35:00Z",
+  "change": "REPLACE SE Louisiana @ Non D1 Opponent -> 2026-11-25 SE Louisiana @ North Dakota",
+  "type": "replace"
  }
 ]
