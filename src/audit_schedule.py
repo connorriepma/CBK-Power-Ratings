@@ -56,6 +56,20 @@ def fetch_season(key: str, start: date, end: date, step: int = 10) -> list[dict]
     return list(games.values())
 
 
+RESERVE = 1000      # calls left for the score ingest: below this the sync does nothing
+
+
+def remaining_calls(key: str):
+    """Calls left this month, from the API's /info (that call is not counted). None if it cannot be read."""
+    try:
+        req = urllib.request.Request(ing.API.rsplit("/", 1)[0] + "/info", headers={"Authorization": "Bearer " + key})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return int(json.load(r)["remainingCalls"])
+    except Exception as e:      # noqa: BLE001 - the guard must never be the thing that breaks the run
+        print(f"Could not read the quota ({e}); going on.")
+        return None
+
+
 def game_date(start_iso: str) -> str:
     """The date a game is listed under: its US Eastern date. Evening starts (7 pm ET = 00:00 UTC) stay on the day they
     were played, and the API's date-only stamps (midnight ET, or 23:59 ET for the previous day) land on their own day."""
@@ -268,7 +282,7 @@ def apply(changes, schedule, postponed):
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write the changes (default: dry run)")
-    ap.add_argument("--full", action="store_true", help="whole season (about 35 API calls); default is a window around today (3 calls)")
+    ap.add_argument("--full", action="store_true", help="whole season (about 35 API calls); default is a window around today (about 7 calls)")
     ap.add_argument("--from", dest="start", default=None)
     ap.add_argument("--to", dest="end", default=None)
     ap.add_argument("--day", help="YYYY-MM-DD: list every API game that day and whether our schedule has it (report only)")
@@ -278,11 +292,15 @@ def main() -> int:
         args.start, args.end = args.start or "2026-11-01", args.end or "2027-04-15"
     else:       # the API is rate limited and the score ingest shares the key: keep the routine run small
         args.start = args.start or (today - timedelta(days=3)).isoformat()
-        args.end = args.end or (today + timedelta(days=28)).isoformat()
+        args.end = args.end or (today + timedelta(days=60)).isoformat()
     key = os.environ.get("CBBD_API_KEY")
     if not key:
         print("CBBD_API_KEY is not set", file=sys.stderr)
         return 1
+    left = remaining_calls(key)
+    if left is not None and left < RESERVE:
+        print(f"Skipped: only {left} API calls left this month (keeping {RESERVE} for the score ingest).")
+        return 0
     teams = cbk.load_json("teams.json")
     names = ing.Names(teams, cbk.load_json("ingest_aliases.json"))
     schedule, results = cbk.load_json("schedule.json"), cbk.load_json("results.json")
