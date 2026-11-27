@@ -116,5 +116,22 @@
   "confidence": "High",
   "modelLine": 2,
   "ts": "2026-11-27T23:38:11.412Z"
+ },
+ {
+  "id": "2026-11-27_louisville_tennessee_tennessee",
+  "gameId": "2026-11-27_louisville_tennessee",
+  "date": "2026-11-27",
+  "home": "Tennessee",
+  "away": "Louisville",
+  "neutral": true,
+  "pick": "Tennessee",
+  "type": "spread",
+  "line": 3.5,
+  "odds": -110,
+  "units": 1,
+  "book": "BetMGM",
+  "confidence": "Medium",
+  "modelLine": -3,
+  "ts": "2026-11-27T23:38:34.379Z"
  }
 ]
