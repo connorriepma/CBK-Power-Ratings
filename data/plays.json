@@ -82,5 +82,22 @@
   "confidence": "Medium",
   "modelLine": 8.5,
   "ts": "2026-11-25T08:13:33.438Z"
+ },
+ {
+  "id": "2026-11-25_marshall_prairie-view-a-m_prairie-view-a-m",
+  "gameId": "2026-11-25_marshall_prairie-view-a-m",
+  "date": "2026-11-25",
+  "home": "Marshall",
+  "away": "Prairie View A&M",
+  "neutral": false,
+  "pick": "Prairie View A&M",
+  "type": "spread",
+  "line": 15.5,
+  "odds": -115,
+  "units": 1,
+  "book": "BetMGM",
+  "confidence": "High",
+  "modelLine": 11,
+  "ts": "2026-11-27T20:51:24.083Z"
  }
 ]
