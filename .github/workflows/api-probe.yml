@@ -1,0 +1,17 @@
+name: API probe
+on:
+  push:
+    branches: [api-probe]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    env:
+      CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+    steps:
+      - name: Probe
+        run: |
+          for u in "https://api.collegebasketballdata.com/info" "https://api.collegebasketballdata.com/games?season=2027&startDateRange=2026-11-27T00:00:00Z&endDateRange=2026-11-27T06:00:00Z"; do
+            echo "== $u"
+            curl -s -D - -o /tmp/body.txt -H "Authorization: Bearer $CBBD_API_KEY" "$u" | grep -i "^HTTP\|ratelimit\|retry\|x-\|date:" || true
+            head -c 400 /tmp/body.txt; echo
+          done
