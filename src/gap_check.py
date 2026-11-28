@@ -58,10 +58,11 @@ def main() -> int:
         print("CBBD_API_KEY is not set", file=sys.stderr)
         return 1
     now = datetime.now(timezone.utc)
-    games = ing.fetch_games(key, DAYS + 2)
+    days = int(os.environ.get("GAP_DAYS") or DAYS)      # set by hand for a bigger sweep
+    games = ing.fetch_games(key, days + 2)
     names = ing.Names(cbk.load_json("teams.json"), cbk.load_json("ingest_aliases.json"))
     no_score, api_issues, tbd = find_gaps(games, names, cbk.load_json("schedule.json"), cbk.load_json("results.json"),
-                                          ing.load_postponed(), now)
+                                          ing.load_postponed(), now, days)
     out = []
     for title, items in (("Schedule games with no saved score", no_score),
                          ("API games that do not match our schedule / are not saved", api_issues),

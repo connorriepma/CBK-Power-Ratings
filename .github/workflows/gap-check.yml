@@ -5,6 +5,10 @@ name: Gap check
 # 1 API call per run. Run it by hand from the Actions tab to check right now.
 on:
   workflow_dispatch:
+    inputs:
+      days:
+        description: "How many completed days back to check (default 3; use 40 to sweep the whole season so far)"
+        default: "3"
   schedule:
     - cron: "17 17 * * *"
   push:
@@ -19,6 +23,7 @@ jobs:
     timeout-minutes: 10
     env:
       CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+      GAP_DAYS: ${{ github.event.inputs.days }}
     steps:
       - uses: actions/checkout@v4
         with:
