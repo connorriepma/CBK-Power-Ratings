@@ -30,6 +30,8 @@ on:
     - cron: "7 0,1 * * *"         # evening window starts (5:07 pm Pacific, daylight or standard time)
     - cron: "37 1 * * *"          # backup start for the evening window
     - cron: "7 2 * * *"           # backup start for the evening window
+    - cron: "37 0,2,3,4,5 * * *"  # more backup starts, every half hour through the evening window
+    - cron: "7 3,4,5 * * *"       # (same, on the hour side)
     - cron: "7 16,17 * * 6"       # Saturday 9 am Pacific
     - cron: "45 21,22 * * 6"      # Saturday afternoon hand-off
     - cron: "25 3,4 * * 0"        # Saturday night hand-off (Sunday UTC)
