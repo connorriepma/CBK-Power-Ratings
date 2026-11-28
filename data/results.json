@@ -1475,6 +1475,8 @@
 {"date":"2026-11-27","home":"memphis","away":"wake-forest","neutral":true,"homeScore":88,"awayScore":85,"line":-0.5,"ts":"2026-11-27T22:03:05.000Z"},
 {"date":"2026-11-27","home":"missouri","away":"arkansas-pine-bluff","neutral":false,"homeScore":97,"awayScore":61,"line":-36,"buy":4,"ts":"2026-11-27T23:31:23.000Z"},
 {"date":"2026-11-27","home":"north-carolina","away":"west-virginia","neutral":true,"homeScore":59,"awayScore":72,"line":3.0,"ts":"2026-11-28T02:51:06.000Z"},
+{"date":"2026-11-27","home":"northwestern","away":"northeastern","neutral":false,"homeScore":65,"awayScore":61,"line":-16.5,"buy":0.94,"ts":"2026-11-28T03:21:53.000Z"},
+{"date":"2026-11-27","home":"oral-roberts","away":"missouri-st","neutral":false,"homeScore":72,"awayScore":66,"line":2.0,"ts":"2026-11-28T03:21:53.000Z"},
 {"date":"2026-11-27","home":"penn-st","away":"mississippi-st","neutral":true,"homeScore":68,"awayScore":63,"line":5.5,"ts":"2026-11-28T02:51:06.000Z"},
 {"date":"2026-11-27","home":"penn","away":"towson","neutral":false,"homeScore":61,"awayScore":72,"line":-5.0,"ts":"2026-11-28T02:51:06.000Z"},
 {"date":"2026-11-27","home":"south-dakota","away":"non-d1-opponent","neutral":false,"homeScore":99,"awayScore":47,"line":null,"ts":"2026-11-27T22:03:05.000Z"},
@@ -1489,5 +1491,6 @@
 {"date":"2026-11-27","home":"vermont","away":"merrimack","neutral":true,"homeScore":57,"awayScore":75,"line":-1.5,"ts":"2026-11-27T22:03:05.000Z"},
 {"date":"2026-11-27","home":"virginia-tech","away":"old-dominion","neutral":false,"homeScore":70,"awayScore":61,"line":-16.0,"buy":0.86,"ts":"2026-11-28T02:51:06.000Z"},
 {"date":"2026-11-27","home":"virginia","away":"xavier","neutral":true,"homeScore":83,"awayScore":71,"line":-8,"ts":"2026-11-27T22:03:05.000Z"},
+{"date":"2026-11-27","home":"washington-st","away":"idaho","neutral":false,"homeScore":69,"awayScore":61,"line":-8.5,"ts":"2026-11-28T03:21:53.000Z"},
 {"date":"2026-11-27","home":"youngstown-st","away":"non-d1-opponent","neutral":false,"homeScore":96,"awayScore":66,"line":null,"ts":"2026-11-27T22:03:05.000Z"}
 ]
