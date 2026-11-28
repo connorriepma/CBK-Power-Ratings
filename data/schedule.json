@@ -43393,5 +43393,14 @@
   "neutral": true,
   "conf": false,
   "site": "San Diego, Calif."
+ },
+ {
+  "date": "2026-11-28",
+  "home": "Louisville",
+  "away": "Creighton",
+  "neutral": true,
+  "conf": false,
+  "site": "Las Vegas",
+  "bracket": "PE16-CH"
  }
 ]
