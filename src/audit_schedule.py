@@ -283,12 +283,15 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write the changes (default: dry run)")
     ap.add_argument("--full", action="store_true", help="whole season (about 35 API calls); default is a window around today (about 7 calls)")
+    ap.add_argument("--near", action="store_true", help="yesterday through 7 days ahead only (1 API call): the hourly run")
     ap.add_argument("--from", dest="start", default=None)
     ap.add_argument("--to", dest="end", default=None)
     ap.add_argument("--day", help="YYYY-MM-DD: list every API game that day and whether our schedule has it (report only)")
     args = ap.parse_args()
     today = datetime.now(timezone.utc).date()
-    if args.full:
+    if args.near:
+        args.start, args.end = args.start or (today - timedelta(days=1)).isoformat(), args.end or (today + timedelta(days=7)).isoformat()
+    elif args.full:
         args.start, args.end = args.start or "2026-11-01", args.end or "2027-04-15"
     else:       # the API is rate limited and the score ingest shares the key: keep the routine run small
         args.start = args.start or (today - timedelta(days=3)).isoformat()

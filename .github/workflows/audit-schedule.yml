@@ -17,7 +17,8 @@ on:
         description: "Optional YYYY-MM-DD: list that day's API games and what is missing (report only)"
         default: ""
   schedule:
-    - cron: "17 */3 * * *"      # every 3 hours (UTC)
+    - cron: "17 * * * *"        # every hour: yesterday to 7 days ahead (1 API call)
+    - cron: "47 */6 * * *"      # every 6 hours: 3 days back to 60 days ahead (7 API calls)
   push:
     branches: [api-schedule-audit, api-schedule-apply]
 
@@ -39,6 +40,7 @@ jobs:
       REF: ${{ github.ref_name }}
       DAY: ${{ github.event.inputs.day }}
       FULL: ${{ github.event.inputs.full }}
+      CRON: ${{ github.event.schedule }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -50,6 +52,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@users.noreply.github.com"
           EXTRA=""; if [ "$FULL" = "true" ]; then EXTRA="--full"; fi
+          if [ "$CRON" = "17 * * * *" ]; then EXTRA="--near"; fi
           if [ "$EVENT" = "schedule" ] || [ "$APPLY_INPUT" = "true" ] || [ "$REF" = "api-schedule-apply" ]; then FLAG="--apply"; else FLAG=""; fi
           for attempt in 1 2 3; do
             python3 src/audit_schedule.py $FLAG $EXTRA | tee out.txt || exit 1
