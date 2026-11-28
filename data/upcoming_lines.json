@@ -1,267 +1,5 @@
 {
  "games": {
-  "2026-11-27_alabama_miami": {
-   "away": "miami",
-   "date": "2026-11-27",
-   "home": "alabama",
-   "lines": {
-    "Bovada": {
-     "open": 2.5,
-     "spread": 2.5,
-     "total": 170.5
-    },
-    "Draft Kings": {
-     "open": 1.5,
-     "spread": 1.5,
-     "total": 170.5
-    }
-   }
-  },
-  "2026-11-27_charleston-southern_east-tennessee-st": {
-   "away": "charleston-southern",
-   "date": "2026-11-27",
-   "home": "east-tennessee-st",
-   "lines": {
-    "Bovada": {
-     "open": -10.5,
-     "spread": -10.5,
-     "total": 141.5
-    },
-    "Draft Kings": {
-     "open": -11.5,
-     "spread": -9.5,
-     "total": 142.5
-    }
-   }
-  },
-  "2026-11-27_creighton_gonzaga": {
-   "away": "creighton",
-   "date": "2026-11-27",
-   "home": "gonzaga",
-   "lines": {
-    "Bovada": {
-     "open": -5.5,
-     "spread": -5.5,
-     "total": 161.5
-    },
-    "Draft Kings": {
-     "open": -5.5,
-     "spread": -6.5,
-     "total": 160.5
-    }
-   }
-  },
-  "2026-11-27_georgia_ucf": {
-   "away": "ucf",
-   "date": "2026-11-27",
-   "home": "georgia",
-   "lines": {
-    "Draft Kings": {
-     "open": -5.5,
-     "spread": -5.5,
-     "total": 162.5
-    }
-   }
-  },
-  "2026-11-27_houston_oakland": {
-   "away": "oakland",
-   "date": "2026-11-27",
-   "home": "houston",
-   "lines": {
-    "Bovada": {
-     "open": -36.0,
-     "spread": -36.0,
-     "total": 146.5
-    },
-    "Draft Kings": {
-     "open": -38.5,
-     "spread": -36.5,
-     "total": 143.5
-    }
-   }
-  },
-  "2026-11-27_idaho_washington-st": {
-   "away": "idaho",
-   "date": "2026-11-27",
-   "home": "washington-st",
-   "lines": {
-    "Bovada": {
-     "open": -11.0,
-     "spread": -11.0,
-     "total": 148.5
-    },
-    "Draft Kings": {
-     "open": -12.5,
-     "spread": -11.5,
-     "total": 148.5
-    }
-   }
-  },
-  "2026-11-27_jacksonville-st_omaha": {
-   "away": "omaha",
-   "date": "2026-11-27",
-   "home": "jacksonville-st",
-   "lines": {
-    "Bovada": {
-     "open": -6.0,
-     "spread": -6.0,
-     "total": 144.5
-    },
-    "Draft Kings": {
-     "open": -6.5,
-     "spread": -5.5,
-     "total": 138.5
-    }
-   }
-  },
-  "2026-11-27_kentucky_wichita-st": {
-   "away": "wichita-st",
-   "date": "2026-11-27",
-   "home": "kentucky",
-   "lines": {
-    "Bovada": {
-     "open": -4.0,
-     "spread": -4.0,
-     "total": 157.0
-    },
-    "Draft Kings": {
-     "open": -3.5,
-     "spread": -4.5,
-     "total": 157.5
-    }
-   }
-  },
-  "2026-11-27_lehigh_uc-santa-barbara": {
-   "away": "lehigh",
-   "date": "2026-11-27",
-   "home": "uc-santa-barbara",
-   "lines": {
-    "Bovada": {
-     "open": -15.5,
-     "spread": -15.5,
-     "total": 145.5
-    },
-    "Draft Kings": {
-     "open": -14.5,
-     "spread": -13.5,
-     "total": 144.5
-    }
-   }
-  },
-  "2026-11-27_louisville_tennessee": {
-   "away": "louisville",
-   "date": "2026-11-27",
-   "home": "tennessee",
-   "lines": {
-    "Bovada": {
-     "open": -1.5,
-     "spread": -1.5,
-     "total": 150.5
-    },
-    "Draft Kings": {
-     "open": -1.5,
-     "spread": 3.5,
-     "total": 148.5
-    }
-   }
-  },
-  "2026-11-27_mississippi-st_penn-st": {
-   "away": "mississippi-st",
-   "date": "2026-11-27",
-   "home": "penn-st",
-   "lines": {
-    "Bovada": {
-     "open": 6.5,
-     "spread": 6.5,
-     "total": 156.5
-    },
-    "Draft Kings": {
-     "open": 6.5,
-     "spread": 6.5,
-     "total": 156.5
-    }
-   }
-  },
-  "2026-11-27_missouri-st_oral-roberts": {
-   "away": "missouri-st",
-   "date": "2026-11-27",
-   "home": "oral-roberts",
-   "lines": {
-    "Bovada": {
-     "open": -3.5,
-     "spread": -3.5,
-     "total": 142.5
-    },
-    "Draft Kings": {
-     "open": -2.5,
-     "spread": -4.5,
-     "total": 142.5
-    }
-   }
-  },
-  "2026-11-27_north-carolina_west-virginia": {
-   "away": "west-virginia",
-   "date": "2026-11-27",
-   "home": "north-carolina",
-   "lines": {
-    "Bovada": {
-     "open": 3.0,
-     "spread": 3.0,
-     "total": 148.5
-    },
-    "Draft Kings": {
-     "open": 1.5,
-     "spread": 3.5,
-     "total": 149.5
-    }
-   }
-  },
-  "2026-11-27_north-dakota-st_north-texas": {
-   "away": "north-dakota-st",
-   "date": "2026-11-27",
-   "home": "north-texas",
-   "lines": {
-    "Bovada": {
-     "open": -6.0,
-     "spread": -6.0,
-     "total": 142.5
-    },
-    "Draft Kings": {
-     "open": -6.5,
-     "spread": -5.5,
-     "total": 142.5
-    }
-   }
-  },
-  "2026-11-27_northeastern_northwestern": {
-   "away": "northeastern",
-   "date": "2026-11-27",
-   "home": "northwestern",
-   "lines": {
-    "Bovada": {
-     "open": -12.5,
-     "spread": -12.5,
-     "total": 147.5
-    },
-    "Draft Kings": {
-     "open": -12.5,
-     "spread": -12.5,
-     "total": 147.5
-    }
-   }
-  },
-  "2026-11-27_san-diego-st_texas-tech": {
-   "away": "texas-tech",
-   "date": "2026-11-27",
-   "home": "san-diego-st",
-   "lines": {
-    "Draft Kings": {
-     "open": 7.5,
-     "spread": 8.5,
-     "total": 142.5
-    }
-   }
-  },
   "2026-11-28_air-force_brown": {
    "away": "brown",
    "date": "2026-11-28",
@@ -269,8 +7,8 @@
    "lines": {
     "Draft Kings": {
      "open": -2.5,
-     "spread": -1.5,
-     "total": 158.5
+     "spread": -2.5,
+     "total": 157.5
     }
    }
   },
@@ -286,15 +24,27 @@
     }
    }
   },
-  "2026-11-28_austin-peay_furman": {
-   "away": "austin-peay",
+  "2026-11-28_american_umass-lowell": {
+   "away": "umass-lowell",
    "date": "2026-11-28",
-   "home": "furman",
+   "home": "american",
+   "lines": {
+    "Draft Kings": {
+     "open": -9.5,
+     "spread": -6.5,
+     "total": 140.5
+    }
+   }
+  },
+  "2026-11-28_army_rider": {
+   "away": "rider",
+   "date": "2026-11-28",
+   "home": "army",
    "lines": {
     "Draft Kings": {
      "open": -8.5,
-     "spread": -6.5,
-     "total": 152.5
+     "spread": -9.5,
+     "total": 136.5
     }
    }
   },
@@ -306,7 +56,7 @@
     "Draft Kings": {
      "open": 3.5,
      "spread": 3.5,
-     "total": 139.5
+     "total": 138.5
     }
    }
   },
@@ -318,7 +68,7 @@
     "Draft Kings": {
      "open": -3.5,
      "spread": -4.5,
-     "total": 155.5
+     "total": 153.5
     }
    }
   },
@@ -329,20 +79,20 @@
    "lines": {
     "Draft Kings": {
      "open": -14.5,
-     "spread": -14.5,
-     "total": 132.5
+     "spread": -15.5,
+     "total": 128.5
     }
    }
   },
-  "2026-11-28_buffalo_towson": {
-   "away": "buffalo",
+  "2026-11-28_bucknell_penn": {
+   "away": "bucknell",
    "date": "2026-11-28",
-   "home": "towson",
+   "home": "penn",
    "lines": {
     "Draft Kings": {
-     "open": -4.5,
-     "spread": -4.5,
-     "total": 139.5
+     "open": -16.5,
+     "spread": -15.5,
+     "total": 149.5
     }
    }
   },
@@ -354,7 +104,7 @@
     "Draft Kings": {
      "open": -5.5,
      "spread": -5.5,
-     "total": 151.5
+     "total": 148.5
     }
    }
   },
@@ -365,8 +115,8 @@
    "lines": {
     "Draft Kings": {
      "open": -12.5,
-     "spread": -12.5,
-     "total": 169.5
+     "spread": -11.5,
+     "total": 168.5
     }
    }
   },
@@ -377,8 +127,20 @@
    "lines": {
     "Draft Kings": {
      "open": 9.5,
-     "spread": 9.5,
-     "total": 141.5
+     "spread": 7.5,
+     "total": 143.5
+    }
+   }
+  },
+  "2026-11-28_central-connecticut_navy": {
+   "away": "central-connecticut",
+   "date": "2026-11-28",
+   "home": "navy",
+   "lines": {
+    "Draft Kings": {
+     "open": -1.5,
+     "spread": 1.5,
+     "total": 127.5
     }
    }
   },
@@ -389,8 +151,8 @@
    "lines": {
     "Draft Kings": {
      "open": -3.5,
-     "spread": -3.5,
-     "total": 147.5
+     "spread": -4.5,
+     "total": 146.5
     }
    }
   },
@@ -401,8 +163,8 @@
    "lines": {
     "Draft Kings": {
      "open": -12.5,
-     "spread": -12.5,
-     "total": 137.5
+     "spread": -11.5,
+     "total": 140.5
     }
    }
   },
@@ -414,7 +176,7 @@
     "Draft Kings": {
      "open": 1.5,
      "spread": 1.5,
-     "total": 146.5
+     "total": 142.5
     }
    }
   },
@@ -425,20 +187,20 @@
    "lines": {
     "Draft Kings": {
      "open": -16.5,
-     "spread": -16.5,
+     "spread": -14.5,
      "total": 157.5
     }
    }
   },
-  "2026-11-28_delaware_stony-brook": {
-   "away": "delaware",
+  "2026-11-28_delaware-st_north-carolina-a-t": {
+   "away": "delaware-st",
    "date": "2026-11-28",
-   "home": "stony-brook",
+   "home": "north-carolina-a-t",
    "lines": {
     "Draft Kings": {
-     "open": -5.5,
-     "spread": -4.5,
-     "total": 137.5
+     "open": -11.5,
+     "spread": -10.5,
+     "total": 141.5
     }
    }
   },
@@ -449,8 +211,8 @@
    "lines": {
     "Draft Kings": {
      "open": -5.5,
-     "spread": -5.5,
-     "total": 144.5
+     "spread": -3.5,
+     "total": 143.5
     }
    }
   },
@@ -461,8 +223,8 @@
    "lines": {
     "Draft Kings": {
      "open": -5.5,
-     "spread": -6.5,
-     "total": 143.5
+     "spread": -5.5,
+     "total": 142.5
     }
    }
   },
@@ -474,7 +236,19 @@
     "Draft Kings": {
      "open": 4.5,
      "spread": 4.5,
-     "total": 137.5
+     "total": 136.5
+    }
+   }
+  },
+  "2026-11-28_east-texas-a-m_marshall": {
+   "away": "east-texas-a-m",
+   "date": "2026-11-28",
+   "home": "marshall",
+   "lines": {
+    "Draft Kings": {
+     "open": -9.5,
+     "spread": -8.5,
+     "total": 146.5
     }
    }
   },
@@ -486,7 +260,7 @@
     "Draft Kings": {
      "open": 10.5,
      "spread": 10.5,
-     "total": 143.5
+     "total": 139.5
     }
    }
   },
@@ -497,7 +271,7 @@
    "lines": {
     "Draft Kings": {
      "open": 3.5,
-     "spread": 3.5,
+     "spread": 4.5,
      "total": 169.5
     }
    }
@@ -509,8 +283,8 @@
    "lines": {
     "Draft Kings": {
      "open": -22.5,
-     "spread": -22.5,
-     "total": 152.5
+     "spread": -20.5,
+     "total": 149.5
     }
    }
   },
@@ -522,7 +296,7 @@
     "Draft Kings": {
      "open": 2.5,
      "spread": 2.5,
-     "total": 141.5
+     "total": 140.5
     }
    }
   },
@@ -533,8 +307,8 @@
    "lines": {
     "Draft Kings": {
      "open": 1.5,
-     "spread": 1.5,
-     "total": 140.5
+     "spread": -1.5,
+     "total": 137.5
     }
    }
   },
@@ -545,8 +319,20 @@
    "lines": {
     "Draft Kings": {
      "open": -19.5,
-     "spread": -19.5,
-     "total": 131.5
+     "spread": -20.5,
+     "total": 130.5
+    }
+   }
+  },
+  "2026-11-28_georgia-southern_unc-asheville": {
+   "away": "georgia-southern",
+   "date": "2026-11-28",
+   "home": "unc-asheville",
+   "lines": {
+    "Draft Kings": {
+     "open": -1.5,
+     "spread": 1.5,
+     "total": 157.5
     }
    }
   },
@@ -557,8 +343,20 @@
    "lines": {
     "Draft Kings": {
      "open": -1.5,
-     "spread": -1.5,
-     "total": 138.5
+     "spread": 1.5,
+     "total": 133.5
+    }
+   }
+  },
+  "2026-11-28_high-point_the-citadel": {
+   "away": "the-citadel",
+   "date": "2026-11-28",
+   "home": "high-point",
+   "lines": {
+    "Draft Kings": {
+     "open": -28.5,
+     "spread": -26.5,
+     "total": 143.5
     }
    }
   },
@@ -569,8 +367,8 @@
    "lines": {
     "Draft Kings": {
      "open": -5.5,
-     "spread": -3.5,
-     "total": 125.5
+     "spread": -1.5,
+     "total": 124.5
     }
    }
   },
@@ -581,8 +379,8 @@
    "lines": {
     "Draft Kings": {
      "open": -30.5,
-     "spread": -31.5,
-     "total": 139.5
+     "spread": -33.5,
+     "total": 136.5
     }
    }
   },
@@ -594,7 +392,31 @@
     "Draft Kings": {
      "open": -2.5,
      "spread": -2.5,
-     "total": 148.5
+     "total": 146.5
+    }
+   }
+  },
+  "2026-11-28_lafayette_maine": {
+   "away": "maine",
+   "date": "2026-11-28",
+   "home": "lafayette",
+   "lines": {
+    "Draft Kings": {
+     "open": -6.5,
+     "spread": -6.5,
+     "total": 134.5
+    }
+   }
+  },
+  "2026-11-28_le-moyne_niagara": {
+   "away": "le-moyne",
+   "date": "2026-11-28",
+   "home": "niagara",
+   "lines": {
+    "Draft Kings": {
+     "open": 1.5,
+     "spread": 1.5,
+     "total": 144.5
     }
    }
   },
@@ -606,7 +428,7 @@
     "Draft Kings": {
      "open": -9.5,
      "spread": -9.5,
-     "total": 149.5
+     "total": 148.5
     }
    }
   },
@@ -617,8 +439,20 @@
    "lines": {
     "Draft Kings": {
      "open": -6.5,
-     "spread": -6.5,
-     "total": 151.5
+     "spread": -5.5,
+     "total": 149.5
+    }
+   }
+  },
+  "2026-11-28_louisiana_mcneese": {
+   "away": "mcneese",
+   "date": "2026-11-28",
+   "home": "louisiana",
+   "lines": {
+    "Draft Kings": {
+     "open": 10.5,
+     "spread": 7.5,
+     "total": 138.5
     }
    }
   },
@@ -629,32 +463,20 @@
    "lines": {
     "Draft Kings": {
      "open": -2.5,
+     "spread": -1.5,
+     "total": 154.5
+    }
+   }
+  },
+  "2026-11-28_manhattan_morgan-st": {
+   "away": "manhattan",
+   "date": "2026-11-28",
+   "home": "morgan-st",
+   "lines": {
+    "Draft Kings": {
+     "open": -2.5,
      "spread": -2.5,
-     "total": 156.5
-    }
-   }
-  },
-  "2026-11-28_monmouth_saint-joseph-s": {
-   "away": "saint-joseph-s",
-   "date": "2026-11-28",
-   "home": "monmouth",
-   "lines": {
-    "Draft Kings": {
-     "open": 1.5,
-     "spread": 1.5,
-     "total": 146.5
-    }
-   }
-  },
-  "2026-11-28_northern-colorado_san-diego": {
-   "away": "northern-colorado",
-   "date": "2026-11-28",
-   "home": "san-diego",
-   "lines": {
-    "Draft Kings": {
-     "open": -13.5,
-     "spread": -13.5,
-     "total": 146.5
+     "total": 150.5
     }
    }
   },
@@ -666,19 +488,19 @@
     "Draft Kings": {
      "open": -6.5,
      "spread": -6.5,
-     "total": 148.5
+     "total": 147.5
     }
    }
   },
-  "2026-11-28_portland-st_southern-illinois": {
-   "away": "portland-st",
+  "2026-11-28_presbyterian_sacramento-st": {
+   "away": "sacramento-st",
    "date": "2026-11-28",
-   "home": "southern-illinois",
+   "home": "presbyterian",
    "lines": {
     "Draft Kings": {
-     "open": -7.5,
-     "spread": -7.5,
-     "total": 154.5
+     "open": -1.5,
+     "spread": -1.5,
+     "total": 156.5
     }
    }
   },
@@ -690,7 +512,7 @@
     "Draft Kings": {
      "open": 2.5,
      "spread": 2.5,
-     "total": 145.5
+     "total": 142.5
     }
    }
   },
@@ -702,19 +524,7 @@
     "Draft Kings": {
      "open": -1.5,
      "spread": -2.5,
-     "total": 157.5
-    }
-   }
-  },
-  "2026-11-28_richmond_vmi": {
-   "away": "vmi",
-   "date": "2026-11-28",
-   "home": "richmond",
-   "lines": {
-    "Draft Kings": {
-     "open": -16.5,
-     "spread": -16.5,
-     "total": 150.5
+     "total": 153.5
     }
    }
   },
@@ -730,18 +540,6 @@
     }
    }
   },
-  "2026-11-28_santa-clara_utah-tech": {
-   "away": "utah-tech",
-   "date": "2026-11-28",
-   "home": "santa-clara",
-   "lines": {
-    "Draft Kings": {
-     "open": -19.5,
-     "spread": -19.5,
-     "total": 165.5
-    }
-   }
-  },
   "2026-11-28_seattle_uc-irvine": {
    "away": "uc-irvine",
    "date": "2026-11-28",
@@ -750,7 +548,7 @@
     "Draft Kings": {
      "open": -4.5,
      "spread": -4.5,
-     "total": 139.5
+     "total": 137.5
     }
    }
   },
@@ -762,7 +560,7 @@
     "Draft Kings": {
      "open": -17.5,
      "spread": -17.5,
-     "total": 155.5
+     "total": 156.5
     }
    }
   },
@@ -774,7 +572,7 @@
     "Draft Kings": {
      "open": 1.5,
      "spread": 1.5,
-     "total": 141.5
+     "total": 139.5
     }
    }
   },
@@ -785,11 +583,35 @@
    "lines": {
     "Draft Kings": {
      "open": -4.5,
-     "spread": -4.5,
-     "total": 153.5
+     "spread": -3.5,
+     "total": 151.5
+    }
+   }
+  },
+  "2026-11-28_unlv_ut-rio-grande-valley": {
+   "away": "ut-rio-grande-valley",
+   "date": "2026-11-28",
+   "home": "unlv",
+   "lines": {
+    "Draft Kings": {
+     "open": -9.5,
+     "spread": -10.5,
+     "total": 149.5
+    }
+   }
+  },
+  "2026-12-05_utah_washington": {
+   "away": "washington",
+   "date": "2026-12-05",
+   "home": "utah",
+   "lines": {
+    "Draft Kings": {
+     "open": -2.5,
+     "spread": -3.5,
+     "total": 143.5
     }
    }
   }
  },
- "updated": "2026-11-27T23:59:49Z"
+ "updated": "2026-11-28T07:37:13Z"
 }
