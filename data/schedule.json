@@ -43307,27 +43307,11 @@
  },
  {
   "date": "2026-11-27",
-  "home": "Georgetown",
-  "away": "Non D1 Opponent",
-  "neutral": true,
-  "conf": false,
-  "site": "San Diego, Calif."
- },
- {
-  "date": "2026-11-27",
   "home": "Maryland",
   "away": "Non D1 Opponent",
   "neutral": true,
   "conf": false,
   "site": "Las Vegas"
- },
- {
-  "date": "2026-11-27",
-  "home": "Texas",
-  "away": "Non D1 Opponent",
-  "neutral": true,
-  "conf": false,
-  "site": "San Diego, Calif."
  },
  {
   "date": "2026-11-27",
@@ -43416,5 +43400,13 @@
   "neutral": true,
   "conf": false,
   "site": "Cancun, Mexico"
+ },
+ {
+  "date": "2026-11-27",
+  "home": "Georgetown",
+  "away": "Texas",
+  "neutral": true,
+  "conf": false,
+  "site": "San Diego, Calif."
  }
 ]
