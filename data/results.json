@@ -1466,6 +1466,7 @@
 {"date":"2026-11-27","home":"iowa-st","away":"st-johns","neutral":true,"homeScore":75,"awayScore":80,"line":0.5,"ts":"2026-11-27T22:03:05.000Z"},
 {"date":"2026-11-27","home":"kansas-st","away":"michigan","neutral":true,"homeScore":69,"awayScore":98,"line":8,"ts":"2026-11-28T02:51:06.000Z"},
 {"date":"2026-11-27","home":"kansas","away":"villanova","neutral":false,"homeScore":65,"awayScore":50,"line":-11,"ts":"2026-11-28T02:51:06.000Z"},
+{"date":"2026-11-27","home":"kentucky","away":"wichita-st","neutral":false,"homeScore":71,"awayScore":73,"line":-3.5,"ts":"2026-11-28T04:51:59.000Z"},
 {"date":"2026-11-27","home":"la-salle","away":"bucknell","neutral":true,"homeScore":89,"awayScore":86,"line":-11.5,"ts":"2026-11-27T23:31:23.000Z"},
 {"date":"2026-11-27","home":"lafayette","away":"niagara","neutral":false,"homeScore":82,"awayScore":54,"line":-5,"ts":"2026-11-28T02:51:06.000Z"},
 {"date":"2026-11-27","home":"liberty","away":"st-thomas","neutral":true,"homeScore":76,"awayScore":67,"line":1,"ts":"2026-11-27T22:03:05.000Z"},
