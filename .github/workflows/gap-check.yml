@@ -1,0 +1,26 @@
+name: Gap check
+
+# Once a day (about 9-10 am Pacific): looks at the last 3 completed days and fails, so GitHub emails you, if any game
+# has no score, any API game does not match the schedule, or the API lists a TBD opponent. Reports only; changes nothing.
+# 1 API call per run. Run it by hand from the Actions tab to check right now.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 17 * * *"
+  push:
+    branches: [gap-check]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      CBBD_API_KEY: ${{ secrets.CBBD_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'schedule' && 'main' || github.ref_name }}
+      - run: python3 src/gap_check.py
